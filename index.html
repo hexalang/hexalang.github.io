@@ -20,6 +20,22 @@
             text-decoration-line: none;
         }
 
+        .editor {
+            outline: none;
+        }
+
+        .code,
+        .code div {
+            font-family: Menlo, Roboto Mono, Courier New, monospace;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+            color: black;
+            position: relative;
+        }
+
+        .output {}
+
         .footer {
             position: absolute;
             bottom: 0;
@@ -34,6 +50,11 @@
         .header {
             text-align: center;
         }
+
+        .demo {
+            padding: 0px;
+            width: 100%;
+        }
     </style>
 
     <div>
@@ -45,6 +66,28 @@
                 <br/>
                 <br/>
             </a>
+        </div>
+        <div class="demo">
+            <div style="padding: 10px;">
+                <div style="padding: 10px; border-radius: 10px; background-color: rgb(204, 204, 204);">
+                    <pre id="editor" class="code editor" contenteditable="true">@native("console")
+declare class Console {
+    static function log(...message: String): Void
+}
+Console.log("Hello from Hexa!")
+Console.log("No `static function main` required")</pre>
+                </div>
+                <div style="margin-top: 10px;padding: 10px; border-radius: 10px; background-color: rgb(204, 204, 204);">
+                    <div id="output" class="code output" style="">
+                        ...JavaScript
+                    </div>
+                </div>
+                <div style="margin-top: 10px;padding: 10px; border-radius: 10px; background-color: rgb(204, 204, 204);">
+                    <div id="debug" class="code output" style="">
+                        ...Debug
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <a href="https://github.com/hexalang">Hexa</a> by
