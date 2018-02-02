@@ -94,4 +94,90 @@ Console.log("No `static function main` required")</pre>
             <a href=https://github.com/PeyTy>Oleg</a> &copy; 2018
         </div>
     </div>
+    <script type="text/javascript">
+        "use strict"
+        function convertUtf8ArrayToString(array) {
+            let out = ""
+            const len = array.length
+            let i = 0
+            let char2
+            while (i < len) {
+                let c = array[i++]
+                switch (c >> 4) {
+                    case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:
+                        // 0xxxxxxx
+                        out += String.fromCharCode(c)
+                        break
+                    case 12: case 13:
+                        // 110x xxxx   10xx xxxx
+                        char2 = array[i++]
+                        out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F))
+                        break
+                    case 14:
+                        // 1110 xxxx  10xx xxxx  10xx xxxx
+                        char2 = array[i++]
+                        const char3 = array[i++]
+                        out += String.fromCharCode(((c & 0x0F) << 12) |
+                            ((char2 & 0x3F) << 6) |
+                            ((char3 & 0x3F) << 0))
+                        break
+                }
+            }
+            return out
+        }
+        const handler = {
+            get: function (target, name) {
+                if (name in target) {
+                    return target[name]
+                }
+                if (name == 'length') {
+                    return target.data.length
+                }
+                return target.data[name]
+            }
+        }
+        class Buffer {
+            static alloc(size) {
+                return new Proxy(new Buffer(new Uint8Array(size)), handler)
+            }
+            get length() {
+                return this.data.length
+            }
+            readUInt16LE(offset) {
+                return this.data[offset] + this.data[offset + 1] * 256
+            }
+            writeUInt16LE(value, offset) {
+                this.data[offset] = value & 0xFF
+                this.data[offset + 1] = (value >>> 8) & 0xFF
+            }
+            readUInt32LE(offset) {
+                return this.data[offset]
+                    + this.data[offset + 1] * 256
+                    + this.data[offset + 2] * 256 * 256
+                    + this.data[offset + 3] * 256 * 256 * 256
+            }
+            toString(encoding, start, end) {
+                return convertUtf8ArrayToString(this.data.subarray(start, end))
+            }
+            static from(string) {
+                let result = []
+                for (let i = 0; i < string.length; i += 1) {
+                    result.push(string.charCodeAt(i))
+                }
+                return new Proxy(new Buffer(Uint8Array.from(result)), handler)
+            }
+            constructor(data) {
+                this.data = data
+            }
+        }
+        window.$console = {
+            log: function (...args) {
+                let out = ''
+                for (const arg of args) {
+                    out += '' + arg + '<br/>'
+                }
+                document.getElementById("debug").innerHTML += out
+            }
+        }
+    </script>
 </body>
