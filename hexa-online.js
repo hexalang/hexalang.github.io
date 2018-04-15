@@ -1917,7 +1917,7 @@ OnlineCompiler.prototype = {
 		html = html.split("\t").join("&nbsp;&nbsp;&nbsp;&nbsp;");
 		html = html.split("\r\n").join("<br/>");
 		html = html.split("\n").join("<br/>");
-		this.output.innerHTML = html;
+		this.output.innerHTML = "// JavaScript from Hexa<br/>" + html;
 		this.debug.innerHTML = "";
 		try {
 			eval(result.split("console").join("$console"));
