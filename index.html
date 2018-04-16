@@ -31,6 +31,7 @@
             overflow: hidden;
             box-sizing: border-box;
             width: 100%;
+            height: 100%;
             color: black;
             position: relative;
         }
@@ -49,19 +50,56 @@
         }
 
         .header {
+            margin-top: 5px;
             text-align: center;
+            font-size: 110%;
         }
 
-        .demo {
-            padding: 0px;
+        .container {
             width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-1 {
+            width: 50%;
+        }
+
+        .col-2 {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            col-sm-1 {
+                width: 50%;
+            }
+            .col-sm-2 {
+                width: 100%;
+            }
+        }
+
+        .pad {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .margin {
+            margin: 10px;
+        }
+
+        .fullheight {
+            height: 100%;
+        }
+
+        .shadow {
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 2px;
         }
     </style>
 
     <div>
         <div class="header">
             <a href="https://github.com/hexalang">
-                <img width="191px" height="191px" src="https://avatars2.githubusercontent.com/u/19646737" />
                 <img width="191px" height="191px" src="hexa.png" />
                 <br/>Hexa Programming Language
                 <br/>Ensures safety, simplicity and performance
@@ -69,23 +107,28 @@
                 <br/>
             </a>
         </div>
-        <div class="demo">
-            <div style="padding: 10px;">
-                <div style="padding: 10px; border-radius: 10px; background-color: rgb(204, 204, 204);">
-                    <pre id="editor" class="code editor" contenteditable="true">@native("console")
+        <div class="container">
+            <div class="col-1 col-sm-2 pad">
+                <div class="shadow fullheight">
+                    <pre id="editor" class="pad code editor" contenteditable="true">@native("console")
 declare class Console {
     static function log(...message: String): Void
 }
 Console.log("Hello from Hexa!")
-Console.log("No `static function main` required")</pre>
+Console.log("No `static function main` required")
+                    </pre>
                 </div>
-                <div style="margin-top: 10px;padding: 10px; border-radius: 10px; background-color: rgb(204, 204, 204);">
-                    <div id="output" class="code output" style="">
+            </div>
+            <div class="col-1 col-sm-2 pad">
+                <div class="shadow fullheight">
+                    <div id="output" class="pad code output">
                         ...JavaScript
                     </div>
                 </div>
-                <div style="margin-top: 10px;padding: 10px; border-radius: 10px; background-color: rgb(204, 204, 204);">
-                    <div id="debug" class="code output" style="">
+            </div>
+            <div class="col-2">
+                <div class="shadow margin">
+                    <div id="debug" class="pad code output">
                         ...Debug
                     </div>
                 </div>
