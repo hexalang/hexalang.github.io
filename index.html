@@ -232,12 +232,21 @@ Console.log("No `static function main` required")
                     + this.data[offset + 3] * 256 * 256 * 256
             }
             toString(encoding, start, end) {
-                return convertUtf8ArrayToString(this.data.subarray(start, end))
+                const str = convertUtf8ArrayToString(this.data.subarray(start, end))
+                return str.replace(new RegExp('(;u{[0-9]+})', 'g'), function (match) {
+                    const code = parseInt(match.substr(3, match.length - 4))
+                    return String.fromCharCode(code)
+                })
             }
             static from(string) {
-                let result = []
-                for (let i = 0; i < string.length; i += 1) {
-                    result.push(string.charCodeAt(i))
+                const result = []
+                for (const char of string.split('')) {
+                    const code = char.charCodeAt(0)
+                    if (code > 255) {
+                        for (const char of (';u{' + code + '}').split('')) result.push(char.charCodeAt(0) & 0xFF)
+                    } else {
+                        result.push(char.charCodeAt(0) & 0xFF)
+                    }
                 }
                 return new Proxy(new Buffer(Uint8Array.from(result)), handler)
             }
