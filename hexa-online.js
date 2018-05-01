@@ -1876,7 +1876,7 @@ OnlineCompiler.main = function() {
 };
 OnlineCompiler.prototype = {
 	build: function() {
-		console.log("Hexaompiler");
+		console.log("Hexa Compiler Performs Build");
 		var code = this.input.innerText;
 		if(code == this.last) {
 			return;
@@ -1896,9 +1896,9 @@ OnlineCompiler.prototype = {
 			if ($e0 instanceof js__$Boot_HaxeError) $e0 = $e0.val;
 			if( js_Boot.__instanceof($e0,CompilerError) ) {
 				var e = $e0;
-				console.log("CompilerError");
+				console.log("CompilerError begin");
 				console.log(e);
-				console.log("!!!");
+				console.log("CompilerError done");
 				var tmp = e.toString();
 				this.output.innerHTML = "Error: " + tmp;
 				this.debug.innerHTML = "Fix errors to run the code!";
@@ -1913,6 +1913,8 @@ OnlineCompiler.prototype = {
 		}
 		this.style();
 		var html = result;
+		html = html.split("<").join("&lt;");
+		html = html.split(">").join("&gt;");
 		html = html.split(" ").join("&nbsp;");
 		html = html.split("\t").join("&nbsp;&nbsp;&nbsp;&nbsp;");
 		html = html.split("\r\n").join("<br/>");
