@@ -1919,7 +1919,20 @@ OnlineCompiler.prototype = {
 		html = html.split("\t").join("&nbsp;&nbsp;&nbsp;&nbsp;");
 		html = html.split("\r\n").join("<br/>");
 		html = html.split("\n").join("<br/>");
-		this.output.innerHTML = "// JavaScript from Hexa<br/>" + html;
+		this.output.innerHTML = html;
+		var color = function(input,begin,end) {
+			var parts = input.split(begin);
+			var out = "" + parts.shift();
+			var _g = 0;
+			while(_g < parts.length) {
+				var p = parts[_g];
+				++_g;
+				out += "<i>" + begin + p.split(end)[0] + end + "</i>" + p.split(end)[1];
+			}
+			return out;
+		};
+		this.output.innerHTML = color(this.output.innerHTML,"/*","*/");
+		this.output.innerHTML = "<i>// JavaScript from Hexa</i><br/>" + this.output.innerHTML;
 		this.debug.innerHTML = "";
 		try {
 			eval(result.split("console").join("$console"));
