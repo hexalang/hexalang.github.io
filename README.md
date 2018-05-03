@@ -1,2 +1,3 @@
 # hexalang.github.io
-Project Homepage
+
+[Project Homepage](https://hexalang.github.io/)
