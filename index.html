@@ -192,10 +192,37 @@
             /* background-color: #4AB3F4; */
             background-color: rgb(253, 61, 36) !important;
         }
+
+        .navbar {
+            right: 10px;
+            position: absolute;
+            min-height: 50px;
+            display: flex;
+            padding: 3px;
+            flex-direction: row;
+        }
+
+        .navbar-btn {
+            color: rgb(32, 32, 32);
+            cursor: pointer;
+            padding: 5px 10px;
+            user-select: none;
+            margin: 6px;
+        }
     </style>
 
     <div class="page shadow">
         <div class="header">
+            <div class="navbar flex-end">
+                <div class="flex-row">
+                    <a href="#" class="navbar-btn">Try</a>
+                    <a href="#" class="navbar-btn">Learn</a>
+                    <a href="#" class="navbar-btn">Install</a>
+                    <a href="#" class="navbar-btn">GitHub</a>
+                    <a href="#" class="navbar-btn">Donate</a>
+                </div>
+            </div>
+
             <a href="https://github.com/hexalang">
                 <img width="191px" height="191px" src="hexa.png" />
                 <br/>Hexa Programming Language
