@@ -79,16 +79,7 @@
         .output {}
 
         .footer {
-            flex: 0 1 30px;
-
-            /* fix at bottom */
-            bottom: 0px;
-            /* content */
-            /* vertical centering */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
+            flex: 0 1 45px;
             background: #6cf;
         }
 
@@ -137,6 +128,70 @@
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
             border-radius: 2px;
         }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-auto {
+            flex: 1 0 auto;
+        }
+
+
+        button:focus {
+            outline: none !important;
+        }
+
+        .btn {
+            cursor: pointer;
+            border-radius: 2px;
+            border: 0;
+            padding: 5px 10px;
+            user-select: none;
+            transition: .2s ease-out;
+            color: #000;
+            margin: 6px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .btn:hover {
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.18), 0 2px 7px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active,
+        .btn:focus,
+        .btn.active {
+            outline: 0;
+        }
+
+        .btn-black {
+            color: #fff !important;
+            background-color: #000 !important;
+        }
+
+        .btn-blue {
+            color: #fff !important;
+            /* background-color: #4AB3F4; */
+            background-color: rgb(41, 156, 228) !important;
+        }
+
+        .btn-red {
+            color: #fff !important;
+            /* background-color: #4AB3F4; */
+            background-color: rgb(253, 61, 36) !important;
+        }
     </style>
 
     <div class="page shadow">
@@ -178,9 +233,19 @@ Console.log("No `static function main` required")
             </div>
         </div>
         <div class="footer">
-            <div class="footer-content">
-                <a href="https://github.com/hexalang">Hexa</a> by
-                <a href=https://github.com/PeyTy>Oleg</a> &copy; 2018
+            <div class="fullheight flex-row">
+                <div class="flex-auto center">
+                    <div>
+                        <a href="https://github.com/hexalang">Hexa</a> by
+                        <a href=https://github.com/PeyTy>Oleg</a> &copy; 2018
+                    </div>
+                </div>
+                <div class="center flex-row">
+                    <a href="https://twitter.com/hexalang" class="btn btn-blue">Twitter</a>
+                    <a href="https://github.com/hexalang" class="btn btn-black">GitHub</a>
+                    <a href="https://www.patreon.com/PeyTy" class="btn btn-red">Patreon</a>
+
+                </div>
             </div>
         </div>
     </div>
