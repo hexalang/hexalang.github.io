@@ -1,0 +1,348 @@
+<!doctype html>
+
+<head>
+    <title>Try Hexa</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0px;
+            margin: 0px;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: absolute;
+            background-color: gainsboro;
+            display: flex;
+            min-height: 100%;
+            min-width: 100%;
+            padding: 10px;
+        }
+
+        .page {
+            display: flex;
+            flex-flow: column;
+            background-color: white;
+            min-height: 100%;
+            min-width: 100%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none!important;
+        }
+
+        .editor {
+            outline: none;
+        }
+
+        .code,
+        .code div {
+            font-family: Menlo, Roboto Mono, Courier New, monospace;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            color: black;
+        }
+
+        .code i {
+            color: gray;
+            font-family: Menlo, Roboto Mono, Courier New, monospace;
+        }
+
+        .output {}
+
+        .footer {
+            flex: 0 1 45px;
+            background: #6cf;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 110%;
+            flex: 0 1 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 auto;
+        }
+
+        .col-1 {
+            width: 50%;
+        }
+
+        .col-2 {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 800px) {
+            col-sm-1 {
+                width: 50%;
+            }
+            .col-sm-2 {
+                width: 100%;
+            }
+        }
+
+        .pad {
+            padding: 10px;
+        }
+
+        .margin {
+            margin: 10px;
+        }
+
+        .fullheight {
+            height: 100%;
+        }
+
+        .shadow {
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 2px;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-auto {
+            flex: 1 0 auto;
+        }
+
+
+        button:focus {
+            outline: none !important;
+        }
+
+        .btn {
+            cursor: pointer;
+            border-radius: 2px;
+            border: 0;
+            padding: 5px 10px;
+            user-select: none;
+            transition: .2s ease-out;
+            color: #000;
+            margin: 6px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .btn:hover {
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.18), 0 2px 7px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active,
+        .btn:focus,
+        .btn.active {
+            outline: 0;
+        }
+
+        .btn-black {
+            color: #fff !important;
+            background-color: #000 !important;
+        }
+
+        .btn-blue {
+            color: #fff !important;
+            /* background-color: #4AB3F4; */
+            background-color: rgb(41, 156, 228) !important;
+        }
+
+        .btn-red {
+            color: #fff !important;
+            /* background-color: #4AB3F4; */
+            background-color: rgb(253, 61, 36) !important;
+        }
+    </style>
+
+    <div class="page shadow">
+        <div class="header">
+            <a href="https://github.com/hexalang">
+                <img width="191px" height="191px" src="/hexa.png" />
+                <br/>Hexa Programming Language
+                <br/>Ensures safety, simplicity and performance
+                <br/>
+                <br/>
+            </a>
+        </div>
+        <div class="container">
+            <div class="col-1 col-sm-2 pad">
+                <div class="shadow fullheight">
+                    <pre id="editor" class="pad code editor" contenteditable="true">// Live demo! Edit to compile on the fly
+@native("console")
+declare class Console {
+    static function log(...message: String): Void
+}
+Console.log("Hello from Hexa!")
+Console.log("No `static function main` required")
+                    </pre>
+                </div>
+            </div>
+            <div class="col-1 col-sm-2 pad">
+                <div class="shadow fullheight">
+                    <div id="output" class="pad code output">
+                        ...JavaScript is required to run interactive demo
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="shadow margin">
+                    <div id="debug" class="pad code output">
+                        ...Debug
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fullheight flex-row">
+                <div class="flex-auto center">
+                    <div>
+                        <a href="https://github.com/hexalang">Hexa</a> by
+                        <a href=https://github.com/PeyTy>Oleg</a> &copy; 2018
+                    </div>
+                </div>
+                <div class="center flex-row">
+                    <a href="https://twitter.com/hexalang" class="btn btn-blue">Twitter</a>
+                    <a href="https://github.com/hexalang" class="btn btn-black">GitHub</a>
+                    <a href="https://www.patreon.com/PeyTy" class="btn btn-red">Patreon</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        "use strict"
+        function convertUtf8ArrayToString(array) {
+            let out = ""
+            const len = array.length
+            let i = 0
+            let char2
+            while (i < len) {
+                let c = array[i++]
+                switch (c >> 4) {
+                    case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:
+                        // 0xxxxxxx
+                        out += String.fromCharCode(c)
+                        break
+                    case 12: case 13:
+                        // 110x xxxx   10xx xxxx
+                        char2 = array[i++]
+                        out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F))
+                        break
+                    case 14:
+                        // 1110 xxxx  10xx xxxx  10xx xxxx
+                        char2 = array[i++]
+                        const char3 = array[i++]
+                        out += String.fromCharCode(((c & 0x0F) << 12) |
+                            ((char2 & 0x3F) << 6) |
+                            ((char3 & 0x3F) << 0))
+                        break
+                }
+            }
+            return out
+        }
+        const handler = {
+            get: function (target, name) {
+                if (name in target) {
+                    return target[name]
+                }
+                if (name == 'length') {
+                    return target.data.length
+                }
+                return target.data[name]
+            }
+        }
+        class Buffer {
+            static alloc(size) {
+                return new Proxy(new Buffer(new Uint8Array(size)), handler)
+            }
+            get length() {
+                return this.data.length
+            }
+            readUInt16LE(offset) {
+                return this.data[offset] + this.data[offset + 1] * 256
+            }
+            writeUInt16LE(value, offset) {
+                this.data[offset] = value & 0xFF
+                this.data[offset + 1] = (value >>> 8) & 0xFF
+            }
+            readUInt32LE(offset) {
+                return this.data[offset]
+                    + this.data[offset + 1] * 256
+                    + this.data[offset + 2] * 256 * 256
+                    + this.data[offset + 3] * 256 * 256 * 256
+            }
+            toString(encoding, start, end) {
+                const str = convertUtf8ArrayToString(this.data.subarray(start, end))
+                return str.replace(new RegExp('(;u{[0-9]+})', 'g'), function (match) {
+                    const code = parseInt(match.substr(3, match.length - 4))
+                    return String.fromCharCode(code)
+                })
+            }
+            static from(string) {
+                const result = []
+                for (const char of string.split('')) {
+                    const code = char.charCodeAt(0)
+                    if (code > 255) {
+                        for (const char of (';u{' + code + '}').split('')) result.push(char.charCodeAt(0) & 0xFF)
+                    } else {
+                        result.push(char.charCodeAt(0) & 0xFF)
+                    }
+                }
+                return new Proxy(new Buffer(Uint8Array.from(result)), handler)
+            }
+            constructor(data) {
+                this.data = data
+            }
+        }
+        window.$console = {
+            log: function (...args) {
+                let out = ''
+                for (const arg of args) {
+                    out += '' + arg + '<br/>'
+                }
+                document.getElementById("debug").innerHTML += out
+            }
+        }
+    </script>
+    <script type="text/javascript" src="/hexa-online.js"></script>
+</body>
