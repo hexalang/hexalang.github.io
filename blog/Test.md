@@ -1,3 +1,8 @@
+---
+layout: post
+title: Blogging Like a Hacker
+---
+
 ## This is really just a markup test
 
 Should be available at [home page](https://hexalang.github.io/blog/Test.md)
