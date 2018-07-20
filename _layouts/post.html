@@ -3,6 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	/>
+	<meta name="MobileOptimized" content="176" />
+
 	<title>{{ page.title }} — Hexa Blog</title>
 </head>
 
@@ -22,11 +26,6 @@
 			padding: 0;
 			margin: 0;
 			font-size: 20px;
-			background: #1D1D1D;
-		}
-
-		p {
-			line-height: 1.6em;
 		}
 
 		a {
@@ -44,7 +43,7 @@
 		}
 
 		h2 {
-			font-size: 60px;
+			font-size: 40px;
 			text-align: center;
 		}
 
@@ -119,6 +118,8 @@
 
 		div.content {
 			background: #fff;
+			max-width: 750px;
+			margin: 0 auto;
 		}
 
 		section.hero {
@@ -166,28 +167,34 @@
 			margin-bottom: 0.25em;
 		}
 
+		.blog-post p,
+		.blog-post li {
+			word-wrap: break-word;
+		}
+
 		.blog-post p {
 			margin-bottom: 1em;
+			/* margin-left: 1em; */
 		}
 
 		.blog-post ul {
+			margin-left: 1em;
 			padding: 0 40px;
 		}
 
 		.blog-post li {
-			margin-top: 1em;
+			margin-bottom: 1em;
 		}
 
 		.blog-post blockquote {
 			padding: 0 20px;
 			border-left: 0.25em solid grey;
+			margin-left: 0.25em;
 		}
 
 		.blog-post {
-			width: 750px;
-			/* margin-left: auto;
-			margin-right: auto; */
-			margin: 0 auto;
+			padding: 20px 10px;
+			font-size: 18px;
 		}
 
 		.blog-post .date {
