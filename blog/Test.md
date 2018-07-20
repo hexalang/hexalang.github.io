@@ -25,3 +25,11 @@ Long
      * [{{ p.title }}]({{ p.url | absolute_url }})
         <small>{{ p.excerpt }}</small>
 {% endfor %}
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
