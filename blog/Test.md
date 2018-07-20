@@ -19,6 +19,18 @@ Long
  Sample
 ```
 
+```js
+var a = Long
+	function Code
+ Sample
+```
+
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 ## Further Reading
 
 {% for p in site.pages %}
@@ -27,9 +39,16 @@ Long
 {% endfor %}
 
 <ul>
-  {% for post in site.posts %}
+  {% for page in site.pages %}
+	{% if page.url contains 'blog/' %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
   </li>
+	{% endif %}
+	{% if page.url contains 'blog' %}
+  <li>
+    <a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
+  </li>
+	{% endif %}
   {% endfor %}
 </ul>
