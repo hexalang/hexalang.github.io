@@ -42,7 +42,7 @@
 				<h3>Further Reading</h3>
 
 				<ul>
-					{% for page in site.pages %} {% if page.url contains 'blog/' %}
+					{% for page in site.pages %} {% if page.url contains '/blog/Blog.html' %} {% elsif page.url contains 'blog/' %}
 					<li>
 						<a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
 					</li>
