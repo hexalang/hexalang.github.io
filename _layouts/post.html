@@ -42,7 +42,7 @@
 				<h3>Further Reading</h3>
 
 				<ul>
-					{% assign sorted = site.resources | sort: 'date' | reverse %}
+					{% assign sorted = (site.resources | group_by: "date" | sort: 'date' | reverse) %}
 					<!--
 
 					-->{% for page in sorted %} {% if page.url contains '/blog/Blog.html' %} {% elsif page.url contains 'blog/' %}
