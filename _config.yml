@@ -18,5 +18,6 @@ markdown: kramdown
 plugins:
    - jemoji
    - jekyll-seo-tag
+   - jekyll-sitemap
 kramdown:
   autolink: true
