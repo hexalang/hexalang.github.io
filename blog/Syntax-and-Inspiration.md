@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Syntax and Inspiration
+date: 2017-02-12
 ---
 
-Hello [youse](http://mashable.com/2016/06/02/stop-saying-hey-guys/#2C7o.kps7kqq)! 😄 
+Hello [youse](http://mashable.com/2016/06/02/stop-saying-hey-guys/#2C7o.kps7kqq)! 😄
 
 This is the beginning of my [blog post series](https://github.com/hexalang/hexa/issues/3) about Hexa so let us start from basics!
 
