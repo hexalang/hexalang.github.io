@@ -42,7 +42,10 @@
 				<h3>Further Reading</h3>
 
 				<ul>
-					{% for page in site.pages %} {% if page.url contains '/blog/Blog.html' %} {% elsif page.url contains 'blog/' %}
+					{% assign sorted = site.resources | sort: 'date' | reverse %}
+					<!--
+
+					-->{% for page in sorted %} {% if page.url contains '/blog/Blog.html' %} {% elsif page.url contains 'blog/' %}
 					<li>
 						<a href="{{ page.url | absolute_url }}">{{ page.title }}
 							<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
