@@ -1,6 +1,7 @@
 ---
 layout: post
 title: So what with Hexa
+date: 2017-02-08
 ---
 
 I am often asked: what is Hexa and how it differs than language-xyz?

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bootstrap the compiler
+date: 2017-02-07
 ---
 
 It was a long standing project and hard research! So it is *the* time to stop over-engineering and dive into implementation and dogfooding.

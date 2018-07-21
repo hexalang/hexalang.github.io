@@ -44,7 +44,9 @@
 				<ul>
 					{% for page in site.pages %} {% if page.url contains '/blog/Blog.html' %} {% elsif page.url contains 'blog/' %}
 					<li>
-						<a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
+						<a href="{{ page.url | absolute_url }}">{{ page.title }}
+							<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+						</a>
 					</li>
 					{% endif %} {% endfor %}
 				</ul>
