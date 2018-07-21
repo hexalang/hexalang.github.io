@@ -28,4 +28,4 @@ Results? Well...
 >> <https://groups.google.com/d/msg/haxelang/zGLnwJRaThU/hOO4Ohmj7acJ>
 
 So I want to announce a short blog posts series about design decisions, experiments and so on.
-They are always available via `blog` <https://github.com/hexalang/hexa/issues?utf8=✓&q=label%3Ablog%20> label in this repository. Follow <https://twitter.com/hexalang> for updates.
+Follow <https://hexalang.github.io/blog/Blog.html> and <https://twitter.com/hexalang> for updates.
