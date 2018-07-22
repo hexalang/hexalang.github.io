@@ -23,7 +23,7 @@
 						<a href="/">Home</a>
 					</li>
 					<li>
-						<a href="/blog/Blog.html">Blog</a>
+						<a href="/blog">Blog</a>
 					</li>
 				</ul>
 			</nav>
@@ -44,7 +44,7 @@
 					{% assign sorted = (site.pages | sort: 'date' | reverse) %}
 					<!--
 
-					-->{% for page in sorted %} {% if page.url contains '/blog/Blog.html' %} {% elsif page.url contains 'blog/' %}
+					-->{% for page in sorted %} {% if page.url contains '/blog/index.html' %} {% elsif page.url contains 'blog/' %}
 					<li>
 						<a href="{{ page.url | absolute_url }}">{{ page.title }}
 							<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
