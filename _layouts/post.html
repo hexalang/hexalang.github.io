@@ -44,8 +44,8 @@
 					{% assign sorted = (site.pages | sort: 'date' | reverse) %}
 					<!--
 
-					-->{% for page in sorted %} {% if page.url contains '/blog/index.html' %} {% elsif page.url contains 'blog/' %}
-					<li>
+					-->{% for page in sorted %} {% if page.path contains '/blog/index.md' %} {% elsif page.url contains 'blog/' %}
+					<li>{{ page.path }}
 						<a href="{{ page.url | absolute_url }}">{{ page.title }}
 							<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
 						</a>
