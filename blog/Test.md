@@ -19,9 +19,22 @@ Long
  Sample
 ```
 
+
+---
+
+
 ```js
+const format = (result) => {
+                if ($(result instanceof Function)) { return 'function' };
+                if ((($typeof(result) == 'object')) && (result.entries != null)) {
+                  const r = result.entries.pop();
+                  if ($instanceof(r, Function)) { throw null };
+                  return format(r);
+                };}
+
 var a = Long
-	function Code
+  function Code
+	function Code(){}
  Sample
 ```
 
