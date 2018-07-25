@@ -15,7 +15,7 @@ And 100 commits behind... bootstrapping is done! :tada:
 From now on, Hexa uses pre-built version of itself to make latest versions usable.
 
 <p align="center">
-![Image](bootstrap.png)
+	<img src="bootstrap.png"/>
 <p/>
 
 There's some quirks, for example, old JavaScript generator dropped entirely from codebase in favor of new normalizer+generator tandem. New generator sometimes breaks compilation, but no worries, it's a quick fix, I just wanted to share my joy as earlier as possible!
