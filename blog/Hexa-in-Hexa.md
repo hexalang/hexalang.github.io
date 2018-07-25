@@ -4,7 +4,7 @@ title: Hexa compiles itself
 date: 2018-07-25
 ---
 
-Hello! If you didn't follow, Hexa is a static typed programming language with a touch of style, magic and beauty... oh, I mean, it compiles to JavaScript, soon [haXe](https://haxe.org) and native. Has safety features, looks nice and simple. Coding in Hexa is really calmful and productive :cake:
+Hello! If you didn't follow, Hexa is a static typed programming language with a touch of style, magic and beauty... oh, I mean, it compiles to JavaScript, soon ![Haxe](https://haxe.org/favicon.ico)[haXe](https://haxe.org) and native. Has safety features, looks nice and simple. Coding in Hexa is really calmful and productive :cake:
 
 As I wrote before in [Bootstrap the compiler](Bootstrap-the-compiler.html), large achievement for any language is to "dogfood" a compiler with itself. Same was a goal for Hexa too (intentionaly, to help with future metaprogramming features).
 
