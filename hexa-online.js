@@ -1877,7 +1877,8 @@ OnlineCompiler.main = function() {
 OnlineCompiler.prototype = {
 	build: function() {
 		console.log("Hexa Compiler Performs Build");
-		var code = this.input.innerText;
+		var code = '' + this.input.innerText;
+		code = code.split(String.fromCharCode(160)).join(' ');
 		if(code == this.last) {
 			return;
 		}

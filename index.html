@@ -68,7 +68,7 @@
 
         .code,
         .code div {
-            font-family: Menlo, Roboto Mono, Courier New, monospace;
+            font-family: Menlo, Roboto Mono, Consolas, Courier New, monospace;
             overflow: hidden;
             width: 100%;
             height: 100%;
@@ -76,8 +76,24 @@
         }
 
         .code i {
-            color: gray;
-            font-family: Menlo, Roboto Mono, Courier New, monospace;
+            color: gray !important;
+            font-style: italic !important;
+        }
+
+        .code, .code * {
+            font-family: Menlo, Roboto Mono, Consolas, Courier New, monospace !important;
+            font-weight: normal !important;
+            color: black !important;
+            background-color: unset !important;
+            font-size: 16px !important;
+            font-style: normal !important;
+            border: 0 !important;
+            box-shadow: unset !important;
+            border-radius: unset !important;
+        }
+
+        .code img {
+            display: none !important;
         }
 
         .output {}
@@ -243,14 +259,12 @@
         <div class="container">
             <div class="col-1 col-sm-2 pad">
                 <div class="shadow fullheight">
-                    <pre id="editor" class="pad code editor" contenteditable="true">// Live demo! Edit to compile on the fly
-@native("console")
-declare class Console {
-    static function log(...message: String): Void
-}
-Console.log("Hello from Hexa!")
-Console.log("No `static function main` required")
-</pre>
+                    <div id="editor" class="pad code editor" contenteditable="true">// Live demo! Edit to compile on the fly<br/>
+@native("console")<br/>
+declare class Console {<br/>&nbsp; &nbsp; static function log(...message: String): Void<br/>
+}<br/><br/>
+Console.log("Hello from Hexa!")<br/>
+Console.log("No `static function main` required")</div>
                 </div>
             </div>
             <div class="col-1 col-sm-2 pad">
