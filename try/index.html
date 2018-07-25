@@ -21,7 +21,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="MobileOptimized" content="176" />
 </head>
 
 <body>
@@ -42,7 +44,7 @@
             display: flex;
             min-height: 100%;
             min-width: 100%;
-            padding: 10px;
+            /* padding: 10px; */
         }
 
         .page {
@@ -55,7 +57,7 @@
 
         a {
             color: black;
-            text-decoration: none!important;
+            text-decoration: none !important;
         }
 
         .editor {
@@ -76,38 +78,45 @@
             font-family: Menlo, Roboto Mono, Courier New, monospace;
         }
 
-        .output {}
-
-        .footer {
-            flex: 0 1 45px;
-            background: #6cf;
-        }
-
-        .header {
-            text-align: center;
-            font-size: 110%;
-            flex: 0 1 auto;
-        }
-
         .container {
             display: flex;
             flex-wrap: wrap;
             flex: 1 1 auto;
         }
 
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
         .col-1 {
-            width: 50%;
+            width: 25%;
         }
 
         .col-2 {
+            width: 50%;
+        }
+
+        .col-3 {
+            width: 75%;
+        }
+
+        .col-4 {
             width: 100%;
         }
 
         @media screen and (max-width: 800px) {
-            col-sm-1 {
-                width: 50%;
+
+            .col-sm-1 {
+                width: 25%;
             }
             .col-sm-2 {
+                width: 50%;
+            }
+            .col-sm-3 {
+                width: 75%;
+            }
+            .col-sm-4 {
                 width: 100%;
             }
         }
@@ -116,12 +125,20 @@
             padding: 10px;
         }
 
+        .pad-2 {
+            padding: 20px;
+        }
+
         .margin {
             margin: 10px;
         }
 
         .fullheight {
             height: 100%;
+        }
+
+        .flex-fullheight {
+            flex-grow: 1;
         }
 
         .shadow {
@@ -183,51 +200,148 @@
 
         .btn-blue {
             color: #fff !important;
-            /* background-color: #4AB3F4; */
             background-color: rgb(41, 156, 228) !important;
         }
 
         .btn-red {
             color: #fff !important;
-            /* background-color: #4AB3F4; */
             background-color: rgb(253, 61, 36) !important;
+        }
+
+        .nav {
+            display: flex;
+            border-bottom: 1px solid gainsboro;
+        }
+
+        .nav>* {
+            padding: 5px 10px;
+            margin-bottom: -1px;
+        }
+
+        .nav-link:nth-child(1) {
+            margin-left: 10px;
+        }
+
+        .nav>.active {
+            border: 1px solid gainsboro;
+            border-top: 2px solid #6cf;
+            border-radius: .25rem .25rem 0 0;
+            border-bottom: 1px solid white;
+            background-color: white;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        textarea {
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            width: 100%;
+        }
+
+        .output {
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            width: 100%;
+        }
+
+
+        .footer {
+            flex: 0 1 45px;
+            background-color: aliceblue;
+            border-top: 2px solid #6cf;
+        }
+
+        .header {
+            flex: 0 1 85px;
+            display: flex;
+            text-align: center;
+            font-size: 110%;
+            background-color: aliceblue;
+            border-bottom: 2px solid #6cf;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ml-1 {
+            margin-left: 0.5em;
+        }
+
+        .ml-2 {
+            margin-left: 1em;
+        }
+
+        .input-control {
+            width: 100%;
+            padding: .25em .75em;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
         }
     </style>
 
     <div class="page shadow">
         <div class="header">
-            <a href="https://github.com/hexalang">
-                <img width="191px" height="191px" src="/hexa.png" />
-                <br/>Hexa Programming Language
-                <br/>Ensures safety, simplicity and performance
-                <br/>
-                <br/>
-            </a>
-        </div>
-        <div class="container">
-            <div class="col-1 col-sm-2 pad">
-                <div class="shadow fullheight">
-                    <pre id="editor" class="pad code editor" contenteditable="true">// Live demo! Edit to compile on the fly
-@native("console")
-declare class Console {
-    static function log(...message: String): Void
-}
-Console.log("Hello from Hexa!")
-Console.log("No `static function main` required")
-                    </pre>
-                </div>
+            <div class="ml-2">
+                <img src='/favicon/android-icon-192x192.png' style="width: 75px; height:75px" />
             </div>
-            <div class="col-1 col-sm-2 pad">
-                <div class="shadow fullheight">
-                    <div id="output" class="pad code output">
-                        ...JavaScript is required to run interactive demo
+            <div class="pad ml-1">
+                Hexa Programming Language
+                <br/> Ensures safety, simplicity and performance
+            </div>
+        </div>
+
+        <div class="container pad">
+            <div class="col-2 col-sm-4 pad flex-column">
+                <div class="nav">
+                    <a class="nav-link active" href="#source">Source</a>
+                    <a class="nav-link" href="#options">Options</a>
+                </div>
+                <div class="tab-content fullheight">
+                    <div class="tab-pane active pad fullheight" id="source">
+                        <div id="editor" class="pad code editor input-control fullheight" contenteditable="true">
+                        </div>
+                    </div>
+                    <div class="tab-pane pad-2" id="options">
+                        <div class="flex-row">
+                            <div class="col-1 flex-center">
+                                Target:
+                            </div>
+                            <div class="col-4">
+                                <select class="input-control">
+                                    <option value="js">Javascript</option>
+                                    <option value="c">C</option>
+                                    <option value="haxe">Haxe</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-2">
-                <div class="shadow margin">
-                    <div id="debug" class="pad code output">
-                        ...Debug
+            <div class="col-2 col-sm-4 pad flex-column">
+                <div class="nav">
+                    <a class="nav-link active" href="#output">Output</a>
+                    <a class="nav-link" href="#outsource">Source</a>
+                </div>
+                <div class="tab-content fullheight">
+                    <div class="tab-pane active pad fullheight" id="output">
+                        <div class="output fullheight"></div>
+                    </div>
+                    <div class="tab-pane pad fullheight flex-column" id="outsource">
+                        <div class="output fullheight"></div>
                     </div>
                 </div>
             </div>
@@ -250,99 +364,27 @@ Console.log("No `static function main` required")
         </div>
     </div>
     <script type="text/javascript">
-        "use strict"
-        function convertUtf8ArrayToString(array) {
-            let out = ""
-            const len = array.length
-            let i = 0
-            let char2
-            while (i < len) {
-                let c = array[i++]
-                switch (c >> 4) {
-                    case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:
-                        // 0xxxxxxx
-                        out += String.fromCharCode(c)
-                        break
-                    case 12: case 13:
-                        // 110x xxxx   10xx xxxx
-                        char2 = array[i++]
-                        out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F))
-                        break
-                    case 14:
-                        // 1110 xxxx  10xx xxxx  10xx xxxx
-                        char2 = array[i++]
-                        const char3 = array[i++]
-                        out += String.fromCharCode(((c & 0x0F) << 12) |
-                            ((char2 & 0x3F) << 6) |
-                            ((char3 & 0x3F) << 0))
-                        break
-                }
+        // "use strict"
+        (function () {
+            function onTabClick(event) {
+                let active = event.target.parentElement.querySelector('.active');
+
+                // deactivate existing active tab
+                active.className = active.className.replace('active', '');
+
+                // activate new tab and panel
+                event.target.className += ' active';
+
+                let panel = document.getElementById(event.target.href.split('#')[1]);
+
+                let activePanel = panel.parentElement.querySelector('.active');
+                activePanel.className = activePanel.className.replace('active', '');
+
+                document.getElementById(event.target.href.split('#')[1]).className += ' active';
             }
-            return out
-        }
-        const handler = {
-            get: function (target, name) {
-                if (name in target) {
-                    return target[name]
-                }
-                if (name == 'length') {
-                    return target.data.length
-                }
-                return target.data[name]
-            }
-        }
-        class Buffer {
-            static alloc(size) {
-                return new Proxy(new Buffer(new Uint8Array(size)), handler)
-            }
-            get length() {
-                return this.data.length
-            }
-            readUInt16LE(offset) {
-                return this.data[offset] + this.data[offset + 1] * 256
-            }
-            writeUInt16LE(value, offset) {
-                this.data[offset] = value & 0xFF
-                this.data[offset + 1] = (value >>> 8) & 0xFF
-            }
-            readUInt32LE(offset) {
-                return this.data[offset]
-                    + this.data[offset + 1] * 256
-                    + this.data[offset + 2] * 256 * 256
-                    + this.data[offset + 3] * 256 * 256 * 256
-            }
-            toString(encoding, start, end) {
-                const str = convertUtf8ArrayToString(this.data.subarray(start, end))
-                return str.replace(new RegExp('(;u{[0-9]+})', 'g'), function (match) {
-                    const code = parseInt(match.substr(3, match.length - 4))
-                    return String.fromCharCode(code)
-                })
-            }
-            static from(string) {
-                const result = []
-                for (const char of string.split('')) {
-                    const code = char.charCodeAt(0)
-                    if (code > 255) {
-                        for (const char of (';u{' + code + '}').split('')) result.push(char.charCodeAt(0) & 0xFF)
-                    } else {
-                        result.push(char.charCodeAt(0) & 0xFF)
-                    }
-                }
-                return new Proxy(new Buffer(Uint8Array.from(result)), handler)
-            }
-            constructor(data) {
-                this.data = data
-            }
-        }
-        window.$console = {
-            log: function (...args) {
-                let out = ''
-                for (const arg of args) {
-                    out += '' + arg + '<br/>'
-                }
-                document.getElementById("debug").innerHTML += out
-            }
-        }
+
+            let els = document.querySelectorAll('.nav .nav-link');
+            els.forEach(v => v.addEventListener('click', onTabClick, false))
+        })();
     </script>
-    <script type="text/javascript" src="/hexa-online.js"></script>
 </body>
