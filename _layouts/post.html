@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	{% include blog-style.html %}
+	{% include blog-style.html %} {% include github-style.html %}
 	<header>
 		<div class="container">
 			<nav class="main-nav">
@@ -28,7 +28,10 @@
 				</ul>
 			</nav>
 			<h1>
-				<a href="/">Hexa</a><strong><a href="/blog">Blog</a></strong>
+				<a href="/">Hexa</a>
+				<strong>
+					<a href="/blog">Blog</a>
+				</strong>
 			</h1>
 		</div>
 	</header>
@@ -41,7 +44,7 @@
 				<h3>Further Reading</h3>
 
 				<ul>
-					{% assign sorted = (site.pages | sort: 'date' | reverse) %}
+					{% assign sorted = site.pages | sort: 'date' | reverse %}
 					<!--
 
 					-->{% for page in sorted %} {% if page.path contains 'blog/index.md' %} {% elsif page.url contains 'blog/' %}
