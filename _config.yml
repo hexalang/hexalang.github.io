@@ -8,7 +8,7 @@ image: "https://hexalang.github.io/logo.png"
 url: "https://hexalang.github.io"
 theme-color: "#66ccff"
 collections:
-  books:
+  book:
     output: true
 social:
   name: Hexa Programming Language

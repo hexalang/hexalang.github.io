@@ -38,7 +38,7 @@
 
         <div class="sidebar">
             <ul>
-            {% for p in site.books %}
+            {% for p in site.book %}
                 <li>
                 {% if p.path == page.path %}
                     <a href="{{p.url}}"><strong>{{ p.title }}</strong></a>
