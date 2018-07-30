@@ -157,6 +157,14 @@
         margin: 0 1em 0.5em;
     }
 
+    .blog-post p {
+        text-align: justify;
+    }
+
+    .blog-post p[align="center"] {
+        text-align: center;
+    }
+
     .blog-post p,
     .blog-post li {
         margin: 0 1em 1em;
@@ -240,5 +248,11 @@
     input[type="submit"] {
         margin: 30px 0 0 0;
         font-size: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .hide-sm {
+            display: none !important;
+        }
     }
 </style>

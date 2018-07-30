@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	/>
+	<meta name="MobileOptimized" content="176" />
+	<meta name="yandex-verification" content="901ce5f7e68b781c" />
+	<meta name="google-site-verification" content="r9QR0nzVoCSoh04LhsLau403jbzC4weuqk0ypB1LD1g" />
+
+	<title>{{ page.title }} — Hexa Book</title>
+    {% seo title=false %}
+
+	{% include book-style.html %} {% include github-style.html %}
+</head>
+
+<body>
+	<div class="content">
+	<!-- <header>
+		<div class="container">
+			<nav class="main-nav">
+				<ul>
+					<li>
+						<a href="https://github.com/hexalang/hexa">GitHub</a>
+					</li>
+					<li>
+						<a href="https://www.patreon.com/PeyTy">Patreon</a>
+					</li>
+				</ul>
+			</nav>
+			<div>
+				<a href="/">Hexa</a><strong><a href="/book">Book</a></strong>
+			</div>
+		</div>
+    </header> -->
+
+
+        <div class="sidebar">
+            <ul>
+            {% for p in site.book %}
+                <li>
+                {% if p.path == page.path %}
+                    <a href="{{p.url}}"><strong>{{ p.title }}</strong></a>
+                {% else %}
+                    <a href="{{p.url}}">{{ p.title }}</a>
+                {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="sidebar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="page">
+                <div class="header">
+                        <div class="header-spacer"></div>
+                        <a href="/try/" class="header-button">Try</a>
+                        <a href="/index.html#install" class="header-button">Install</a>
+                        <a href="/blog" class="header-button">Blog</a>
+                        <a href="https://github.com/hexalang" class="header-button">GitHub</a>
+                        <a href="https://www.patreon.com/PeyTy" class="header-button">Donate</a>
+                    </div>
+            <div class="article markdown">
+
+                <h2>
+                    {{page.title}}
+                </h2>
+                {{ content }}
+            </div>
+        </div>
+
+
+	<!-- <footer>
+		<div class="container">
+			<p class="">
+				<a href="https://github.com/PeyTy">Created by PeyTy</a>
+				<a class="hide-sm" href="https://github.com/hexalang/hexalang.github.io/blob/master/{{page.path}}" style="float: right; padding: 0 10px;">Edit this page</a>
+			</p>
+		</div>
+	</footer> -->
+</div>
+<script>
+    {
+        let sidebarToggles = [].slice.call(document.getElementsByClassName("sidebar-toggle"))
+        sidebarToggles.forEach(element => {
+            element.addEventListener("click", v => document.body.classList.toggle("sidebar-hidden"))
+        });
+    }
+</script>
+</body>
+
+</html>
