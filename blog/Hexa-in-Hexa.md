@@ -10,12 +10,12 @@ As I wrote before in [Bootstrap the compiler](Bootstrap-the-compiler.html), larg
 
 And 100 commits behind... bootstrapping is done! :tada:
 
-![Image](such_a_many_commits.png)
+![Image](Hexa-in-Hexa/such_a_many_commits.png)
 
 From now on, Hexa uses pre-built version of itself to make latest versions usable.
 
 <p align="center">
-	<img src="bootstrap.png"/>
+	<img src="Hexa-in-Hexa/bootstrap.png"/>
 <p/>
 
 <p>There's some quirks, for example, old JavaScript generator dropped entirely from codebase in favor of new normalizer+generator tandem. New generator sometimes breaks compilation, but no worries, it's a quick fix, I just wanted to share my joy as earlier as possible!<p/>
