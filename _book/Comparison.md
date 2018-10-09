@@ -55,3 +55,18 @@ For example: `var i: Int? = null if (let int = i, int > 5) compute(int)` does ch
 all *condition checks* for `int` and calls `compute` with a guaranteed non-null value *if they a met*.
 - `switch` does `break` automatically for each case. You don't place `break`s for `switch`es
 - Modularity is very different (based on package-level namespaces), but on-demand compatible with JS
+
+## C
+
+- Object oriented programming with single inheritance, always-virtual methods, ARC and real interfaces
+- No structures. Instead anonymous objects to be used. They are stored in memory as C-like structures, but with a pointer
+to field accessor, very similiar to Go interfaces.
+- Low-level features are implemented as on-demand code attributes. For example, you may declare C-like structures, even embedded into
+other ones (without pointers or heap allocation) or unions, but it's not very idiomatic 
+- Hexa has basic strongly-typed enums, tagged enums (algebraic data types), enums with fields (tagged classes), and nice pattern matching over them!
+- String type is built-in. All string instances are kept in memory only once, thus they are very fast to use as keys for dictionaries
+and reflection
+- Namespaces are a thing
+- Inline classes (abstract types) over any other type
+- Unwrapping "possibly null" values done explicitly or via `value as! Int` unsafe cast (this is the only way to do this)
+- Generics and compile time syntax tree transformation (instead of token-level `#define` macro)
