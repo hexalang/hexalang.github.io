@@ -1,0 +1,57 @@
+---
+layout: book
+title: Comparison with other languages
+---
+
+At first, there are common things that differentiate Hexa to most other programming languages:
+
+- No semicolons `;` at all
+- Language is strongly typed, types are [automatically inferred](https://en.wikipedia.org/wiki/Type_inference) (guessed) when possible
+- Compiles very straitforwardly to JavaScript and machine code (LLVM and C) because of semantics of [lowest common denominator](https://en.wikipedia.org/wiki/Lowest_common_denominator_(computers)),
+this ensures native interopability in both cases and very high performance
+- Compiles [to any other programming language](https://en.wikipedia.org/wiki/Source-to-source_compiler), if corresponding code generation backend is provided and target language is not super
+different to Hexa
+- No garbage collection in native backends (LLVM and C), possibility of manual memory management - otherwise 
+threadsafe [automatic reference counting](https://en.wikipedia.org/wiki/Automatic_Reference_Counting) is used
+- Safety-first: null safety, checked exceptions, [iterators](https://en.wikipedia.org/wiki/Iterator), special syntax features
+
+## JavaScript
+
+- `var` in Hexa is a `let` in JavaScript
+- `let` compiles to `const`, accordingly
+- Normal `function` functions are always compiled to `()=>` arrow-functions, thus they catch outer `this`
+- Hexa has `()=>` syntax too
+- Types are placed like this: `var a : Int = 1` and `function (v: Int): Int`
+- Class fields has `var` or `let` before their names, also there is one and only visibility modifier `private`.
+Methods prepended with `function`. Constructions are `new()`. Placing `this.` before field names isn't required. 
+Braces `{}` aren't required for function bodies.
+
+Full example:
+
+```js
+class A {
+    var a = 123
+    new (value) a = value
+    private function return_a() {
+        return this.a + 1
+    }
+}
+
+let a = new A(456)
+```
+
+- Maps are `[K:V]`, empty `new Map()` is `[:]` in Hexa: `var map: [String: Int] = [:]` then `map = ["JennysAge" : 12, "BillsAge": 13]`
+- Empty objects are `{:}`
+- Strings are interpolated with `\()`. This works for all (`""` and `''`) strings except for raw ones surrounded with backtics.
+Strings may be mutliple lines. `let age = 13 let billsAge = 'Bill\'s age is \(age)!'`
+- No `===` and `!==` operators, use `strictEqual` and `strictNotEqual` functions
+- Only `null`. Still, `undefined` is available as just an external variable (only in JavaScript backend)
+- Arrays are typed and contain values of a single type: `let a: [Int] = [1, 2, 3] // Int's only`
+- Not so many loops and iterators. Only `for(a in b)` which is same as `for(const a of b)` in JS,
+and `while() {}` with a `do {} while ()` ones
+- You may use `,` comma to list mutliple conditions instead of `&&`! `if (a, b == c, d > 5) {} else {}`
+- Null-avoiding checks may be done with `if (let a = b)` syntax.
+For example: `var i: Int? = null if (let int = i, int > 5) compute(int)` does check for `i != null`, sets it value to `int`, does 
+all *condition checks* for `int` and calls `compute` with a guaranteed non-null value *if they a met*.
+- `switch` does `break` automatically for each case. You don't place `break`s for `switch`es
+- Modularity is very different (based on package-level namespaces), but on-demand compatible with JS
