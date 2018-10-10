@@ -43,11 +43,11 @@ Software deserves to be great, and problems to be solvable.
 | Compiles to C | In the works |
 | Ultimately crossplatform (for development, i.e. Windows, macOS, Linux) | Yes |
 | Ultimately crossplatform (for targeting) | Currently JavaScript (web, node, scripting) |
-| Fast compilation | Nearly instantaneous |
+| Fast compilation | [Nearly instantaneous](https://hexalang.github.io/book/Performance.html) |
 | Stable syntax | Most of the language will stay as-is |
 | Compiles itself | Currently with node, LLVM in the works |
 | Syntax is not obscure, common paradigms | Yes |
-| Very fast native targets | Yes, semantically guaranteed |
+| Very fast native targets | [Yes](https://hexalang.github.io/book/Performance.html), semantically guaranteed |
 | Low memory overhead | No tracing garbage collection |
 | Transpiles to other programming languages | Yes, mostly stable [IR](https://en.wikipedia.org/wiki/Intermediate_representation), pluggable targets in the works
 | Imperative metaprogramming | In the works |
@@ -56,6 +56,7 @@ Software deserves to be great, and problems to be solvable.
 | Exception-safety | In the works |
 | Helpful error messages | Compiler mostly understands your code and intention |
 | Zero-cost abstractions | In the works (inline functions, inline classes, code transformation) |
+| C ABI compatibility | Of course |
 
 ## Cons
 
