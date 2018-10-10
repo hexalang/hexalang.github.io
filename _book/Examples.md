@@ -7,15 +7,13 @@ title: Examples
 
 
 
-Hello, World!
----
+### Hello, World!
 
 ```js
 console.log("Hello, World!")
 ```
 
-Comments
----
+### Comments
 
 Comments are JavaScript-style. Multi-line comments are nestable.
 
@@ -65,16 +63,14 @@ let b = true
 
 ## Deeper overview
 
-Literals
----
+### Literals
 
 ```swift
 0x10 // Hexadecimal
 `C:\Windows\System32\` // Raw strings do *not* do pre-escaping, but generate to JavaScript with escapes
 ```
 
-Lists
----
+### Lists
 
 ```swift
 [] // Empty structure
