@@ -24,6 +24,8 @@ Are you experienced developer?
 - ["Programming language checklist"](https://hexalang.github.io/book/Checklist.html)
 - ["Why Hexa?"](https://hexalang.github.io/book/Profit.html)
 
+Hit a green button on the left to view/hide table of contents :arrow_left:
+
 ## Helpful links
 
 - [Telegram @hexalang](https://t.me/hexalang) our official group
