@@ -8,7 +8,7 @@ Let's write your very first program in Hexa!
 If you're already familiar with programming,
 take a look at [programming language comparison list](https://hexalang.github.io/book/Comparison.html).
 
-### Quickstart
+## Quickstart
 
 Download [The Hexa Compiler](https://github.com/hexalang/hexa/blob/master/README.md#enjoy). 
 Create new file `hello.hexa` and place anywhere you wish.
@@ -28,7 +28,13 @@ Your file may be evaluated directly without compilation:
 hexa hello.hexa
 ```
 
-### Long story
+Expected output:
+
+```sh
+
+```
+
+## Long story
 
 Let's investigate our program step-by-step:
 
