@@ -22,6 +22,9 @@ Consider adopting new programming language? :yum:
 | Low memory overhead | No tracing garbage collection |
 | Transpiles to other programming languages | Yes, mostly stable [IR](https://en.wikipedia.org/wiki/Intermediate_representation), pluggable targets in the works
 | Imperative metaprogramming | In the works |
+| Scripting (running single files without compilation and REPL) | Sometimes works |
+| Null-safety | In the works |
+| Exception-safety | In the works |
 
 ## Cons
 
