@@ -55,6 +55,7 @@ Software deserves to be great, and problems to be solvable.
 | Null-safety | In the works |
 | Exception-safety | In the works |
 | Helpful error messages | Compiler mostly understands your code and intention |
+| Zero-cost abstractions | In the works (inline functions, inline classes, code transformation) |
 
 ## Cons
 
