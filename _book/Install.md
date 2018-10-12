@@ -12,3 +12,4 @@ TODO
 - Linux distros
 - IDEs
 - Build yourself
+- Nightly builds (i.e. CI Artifacts)
