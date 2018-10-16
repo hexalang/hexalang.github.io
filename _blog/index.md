@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Posts
+title: Welcome
 ---
 
 Hexa is a language built around ideas of high performance, type safety and dense development times.
