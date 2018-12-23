@@ -23,6 +23,7 @@ Are you experienced developer?
 - ["Comparison with other languages"](https://hexalang.github.io/book/Comparison.html)
 - ["Programming language checklist"](https://hexalang.github.io/book/Checklist.html)
 - ["Why Hexa?"](https://hexalang.github.io/book/Profit.html)
+- [Contribute to the compiler](https://hexalang.github.io/hexa/)
 
 Hit a green button on the left to view/hide table of contents :arrow_left:
 
