@@ -37,6 +37,9 @@
         {% include header.html %}
 
         <div class="container">
+
+            <!-- INTERACTIVE DEMO -->
+
             <div class="col-1 col-sm-2 pad">
                 <div class="shadow fullheight">
                     <div id="editor" class="pad code editor" contenteditable="true">// Live demo! Edit to compile on the fly<br/>
@@ -61,6 +64,47 @@ Console.log("No `static function main` required")</div>
                     </div>
                 </div>
             </div>
+
+            <!-- DOWNLOADS -->
+
+            <div class="col-1">
+                <div class="shadow margin">
+                    <div id="download" class="pad code output">
+                        <div><h2>Download</h2></div>
+                        <div>Available for Linux, macOS and Windows</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 pad">
+                <div class="shadow fullheight">
+                    <div id="stable" class="pad code output">
+                        <a href="#install-stable">
+                            <div>0.0.x</div>
+                            <div>Recommended</div>
+                        </a>
+                        <div><a href="#changelog-stable">Changelog</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 pad">
+                <div class="shadow fullheight">
+                    <div id="unstable" class="pad code output">
+                        <a href="#install-unstable">
+                            <div>0.0.y NIGHTLY</div>
+                            <div>Latest features</div>
+                        </a>
+                        <div><a href="#changelog-unstable">Changelog</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="shadow margin">
+                    <div id="without" class="pad code output">
+                        <a href="/try">Try Hexa without installing</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div id="overview"></div>
         <div id="install"></div>
