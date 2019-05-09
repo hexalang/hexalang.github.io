@@ -10,7 +10,7 @@ take a look at [programming language comparison list](https://hexalang.github.io
 
 ## Quickstart
 
-Download [The Hexa Compiler](https://github.com/hexalang/hexa/blob/master/README.md#enjoy). 
+Download [Hexa compiler](https://github.com/hexalang/hexa#stable) and [support for your code editor](https://github.com/hexalang/hexa#tools--ide). 
 Create new file `hello.hexa` and place anywhere you wish.
 
 Add some pretty lines into:
