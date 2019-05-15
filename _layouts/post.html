@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
 	/>
 	<meta name="MobileOptimized" content="176" />
-	<meta name="yandex-verification" content="901ce5f7e68b781c" />
 	<meta name="google-site-verification" content="r9QR0nzVoCSoh04LhsLau403jbzC4weuqk0ypB1LD1g" />
 
 	<title>{{ page.title }} — Hexa Blog</title>
@@ -44,12 +43,12 @@
 					{% assign sorted = site.blog | sort: 'date' | reverse %}
 					<!--
 
-					-->{% for page in sorted %}
+					-->{% for page in sorted %}{% if page.title == 'Welcome' %} {% else %}
 					<li>
 						<a href="{{ page.url | absolute_url }}">{{ page.title }}
 							<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
 						</a>
-					</li>
+					</li>{% endif %}
 					{% endfor %}
 				</ul>
 			</div>
