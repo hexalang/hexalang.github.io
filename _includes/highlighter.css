@@ -83,6 +83,10 @@
   color: #005cc5;
 }
 
+.c1, .cm {
+  color: #6a737d;
+}
+
 .e /* entity */,
 .en /* entity.name */ {
   color: #6f42c1;
