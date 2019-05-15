@@ -27,3 +27,5 @@ plugins:
    - jekyll-sitemap
 kramdown:
   autolink: true
+  input: GFM
+  syntax_highlighter: rouge
