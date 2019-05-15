@@ -20,6 +20,7 @@ social:
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 plugins:
    - jemoji
    - jekyll-seo-tag
