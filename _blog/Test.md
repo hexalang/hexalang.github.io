@@ -53,10 +53,12 @@ end
 
 ## 1
 
+{% highlight ruby %}
 {% for p in site.pages %}
      t<b>huh<a href="#">lol</a>huh</b>x [{{ p.title }}]({{ p.url | absolute_url }})
         <small>{{ p.excerpt }}</small>
 {% endfor %}
+{% endhighlight %}
 
 ## 2
 
