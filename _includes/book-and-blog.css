@@ -1,4 +1,10 @@
+/* CODE */
+
 code, code * {
     font-size: 17px !important;
     font-family: "SF Mono", "Consolas", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace !important;
+}
+
+.highlighter-rouge {
+    background-color: #f6f8fa;
 }
