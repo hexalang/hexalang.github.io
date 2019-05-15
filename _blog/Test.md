@@ -60,7 +60,7 @@ this one
 <ul>
 {% assign sortedss = site.blog | sort: 'date' | reverse %}
 {% for page in sortedss %}
-{% if p.title == 'Welcome' %}
+{% if page.title == 'Welcome' %}
 (unwelcome)
 {% else %}
 <li>
