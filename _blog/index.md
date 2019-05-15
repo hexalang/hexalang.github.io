@@ -18,4 +18,21 @@ If you came here directly, try also these links!
 - [Stickers for Telegram](https://t.me/addstickers/hexalang)
 
 
-Posts are below this text **:)**
+More posts are on the side bar.
+
+<div class="further-reading">
+<h3>Further Reading</h3>
+<ul>
+{% assign sortedPosts = site.blog | sort: 'date' | reverse %}
+{% for page in sortedPosts limit: 10 %}
+{% if page.title == 'Welcome' %}
+{% else %}
+<li>
+<a href="{{ page.url | absolute_url }}">{{ page.title }}
+<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+</div>
