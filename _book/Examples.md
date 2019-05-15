@@ -3,6 +3,7 @@ layout: book
 title: Syntax examples (draft)
 ---
 
+* Table of contents
 {:toc}
 
 ### Hello, World!
