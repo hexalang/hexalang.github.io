@@ -3,6 +3,8 @@ layout: book
 title: Syntax examples (draft)
 ---
 
+{:toc}
+
 ### Hello, World!
 
 ```js
