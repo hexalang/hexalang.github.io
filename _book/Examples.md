@@ -1,11 +1,7 @@
 ---
 layout: book
-title: Examples
+title: Syntax examples (draft)
 ---
-
-! This is a draft !
-
-
 
 ### Hello, World!
 
