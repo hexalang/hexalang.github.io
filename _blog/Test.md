@@ -53,6 +53,32 @@ end
 
 ## 1
 
+<div class="further-reading">
+<h3>Further Reading</h3>
+
+<ul>
+{% assign sortedss = site.blog | sort: 'date' | reverse %}
+{% for page in sortedss %}
+<li>
+<a href="{{ page.url | absolute_url }}">{{ page.title }}
+<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+---
+
+<div markdown="1">
+{% assign sortedWeclome = site.blog | sort: 'date' | reverse %}
+{% for page in sortedWeclome %}
+- [{{ page.title }}]({{ page.url | absolute_url }})
+{% endfor %}
+</div>
+
+---
+
 <div markdown="1">
 {% for p in site.pages %}
   [this{{ p.title }}]({{ p.url | absolute_url }})
