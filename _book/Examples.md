@@ -12,6 +12,8 @@ title: Syntax examples (draft)
 console.log("Hello, World!")
 ```
 
+- [Hello, Hexa!](https://hexalang.github.io/book/Hello.html)
+
 ### Comments
 
 Comments are JavaScript-style. Multi-line comments are nestable.
@@ -43,8 +45,9 @@ null // No value
 true false // Boolean type
 "string" // String or text type
 ["red", "green", "blue"] // Array type or list
-
 ```
+
+- [Strings](https://hexalang.github.io/book/Strings.html)
 
 Variables in Hexa are statically typed:
 
