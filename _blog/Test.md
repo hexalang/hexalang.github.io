@@ -53,17 +53,22 @@ end
 
 ## 1
 
+this one
+
 <div class="further-reading">
 <h3>Further Reading</h3>
-
 <ul>
 {% assign sortedss = site.blog | sort: 'date' | reverse %}
 {% for page in sortedss %}
+{% if p.title == 'Welcome' %}
+(unwelcome)
+{% else %}
 <li>
 <a href="{{ page.url | absolute_url }}">{{ page.title }}
 <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
 </a>
 </li>
+{% endif %}
 {% endfor %}
 </ul>
 </div>
