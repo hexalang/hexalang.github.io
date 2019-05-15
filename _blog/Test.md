@@ -51,6 +51,15 @@ end
         <small>{{ p.excerpt }}</small>
 {% endfor %}
 
+## 1
+
+{% for p in site.pages %}
+     t<b>huh<a href="#">lol</a>huh</b>x [{{ p.title }}]({{ p.url | absolute_url }})
+        <small>{{ p.excerpt }}</small>
+{% endfor %}
+
+## 2
+
 <ul>
   {% for page in site.pages %}
 	{% if page.url contains 'blog/' %}
