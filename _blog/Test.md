@@ -53,11 +53,11 @@ end
 
 ## 1
 
-{% highlight markdown %}
+<div markdown="1">
 {% for p in site.pages %}
   [this{{ p.title }}]({{ p.url | absolute_url }})
 {% endfor %}
-{% endhighlight %}
+</div>
 
 ---
 
