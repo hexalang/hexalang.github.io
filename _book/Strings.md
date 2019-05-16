@@ -3,12 +3,12 @@ layout: book
 title: Strings and text
 ---
 
-* Table of contents
-{:toc}
-
 Text block, or word, or sentence, or character, in Hexa are all called a "string".
 String is an independent piece of human-readable something in computer memory. Strings do not contain any special meaning (compared to objects),
-and represented as type `String`.
+and represented as type `String`. <!-- TODO link to class documentation -->
+
+* Table of contents
+{:toc}
 
 ### Syntax of strings
 
