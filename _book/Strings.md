@@ -53,11 +53,31 @@ console.log(a) // -> prints 'hello world !'
 Strings have special superpower: adding anything to string converts it to string (...sometimes into nonsensical stuff 😅)
 
 ```ts
-"value: " + 3
-
+"value: " + 3 // -> becomes "value: 3"
+"value: " + [1, 2, 3] // -> becomes "value: 1,2,3"
+"value: " + true // -> becomes "value: true"
 ```
 
-TODO \r\n
+Special characters used as `\n` allowing you to add invisible space. Currently supported characters are:
+
+- `\\` — adds `\` character itself
+- `\t` — adds a tab
+- `\n` — new line
+- `\r` — most useless superpower
+
+When multi line strings are used directly in code, without resorting to special characters to encode new lines,
+on different platforms you will have incomplatible newlines encoding, `\r\n` on Windows, `\n` on Linux and most others.
+
+```ts
+let multiline = "what is in between
+of those lines?"
+```
+
+Hexa takes care for you, by always replacing `\r\n` to `\n`, saving your team mates from unneccessary headache and holywars:
+
+```ts
+let multiline = "what is in between\nof those lines?" // -> not \n in the middle
+```
 
 ### String interpolation
 
