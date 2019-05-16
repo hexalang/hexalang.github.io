@@ -9,3 +9,7 @@ code, code * {
     background-color: #f6f8fa;
     margin: 0 1em 1em;
 }
+
+p code.highlighter-rouge, li code.highlighter-rouge {
+    margin: auto;
+}
