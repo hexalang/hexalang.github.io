@@ -81,7 +81,7 @@ console.log('ten is \(5 + 5) while [\(a)] length is \(a.length)')
 
 ### Raw strings
 
-Raw text is surrounded by **&#96;backticks&#96;**. They don't care about special characters.
+Raw texts are surrounded by **&#96;backticks&#96;**. They don't care about special characters.
 
 ```ts
 console.log("hello\tworld") // -> prints 'hello    world'
