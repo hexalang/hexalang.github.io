@@ -81,7 +81,7 @@ console.log('ten is \(5 + 5) while [\(a)] length is \(a.length)')
 
 ### Raw strings
 
-Raw text is surrounded by **`**backticks**`**. They don't care about special characters.
+Raw text is surrounded by **&#96;backticks&#96;**. They don't care about special characters.
 
 ```ts
 console.log("hello\tworld") // -> prints 'hello    world'
@@ -93,7 +93,7 @@ Raw strings **do not** support interpolation:
 
 ```ts
 let welcome = 'world'
-console.log('hello \(welcome)!') // -> prints 'hello \(welcome)!'
+console.log(`hello \(welcome)!`) // -> prints 'hello \(welcome)!'
 ```
 
 They also keep line endings information as is:
