@@ -67,6 +67,7 @@ other ones (without pointers or heap allocation) or unions, but it's not very id
 - String type is built-in. All string instances are kept in memory only once, thus they are very fast to use as keys for dictionaries
 and reflection
 - Namespaces are a thing
+- `switch` does `break` automatically for each case. You don't place `break`s for `switch`es. [Saves you from some weird situations](https://www.phoronix.com/scan.php?page=news_item&px=Kernel-Wimplicit-fallthrough)
 - Inline classes (abstract types) over any other type
 - Unwrapping "possibly null" values done explicitly or via `value as! Int` unsafe cast (this is the only way to do this)
 - Generics and compile time syntax tree transformation (instead of token-level `#define` macro)
