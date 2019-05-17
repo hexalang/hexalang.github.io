@@ -23,11 +23,11 @@
 .gs { font-weight: normal; }
 .gu { color: #800080; font-weight: normal; }
 .gt { color: #aa0000; }
-.kc { font-weight: normal; }
+.kc { font-weight: normal; color: #005cc5; }
 .kd { font-weight: normal; }
 .kn { font-weight: normal; }
 .kp { font-weight: normal; }
-.kr { font-weight: normal; }
+.kr { font-weight: normal; color: #d73a49; }
 .kt { color: #445588; font-weight: normal; }
 .m { color: #009999; }
 .s { color: #dd1144; }
@@ -102,6 +102,7 @@
 }
 
 .o,
+.kd,
 .k /* keyword, storage, storage.type */ {
   color: #d73a49;
 }
@@ -157,7 +158,7 @@
 
 .mi /* markup.italic */ {
   font-style: normal;
-  color: #24292e;
+  /* color: #24292e; */
 }
 
 .mb /* markup.500 */ {
