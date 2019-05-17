@@ -22,11 +22,11 @@ Drag it into code editor then add some pretty lines into:
 // My first program in Hexa!
 
 /// Show greetings
-function helloMessage() {
+function hello() {
     console.log("Hello, Hexa!")
 }
 
-helloMessage()
+hello()
 ```
 
 > Note: Hexa uses tabs for indentation
@@ -50,6 +50,10 @@ Expected output:
 Hello, Hexa!
 ```
 
+### Running code online
+
+
+
 ### Long story
 
 Let's investigate our program step-by-step:
@@ -65,3 +69,52 @@ Or multiple lines altogether:
 
 
 This is a good practice to document your code
+
+
+<!-- ## Troubleshooting -->
+
+### Mastering error messages
+
+Hexa is strictly typed and compiled, meaning it keep track of code structure also at development time, not only at running resulting app. Thus it helps you to quickly find errors, way faster than, say, JavaScript. So let's go crazy and break some code!
+
+Changle this line:
+
+```ts
+hello()
+```
+
+To this one:
+
+```ts
+hello(something)
+```
+
+When you will try to run it, you'll see something like this, and program will not start:
+
+```ts
+
+```
+
+All error messages have common structure:
+
+```ts
+[filename.hexa:line:column] #errorCode description
+```
+
+It is really hard to get lost.
+Error `#` codes help you to discuss errors with team mates who have different error messages translation than yours.
+
+Line numbers start from 1, so do columns:
+
+```ts
+/*1*/ // My first program in Hexa!
+/*2*/ 
+/*3*/ /// Show greetings
+/*4*/ function hello() {
+/*5*/     console.log("Hello, Hexa!")
+/*6*/ }
+/*7*/ 
+/*8*/ hello(something)
+            ^ [hello.hexa:8:7]
+      123456789
+```
