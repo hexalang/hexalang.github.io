@@ -15,6 +15,10 @@ different to Hexa
 threadsafe [automatic reference counting](https://en.wikipedia.org/wiki/Automatic_Reference_Counting) is used
 - Safety-first: null safety, checked exceptions, [iterators](https://en.wikipedia.org/wiki/Iterator), special syntax features
 
+
+* Table of contents
+{:toc}
+
 ## JavaScript
 
 - `var` in Hexa is a `let` in JavaScript
@@ -69,5 +73,5 @@ and reflection
 - Namespaces are a thing
 - `switch` does `break` automatically for each case. You don't place `break`s for `switch`es. [Saves you from some weird situations](https://www.phoronix.com/scan.php?page=news_item&px=Kernel-Wimplicit-fallthrough)
 - Inline classes (abstract types) over any other type
-- Unwrapping "possibly null" values done explicitly or via `value as! Int` unsafe cast (this is the only way to do this)
+- Unwrapping "possibly null" values done explicitly as `if (let a = b)` safe binding or via `value as! Int` unsafe cast (this is the only way to do this)
 - Generics and compile time syntax tree transformation (instead of token-level `#define` macro)
