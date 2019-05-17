@@ -28,7 +28,7 @@ Compare with known language:
 - `let` compiles to `const`, accordingly
 - Normal `function` functions are always compiled to `()=>` arrow-functions, thus they catch outer `this`
 - Hexa has `()=>` syntax too
-- Types are placed like this: `var a : Int = 1` and `function (v: Int): Int`
+- Types are placed like this: `var a: Int = 1` and `function (v: Int): Int`
 - Class fields has `var` or `let` before their names, also there is one and only visibility modifier `private`.
 Methods prepended with `function`. Constructions are `new()`. Placing `this.` before field names isn't required. 
 Braces `{}` aren't required for function bodies.
@@ -47,15 +47,15 @@ class A {
 let a = new A(456)
 ```
 
-- Maps are `[K:V]`, empty `new Map()` is `[:]` in Hexa: `var map: [String: Int] = [:]` then `map = ["JennysAge" : 12, "BillsAge": 13]`
+- Maps are `[K:V]`, empty `new Map()` is `[:]` in Hexa: `var map: [String: Int] = [:]` then `map = ["JennysAge": 12, "BillsAge": 13]`
 - Empty objects are `{:}`
 - Strings are interpolated with `\()`. This works for all (`""` and `''`) strings except for raw ones surrounded with backtics.
 Strings may be mutliple lines. `let age = 13 let billsAge = 'Bill\'s age is \(age)!'`
 - No `===` and `!==` operators, use `strictEqual` and `strictNotEqual` functions
 - Only `null`. Still, `undefined` is available as just an external variable (only in JavaScript backend)
 - Arrays are typed and contain values of a single type: `let a: [Int] = [1, 2, 3] // Int's only`
-- Not so many loops and iterators. Only `for(a in b)` which is same as `for(const a of b)` in JS,
-and `while() {}` with a `do {} while ()` ones
+- Not so many loops and iterators. Only `for (a in b)` which is same as `for (const a of b)` in JS,
+and `while () {}` with a `do {} while ()` ones
 - You may use `,` comma to list mutliple conditions instead of `&&`! `if (a, b == c, d > 5) {} else {}`
 - Null-avoiding checks may be done with `if (let a = b)` syntax.
 For example: `var i: Int? = null if (let int = i, int > 5) compute(int)` does check for `i != null`, sets it value to `int`, does 
