@@ -14,7 +14,9 @@ and represented as type `String`. <!-- TODO link to class documentation -->
 
 ```ts
 let s: String = "hello"
-let s = "hello" // Compiler knows what qoutes mean and sets 's' type to 'String' for you
+let s = "hello"
+// Compiler knows what qoutes mean 
+// and sets 's' type to 'String' for you
 ```
 
 Double- and single quoted strings have absolutely same meaning and features
@@ -76,7 +78,8 @@ of those lines?"
 Hexa takes care for you, by always replacing `\r\n` to `\n`, saving your team mates from unneccessary headache and holywars:
 
 ```ts
-let multiline = "what is in between\nof those lines?" // -> not \n in the middle
+let multiline = "what is in between\nof those lines?"
+//                                 ^^ note \n in the middle
 ```
 
 ### String interpolation
