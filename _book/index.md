@@ -21,7 +21,7 @@ It assumes that you have some familiarity with the basics of programming, such a
 
 Are you novice?
 
-- ["Hello Hexa"](https://hexalang.github.io/book/Hello.html)
+- ["Hello, Hexa!"](https://hexalang.github.io/book/Hello.html) — beginner friendly intro to Hexa
 - [Online compiler (in browser!) to run examples](https://hexalang.github.io/try/)
 
 Are you experienced developer?
@@ -29,7 +29,7 @@ Are you experienced developer?
 - ["Comparison with other languages"](https://hexalang.github.io/book/Comparison.html)
 - ["Programming language checklist"](https://hexalang.github.io/book/Checklist.html)
 - ["Why Hexa?"](https://hexalang.github.io/book/Profit.html)
-- [Contribute to the compiler](https://hexalang.github.io/hexa/)
+- [Contribute to the compiler](https://github.com/hexalang/hexa)
 
 Hit a green button on the left to view/hide table of contents :arrow_left:
 
