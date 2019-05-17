@@ -3,9 +3,15 @@ layout: book
 title: Introduction
 ---
 
+<!-- rename to About this book
+
+<!-- into Introduction group -->
+
+<!-- Introduction -->
+
 ## ![Hexa](https://hexalang.github.io/favicon/android-icon-192x192.png)
 
-Hexa is a high level, strictly typed programming language! It compiles to JavaScript, native executables and other languages. Easy to use and completely crossplatfrom.
+Hexa is a high level, strictly typed programming language. It compiles to JavaScript, native executables and other languages. Easy to use and completely crossplatfrom.
 
 This "book" is intended to serve as a guide to help you learn the Hexa programming language. It will give you the knowledge you need to get started.
 
