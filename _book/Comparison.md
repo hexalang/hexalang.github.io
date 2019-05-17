@@ -15,7 +15,9 @@ different to Hexa
 threadsafe [automatic reference counting](https://en.wikipedia.org/wiki/Automatic_Reference_Counting) is used
 - Safety-first: null safety, checked exceptions, [iterators](https://en.wikipedia.org/wiki/Iterator), special syntax features
 
-<!-- Jekyll is not good -->
+
+Compare with known language:
+
 
 * Table of contents
 {:toc}
