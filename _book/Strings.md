@@ -33,7 +33,10 @@ And they have only one property — length, or size.
 let s = "hello" + "!" // Same as "hello!"
 let s = "hello" + '!' // Mixing double- and single quoted strings is fine
 
-// TODO []> It is better to use .charCodeAt
+let h = "hello"[0] // Starts from zero
+let s = "hello"
+let h = s[0] // "h"
+let h = s.charAt(0) // Same effect
 
 s.length // -> 6 characters, h-e-l-l-o-!
 "hello!".length // -> 6
