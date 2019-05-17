@@ -1,6 +1,6 @@
 ---
 layout: book
-title: Inside compiler&#59; Lexer
+title: Inside compiler&#58; Lexer
 into: compiler
 ---
 
