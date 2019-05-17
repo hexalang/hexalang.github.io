@@ -31,7 +31,7 @@ Are you experienced developer?
 - ["Why Hexa?"](https://hexalang.github.io/book/Profit.html)
 - [Contribute to the compiler](https://github.com/hexalang/hexa)
 
-Hit a green button on the left to view/hide table of contents :arrow_left:
+Hit a button on the left side to view/hide table of contents :arrow_left:
 
 ## Helpful links
 
