@@ -18,7 +18,7 @@ Create new file `hello.hexa` and place anywhere you wish.
 
 Drag it into code editor then add some pretty lines into:
 
-```js
+```ts
 // My first program in Hexa!
 
 /// Show greetings
@@ -52,24 +52,69 @@ Hello, Hexa!
 
 ### Running code online
 
+<https://hexalang.github.io/try/>
 
+Some features are not supported in the online compiler (like file system access).
 
 ### Long story
 
 Let's investigate our program step-by-step:
 
-
+```ts
+// My first program in Hexa!
+```
 
 Those gray notes are called *comments* and they don't affect program flow.
 Feel free to note anything you find useful for yourself and other programmers.
 You may comment out any code to disable it, so it won't be compiled:
 
+```ts
+// hello() this will do nothing
+```
 
 Or multiple lines altogether:
 
+```ts
+/*
+  nothing
+  here
+  will be compiled
+*/
+```
 
-This is a good practice to document your code
+There is also are documentational comments. They start with triple slash `///` and attached semantically to the next code block after them:
 
+```ts
+/// Show greetings
+function hello() {
+```
+
+So we know what exactly that function does without reading whole code :thinking:. This is a really good and common practice to document your code, make it your habit.
+
+Next we see a function and it's body:
+
+```ts
+function hello() { // "hello" is a function name
+    // function body
+}
+```
+
+Function is a reusable code block, you may run it as many times you wish, and even send different parameters (arguments) into it:
+
+```ts
+function hello(name) { // "name" is a function argument
+    console.log("Hello, " + name) // "+" here joins text strings together
+}
+
+hello("World") // -> prints "Hello, World"
+hello("people of the Earth") // -> prints "Hello, people of the Earth"
+```
+
+Some functions may be attached to modules and objects, you call them with a `.dot()` syntax, like `console` in this example:
+
+```ts
+console.log("Hello, Hexa!")
+```
 
 <!-- ## Troubleshooting -->
 
