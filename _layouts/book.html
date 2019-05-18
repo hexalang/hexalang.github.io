@@ -43,7 +43,23 @@
             </div>
             <ul>
 	    {% assign sorted = site.book | sort: 'title' %}
-            {% for p in sorted %}
+	    {% assign otherSorted = (sorted | where: "into" , "") %}
+	    {% assign introSorted = (sorted | where: "into" , "intro" | reverse) %}
+	    {% assign compilerSorted = (sorted | where: "into" , "compiler") %}
+
+	    {% for p in introSorted %}
+                <li>
+                {% if p.path == page.path %}
+                    <a href="{{p.url}}"><strong>{{ p.title }}</strong></a>
+                {% else %}
+                    <a href="{{p.url}}">{{ p.title }}</a>
+                {% endif %}
+                </li>
+            {% endfor %}   
+
+            <div style="height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);"></div>
+
+            {% for p in otherSorted %}
                 <li>
                 {% if p.path == page.path %}
                     <a href="{{p.url}}"><strong>{{ p.title }}</strong></a>
@@ -52,6 +68,19 @@
                 {% endif %}
                 </li>
             {% endfor %}
+
+            <div style="height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);"></div>
+
+	    {% for p in compilerSorted %}
+                <li>
+                {% if p.path == page.path %}
+                    <a href="{{p.url}}"><strong>{{ p.title }}</strong></a>
+                {% else %}
+                    <a href="{{p.url}}">{{ p.title }}</a>
+                {% endif %}
+                </li>
+            {% endfor %}
+
             </ul>
         </div>
 
