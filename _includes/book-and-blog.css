@@ -13,3 +13,7 @@ code, code * {
 p code.highlighter-rouge, li code.highlighter-rouge {
     margin: auto;
 }
+
+.article > .highlighter-rouge {
+    padding: 0.4em;
+}
