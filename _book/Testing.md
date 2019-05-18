@@ -1,7 +1,9 @@
 ---
 layout: book
-title: Unit testing (draft)
+title: Unit testing
 ---
+
+(draft)
 
 Most classic languages don't have built-in unit testing features, while modern ones add syntax sugar for "inline' testing.
 
