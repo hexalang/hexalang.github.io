@@ -30,6 +30,7 @@ Are you experienced developer?
 - ["Programming language checklist"](https://hexalang.github.io/book/Checklist.html)
 - ["Why Hexa?"](https://hexalang.github.io/book/Profit.html)
 - [Contribute to the compiler](https://github.com/hexalang/hexa)
+- [Compiler internals](https://hexalang.github.io/book/Lexer.html)
 
 Hit a button on the left side to view/hide table of contents :arrow_left:
 
