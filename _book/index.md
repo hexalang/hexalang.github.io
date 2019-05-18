@@ -1,11 +1,10 @@
 ---
 layout: book
 title: Introduction
+into: intro
 ---
 
-<!-- rename to About this book
-
-<!-- into Introduction group -->
+<!-- rename to About this book -->
 
 <!-- Introduction -->
 
