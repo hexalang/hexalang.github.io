@@ -52,6 +52,8 @@ Hello, Hexa!
 
 ### Running code online
 
+If you don't want to setup Hexa right now, try compiler by not leaving a browser:
+
 <https://hexalang.github.io/try/>
 
 Some features are not supported in the online compiler (like file system access).
@@ -120,7 +122,7 @@ console.log("Hello, Hexa!")
 
 ### Mastering error messages
 
-Hexa is strictly typed and compiled, meaning it keep track of code structure also at development time, not only at running resulting app. Thus it helps you to quickly find errors, way faster than, say, JavaScript. So let's go crazy and break some code!
+Hexa is strictly typed and compiled, meaning it keeps track of code structure also at development time, not only at running resulting app. Thus it helps you to quickly find errors, way faster than, say, JavaScript. So let's go crazy and break some code!
 
 Changle this line:
 
@@ -134,10 +136,10 @@ To this one:
 hello(something)
 ```
 
-When you will try to run it, you'll see something like this, and program will not start:
+When you will try to run it, you'll see a message like this, and program will not start:
 
-```ts
-
+```sh
+[hello.hexa:8:7] #17 Can't find anything with name `something`
 ```
 
 All error messages have common structure:
@@ -163,3 +165,7 @@ Line numbers start from 1, so do columns:
             ^ [hello.hexa:8:7]
       123456789
 ```
+
+<!-- ## Level 2 - file system, useful stuff level 3, read repl from keyboard coz classic -->
+
+<!-- ## Going next / Level Up - link to syntax examples article -->
