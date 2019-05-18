@@ -43,7 +43,7 @@
             </div>
             <ul>
 	    {% assign sorted = site.book | sort: 'title' %}
-	    {% assign otherSorted = (sorted | where: "into" , "") %}
+	    {% assign otherSorted = (sorted | where: "into" , nil) %}
 	    {% assign introSorted = (sorted | where: "into" , "intro" | reverse) %}
 	    {% assign compilerSorted = (sorted | where: "into" , "compiler") %}
 
