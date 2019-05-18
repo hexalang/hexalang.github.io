@@ -1,6 +1,7 @@
 ---
 layout: book
 title: Hello, Hexa!
+into: intro
 ---
 
 Let's write your very first program in Hexa!
