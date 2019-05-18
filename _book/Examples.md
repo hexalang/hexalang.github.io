@@ -1,7 +1,11 @@
 ---
 layout: book
-title: Syntax examples (draft)
+title: Syntax examples
 ---
+
+(draft)
+
+Syntax examples
 
 * Table of contents
 {:toc}
