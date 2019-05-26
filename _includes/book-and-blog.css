@@ -38,3 +38,9 @@ li ul li {
     padding: 2px 0 4px 15px;
     margin: 0;
 }
+
+/* Emoji haXe logo */
+
+img[src*="favicon"] {
+    margin-right: 4px;
+}
