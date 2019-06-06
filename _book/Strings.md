@@ -69,6 +69,8 @@ Special characters used as `\n` allowing you to add invisible space. Currently s
 - `\t` — adds a tab
 - `\n` — new line
 - `\r` — most useless superpower
+- `\'` — adds `'` character, even if string surrounded by `'single \'quotes\''`
+- `\"` — adds `"` character, even if string surrounded by `"double \"quotes\""`
 
 When multi line strings are used directly in code, without resorting to special characters to encode new lines,
 on different platforms you will have incomplatible newlines encoding, `\r\n` on Windows, `\n` on Linux and most others.
