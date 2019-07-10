@@ -396,7 +396,7 @@
         // "use strict"
         (function () {
             // Load URI
-            {
+            try {
                 if (location.search.indexOf('src=') != -1) {
                     for (const uri of location.search.substr(1).split('&')) {
                         if (uri.startsWith('src=')) {
@@ -406,10 +406,10 @@
                         }
                     }
                 }
-            }
+            } catch(e) { console.log(e); }
          
             // Editor
-            {
+            try {
                 const editor = document.getElementById("editor")
                 editor.onkeyup = function () {
                     let code = '' + editor.innerText
@@ -417,12 +417,16 @@
                     code = code.split(String.fromCharCode(160)).join(' ').trim() + '\n'
                     // Create shareable link:
                     if (window.history) {
+                        // TODO code.substr(0,4096)
+                        // TODO fix \t
+                        // TODO fix # it traited as .hash, not part of URI
+                        // TODO fix text editor insanity
                         window.history.replaceState({}, "Try Hexa", "/try/?src=" + encodeURI(code))
                     }
                     
                     // Build:
                 }
-            }
+            } catch(e) { console.log(e); }
                 
             // UI
             function onTabClick(event) {
