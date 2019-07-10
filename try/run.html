@@ -26,6 +26,7 @@
 	let output = document.getElementById('console-output');
 	console.log = function (unescaped_text) {
 		output.appendChild(document.createTextNode(unescaped_text));
+		output.appendChild(document.createElement('br'));
 	}
 
 	window.onerror = function(message, uri, line) {
