@@ -398,9 +398,9 @@
             // Load URI
             {
                 if (location.search.indexOf('src=') != -1) {
-                    for (const uri of location.search.split('&')) {
+                    for (const uri of location.search.substr(1).split('&')) {
                         if (uri.startsWith('src=')) {
-                            const value = decodeURI(uri.substr('src='.length + 1))
+                            const value = decodeURI(uri.substr('src='.length))
                             const editor = document.getElementById("editor")
                             editor.innerText = value
                         }
