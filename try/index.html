@@ -331,6 +331,7 @@
                                 </select>
                             </div>
                         </div>
+                        <div>Note: only JavaScript target is runnable within browser</div>
                     </div>
                 </div>
             </div>
@@ -344,7 +345,9 @@
                         <div class="output fullheight"></div>
                     </div>
                     <div class="tab-pane pad fullheight flex-column" id="outsource">
-                        <div class="output fullheight"></div>
+                        <div class="output fullheight" id="runner-wrapper">
+                            <iframe class="runner" src="./run.html?r=0.6468282873069537#oops" name="runner" scrolling="no" style="height: 100%;" frameborder="no"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
