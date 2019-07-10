@@ -414,7 +414,7 @@
                 editor.onkeyup = function () {
                     let code = '' + editor.innerText
                     // Fixes some HTML weirdness:
-                    code = code.split(String.fromCharCode(160)).join(' ').trim()
+                    code = code.split(String.fromCharCode(160)).join(' ').trim() + '\n'
                     // Create shareable link:
                     if (window.history) {
                         window.history.replaceState({}, "Try Hexa", "/try/?src=" + encodeURI(code))
