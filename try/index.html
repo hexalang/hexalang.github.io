@@ -396,6 +396,23 @@
     <script type="text/javascript">
         // "use strict"
         (function () {
+            // Editor
+            {
+                const editor = document.getElementById("editor")
+                editor.onkeyup = function () {
+                    let code = '' + editor.innerText
+                    // Fixes some HTML weirdness:
+                    code = code.split(String.fromCharCode(160)).join(' ')
+                    // Create shareable link:
+                    if (window.history) {
+                        window.history.replaceState({}, "Try Hexa", "/try/?" + encodeURIComponent(code))
+                    }
+                    
+                    // Build:
+                }
+            }
+                
+            // UI
             function onTabClick(event) {
                 let active = event.target.parentElement.querySelector('.active');
 
