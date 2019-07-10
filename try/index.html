@@ -298,7 +298,9 @@
     <div class="page shadow">
         <div class="header">
             <div class="ml-2">
-                <img src='/favicon/android-icon-192x192.png' style="width: 75px; height:75px" />
+                <a href="https://hexalang.github.io">
+                   <img src='/favicon/android-icon-192x192.png' style="width: 75px; height:75px" />
+                </a>
             </div>
             <div class="pad ml-1">
                 Hexa Programming Language
@@ -337,17 +339,21 @@
             </div>
             <div class="col-2 col-sm-4 pad flex-column">
                 <div class="nav">
-                    <a class="nav-link active" href="#output">Output</a>
-                    <a class="nav-link" href="#outsource">Source</a>
+                    <a class="nav-link active" href="#run">Run</a>
+                    <a class="nav-link" href="#code">Code</a>
+                    <a class="nav-link" href="#log">Log</a>
                 </div>
                 <div class="tab-content fullheight">
-                    <div class="tab-pane active pad fullheight" id="output">
-                        <div class="output fullheight"></div>
-                    </div>
-                    <div class="tab-pane pad fullheight flex-column" id="outsource">
+                    <div class="tab-pane active pad fullheight flex-column" id="run">
                         <div class="output fullheight" id="runner-wrapper">
                             <iframe class="runner" src="./run.html?r=0.6468282873069537#oops" name="runner" scrolling="no" style="height: 100%;" frameborder="no"></iframe>
                         </div>
+                    </div>
+                    <div class="tab-pane pad fullheight flex-column" id="code">
+                        <div class="output fullheight"></div>
+                    </div>
+                    <div class="tab-pane pad fullheight flex-column" id="log">
+                        <div class="output fullheight"></div>
                     </div>
                 </div>
             </div>
