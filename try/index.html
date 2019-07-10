@@ -331,8 +331,7 @@
                 </div>
                 <div class="tab-content fullheight">
                     <div class="tab-pane active pad fullheight" id="source">
-                        <div id="editor" class="pad code editor input-control fullheight" contenteditable="true">
-                        </div>
+                        <div id="editor" class="pad code editor input-control fullheight" contenteditable="true">var names = ['Joffrey', 'Tyrion', 'Sansa']<br>console.log('Hello ' + names.join(", ") + '!')</div>
                     </div>
                     <div class="tab-pane pad-2" id="options">
                         <div class="flex-row">
@@ -396,16 +395,29 @@
     <script type="text/javascript">
         // "use strict"
         (function () {
+            // Load URI
+            {
+                if (location.search.indexOf('src=') != -1) {
+                    for (const uri of location.search.split('&')) {
+                        if (uri.startsWith('src=') {
+                            const value = decodeURI(uri.substr('src='.length + 1))
+                            const editor = document.getElementById("editor")
+                            editor.innerText = value
+                        }
+                    }
+                }
+            }
+         
             // Editor
             {
                 const editor = document.getElementById("editor")
                 editor.onkeyup = function () {
                     let code = '' + editor.innerText
                     // Fixes some HTML weirdness:
-                    code = code.split(String.fromCharCode(160)).join(' ')
+                    code = code.split(String.fromCharCode(160)).join(' ').trim()
                     // Create shareable link:
                     if (window.history) {
-                        window.history.replaceState({}, "Try Hexa", "/try/?" + encodeURIComponent(code))
+                        window.history.replaceState({}, "Try Hexa", "/try/?src=" + encodeURI(code))
                     }
                     
                     // Build:
