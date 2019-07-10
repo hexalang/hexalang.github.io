@@ -399,7 +399,7 @@
             {
                 if (location.search.indexOf('src=') != -1) {
                     for (const uri of location.search.split('&')) {
-                        if (uri.startsWith('src=') {
+                        if (uri.startsWith('src=')) {
                             const value = decodeURI(uri.substr('src='.length + 1))
                             const editor = document.getElementById("editor")
                             editor.innerText = value
