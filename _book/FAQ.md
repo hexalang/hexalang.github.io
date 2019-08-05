@@ -15,7 +15,7 @@ And Swift, JavaScript, ... are **not** perfect languages from author's stand poi
 If you fall in love with (say) Swift, it doesn't makes that Hexa should be Swift-on-steroids.
 Idea of Hexa-as-superset-of-X was dropped many years ago.
 
-Goal is to keep language simple and straitforward, and familiar to
+Goal is to keep language simple and straightforward, and familiar to
 developers coming from other languages.
 Every feature was taken from strictly pragmatic position.
 Features which didn't prove their usefullness,
@@ -45,7 +45,7 @@ generic, specialized at compiler type, known by every Hexa and JavaScript/Python
 If you feel advanced and sane to **not** overoptimize every line of code, you may go native
 and implement some parts like you would in C (or just use external lib).
 
-In comparison, languages like Jai (Jonathan Blow) of Zig (Andrew Kelley) have different vision:
+In comparison, languages like Jai (Jonathan Blow) or Zig (Andrew Kelley) have different visions:
 
 - Jai is advanced developers only (as stated by the creator) and all about performance (feel risky?)
 - Zig is all about (safe!) systems programming, with pointers, allocators and all, while it way better than C
