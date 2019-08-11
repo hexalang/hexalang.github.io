@@ -31,7 +31,7 @@ and should be defined before calling position
 - Hexa has `()=>` syntax too
 - Types are placed like this: `var a: Int = 1` and `function (v: Int): Int`
 - Class fields have `var` and `let` before their names, also there is one and only visibility modifier `private`.
-Methods prepended with `function`. Constructions are `new()`. Placing `this.` before field names isn't required. 
+Methods prepended with `function`. Constructors are `new()`. Placing `this.` before field names isn't required. 
 Braces `{}` aren't required for function bodies.
 
 Full example:
@@ -41,7 +41,7 @@ class A {
     var a = 123
     new (value) a = value
     private function return_a() {
-        return this.a + 1
+        return this.a + 1 + a
     }
 }
 
