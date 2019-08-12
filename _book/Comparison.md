@@ -64,6 +64,8 @@ all *condition checks* for `int` and calls `compute` with a guaranteed non-null 
 - `switch` does `break` automatically for each case. You don't place `break`s for `switch`es
 - Modularity is very different (based on package-level namespaces), but on-demand compatible with JS
 
+[More on porting from JavaScript](https://hexalang.github.io/book/FromJavaScript.html)
+
 ## C
 
 - Object oriented programming with single inheritance, always-virtual methods, ARC and real interfaces
