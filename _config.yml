@@ -1,3 +1,7 @@
+# Site settings
+
+baseurl: ""
+
 # SEO related
 
 title: "Hexa Programming Language"
@@ -7,6 +11,9 @@ description: "Hexa is a high level, strictly typed programming language that com
 image: "https://hexalang.github.io/logo.png"
 url: "https://hexalang.github.io"
 theme-color: "#66ccff"
+
+# Structure
+
 collections:
   book:
     output: true
@@ -19,6 +26,7 @@ social:
     - https://github.com/hexalang
 
 # Build settings
+
 markdown: kramdown
 highlighter: rouge
 plugins:
