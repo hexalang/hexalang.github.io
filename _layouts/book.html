@@ -3,13 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
 	/>
 	<meta name="MobileOptimized" content="176" />
 	<meta name="google-site-verification" content="r9QR0nzVoCSoh04LhsLau403jbzC4weuqk0ypB1LD1g" />
 
 	<title>{{ page.title }} — Hexa Book</title>
-        {% seo title=false %}
+    {% seo title=false %}
 
 	{% include book-style.html %}
 	<style>{% include book-and-blog.css %}</style>
@@ -55,7 +56,7 @@
                     <a href="{{p.url}}">{{ p.title }}</a>
                 {% endif %}
                 </li>
-            {% endfor %}   
+            {% endfor %}
 
             <div style="height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);"></div>
 
@@ -118,15 +119,15 @@
 			</p>
 		</div>
 	</footer> -->
-</div>
-<script>
+    </div>
+    <script>
     {
         let sidebarToggles = [].slice.call(document.getElementsByClassName("sidebar-toggle"))
         sidebarToggles.forEach(element => {
             element.addEventListener("click", v => document.body.classList.toggle("sidebar-hidden"))
         });
     }
-</script>
+    </script>
 </body>
 
 </html>
