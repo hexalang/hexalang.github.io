@@ -4,216 +4,216 @@
 
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Hexa Programming Language</title>
-    <meta name="keywords" content="Hexa programming language hexalang">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="google-site-verification" content="r9QR0nzVoCSoh04LhsLau403jbzC4weuqk0ypB1LD1g" />
-    <link rel="manifest" href="/manifest.json">
-    <meta name="viewport" content="width=device-width">
-    {% seo title=false %}
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Hexa Programming Language</title>
+	<meta name="keywords" content="Hexa programming language hexalang">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="google-site-verification" content="r9QR0nzVoCSoh04LhsLau403jbzC4weuqk0ypB1LD1g" />
+	<link rel="manifest" href="/manifest.json">
+	<meta name="viewport" content="width=device-width">
+	{% seo title=false %}
 </head>
 
 <body>
-    {% include main-style.html %}
+	{% include main-style.html %}
 
-    <div class="page shadow">
-            <div class="wip-label">Site is under construction</div>
+	<div class="page shadow">
+			<div class="wip-label">Site is under construction</div>
 
-        {% include header.html %}
+		{% include header.html %}
 
-        <div class="container">
+		<div class="container">
 
-            <!-- INTERACTIVE DEMO -->
+			<!-- INTERACTIVE DEMO -->
 
-            <div class="col-1 col-sm-2 pad">
-                <div class="shadow fullheight">
-                    <div id="editor" class="pad code editor" contenteditable="true">// Live demo! Edit to compile on the fly<br/>
+			<div class="col-1 col-sm-2 pad">
+				<div class="shadow fullheight">
+					<div id="editor" class="pad code editor" contenteditable="true">// Live demo! Edit to compile on the fly<br/>
 /* !! WARNING this is a VERY old compiler, will be updated soon !! */<br/>
 @native("console")<br/>
 declare class Console {<br/>&nbsp; &nbsp; static function log(...message: String): Void<br/>
 }<br/><br/>
 Console.log("Hello from Hexa!")<br/>
 Console.log("No `static function main` required")</div>
-                </div>
-            </div>
-            <div class="col-1 col-sm-2 pad">
-                <div class="shadow fullheight">
-                    <div id="output" class="pad code output">
-                        ...JavaScript is required to run interactive demo
-                    </div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="shadow margin">
-                    <div id="debug" class="pad code output">
-                        ...Debug
-                    </div>
-                </div>
-            </div>
+				</div>
+			</div>
+			<div class="col-1 col-sm-2 pad">
+				<div class="shadow fullheight">
+					<div id="output" class="pad code output">
+						...JavaScript is required to run interactive demo
+					</div>
+				</div>
+			</div>
+			<div class="col-2">
+				<div class="shadow margin">
+					<div id="debug" class="pad code output">
+						...Debug
+					</div>
+				</div>
+			</div>
 
-            <!-- DOWNLOADS -->
+			<!-- DOWNLOADS -->
 
-            <div class="col-1">
-                <div class="shadow margin">
-                    <div id="download" class="pad code output">
-                        <div><h2>Download</h2></div>
-                        <div>Available for 64-bit Linux, macOS and Windows</div>
-                        <img src="https://github.com/hexalang/hexa/blob/master/preview.png?raw=true"/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 col-sm-2 pad">
-                <div class="shadow fullheight">
-                    <div id="stable" class="pad code output">
-                        <a href="https://github.com/hexalang/hexa#stable">
-                            <div>Install Hexa</div>
-                            <div><b>COMING SOON</b> Stable compiler versions</div>
-                        </a>
-                        <div><a href="#changelog-hexa">Changelog</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 col-sm-2 pad">
-                <div class="shadow fullheight">
-                    <div id="unstable" class="pad code output">
-                        <a href="https://github.com/hexalang/hexa#tools--ide">
-                            <div>Tools & IDE</div>
-                            <div>Packages for code editors</div>
-                        </a>
-                        <div><a href="#changelog-tools">Changelog</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="shadow margin">
-                    <div id="without" class="pad code output">
-                        <a href="/try">Try Hexa without installing</a>
-                    </div>
-                </div>
-            </div>
+			<div class="col-1">
+				<div class="shadow margin">
+					<div id="download" class="pad code output">
+						<div><h2>Download</h2></div>
+						<div>Available for 64-bit Linux, macOS and Windows</div>
+						<img src="https://github.com/hexalang/hexa/blob/master/preview.png?raw=true"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-2 col-sm-2 pad">
+				<div class="shadow fullheight">
+					<div id="stable" class="pad code output">
+						<a href="https://github.com/hexalang/hexa#stable">
+							<div>Install Hexa</div>
+							<div><b>COMING SOON</b> Stable compiler versions</div>
+						</a>
+						<div><a href="#changelog-hexa">Changelog</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-2 col-sm-2 pad">
+				<div class="shadow fullheight">
+					<div id="unstable" class="pad code output">
+						<a href="https://github.com/hexalang/hexa#tools--ide">
+							<div>Tools & IDE</div>
+							<div>Packages for code editors</div>
+						</a>
+						<div><a href="#changelog-tools">Changelog</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="shadow margin">
+					<div id="without" class="pad code output">
+						<a href="/try">Try Hexa without installing</a>
+					</div>
+				</div>
+			</div>
 
-        </div>
-        <div id="overview"></div>
-        <div id="install"></div>
-        <div id="learn"></div>
-        <div id="community"></div>
+		</div>
+		<div id="overview"></div>
+		<div id="install"></div>
+		<div id="learn"></div>
+		<div id="community"></div>
 
-        {% include footer.html %}
-    </div>
-    <script type="text/javascript">
-        "use strict"
-        function convertUtf8ArrayToString(array) {
-            let out = ""
-            const len = array.length
-            let i = 0
-            let char2
-            while (i < len) {
-                let c = array[i++]
-                switch (c >> 4) {
-                    case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:
-                        // 0xxxxxxx
-                        out += String.fromCharCode(c)
-                        break
-                    case 12: case 13:
-                        // 110x xxxx   10xx xxxx
-                        char2 = array[i++]
-                        out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F))
-                        break
-                    case 14:
-                        // 1110 xxxx  10xx xxxx  10xx xxxx
-                        char2 = array[i++]
-                        const char3 = array[i++]
-                        out += String.fromCharCode(((c & 0x0F) << 12) |
-                            ((char2 & 0x3F) << 6) |
-                            ((char3 & 0x3F) << 0))
-                        break
-                }
-            }
-            return out
-        }
-        const handler = {
-            get: function (target, name) {
-                if (name in target) {
-                    return target[name]
-                }
-                if (name == 'length') {
-                    return target.data.length
-                }
-                return target.data[name]
-            }
-        }
-        class Buffer {
-            static alloc(size) {
-                return new Proxy(new Buffer(new Uint8Array(size)), handler)
-            }
-            get length() {
-                return this.data.length
-            }
-            readUInt16LE(offset) {
-                return this.data[offset] + this.data[offset + 1] * 256
-            }
-            writeUInt16LE(value, offset) {
-                this.data[offset] = value & 0xFF
-                this.data[offset + 1] = (value >>> 8) & 0xFF
-            }
-            readUInt32LE(offset) {
-                return this.data[offset]
-                    + this.data[offset + 1] * 256
-                    + this.data[offset + 2] * 256 * 256
-                    + this.data[offset + 3] * 256 * 256 * 256
-            }
-            toString(encoding, start, end) {
-                const str = convertUtf8ArrayToString(this.data.subarray(start, end))
-                return str.replace(new RegExp('(;u{[0-9]+})', 'g'), function (match) {
-                    const code = parseInt(match.substr(3, match.length - 4))
-                    return String.fromCharCode(code)
-                })
-            }
-            static from(string) {
-                const result = []
-                for (const char of string.split('')) {
-                    const code = char.charCodeAt(0)
-                    if (code > 255) {
-                        for (const char of (';u{' + code + '}').split('')) result.push(char.charCodeAt(0) & 0xFF)
-                    } else {
-                        result.push(char.charCodeAt(0) & 0xFF)
-                    }
-                }
-                return new Proxy(new Buffer(Uint8Array.from(result)), handler)
-            }
-            constructor(data) {
-                this.data = data
-            }
-        }
-        window.$console = {
-            log: function (...args) {
-                let out = ''
-                for (const arg of args) {
-                    out += '' + arg + '<br/>'
-                }
-                document.getElementById("debug").innerHTML += out
-            }
-        }
-    </script>
-    <script type="text/javascript" src="hexa-online.js"></script>
+		{% include footer.html %}
+	</div>
+	<script type="text/javascript">
+		"use strict"
+		function convertUtf8ArrayToString(array) {
+			let out = ""
+			const len = array.length
+			let i = 0
+			let char2
+			while (i < len) {
+				let c = array[i++]
+				switch (c >> 4) {
+					case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:
+						// 0xxxxxxx
+						out += String.fromCharCode(c)
+						break
+					case 12: case 13:
+						// 110x xxxx   10xx xxxx
+						char2 = array[i++]
+						out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F))
+						break
+					case 14:
+						// 1110 xxxx  10xx xxxx  10xx xxxx
+						char2 = array[i++]
+						const char3 = array[i++]
+						out += String.fromCharCode(((c & 0x0F) << 12) |
+							((char2 & 0x3F) << 6) |
+							((char3 & 0x3F) << 0))
+						break
+				}
+			}
+			return out
+		}
+		const handler = {
+			get: function (target, name) {
+				if (name in target) {
+					return target[name]
+				}
+				if (name == 'length') {
+					return target.data.length
+				}
+				return target.data[name]
+			}
+		}
+		class Buffer {
+			static alloc(size) {
+				return new Proxy(new Buffer(new Uint8Array(size)), handler)
+			}
+			get length() {
+				return this.data.length
+			}
+			readUInt16LE(offset) {
+				return this.data[offset] + this.data[offset + 1] * 256
+			}
+			writeUInt16LE(value, offset) {
+				this.data[offset] = value & 0xFF
+				this.data[offset + 1] = (value >>> 8) & 0xFF
+			}
+			readUInt32LE(offset) {
+				return this.data[offset]
+					+ this.data[offset + 1] * 256
+					+ this.data[offset + 2] * 256 * 256
+					+ this.data[offset + 3] * 256 * 256 * 256
+			}
+			toString(encoding, start, end) {
+				const str = convertUtf8ArrayToString(this.data.subarray(start, end))
+				return str.replace(new RegExp('(;u{[0-9]+})', 'g'), function (match) {
+					const code = parseInt(match.substr(3, match.length - 4))
+					return String.fromCharCode(code)
+				})
+			}
+			static from(string) {
+				const result = []
+				for (const char of string.split('')) {
+					const code = char.charCodeAt(0)
+					if (code > 255) {
+						for (const char of (';u{' + code + '}').split('')) result.push(char.charCodeAt(0) & 0xFF)
+					} else {
+						result.push(char.charCodeAt(0) & 0xFF)
+					}
+				}
+				return new Proxy(new Buffer(Uint8Array.from(result)), handler)
+			}
+			constructor(data) {
+				this.data = data
+			}
+		}
+		window.$console = {
+			log: function (...args) {
+				let out = ''
+				for (const arg of args) {
+					out += '' + arg + '<br/>'
+				}
+				document.getElementById("debug").innerHTML += out
+			}
+		}
+	</script>
+	<script type="text/javascript" src="hexa-online.js"></script>
 </body>
 </html>
