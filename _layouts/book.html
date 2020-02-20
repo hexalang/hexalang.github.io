@@ -137,10 +137,11 @@
 		header.onclick = articleNav
 		header.innerText = node.innerText
 		header.href = '#' + node.id
-		if ((event && event.srcElement && event.srcElement.hash || location.hash) == header.hash) {
+		let hash = (event && event.srcElement && event.srcElement.hash || location.hash)
+		if (hash == header.hash) {
 		    header.style.fontWeight = 'bold'
 		}
-		if ((location.hash == '#' || location.hash == '') && (div.children.length == 0)) {
+		if ((hash == '#' || hash == '') && (div.children.length == 0)) {
 		    header.style.fontWeight = 'bold'
 		}
 		div.appendChild(header)
