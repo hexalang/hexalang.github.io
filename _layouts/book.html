@@ -139,10 +139,10 @@
 		header.href = '#' + node.id
 		let hash = (event && event.srcElement && event.srcElement.hash || location.hash)
 		if (hash == header.hash) {
-		    header.style.fontWeight = 'bold'
+		    header.className = 'selected'
 		}
 		if ((hash == '#' || hash == '') && (div.children.length == 0)) {
-		    header.style.fontWeight = 'bold'
+		    header.className = 'selected'
 		}
 		div.appendChild(header)
 		div.appendChild(document.createElement('br'))
