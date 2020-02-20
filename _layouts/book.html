@@ -140,6 +140,9 @@
 		if ((event && event.srcElement && event.srcElement.hash || location.hash) == header.hash) {
 		    header.style.fontWeight = 'bold'
 		}
+		if ((location.hash == '#' || location.hash == '') && (div.children.length == 0)) {
+		    header.style.fontWeight = 'bold'
+		}
 		div.appendChild(header)
 		div.appendChild(document.createElement('br'))
 	    }    
