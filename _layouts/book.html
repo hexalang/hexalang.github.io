@@ -102,10 +102,9 @@
                         <a href="https://github.com/hexalang" class="header-button">GitHub</a>
                         <a href="https://www.patreon.com/PeyTy" class="header-button">Donate</a>
                     </div>
+	    <div id="article-navigation"></div>
             <div class="article markdown">
-                <h2>
-                    {{page.title}}
-                </h2>
+                <h2 id="top">{{page.title}}</h2>
                 {{ content }}
             </div><br/><br/>
         </div>
@@ -127,6 +126,25 @@
             element.addEventListener("click", function (v) { document.body.classList.toggle("sidebar-hidden") })
         });
     }
+    function articleNav(event) {
+	    let nodes = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+	    let div = document.querySelector('#article-navigation')
+	    while (div.children.length > 0) {
+		    div.removeChild(div.children[0])
+	    }
+	    for (let node of nodes) {
+		let header = document.createElement('a')
+		header.onclick = articleNav
+		header.innerText = node.innerText
+		header.href = '#' + node.id
+		if ((event && event.srcElement && event.srcElement.hash || location.hash) == header.hash) {
+		    header.style.fontWeight = 'bold'
+		}
+		div.appendChild(header)
+		div.appendChild(document.createElement('br'))
+	    }    
+    }; 
+    articleNav();
     </script>
 </body>
 
