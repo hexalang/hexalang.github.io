@@ -2,4 +2,4 @@
 ---
 {% include book-and-blog.css %}
 {% include highlighter.css %}
-{% include book-style.html %}
+{% include book-style.css %}

@@ -12,9 +12,7 @@
 	<title>{{ page.title }} — Hexa Book</title>
     {% seo title=false %}
 
-	{% include book-style.html %}
-	<style>{% include book-and-blog.css %}</style>
-	<style>{% include highlighter.css %}</style>
+    <link rel="stylesheet" type="text/css" href="https://hexalang.github.io/shared/wiki.css" />
 </head>
 
 <body>
@@ -146,8 +144,8 @@
 		}
 		div.appendChild(header)
 		div.appendChild(document.createElement('br'))
-	    }    
-    }; 
+	    }
+    };
     articleNav();
     </script>
 </body>
