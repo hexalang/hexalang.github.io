@@ -11,6 +11,7 @@ function articleNav(event) {
 	while (div.children.length > 0) {
 		div.removeChild(div.children[0])
 	}
+	if (nodes.length < 2) return
 	for (let node of nodes) {
 		let header = document.createElement('a')
 		header.onclick = articleNav
