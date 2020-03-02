@@ -11,8 +11,8 @@
 }
 
 :root {
-  --color-bg: #ffffff;
-  --color-text: #000000;
+	--color-bg: #ffffff;
+	--color-text: #000000;
 }
 
 body {
@@ -21,8 +21,15 @@ body {
 }
 
 [data-theme="dark"] {
-  --color-bg: #333333;
-  --color-text: #ffffff;
+	--color-bg: #333333;
+	--color-text: #ffffff;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--color-bg: #333333;
+		--color-text: #ffffff;
+	}
 }
 
 html,
