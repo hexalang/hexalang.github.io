@@ -6,6 +6,23 @@
 	font-size: 100%;
 	vertical-align: baseline;
 	box-sizing: border-box;
+	transition: color .95s ease;
+	transition: background-color .95s ease;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+}
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+[data-theme="dark"] {
+  --color-bg: #333333;
+  --color-text: #ffffff;
 }
 
 html,
@@ -21,6 +38,7 @@ body {
 
 a {
 	color: #000;
+	color: var(--color-text);
 }
 
 a:hover {
@@ -181,17 +199,6 @@ nav.main-nav li a {
 	z-index: 0;
 }
 
-.sidebar-toggle {
-	outline: none;
-	padding: 10px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	text-align: center;
-	transition: opacity .3s;
-	z-index: 4;
-}
-
 .sidebar {
 	border-right: 1px solid rgba(139, 216, 255, 0.2);
 	overflow-y: auto;
@@ -222,6 +229,7 @@ nav.main-nav li a {
 	left: 0;
 	text-align: center;
 	z-index: 4;
+	transition: opacity .3s;
 }
 
 .sidebar-toggle span {
@@ -234,6 +242,42 @@ nav.main-nav li a {
 }
 
 .sidebar-toggle:hover {
+	opacity: .4;
+}
+
+.dark-toggle {
+	outline: none;
+	padding: 10px;
+	position: absolute;
+	left: 0;
+	text-align: center;
+	transition: opacity .3s;
+	z-index: 4;
+	bottom: 40px;
+}
+
+.dark-toggle span {
+	transition: opacity .3s;
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+}
+
+.dark-toggle span.dark {
+	background-color: rgb(104, 104, 104);
+	top: 4px;
+	left: 0;
+}
+
+.dark-toggle span.light {
+	background-color: rgb(206, 206, 206);
+	top: -16px;
+	left: 4px;
+}
+
+
+.dark-toggle:hover {
 	opacity: .4;
 }
 
@@ -299,6 +343,7 @@ body.sidebar-hidden .page {
 	right: 16px;
 	font-size: 0.9em;
 	background-color: #fff;
+	background-color: var(--color-bg);
 	border-radius: 8px;
 	padding-bottom: 4px;
 }
@@ -352,6 +397,7 @@ body.sidebar-hidden .page {
 
 	.github-corner,
 	.sidebar,
+	.dark-toggle,
 	.sidebar-toggle {
 		position: fixed;
 	}
