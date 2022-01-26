@@ -45,3 +45,8 @@ _config.yml
 
 # So you can use local server freely
 _site
+
+# node
+node_modules
+Gemfile.lock
+Gemfile
