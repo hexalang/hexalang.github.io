@@ -60,7 +60,11 @@ const pagesNoRoutes = [
 const toRoutablePages = (pages: typeof pagesNoRoutes) => {
 	return pages.map(chapter => chapter.map(
 		page => {
-			return { ...page, route: page.name.toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz'.indexOf(char) !== -1 ? char : '_').join('').split('__').join('_') }
+			return {
+				...page,
+				name: page.name.trim(),
+				route: page.name.trim().toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz'.indexOf(char) !== -1 ? char : '_').join('').split('__').join('_')
+			}
 		}
 	))
 }

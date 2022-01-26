@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { pages } from './pages'
 import { StyledBook } from './StyledBook'
 import { useParams } from "react-router-dom"
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 
 const strong = (text: string, strong: boolean) => strong ? <strong>{text}</strong> : <>{text}</>
 
@@ -24,11 +24,42 @@ export const Book = () => {
 	const params = useParams<{ article: string }>()
 	const current = articleByRoute(params.article || '')
 	const Article = current.render
+
+	// TODO save to localStorage
 	const [theme, setTheme] = useState<"normal" | "invert">("normal")
+	const [nav, setNav] = useState<{ id: string, name: string }[]>([])
 
 	useEffect(() => {
-		document.title = current.name + ' — Hexa Book'
+		// TODO SSR router title?
+		const newTitle = current.name + ' — Hexa Book'
+		if (newTitle !== document.title) {
+			const headers: typeof nav = []
+			// eslint-disable-next-line no-lone-blocks
+			{
+				[
+					...document.querySelectorAll<HTMLElement>('h2[id]'),
+					...document.querySelectorAll<HTMLElement>('h3[id]')
+				].forEach(header => {
+					const name: string = header.innerText.trim()
+					if (name !== current.name) {
+						headers.push({ id: header.id, name })
+					}
+				})
+			}
+			setNav(headers)
+		}
+		document.title = newTitle
 	})
+
+	useEffect(() => {
+		// eslint-disable-next-line no-restricted-globals
+		if (location.hash.length < 3) return
+		// eslint-disable-next-line no-restricted-globals
+		const target = document.querySelector(location.hash)
+		if (target) {
+			target.scrollIntoView()
+		}
+	}, [])
 
 	return (
 		<StyledBook data-theme={theme}>
@@ -42,12 +73,12 @@ export const Book = () => {
 					{
 						(() => {
 							return pages.map((chapter, index) => (
-								<>
+								<Fragment key={index}>
 									{index !== 0 && <div css={`height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);`}></div>}
 									{chapter.map(page =>
-										<li><Link to={`/book/${page.route}`}>{strong(page.name, current.route === page.route)}</Link></li>
+										<li key={page.route}><Link to={`/book/${page.route}`}>{strong(page.name, current.route === page.route)}</Link></li>
 									)}
-								</>
+								</Fragment>
 							))
 						})()
 					}
@@ -73,8 +104,7 @@ export const Book = () => {
 				</div>
 				<div id="article-navigation">
 					<a href="#top" className="selected">{current.name}</a><br />
-					<a href="#where-to-start">Where to start</a><br />
-					<a href="#helpful-links">Helpful links</a><br />
+					{nav.map(nav => <Fragment key={nav.id}><a href={`#${nav.id}`}>{nav.name}</a><br /></Fragment>)}
 				</div>
 				<div className="article markdown">
 					<h2 id="top">{current.name}</h2>
