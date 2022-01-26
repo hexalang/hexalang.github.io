@@ -2,11 +2,15 @@ import React from 'react'
 import logo from './logo.svg'
 import { Home } from './home/Home'
 import { Book } from './book/Book'
+import { Try } from './try/Try'
+import { Donate } from './donate/Donate'
 import './App.css'
 
 function App() {
-	//return <Book />
+	return <Donate />
 	return <Home />
+	return <Book />
+	return <Try />
 
 	return (
 		<div className="App">
