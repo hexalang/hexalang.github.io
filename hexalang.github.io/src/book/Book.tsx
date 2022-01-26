@@ -79,7 +79,7 @@ export const Book = () => {
 					<h2 id="top">{current.name}</h2>
 					<Article />
 				</div>
-				<br /><br />
+				<div css="margin-top: 64px" />
 			</div>
 
 			<div className="dark-toggle"><span className="dark"></span><span className="light"></span></div>

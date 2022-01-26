@@ -1,7 +1,6 @@
 export const Article = () => {
 	return (
 		<>
-
 			<h2><img src="https://hexalang.github.io/favicon/android-icon-192x192.png" alt="Hexa" /></h2>
 
 			<p>Hexa is a high level, strictly typed programming language. It compiles to JavaScript, native executables and other languages. Easy to use and completely crossplatfrom.</p>

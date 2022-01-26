@@ -1,5 +1,5 @@
 export const Article = () => {
 	return (
-		<>Hello!</>
+		<>(draft)</>
 	)
 }
