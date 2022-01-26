@@ -1,6 +1,7 @@
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { StyledHome } from './StyledHome'
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
 	return (
@@ -70,7 +71,7 @@ export const Home = () => {
 				<div className="col-3">
 					<div className="shadow margin">
 						<div id="without" className="pad code output">
-							<a href="/try">Try Hexa without installing</a>
+							<Link to="/try">Try Hexa without installing</Link>
 						</div>
 					</div>
 				</div>

@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom'
 import { StyledBook } from './StyledBook'
 
 export const Book = () => {
 	return (
-		<div className="content">
+		<StyledBook>
 
 			<div className="sidebar">
 				<div css={`margin-block-start: 7px; padding-inline-start: 15px; margin-block-end: 4px;`}>
-					<a href="/">Hexa</a><strong><a href="/book">Book</a></strong>
+					<Link to="/">Hexa</Link><strong><Link to="/book">Book</Link></strong>
 				</div>
 				<ul>
 
@@ -163,11 +164,11 @@ export const Book = () => {
 			<div className="page">
 				<div className="header">
 					<div className="header-spacer"></div>
-					<a href="/try/" className="header-button">Try</a>
+					<Link to="/try" className="header-button">Try</Link>
 					<a href="https://github.com/hexalang/hexa/releases/latest" className="header-button">Install</a>
 					<a href="https://t.me/s/hexalang_news" className="header-button">News</a>
 					<a href="https://github.com/hexalang" className="header-button">GitHub</a>
-					<a href="https://www.patreon.com/PeyTy" className="header-button">Donate</a>
+					<Link to="/donate" className="header-button">Donate</Link>
 				</div>
 				<div id="article-navigation">
 					<a href="#top" className="selected">Introduction</a><br />
@@ -234,6 +235,6 @@ export const Book = () => {
 			</div>
 
 			<div className="dark-toggle"><span className="dark"></span><span className="light"></span></div>
-		</div>
+		</StyledBook>
 	)
 }

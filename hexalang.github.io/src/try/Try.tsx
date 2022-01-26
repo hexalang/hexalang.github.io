@@ -2,6 +2,7 @@ import { year } from 'data/links'
 import { Footer } from 'home/Footer'
 import { StyledTry } from './StyledTry'
 import { useEffect } from 'react'
+import { Header } from 'home/Header'
 
 export const Try = () => {
 	useEffect(() => {
@@ -11,10 +12,11 @@ export const Try = () => {
 	return <StyledTry>
 
 		<div className="page shadow">
+			<Header />
 			<div className="header">
 				<div className="ml-2">
 					<a href="https://hexalang.github.io">
-						<img src='/favicon/android-icon-192x192.png' css="width: 75px; height:75px" />
+						<img alt='' src='/favicon/android-icon-192x192.png' css="width: 75px; height:75px" />
 					</a>
 				</div>
 				<div className="pad ml-1">
@@ -40,7 +42,7 @@ export const Try = () => {
 								</div>
 								<div className="col-4">
 									<select className="input-control">
-										<option value="js">Javascript</option>
+										<option value="js">JavaScript</option>
 										<option value="c">C</option>
 										<option value="haxe">Haxe</option>
 									</select>
@@ -59,7 +61,7 @@ export const Try = () => {
 					<div className="tab-content fullheight">
 						<div className="tab-pane active pad fullheight flex-column" id="run">
 							<div className="output fullheight" id="runner-wrapper">
-								<iframe className="runner" src="/run.html?r=0.6468282873069537#oops" name="runner" scrolling="no" css="height: 100%;" frameBorder="no"></iframe>
+								<iframe title="runner" className="runner" src="/run.html?r=0.6468282873069537#oops" name="runner" scrolling="no" css="height: 100%;" frameBorder="no"></iframe>
 							</div>
 						</div>
 						<div className="tab-pane pad fullheight flex-column" id="code">
