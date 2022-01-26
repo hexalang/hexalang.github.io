@@ -1,4 +1,4 @@
-import './book.css'
+import { StyledBook } from './StyledBook'
 
 export const Book = () => {
 	return (

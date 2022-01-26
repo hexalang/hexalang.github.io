@@ -1,3 +1,6 @@
+import styled, { css } from 'styled-components'
+
+export const StyledBook = styled.div`
 /* Code */
 
 code, code * {
@@ -577,7 +580,7 @@ img[src*="favicon"] {
 	--color-text: #000000;
 }
 
-body, #root, .page {
+body, #root, .page, & {
 	background-color: var(--color-bg);
 	color: var(--color-text);
 	min-width: unset;
@@ -779,6 +782,7 @@ nav.main-nav li a {
 	left: 0;
 	width: 250px;
 	transition: transform .25s ease-out;
+	font-size: 20px;
 }
 
 .sidebar ul li {
@@ -912,7 +916,7 @@ body.sidebar-hidden .page {
 	width: 226px;
 	text-align: right;
 	right: 16px;
-	font-size: 0.9em;
+	font-size: 18px;
 	background-color: #fff;
 	background-color: var(--color-bg);
 	border-radius: 8px;
@@ -973,3 +977,4 @@ body.sidebar-hidden .page {
 		position: fixed;
 	}
 }
+`
