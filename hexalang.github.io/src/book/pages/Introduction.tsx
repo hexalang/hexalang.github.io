@@ -43,8 +43,6 @@ export const Article = () => {
 				<li>
 					<a href="https://hexalang.github.io">https://hexalang.github.io</a> home page</li>
 				<li>
-					<a href="https://twitter.com/hexalang">https://twitter.com/hexalang</a> Twitter account</li>
-				<li>
 					<a href="https://github.com/hexalang">https://github.com/hexalang</a> GitHub itself and source code</li>
 				<li>Patreon <a href="https://patreon.com/PeyTy">https://patreon.com/PeyTy</a> if you consider donations</li>
 				<li>

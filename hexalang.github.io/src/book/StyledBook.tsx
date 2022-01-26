@@ -575,27 +575,47 @@ img[src*="favicon"] {
 	transition: background-color .95s ease;
 }
 
-:root {
-	--color-bg: #ffffff;
-	--color-text: #000000;
+--color-bg: #ffffff;
+--color-text: #000000;
+
+@media screen and (prefers-color-scheme: dark) {
+	--color-bg: #333333;
+	--color-text: #ffffff;
+
+	&[data-theme="invert"] {
+		--color-bg: #ffffff;
+		--color-text: #000000;
+	}
 }
 
-body, #root, .page, & {
+@media screen and (prefers-color-scheme: light) {
+	--color-bg: #ffffff;
+	--color-text: #000000;
+
+	&[data-theme="invert"] {
+		--color-bg: #333333;
+		--color-text: #ffffff;
+	}
+}
+
+body, #root, .page, .sidebar {
 	background-color: var(--color-bg);
 	color: var(--color-text);
 	min-width: unset;
 	display: unset;
-}
 
-[data-theme="dark"] {
-	--color-bg: #333333;
-	--color-text: #ffffff;
-}
+	::-webkit-scrollbar {
+		width: 10px;
+	}
 
-@media screen and (prefers-color-scheme: dark) {
-	:root {
-		--color-bg: #333333;
-		--color-text: #ffffff;
+	::-webkit-scrollbar-track {
+		background-color: darkgrey;
+		background-color: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+		border-radius: 5px;
 	}
 }
 

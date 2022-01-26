@@ -42,7 +42,7 @@ export const StyledTry = styled.div`
 	.code *,
 	.code div {
 		font-family: Menlo, Roboto Mono, Consolas, Courier New, monospace;
-		overflow: hidden;
+		overflow: clip;
 		width: 100%;
 		height: 100%;
 		color: black;

@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 
 export const StyledHome = styled.div`
+background-color: rgb(255, 255, 255);
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
@@ -59,7 +61,7 @@ a {
 .code,
 .code div {
 	font-family: Menlo, Roboto Mono, Consolas, Courier New, monospace;
-	overflow: hidden;
+	overflow: clip;
 	width: 100%;
 	height: 100%;
 	color: black;

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { pages } from './pages'
 import { StyledBook } from './StyledBook'
 import { useParams } from "react-router-dom"
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const strong = (text: string, strong: boolean) => strong ? <strong>{text}</strong> : <>{text}</>
 
@@ -24,13 +24,14 @@ export const Book = () => {
 	const params = useParams<{ article: string }>()
 	const current = articleByRoute(params.article || '')
 	const Article = current.render
+	const [theme, setTheme] = useState<"normal" | "invert">("normal")
 
 	useEffect(() => {
 		document.title = current.name + ' — Hexa Book'
 	})
 
 	return (
-		<StyledBook>
+		<StyledBook data-theme={theme}>
 
 			<div className="sidebar">
 				<div css={`margin-block-start: 7px; padding-inline-start: 15px; margin-block-end: 4px;`}>
@@ -82,7 +83,7 @@ export const Book = () => {
 				<div css="margin-top: 64px" />
 			</div>
 
-			<div className="dark-toggle"><span className="dark"></span><span className="light"></span></div>
+			<div className="dark-toggle" onClick={() => setTheme(theme === "normal" ? "invert" : "normal")}><span className="dark"></span><span className="light"></span></div>
 		</StyledBook>
 	)
 }
