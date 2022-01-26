@@ -61,6 +61,9 @@ export const Book = () => {
 		}
 	}, [])
 
+	// eslint-disable-next-line no-restricted-globals
+	const hash = location.hash || '#'
+
 	return (
 		<StyledBook data-theme={theme}>
 
@@ -76,7 +79,17 @@ export const Book = () => {
 								<Fragment key={index}>
 									{index !== 0 && <div css={`height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);`}></div>}
 									{chapter.map(page =>
-										<li key={page.route}><Link to={`/book/${page.route}`}>{strong(page.name, current.route === page.route)}</Link></li>
+										<li key={page.route}><Link
+											to={`/book/${page.route}`}
+											onClick={
+												() => {
+													const target = document.querySelector('#top')
+													if (target) {
+														target.scrollIntoView()
+													}
+												}
+											}
+										>{strong(page.name, current.route === page.route)}</Link></li>
 									)}
 								</Fragment>
 							))
@@ -103,8 +116,11 @@ export const Book = () => {
 					<Link to="/donate" className="header-button">Donate</Link>
 				</div>
 				<div id="article-navigation">
-					<a href="#top" className="selected">{current.name}</a><br />
-					{nav.map(nav => <Fragment key={nav.id}><a href={`#${nav.id}`}>{nav.name}</a><br /></Fragment>)}
+					<a href="#top" className={(hash === '#' || hash === '#top') ? "selected" : ''}>{current.name}</a><br />
+					{nav.map(nav => <Fragment key={nav.id}><a
+						href={`#${nav.id}`}
+						className={(hash === `#${nav.id}`) ? "selected" : ''}
+					>{nav.name}</a><br /></Fragment>)}
 				</div>
 				<div className="article markdown">
 					<h2 id="top">{current.name}</h2>
