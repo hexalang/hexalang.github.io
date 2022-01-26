@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { pages } from './pages'
 import { StyledBook } from './StyledBook'
 import { useParams } from "react-router-dom"
+import { useEffect } from 'react'
 
 const strong = (text: string, strong: boolean) => strong ? <strong>{text}</strong> : <>{text}</>
 
@@ -23,6 +24,10 @@ export const Book = () => {
 	const params = useParams<{ article: string }>()
 	const current = articleByRoute(params.article || '')
 	const Article = current.render
+
+	useEffect(() => {
+		document.title = current.name + ' — Hexa Book'
+	})
 
 	return (
 		<StyledBook>
@@ -47,6 +52,7 @@ export const Book = () => {
 					}
 
 				</ul>
+				<br /><br /><br />
 			</div>
 
 			<div className="sidebar-toggle">
