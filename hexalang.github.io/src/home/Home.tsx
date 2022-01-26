@@ -1,9 +1,10 @@
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { StyledHome } from './StyledHome'
 
 export const Home = () => {
 	return (
-		<div className="page shadow">
+		<StyledHome className="page shadow">
 			<div className="wip-label">Site is under construction</div>
 			<Header />
 
@@ -82,6 +83,6 @@ export const Home = () => {
 
 			<Footer />
 
-		</div>
+		</StyledHome>
 	)
 }
