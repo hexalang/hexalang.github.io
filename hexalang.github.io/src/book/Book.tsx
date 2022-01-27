@@ -27,6 +27,7 @@ export const Book = () => {
 
 	// TODO save to localStorage
 	const [theme, setTheme] = useState<"normal" | "invert">("normal")
+	const [sidebar, setSidebar] = useState<boolean>(true)
 	const [nav, setNav] = useState<{ id: string, name: string }[]>([])
 
 	useEffect(() => {
@@ -65,7 +66,7 @@ export const Book = () => {
 	const hash = location.hash || '#'
 
 	return (
-		<StyledBook data-theme={theme}>
+		<StyledBook data-theme={theme} className={sidebar ? '' : 'sidebar-hidden'}>
 
 			<div className="sidebar">
 				<div css={`margin-block-start: 7px; padding-inline-start: 15px; margin-block-end: 4px;`}>
@@ -100,7 +101,7 @@ export const Book = () => {
 				<br /><br /><br />
 			</div>
 
-			<div className="sidebar-toggle">
+			<div className="sidebar-toggle" onClick={() => setSidebar(!sidebar)}>
 				<span></span>
 				<span></span>
 				<span></span>

@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components'
 
 export const StyledBook = styled.div`
+// Avoid weird trail on sidebar animation
+background-color: var(--color-bg);
+width: 100vw;
+height: 100vh;
+
 /* Code */
 
 code, code * {
@@ -575,6 +580,7 @@ img[src*="favicon"] {
 	transition: background-color .95s ease;
 }
 
+transition: background-color .95s ease;
 --color-bg: #ffffff;
 --color-text: #000000;
 
@@ -599,13 +605,29 @@ img[src*="favicon"] {
 }
 
 body, #root, .page, .sidebar {
-	background-color: var(--color-bg);
 	color: var(--color-text);
 	min-width: unset;
 	display: unset;
 
 	::-webkit-scrollbar {
 		width: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: darkgrey;
+		background-color: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+		border-radius: 5px;
+	}
+}
+
+code {
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
 	}
 
 	::-webkit-scrollbar-track {
@@ -880,7 +902,7 @@ nav.main-nav li a {
 	text-decoration: none;
 }
 
-body.sidebar-hidden .sidebar {
+&.sidebar-hidden .sidebar {
 	transform: translateX(-250px);
 }
 
@@ -896,7 +918,7 @@ body.sidebar-hidden .sidebar {
 	text-decoration-skip-ink: auto;
 }
 
-body.sidebar-hidden .page {
+&.sidebar-hidden .page {
 	left: 0;
 }
 
@@ -937,10 +959,14 @@ body.sidebar-hidden .page {
 	text-align: right;
 	right: 16px;
 	font-size: 18px;
-	background-color: #fff;
 	background-color: var(--color-bg);
-	border-radius: 8px;
 	padding-bottom: 4px;
+	border-left-color: rgba(0,0,0,0.5);
+	border-left-style: solid;
+	border-left-width: 6px;
+	a {
+		text-decoration: none;
+	}
 }
 
 #article-navigation a.selected {
@@ -970,7 +996,7 @@ body.sidebar-hidden .page {
 }
 
 @media screen and (max-width: 768px) {
-	body.sidebar-hidden .sidebar {
+	&.sidebar-hidden .sidebar {
 		transform: translateX(250px);
 	}
 
@@ -981,7 +1007,7 @@ body.sidebar-hidden .page {
 		transition: transform .25s ease;
 	}
 
-	body.sidebar-hidden .page {
+	&.sidebar-hidden .page {
 		transform: translateX(250px);
 	}
 
