@@ -9,7 +9,7 @@ export const Footer = () => {
 		<Styled className="footer flex-row">
 			<div className="flex-auto center non-mobile">
 				<div>
-					<a href="https://github.com/hexalang">Hexa</a> &copy; {year}
+					<a href={github}>Hexa</a> &copy; {year}
 				</div>
 			</div>
 			<div className="flex-row footer-buttons">

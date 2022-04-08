@@ -1,3 +1,22 @@
+import { FC } from 'react'
+import styled, { css } from 'styled-components'
+
+export const Sticky = styled.div`
+	position: sticky;
+	top: 0;
+`
+
+interface Props {
+	id: string
+}
+
+const H2: FC<Props> = ({ children, id }) => {
+	return <>
+		<h2 data-id={id}>{children}</h2>
+		<div id={id} />
+	</>
+}
+
 export const Article = () => {
 	return (
 		<>
@@ -23,7 +42,7 @@ export const Article = () => {
 				<li><a href="#c" id="markdown-toc-c">C</a></li>
 			</ul>
 
-			<h2 id="javascript">JavaScript</h2>
+			<H2 id="javascript">JavaScript</H2>
 
 			<ul>
 				<li><code className="language-plaintext highlighter-rouge">var</code> in Hexa is a <code className="language-plaintext highlighter-rouge">let</code> in JavaScript. Everyone uses <code className="language-plaintext highlighter-rouge">let</code> in js today anyway, but <code className="language-plaintext highlighter-rouge">var</code> as a keyword is more common and not breaks your old habits</li>

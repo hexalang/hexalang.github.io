@@ -690,6 +690,8 @@ h1,
 h2 {
 	padding: 0;
 	margin: 0;
+	position: sticky;
+	top: 0;
 }
 
 h1 {
@@ -957,7 +959,7 @@ nav.main-nav li a {
 #article-navigation {
 	position: sticky;
 	float: right;
-	top: 10px;
+	top: 50px;
 	width: 226px;
 	text-align: right;
 	right: 16px;

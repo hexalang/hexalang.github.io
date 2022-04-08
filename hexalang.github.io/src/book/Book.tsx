@@ -4,8 +4,7 @@ import { StyledBook } from './StyledBook'
 import { useParams } from "react-router-dom"
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { github } from '../data/links'
-
-const strong = (text: string, strong: boolean) => strong ? <strong>{text}</strong> : <>{text}</>
+import { Sidebar } from './Sidebar'
 
 const articleByRoute = (route: string) => {
 	route = route.replace('/', '').trim().toLowerCase()
@@ -39,12 +38,15 @@ export const Book = () => {
 			// eslint-disable-next-line no-lone-blocks
 			{
 				[
+					...document.querySelectorAll<HTMLElement>('h2[data-id]'),
+					...document.querySelectorAll<HTMLElement>('h3[data-id]'),
 					...document.querySelectorAll<HTMLElement>('h2[id]'),
 					...document.querySelectorAll<HTMLElement>('h3[id]')
 				].forEach(header => {
 					const name: string = header.innerText.trim()
-					if (name !== current.name) {
-						headers.push({ id: header.id, name })
+					const id = header.dataset['id'] ?? header.id
+					if (name !== current.name && name !== '' && id) {
+						headers.push({ id, name })
 					}
 				})
 			}
@@ -69,44 +71,10 @@ export const Book = () => {
 	return (
 		<StyledBook data-theme={theme} className={sidebar ? '' : 'sidebar-hidden'}>
 
-			<div className="sidebar">
-				<div css={`margin-block-start: 7px; padding-inline-start: 15px; margin-block-end: 4px;`}>
-					<Link to="/">Hexa</Link><strong><Link to="/book">Book</Link></strong>
-				</div>
-				<ul>
-
-					{
-						(() => {
-							return pages.map((chapter, index) => (
-								<Fragment key={index}>
-									{index !== 0 && <div css={`height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);`}></div>}
-									{chapter.map(page =>
-										<li key={page.route}><Link
-											to={`/book/${page.route}`}
-											onClick={
-												() => {
-													const target = document.querySelector('#top')
-													if (target) {
-														target.scrollIntoView()
-													}
-												}
-											}
-										>{strong(page.name, current.route === page.route)}</Link></li>
-									)}
-								</Fragment>
-							))
-						})()
-					}
-
-				</ul>
-				<br /><br /><br />
-			</div>
-
-			<div className="sidebar-toggle" onClick={() => setSidebar(!sidebar)}>
-				<span></span>
-				<span></span>
-				<span className="red"></span>
-			</div>
+			<Sidebar
+				toggleSidebar={() => setSidebar(!sidebar)}
+				currentRoute={current.route}
+			/>
 
 			<div className="page">
 				<div className="header">
@@ -125,7 +93,8 @@ export const Book = () => {
 					>{nav.name}</a><br /></Fragment>)}
 				</div>
 				<div className="article markdown">
-					<h2 id="top">{current.name}</h2>
+					<h2>{current.name}</h2>
+					<div id="top"></div>
 					<Article />
 				</div>
 				<div css="margin-top: 64px" />

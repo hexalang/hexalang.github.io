@@ -42,7 +42,7 @@ export const Home = () => {
 						<div id="download" className="pad code output">
 							<div><h2>Download</h2></div>
 							<div>Available for 64-bit Linux, macOS and Windows</div>
-							<img src="https://github.com/hexalang/hexa/blob/master/preview.png?raw=true" />
+							<img src="https://github.com/hexalang/hexa/blob/kawaii/preview.png?raw=true" />
 						</div>
 					</div>
 				</div>
