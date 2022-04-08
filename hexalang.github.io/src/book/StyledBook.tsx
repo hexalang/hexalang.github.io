@@ -759,7 +759,8 @@ footer {
 }
 
 li a strong {
-	font-weight: 500;
+	font-weight: normal;
+	color: rgb(0, 174, 239);
 }
 
 nav.main-nav ul {
@@ -997,7 +998,7 @@ nav.main-nav li a {
 }
 
 #article-navigation a.selected {
-	font-weight: bold;
+	color: rgb(0, 174, 239);
 }
 
 #article-navigation a {
