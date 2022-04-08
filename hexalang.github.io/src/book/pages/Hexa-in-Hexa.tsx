@@ -22,7 +22,7 @@ export const Article = () => {
 			<p>There's some quirks, for example, old JavaScript generator dropped entirely from codebase in favor of new normalizer+generator tandem. New generator sometimes breaks compilation, but no worries, it's a quick fix, I just wanted to share my joy as earlier as possible!</p>
 			<p></p>
 
-			<p>It is now really easy to add new <a href="https://github.com/hexalang/hexa/tree/master/source/targets">targets</a> with introduced adaptive code <a href="https://github.com/hexalang/hexa/blob/master/source/compiler/normalizer.hexa">normalizer</a>. It receives platform-specific keywords and rules directly, and does all renaming stuff and heavy lifting by itself.</p>
+			<p>It is now really easy to add new <a href="https://github.com/hexalang/hexa/tree/kawaii/source/targets">targets</a> with introduced adaptive code <a href="https://github.com/hexalang/hexa/blob/kawaii/source/compiler/normalizer.hexa">normalizer</a>. It receives platform-specific keywords and rules directly, and does all renaming stuff and heavy lifting by itself.</p>
 			<p></p>
 
 			<p>It's time to backport some features from early prototypes and go public!</p>
