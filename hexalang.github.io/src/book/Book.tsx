@@ -139,15 +139,19 @@ export const Book = () => {
 							scrollTo(`#top`)
 						}}
 						className={(hash === '#' || hash === '#top') ? "selected" : ''}
-					>{current.name}</a><br />
+					>{current.name}</a>
 					{nav.map(nav => <Fragment key={nav.id}><a
 						href={`#${nav.id}`}
 						onClick={(event) => {
 							event.preventDefault()
 							scrollTo(`#${nav.id}`)
 						}}
-						className={(hash === `#${nav.id}`) ? "selected" : ''}
-					>{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a><br /></Fragment>)}
+						className={
+							((hash === `#${nav.id}`) ? "selected" : '')
+							+
+							(nav.h === 'h3' ? ' flex' : '')
+						}
+					>{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
 				</div>
 				<div className="article markdown">
 					<h2><a

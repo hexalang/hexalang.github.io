@@ -990,10 +990,17 @@ nav.main-nav li a {
 	border-left-style: solid;
 	border-left-width: 6px;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
 
 	a {
+		position: relative;
+		align-self: self-end;
 		text-decoration: none;
 		transition: color .2s ease-in-out;
+		&.flex {
+			display: flex;
+		}
 	}
 }
 
