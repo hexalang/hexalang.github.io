@@ -7,9 +7,10 @@ const strong = (text: string, strong: boolean) => strong ? <strong>{text}</stron
 interface Props {
 	currentRoute: string
 	toggleSidebar: () => void
+	toggleTheme: () => void
 }
 
-export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar }: Props) => {
+export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar, toggleTheme }: Props) => {
 	return (
 		<>
 			<div className="sidebar">
@@ -50,6 +51,8 @@ export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar }: Props) => {
 				<span></span>
 				<span className="red"></span>
 			</div>
+
+			<div className="dark-toggle" onClick={toggleTheme}><span className="dark"></span><span className="light"></span></div>
 		</>
 	)
 }

@@ -75,11 +75,6 @@ export const Book = () => {
 	return (
 		<StyledBook data-theme={theme} className={sidebar ? '' : 'sidebar-hidden'}>
 
-			<Sidebar
-				toggleSidebar={() => setSidebar(!sidebar)}
-				currentRoute={current.route}
-			/>
-
 			<div className="page">
 				<div className="header">
 					<div className="header-spacer"></div>
@@ -104,7 +99,11 @@ export const Book = () => {
 				<div css="margin-top: 64px" />
 			</div>
 
-			<div className="dark-toggle" onClick={() => setTheme(theme === "normal" ? "invert" : "normal")}><span className="dark"></span><span className="light"></span></div>
+			<Sidebar
+				toggleSidebar={() => setSidebar(!sidebar)}
+				toggleTheme={() => setTheme(theme === "normal" ? "invert" : "normal")}
+				currentRoute={current.route}
+			/>
 		</StyledBook>
 	)
 }
