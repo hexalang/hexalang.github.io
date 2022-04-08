@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components'
 
+const headerHeight = `50px`
+const stickyTop = `42px`
+
 export const StyledBook = styled.div`
 // Avoid weird trail on sidebar animation
 background-color: var(--color-bg);
@@ -695,7 +698,8 @@ h2 {
 	padding: 0;
 	margin: 0;
 	position: sticky;
-	top: 0;
+	top: ${stickyTop};
+	background-color: var(--color-bg);
 }
 
 h1 {
@@ -705,11 +709,16 @@ h1 {
 h2 {
 	font-size: 40px;
 	text-align: center;
+	height: 54px; // Sticky
 }
 
 h3 {
 	font-size: 25px;
 	text-align: center;
+	position: sticky;
+	top: ${stickyTop};
+	background-color: var(--color-bg);
+	height: 54px; // Sticky
 }
 
 img {
@@ -773,11 +782,13 @@ nav.main-nav li a {
 }
 
 .markdown h2 {
-	margin: 0 0.5em 0.45em;
+	margin-top: 0px;
+    margin-bottom: 0.45em;
 }
 
 .markdown h3 {
-	margin: 0 1em 0.5em;
+	margin-top: 0px;
+    margin-bottom: 0.5em;
 }
 
 .markdown p {
@@ -935,9 +946,12 @@ nav.main-nav li a {
 	top: 0;
 	right: 0;
 	left: 0;
-	height: 50px;
+	height: ${headerHeight};
 	display: flex;
 	flex-wrap: wrap;
+	position: fixed;
+	z-index: 1;
+	background-color: var(--color-bg);
 }
 
 .header .header-spacer {
@@ -952,7 +966,7 @@ nav.main-nav li a {
 
 .article {
 	margin: 0 auto;
-	padding: 10px 15px;
+	padding: 40px 15px;
 	max-width: 800px;
 }
 
@@ -973,6 +987,8 @@ nav.main-nav li a {
 	border-left-color: rgba(0,0,0,0.5);
 	border-left-style: solid;
 	border-left-width: 6px;
+	z-index: 1;
+
 	a {
 		text-decoration: none;
 		transition: color .2s ease-in-out;
