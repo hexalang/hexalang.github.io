@@ -26,7 +26,12 @@ import { Article as Bootstrap } from './pages/Bootstrap-the-compiler'
 import { Article as Hexa } from './pages/Hexa-in-Hexa'
 import { Article as Syntax } from './pages/Syntax-and-Inspiration'
 
-const pagesNoRoutes = [
+type PageNoRoutes = {
+	name: string
+	render: () => JSX.Element
+}[][]
+
+const pagesNoRoutes: PageNoRoutes = [
 	[
 		{ name: 'Introduction', render: Introduction },
 		{ name: 'Hello, Hexa', render: Hello },
@@ -63,7 +68,7 @@ const toRoutablePages = (pages: typeof pagesNoRoutes) => {
 			return {
 				...page,
 				name: page.name.trim(),
-				route: page.name.trim().toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz'.indexOf(char) !== -1 ? char : '_').join('').split('__').join('_')
+				route: page.name.trim().toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz'.indexOf(char) !== -1 ? char : '-').join('').split('--').join('-')
 			}
 		}
 	))
