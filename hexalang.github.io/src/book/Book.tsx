@@ -38,10 +38,14 @@ export const Book = () => {
 			// eslint-disable-next-line no-lone-blocks
 			{
 				[
-					...document.querySelectorAll<HTMLElement>('h2[data-id]'),
-					...document.querySelectorAll<HTMLElement>('h3[data-id]'),
-					...document.querySelectorAll<HTMLElement>('h2[id]'),
-					...document.querySelectorAll<HTMLElement>('h3[id]')
+					...document.querySelectorAll<HTMLElement>(
+						[
+							'h2[data-id]',
+							'h3[data-id]',
+							'h2[id]',
+							'h3[id]'
+						].join(', ')
+					)
 				].forEach(header => {
 					const name: string = header.innerText.trim()
 					const id = header.dataset['id'] ?? header.id
