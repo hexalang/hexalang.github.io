@@ -3,6 +3,7 @@ import { pages } from './pages'
 import { StyledBook } from './StyledBook'
 import { useParams } from "react-router-dom"
 import { Fragment, useEffect, useRef, useState } from 'react'
+import { github } from '../data/links'
 
 const strong = (text: string, strong: boolean) => strong ? <strong>{text}</strong> : <>{text}</>
 
@@ -104,7 +105,7 @@ export const Book = () => {
 			<div className="sidebar-toggle" onClick={() => setSidebar(!sidebar)}>
 				<span></span>
 				<span></span>
-				<span></span>
+				<span className="red"></span>
 			</div>
 
 			<div className="page">
@@ -113,7 +114,7 @@ export const Book = () => {
 					<Link to="/try" className="header-button">Try</Link>
 					<a href="https://github.com/hexalang/hexa/releases/latest" className="header-button">Install</a>
 					<a href="https://t.me/s/hexalang_news" className="header-button">News</a>
-					<a href="https://github.com/hexalang" className="header-button">GitHub</a>
+					<a href={github} className="header-button">GitHub</a>
 					<Link to="/donate" className="header-button">Donate</Link>
 				</div>
 				<div id="article-navigation">

@@ -34,7 +34,7 @@ li ul li {
 
 /* Sidebar */
 
-.sidebar-toggle :nth-child(3) {
+.sidebar-toggle .red {
 	background-color: rgb(250, 96, 74);
 }
 
@@ -847,6 +847,7 @@ nav.main-nav li a {
 	text-align: center;
 	z-index: 4;
 	transition: opacity .3s;
+	cursor: pointer;
 }
 
 .sidebar-toggle span {
@@ -871,6 +872,7 @@ nav.main-nav li a {
 	transition: opacity .3s;
 	z-index: 4;
 	bottom: 40px;
+	cursor: pointer;
 }
 
 .dark-toggle span {
@@ -879,6 +881,7 @@ nav.main-nav li a {
 	width: 16px;
 	height: 16px;
 	position: relative;
+	border-radius: 4px;
 }
 
 .dark-toggle span.dark {
