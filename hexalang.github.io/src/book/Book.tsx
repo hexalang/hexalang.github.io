@@ -5,6 +5,34 @@ import { useParams } from "react-router-dom"
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { github } from '../data/links'
 import { Sidebar } from './Sidebar'
+import styled, { css } from 'styled-components'
+
+export const StyledSub = styled.span`
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: relative;
+
+	div {
+		background-color: gray;
+	}
+
+	div.ver {
+		position: absolute;
+		height: 8px;
+		width: 2px;
+		right: 4px;
+		top: 4px;
+	}
+
+	div.hor {
+		position: absolute;
+		height: 2px;
+		width: 8px;
+		right: 4px;
+		top: 12px;
+	}
+`
 
 const articleByRoute = (route: string) => {
 	route = route.replace('/', '').trim().toLowerCase()
@@ -28,7 +56,7 @@ export const Book = () => {
 	// TODO save to localStorage
 	const [theme, setTheme] = useState<"normal" | "invert">("normal")
 	const [sidebar, setSidebar] = useState<boolean>(true)
-	const [nav, setNav] = useState<{ id: string, name: string }[]>([])
+	const [nav, setNav] = useState<{ id: string, name: string, h: string }[]>([])
 
 	useEffect(() => {
 		// TODO SSR router title?
@@ -50,7 +78,7 @@ export const Book = () => {
 					const name: string = header.innerText.trim()
 					const id = header.dataset['id'] ?? header.id
 					if (name !== current.name && name !== '' && id) {
-						headers.push({ id, name })
+						headers.push({ id, name, h: header.tagName.toLowerCase() })
 					}
 				})
 			}
@@ -89,7 +117,7 @@ export const Book = () => {
 					{nav.map(nav => <Fragment key={nav.id}><a
 						href={`#${nav.id}`}
 						className={(hash === `#${nav.id}`) ? "selected" : ''}
-					>{nav.name}</a><br /></Fragment>)}
+					>{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a><br /></Fragment>)}
 				</div>
 				<div className="article markdown">
 					<h2>{current.name}</h2>

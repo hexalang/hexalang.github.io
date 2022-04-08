@@ -47,6 +47,10 @@ li ul li {
 	margin: 0;
 }
 
+.sidebar ul li a {
+	transition: color .2s ease-in-out;
+}
+
 /* Emoji haXe logo */
 
 img[src*="favicon"] {
@@ -971,6 +975,7 @@ nav.main-nav li a {
 	border-left-width: 6px;
 	a {
 		text-decoration: none;
+		transition: color .2s ease-in-out;
 	}
 }
 
