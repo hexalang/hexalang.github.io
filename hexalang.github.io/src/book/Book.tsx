@@ -87,14 +87,33 @@ export const Book = () => {
 		document.title = newTitle
 	})
 
+	const headerOffset = 50
+
+	const scrollTo = (id: string) => {
+		const target = document.querySelector<HTMLElement>(id)
+		const page = document.querySelector<HTMLElement>('.page')
+		if (!target) return
+		if (!page) return
+		window.location.hash = id
+
+		if (id === `#top`) {
+			page.scrollTo(0, 0)
+			return
+		}
+
+		target.scrollIntoView({
+			//	block: 'start',
+			block: 'start'
+		})
+
+		page.scrollBy(0, -headerOffset)
+	}
+
 	useEffect(() => {
 		// eslint-disable-next-line no-restricted-globals
 		if (location.hash.length < 3) return
 		// eslint-disable-next-line no-restricted-globals
-		const target = document.querySelector(location.hash)
-		if (target) {
-			target.scrollIntoView()
-		}
+		scrollTo(location.hash)
 	}, [])
 
 	// eslint-disable-next-line no-restricted-globals
@@ -113,14 +132,31 @@ export const Book = () => {
 					<Link to="/donate" className="header-button">Donate</Link>
 				</div>
 				<div id="article-navigation">
-					<a href="#top" className={(hash === '#' || hash === '#top') ? "selected" : ''}>{current.name}</a><br />
+					<a
+						href="#top"
+						onClick={(event) => {
+							event.preventDefault()
+							scrollTo(`#top`)
+						}}
+						className={(hash === '#' || hash === '#top') ? "selected" : ''}
+					>{current.name}</a><br />
 					{nav.map(nav => <Fragment key={nav.id}><a
 						href={`#${nav.id}`}
+						onClick={(event) => {
+							event.preventDefault()
+							scrollTo(`#${nav.id}`)
+						}}
 						className={(hash === `#${nav.id}`) ? "selected" : ''}
 					>{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a><br /></Fragment>)}
 				</div>
 				<div className="article markdown">
-					<h2>{current.name}</h2>
+					<h2><a
+						href={'#top'}
+						onClick={(event) => {
+							event.preventDefault()
+							scrollTo(`#top`)
+						}}
+					>{current.name}</a></h2>
 					<div id="top"></div>
 					<Article />
 				</div>

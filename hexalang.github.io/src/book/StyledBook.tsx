@@ -660,8 +660,9 @@ body {
 }
 
 a {
-	color: #000;
 	color: var(--color-text);
+	transition: color .2s ease-in-out;
+	text-decoration: none;
 }
 
 a:hover {

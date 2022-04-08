@@ -12,8 +12,8 @@ interface Props {
 
 const H2: FC<Props> = ({ children, id }) => {
 	return <>
-		<h2 data-id={id}>{children}</h2>
 		<div id={id} />
+		<h2 data-id={id}><a href={'#' + id}>{children}</a></h2>
 	</>
 }
 
