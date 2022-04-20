@@ -10,6 +10,7 @@ export const StyledTry = styled.div`
 		vertical-align: baseline;
 		box-sizing: border-box;
 	}
+
 	body {
 		position: absolute;
 		background-color: gainsboro;
@@ -19,6 +20,7 @@ export const StyledTry = styled.div`
 		padding: 0px;
 		/* padding: 10px; */
 	}
+
 	.page {
 		display: flex;
 		flex-flow: column;
@@ -26,18 +28,22 @@ export const StyledTry = styled.div`
 		min-height: 100vh;
 		min-width: 100%;
 	}
+
 	a {
 		color: black;
 		text-decoration: none !important;
 	}
+
 	.nav a {
 		user-select: none;
 		cursor: default;
 		-webkit-user-select: none;
 	}
+
 	.editor {
 		outline: none;
 	}
+
 	.code,
 	.code *,
 	.code div {
@@ -54,31 +60,39 @@ export const StyledTry = styled.div`
 		box-shadow: unset;
 		border-radius: unset;
 	}
+
 	.code i {
 		color: gray;
 		font-family: Menlo, Roboto Mono, Courier New, monospace;
 	}
+
 	.container {
 		display: flex;
 		flex-wrap: wrap;
 		flex: 1 1 auto;
 	}
+
 	.flex-column {
 		display: flex;
 		flex-direction: column;
 	}
+
 	.col-1 {
 		width: 25%;
 	}
+
 	.col-2 {
 		width: 50%;
 	}
+
 	.col-3 {
 		width: 75%;
 	}
+
 	.col-4 {
 		width: 100%;
 	}
+
 	@media screen and (max-width: 800px) {
 		.col-sm-1 {
 			width: 25%;
@@ -93,18 +107,23 @@ export const StyledTry = styled.div`
 			width: 100%;
 		}
 	}
+
 	.pad {
 		padding: 10px;
 	}
+
 	.pad-2 {
 		padding: 20px;
 	}
+
 	.margin {
 		margin: 10px;
 	}
+
 	.fullheight {
 		height: 100%;
 	}
+
 	.flex-fullheight {
 		flex-grow: 1;
 	}
@@ -112,25 +131,31 @@ export const StyledTry = styled.div`
 		box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 		border-radius: 2px;
 	}
+
 	.center {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center
 	}
+
 	.flex-row {
 		display: flex;
 		flex-direction: row;
 	}
+
 	.flex-end {
 		justify-content: flex-end;
 	}
+
 	.flex-auto {
 		flex: 1 0 auto;
 	}
+
 	button:focus {
 		outline: none !important;
 	}
+
 	.btn {
 		cursor: pointer;
 		border-radius: 2px;
@@ -142,37 +167,50 @@ export const StyledTry = styled.div`
 		margin: 6px;
 		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 	}
+
 	.btn:hover {
 		box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.18), 0 2px 7px 0 rgba(0, 0, 0, 0.15);
 	}
+
 	.btn:active,
 	.btn:focus,
 	.btn.active {
 		outline: 0;
 	}
+
 	.btn-black {
 		color: #fff !important;
 		background-color: #000 !important;
 	}
+
 	.btn-blue {
 		color: #fff !important;
 		background-color: rgb(41, 156, 228) !important;
 	}
+
 	.btn-red {
 		color: #fff !important;
 		background-color: rgb(253, 61, 36) !important;
 	}
+
 	.nav {
 		display: flex;
 		border-bottom: 1px solid gainsboro;
 	}
+
 	.nav>* {
 		padding: 5px 10px;
 		margin-bottom: -1px;
 	}
+
+	.nav-link {
+		font-size: 16px;
+	}
+
 	.nav-link:nth-child(1) {
 		margin-left: 10px;
 	}
+
 	.nav>.active {
 		border: 1px solid gainsboro;
 		border-top: 2px solid #6cf;
@@ -180,12 +218,15 @@ export const StyledTry = styled.div`
 		border-bottom: 1px solid white;
 		background-color: white;
 	}
+
 	.tab-pane {
 		display: none;
 	}
+
 	.tab-pane.active {
 		display: block;
 	}
+
 	textarea {
 		background-color: #fff;
 		background-clip: padding-box;
@@ -193,6 +234,7 @@ export const StyledTry = styled.div`
 		border-radius: .25rem;
 		width: 100%;
 	}
+
 	.output {
 		background-color: #fff;
 		background-clip: padding-box;
@@ -200,11 +242,13 @@ export const StyledTry = styled.div`
 		border-radius: .25rem;
 		width: 100%;
 	}
+
 	.footer {
 		flex: 0 1 45px;
 		background-color: aliceblue;
 		border-top: 2px solid #6cf;
 	}
+
 	.header {
 		flex: 0 1 85px;
 		display: flex;
@@ -215,18 +259,22 @@ export const StyledTry = styled.div`
 		justify-content: center;
 		align-items: center;
 	}
+
 	.ml-1 {
 		margin-left: 0.5em;
 	}
+
 	.ml-2 {
 		margin-left: 1em;
 	}
+
 	.input-control {
 		width: 100%;
 		padding: .25em .75em;
 		border: 1px solid #ced4da;
 		border-radius: .25rem;
 	}
+
 	.flex-center {
 		display: flex;
 		align-items: center;

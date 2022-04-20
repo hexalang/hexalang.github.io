@@ -1,21 +1,88 @@
-import { github, year, patreon, telegram } from '../data/links'
+import { github, year, patreon, telegram, discord } from '../data/links'
 import styled, { css } from 'styled-components'
 
 const Styled = styled.div`
-	font-size: 16px;
+	.footer {
+		flex: 0 1 45px;
+		background: #6cf;
+		justify-content: center;
+	}
+
+	.flex-row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.center {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center
+	}
+
+	.flex-auto {
+		flex: 1 0 auto;
+	}
+
+	.footer-buttons {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer-buttons > .btn {
+		margin-right: 10px;
+	}
+
+	.text {
+		font-size: 16px;
+		text-align: left;
+		a {
+			text-decoration: none;
+		}
+	}
+
+	a.btn {
+		font-size: 16px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.btn-discord {
+		background-color: #5663EE;
+	}
+
+	.btn-telegram {
+		background-color: rgb(41, 156, 228);
+	}
+
+	.btn-github {
+		background-color: #000;
+	}
+
+	.btn-patreon {
+		background-color: rgb(253, 61, 36);
+	}
+
+	@media screen and (max-width: 800px) {
+		.non-mobile {
+			display: none;
+		}
+	}
 `
 export const Footer = () => {
 	return (
 		<Styled className="footer flex-row">
-			<div className="flex-auto center non-mobile">
+			<div className="flex-auto center non-mobile text">
 				<div>
 					<a href={github}>Hexa</a> &copy; {year}
 				</div>
 			</div>
 			<div className="flex-row footer-buttons">
-				<a href={telegram} className="btn btn-blue">Telegram</a>
-				<a href={github} className="btn btn-black">GitHub</a>
-				<a href={patreon} className="btn btn-red">Patreon</a>
+				<a href={discord} className="btn btn-discord">Discord</a>
+				<a href={telegram} className="btn btn-telegram">Telegram</a>
+				<a href={github} className="btn btn-github">GitHub</a>
+				<a href={patreon} className="btn btn-patreon">Patreon</a>
 			</div>
 		</Styled>
 	)

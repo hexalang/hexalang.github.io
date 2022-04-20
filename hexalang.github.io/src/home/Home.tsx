@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 export const Home = () => {
 	return (
 		<StyledHome className="page shadow">
-			<div className="wip-label">Site is under construction</div>
-			<Header />
+			<div className="wip-label">Site is under construction!! =)</div>
+			<Header compact={false} />
 
 			<div className="container">
 
@@ -71,7 +71,7 @@ export const Home = () => {
 				<div className="col-3">
 					<div className="shadow margin">
 						<div id="without" className="pad code output">
-							<Link to="/try">Try Hexa without installing</Link>
+							<Link to="/try">Try Hexa without installing =P</Link>
 						</div>
 					</div>
 				</div>

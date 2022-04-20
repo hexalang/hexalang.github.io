@@ -3,7 +3,7 @@ import { pages } from './pages'
 import { StyledBook } from './StyledBook'
 import { useParams } from "react-router-dom"
 import { Fragment, useEffect, useRef, useState } from 'react'
-import { github } from '../data/links'
+import { github, youtube } from '../data/links'
 import { Sidebar } from './Sidebar'
 import styled, { css } from 'styled-components'
 
@@ -102,7 +102,6 @@ export const Book = () => {
 		}
 
 		target.scrollIntoView({
-			//	block: 'start',
 			block: 'start'
 		})
 
@@ -127,7 +126,7 @@ export const Book = () => {
 					<div className="header-spacer"></div>
 					<Link to="/try" className="header-button">Try</Link>
 					<a href="https://github.com/hexalang/hexa/releases/latest" className="header-button">Install</a>
-					<a href="https://t.me/s/hexalang_news" className="header-button">News</a>
+					<a href={youtube} className="header-button">YouTube</a>
 					<a href={github} className="header-button">GitHub</a>
 					<Link to="/donate" className="header-button">Donate</Link>
 				</div>

@@ -2,15 +2,16 @@ import { Header } from '../home/Header'
 import { Footer } from '../home/Footer'
 import { useEffect } from 'react'
 import liberapay from './liberapay.svg'
+import { StyledDonate } from './StyledDonate'
 
 export const Donate = () => {
 	useEffect(() => {
 		document.title = 'Donate to Hexa'
 	}, [])
 
-	return <>
+	return <StyledDonate>
 		<div className="page shadow">
-			<Header />
+			<Header compact={false} />
 
 			<div className="container flex-column pad">
 				<div className="card donate-card">
@@ -200,5 +201,5 @@ export const Donate = () => {
 
 			<Footer />
 		</div>
-	</>
+	</StyledDonate>
 }

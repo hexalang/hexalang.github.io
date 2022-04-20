@@ -12,17 +12,8 @@ export const Try = () => {
 	return <StyledTry>
 
 		<div className="page shadow">
-			<Header />
+			<Header compact={true} />
 			<div className="header">
-				<div className="ml-2">
-					<a href="https://hexalang.github.io">
-						<img alt='' src='/favicon/android-icon-192x192.png' css="width: 75px; height:75px" />
-					</a>
-				</div>
-				<div className="pad ml-1">
-					Hexa Programming Language
-					<br /> Ensures safety, simplicity and performance
-				</div>
 			</div>
 
 			<div className="container pad">

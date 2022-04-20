@@ -2,6 +2,9 @@ import styled, { css } from 'styled-components'
 
 export const StyledHome = styled.div`
 background-color: rgb(255, 255, 255);
+display: flex;
+flex-direction: column;
+min-height: 100vh;
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -95,15 +98,6 @@ a {
 	flex: 0 1 45px;
 	background: #6cf;
 	justify-content: center;
-}
-
-.footer-buttons {
-	align-items: center;
-	justify-content: center;
-}
-
-.footer-buttons>.btn {
-	margin-right: 10px;
 }
 
 .header {
@@ -207,27 +201,6 @@ button:focus {
 	color: #fff !important;
 	/* background-color: #4AB3F4; */
 	background-color: rgb(253, 61, 36) !important;
-}
-
-.navbar {
-	right: 10px;
-	position: absolute;
-	min-height: 50px;
-	display: flex;
-	padding: 3px;
-	flex-direction: row;
-}
-
-.navbar-btn {
-	color: rgb(32, 32, 32);
-	cursor: pointer;
-	padding: 5px 10px;
-	user-select: none;
-	margin: 6px;
-}
-
-.navbar-btn:hover {
-	box-shadow: 0px 10px 20px -10px lightgrey, inset 0px -15px 20px -20px lightgrey;
 }
 
 .card {
@@ -345,7 +318,7 @@ button:focus {
 }
 
 @media screen and (max-width: 800px) {
-	col-sm-1 {
+	.col-sm-1 {
 		width: 50%;
 	}
 
