@@ -34,7 +34,7 @@ export const Try = () => {
 								<div className="col-4">
 									<select className="input-control">
 										<option value="js">JavaScript</option>
-										<option value="c">C</option>
+										<option value="c">C/C++</option>
 										<option value="haxe">Haxe</option>
 									</select>
 								</div>
@@ -52,7 +52,7 @@ export const Try = () => {
 					<div className="tab-content fullheight">
 						<div className="tab-pane active pad fullheight flex-column" id="run">
 							<div className="output fullheight" id="runner-wrapper">
-								<iframe title="runner" className="runner" src="/run.html?r=0.6468282873069537#oops" name="runner" scrolling="no" css="height: 100%;" frameBorder="no"></iframe>
+								<iframe title="runner" className="runner" src="/run.html?r=0.6468282873069537#soon" name="runner" scrolling="no" css="height: 100%;" frameBorder="no"></iframe>
 							</div>
 						</div>
 						<div className="tab-pane pad fullheight flex-column" id="code">

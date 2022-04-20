@@ -25,7 +25,7 @@ export const Home = () => {
 				<div className="col-1 col-sm-2 pad">
 					<div className="shadow fullheight">
 						<div id="output" className="pad code output">
-							...JavaScript is required to run interactive demo
+							...coming soon
 						</div>
 					</div>
 				</div>
