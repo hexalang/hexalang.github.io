@@ -31,7 +31,6 @@ div.small-container {
 }
 
 div.container {
-	min-width: 100vw;
 }
 
 div.small-container {
@@ -162,8 +161,9 @@ div.small-container {
 	background-color: #000 !important;
 }
 
-.btn-blue {
+a.btn-blue {
 	color: #fff !important;
+	text-decoration: none;
 	background-color: rgb(41, 156, 228) !important;
 }
 
