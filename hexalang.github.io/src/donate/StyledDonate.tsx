@@ -31,7 +31,7 @@ div.small-container {
 }
 
 div.container {
-	max-width: 940px;
+	min-width: 100vw;
 }
 
 div.small-container {
@@ -75,6 +75,10 @@ div.small-container {
 	display: flex;
 	flex-direction: row;
 	padding: 15px 30px;
+
+	&.center {
+		justify-content: center;
+	}
 }
 
 .donate-section-header {
@@ -176,7 +180,12 @@ div.small-container {
 	vertical-align: -12.5%;
 }
 
-@media screen and (max-width: 800px) {
+.footer {
+	padding-bottom: 8px;
+	padding-left: 8px;
+}
+
+@media screen and (max-width: 1128px) {
 	.col-sm-1 {
 		width: 50%;
 	}
@@ -190,7 +199,7 @@ div.small-container {
 	}
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1129px) {
 	.mobile {
 		display: none;
 	}

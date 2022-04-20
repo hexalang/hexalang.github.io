@@ -61,7 +61,7 @@ export const Donate = () => {
 								Patreon
 							</div>
 							<a href="https://www.patreon.com/PeyTy">
-								<div className="card-body">
+								<div className="card-body center">
 									<img
 										css='border-radius: 4px'
 										alt="Become a Patron"
@@ -80,7 +80,7 @@ export const Donate = () => {
 								Liberapay
 							</div>
 							<a href="https://liberapay.com/PeyTy">
-								<div className="card-body">
+								<div className="card-body center">
 									<img
 										src={liberapay}
 										width="140"
