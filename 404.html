@@ -10,7 +10,7 @@
 	{% seo title=false %}
 </head>
 
-<body>
+<body onload="redirect()">
 	<style>
 		body,
 		html {
@@ -84,6 +84,13 @@
 		<p>Want more?</p>
 		<p><a href="https://www.patreon.com/PeyTy" class="patreon">Patreon</a></p>
 	</div>
+	<script>
+		function redirect() {
+			setTimeout(function () {
+				window.location.replace("/");
+			}, 1000);
+		}
+	</script>
 </body>
 
 </html>
