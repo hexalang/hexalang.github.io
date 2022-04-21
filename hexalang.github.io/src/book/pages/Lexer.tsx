@@ -7,8 +7,8 @@ export const Article = () => {
 
 			<p>Example of lexer work:</p>
 
-			<Code code={`"function hello() return 123" => [
-    "function", "hello", "(", ")", "return", "123"
+			<Code code={`"fun hello() return 123" => [
+    "fun", "hello", "(", ")", "return", "123"
 ]
 // In actual compiler code tokens are used, not arrays of plain strings`} />
 

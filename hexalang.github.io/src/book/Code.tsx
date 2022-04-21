@@ -39,7 +39,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 		'catch',
 		'true',
 		'false',
-		'function' // TODO
+		'fun' // TODO
 	]
 
 	let state: State = State.Plaintext as State

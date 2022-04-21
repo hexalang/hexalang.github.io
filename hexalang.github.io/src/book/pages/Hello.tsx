@@ -3,7 +3,7 @@ import { Code } from '../Code'
 const code = `// My first program in Hexa!
 
 /// Show greetings
-function hello() {
+fun hello() {
     console.log("Hello, Hexa!")
 }
 
@@ -94,19 +94,19 @@ export const Article = () => {
 			<p>There is also are documentational comments. They start with triple slash <code className="language-plaintext highlighter-rouge">///</code> and attached semantically to the next code block after them:</p>
 
 			<Code code={`/// Show greetings
-function hello() {`} />
+fun hello() {`} />
 
 			<p>So we know what exactly that function does without reading whole code <img className="emoji" title=":thinking:" alt=":thinking:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png" height="20" width="20" />. This is a really good and common practice to document your code, make it your habit.</p>
 
 			<p>Next we see a function and it’s body:</p>
 
-			<Code code={`function hello() { // "hello" is a function name
+			<Code code={`fun hello() { // "hello" is a function name
     // function body
 }`} />
 
 			<p>Function is a reusable code block, you may run it as many times you wish, and even send different parameters (arguments) into it:</p>
 
-			<Code code={`function hello(name) { // "name" is a function argument
+			<Code code={`fun hello(name) { // "name" is a function argument
     console.log("Hello, " + name) // "+" here joins text strings together
 }
 
@@ -147,7 +147,7 @@ hello("people of the Earth") // -> prints "Hello, people of the Earth"`} />
 			<Code code={`/*1*/ // My first program in Hexa!
 /*2*/
 /*3*/ /// Show greetings
-/*4*/ function hello() {
+/*4*/ fun hello() {
 /*5*/     console.log("Hello, Hexa!")
 /*6*/ }
 /*7*/

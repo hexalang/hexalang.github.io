@@ -16,10 +16,10 @@ export const Home = () => {
 						<div id="editor" className="pad code editor" contentEditable="true" spellCheck="false">// Live demo! Edit to compile on the fly<br />
 /* !! WARNING this is a VERY old compiler, will be updated soon !! */<br />
 							@native("console")<br />
-							declare class Console &#123;<br /> &nbsp; &nbsp; static function log(...message: String): Void<br />
+							declare class Console &#123;<br /> &nbsp; &nbsp; static fun log(...message: String): Void<br />
 							&#125;<br /><br />
 							Console.log("Hello from Hexa!")<br />
-							Console.log("No `static function main` required")</div>
+							Console.log("No `static fun main` required")</div>
 					</div>
 				</div>
 				<div className="col-1 col-sm-2 pad">

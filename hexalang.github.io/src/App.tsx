@@ -8,7 +8,7 @@ import {
 	Route
 } from "react-router-dom"
 
-function App() {
+const App = () => {
 	return <BrowserRouter>
 		<Routes>
 			<Route path="/try" element={<Try />} />

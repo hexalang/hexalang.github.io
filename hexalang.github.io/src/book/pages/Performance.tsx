@@ -37,15 +37,15 @@ export const Article = () => {
 			<p>Something like that:</p>
 
 			<Code code={`//(()=>{ "use strict"
-function throws(i) {
+fun throws(i) {
  if (i % 2 == 0) throw 123
 }
 
-function calls(i) {
+fun calls(i) {
  if (i % 2 == 0) throws(i * 3)
 }
 
-function catches(i) {
+fun catches(i) {
  try {
    if (i % 2 == 0) calls(i * 3)
  } catch() return i - 1

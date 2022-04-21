@@ -42,11 +42,11 @@ export const Article = () => {
 			<ul>
 				<li><Code inline code={`var`} /> in Hexa is a <Code inline code={`let`} /> in JavaScript. Everyone uses <Code inline code={`let`} /> in js today anyway, but <Code inline code={`var`} /> as a keyword is more common and not breaks your old habits</li>
 				<li><Code inline code={`let`} /> compiles to <Code inline code={`const`} />, accordingly, saving you some keystrokes</li>
-				<li>Normal <Code inline code={`function`} /> functions are always compiled to <Code inline code={`()=>`} /> arrow-functions, thus they catch outer <Code inline code={`this`} /> and should be defined before calling position</li>
+				<li>Normal <Code inline code={`fun`} /> functions are always compiled to <Code inline code={`()=>`} /> arrow-functions, thus they catch outer <Code inline code={`this`} /> and should be defined before calling position</li>
 				<li>Hexa has <Code inline code={`()=>`} /> syntax too</li>
-				<li>Types are placed like this: <Code inline code={`var a: Int = 1`} /> and <Code inline code={`function (v: Int): Int`} /></li>
+				<li>Types are placed like this: <Code inline code={`var a: Int = 1`} /> and <Code inline code={`fun (v: Int): Int`} /></li>
 				<li>Class fields have <Code inline code={`var`} /> and <Code inline code={`let`} /> before their names, also there is one and only visibility modifier <Code inline code={`private`} />.
-					Methods prepended with <Code inline code={`function`} />. Constructors are <Code inline code={`new()`} />. Placing <Code inline code={`this.`} /> before field names isn’t required.
+					Methods prepended with <Code inline code={`fun`} />. Constructors are <Code inline code={`new()`} />. Placing <Code inline code={`this.`} /> before field names isn’t required.
 					Braces <Code inline code={`{}`} /> aren’t required for function bodies.</li>
 			</ul>
 
@@ -55,7 +55,7 @@ export const Article = () => {
 			<Code code={`class A {
     var a = 123
     new (value) a = value
-    private function return_a() {
+    private fun return_a() {
         return this.a + 1 + a
     }
 }
