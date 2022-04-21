@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { github, youtube } from '../data/links'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { FC } from 'react'
 
 const Styled = styled.div`

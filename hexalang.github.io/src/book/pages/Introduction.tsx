@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import { github, year, patreon, telegram, discord, news, telegramChat } from '../../data/links'
+import { telegram, discord, telegramChat } from '../../data/links'
 import logo from './images/logo.svg'
 import { Img } from '../Img'
+import { H2 } from 'book/H2'
 
 export const Article = () => {
 	return (

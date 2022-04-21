@@ -1,5 +1,5 @@
 import { H2 } from 'book/H2'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Code } from '../Code'
 
 export const Sticky = styled.div`
@@ -15,8 +15,8 @@ export const Article = () => {
 			<ul>
 				<li>No semicolons <Code inline code={`;`} /> at all</li>
 				<li>Language is strongly typed, types are <a href="https://en.wikipedia.org/wiki/Type_inference">automatically inferred</a> (guessed) when possible</li>
-				<li>Compiles very straitforwardly to JavaScript and machine code (LLVM and C) because of semantics of <a href="https://en.wikipedia.org/wiki/Lowest_common_denominator_(computers)">lowest common denominator</a>,
-					this ensures native interopability in both cases and very high performance</li>
+				<li>Compiles very straightforwardly to JavaScript and machine code (LLVM and C) because of semantics of <a href="https://en.wikipedia.org/wiki/Lowest_common_denominator_(computers)">lowest common denominator</a>,
+					this ensures native interoperability in both cases and very high performance</li>
 				<li>Compiles <a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">to any other programming language</a>, if corresponding code generation backend is provided and target language is not super
 					different to Hexa</li>
 				<li>No garbage collection in native backends (LLVM and C), possibility of manual memory management - otherwise
@@ -57,7 +57,7 @@ let a = new A(456)`} />
 				<li>Maps are <Code inline code={`[K:V]`} />, empty <Code inline code={`new Map()`} /> is <Code inline code={`[:]`} /> in Hexa: <Code inline code={`var map: [String: Int] = [:]`} /> then <Code inline code={`map = ["JennysAge": 12, "BillsAge": 13]`} /></li>
 				<li>Empty objects are <Code inline code={`{:}`} /></li>
 				<li>Strings are interpolated with <Code inline code={`\\()`} />. This works for all (<Code inline code={`""`} /> and <Code inline code={`''`} />) strings except for raw ones surrounded with backticks.
-					Strings may be mutliple lines. <Code inline code={`let age = 13 let billsAge = 'Bill\\'s age is \\(age)!'`} /></li>
+					Strings may be multiple lines. <Code inline code={`let age = 13 let billsAge = 'Bill\\'s age is \\(age)!'`} /></li>
 				<li>No <Code inline code={`===`} /> and <Code inline code={`!==`} /> operators, use <Code inline code={`strictEqual`} /> and <Code inline code={`strictNotEqual`} /> functions</li>
 				<li>Only <Code inline code={`null`} />. Still, <Code inline code={`undefined`} /> is available as just an external variable (only in JavaScript backend)</li>
 				<li>Arrays are typed and contain values of a single type: <Code inline code={`let a: [Int] = [1, 2, 3] // Int's only`} /></li>
@@ -96,7 +96,7 @@ let a = new A(456)`} />
 			<ul>
 				<li>Object oriented programming with single inheritance, always-virtual methods, ARC and real interfaces</li>
 				<li>No structures. Instead anonymous objects to be used. They are stored in memory as C-like structures, but with a pointer
-					to field accessor, very similiar to Go interfaces.</li>
+					to field accessor, very similar to Go interfaces.</li>
 				<li>Low-level features are implemented as on-demand code attributes. For example, you may declare C-like structures, even embedded into
 					other ones (without pointers or heap allocation) or unions, but it’s not very idiomatic</li>
 				<li>Hexa has basic strongly-typed enums, tagged enums (algebraic data types), enums with fields (tagged classes), and nice pattern matching over them!</li>

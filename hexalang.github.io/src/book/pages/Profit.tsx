@@ -1,4 +1,5 @@
 import { H2 } from "book/H2"
+import { Page } from "book/Page"
 
 export const Article = () => {
 	return (
@@ -68,7 +69,7 @@ export const Article = () => {
 					</tr>
 					<tr>
 						<td css="text-align: left">Fast compilation</td>
-						<td css="text-align: right"><a href="https://hexalang.github.io/book/Performance.html">Nearly instantaneous</a></td>
+						<td css="text-align: right"><Page page="Performance">Nearly instantaneous</Page></td>
 					</tr>
 					<tr>
 						<td css="text-align: left">Stable syntax</td>
@@ -141,7 +142,7 @@ export const Article = () => {
 						<td css="text-align: right">Version Alpha</td>
 					</tr>
 					<tr>
-						<td css="text-align: left">Few bingings</td>
+						<td css="text-align: left">Few bindings</td>
 						<td css="text-align: right">Some subset of JavaScript, browser and node API</td>
 					</tr>
 					<tr>

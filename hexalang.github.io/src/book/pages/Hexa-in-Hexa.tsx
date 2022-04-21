@@ -5,11 +5,11 @@ import { Img } from '../Img'
 export const Article = () => {
 	return (
 		<>
-			<p>Hello! If you didn’t follow, Hexa is a static typed programming language with a touch of style, magic and beauty… oh, I mean, it compiles to JavaScript, soon <img src="https://haxe.org/favicon.ico" alt="Haxe" /><a href="https://haxe.org">Haxe</a> and native. Has safety features, looks nice and simple. Coding in Hexa is really calmful and productive&nbsp;<img className="emoji" title=":cake:" alt=":cake:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f370.png" height="20" width="20" /></p>
+			<p>Hello! If you didn’t follow, Hexa is a static typed programming language with a touch of style, magic and beauty… oh, I mean, it compiles to JavaScript, soon <img style={{ verticalAlign: 'middle' }} src="https://haxe.org/favicon.ico" height="16" width="16" alt="Haxe" /><a href="https://haxe.org">Haxe</a> and native. Has safety features, looks nice and simple. Coding in Hexa is really calmful and productive&nbsp;<img className="emoji" title=":cake:" alt=":cake:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f370.png" height="20" width="20" /></p>
 
 			<p>As I wrote before in <a href="Bootstrap-the-compiler.html">Bootstrap the compiler</a>, large achievement for any language is to “dogfood” a compiler with itself. Same was a goal for Hexa too (intentionally, to help with future metaprogramming features).</p>
 
-			<p>And 100 commits behind… bootstrapping is done! <img className="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20" /></p>
+			<p>And 100 commits behind… bootstrapping is done! <img className="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" /></p>
 
 			<Img src={such_a_many_commits} alt="Git GUI showing lots of commits to be pushed" />
 

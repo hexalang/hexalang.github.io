@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom'
 import { pages } from './pages'
 import { StyledBook } from './StyledBook'
 import { useParams } from "react-router-dom"
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { github, youtube } from '../data/links'
 import { Sidebar } from './Sidebar'
-import styled, { css } from 'styled-components'
-import { scrollTo as scrollToh2 } from './H2'
-import { scrollTo as scrollToh3 } from './H3'
+import styled from 'styled-components'
+import { scrollTo as scrollToH2 } from './H2'
+import { scrollTo as scrollToH3 } from './H3'
+import { scrollTo as scrollToPage } from './Page'
 
 export const StyledSub = styled.span`
 	width: 16px;
@@ -116,8 +117,9 @@ export const Book = () => {
 		page.scrollBy(0, -headerOffset)
 	}
 
-	scrollToh2.scrollTo = scrollTo
-	scrollToh3.scrollTo = scrollTo
+	scrollToH2.scrollTo = scrollTo
+	scrollToH3.scrollTo = scrollTo
+	scrollToPage.scrollTo = scrollTo
 
 	useEffect(() => {
 		// eslint-disable-next-line no-restricted-globals

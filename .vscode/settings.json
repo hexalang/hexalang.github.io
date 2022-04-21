@@ -8,6 +8,8 @@
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"cSpell.words": [
-		"Hexa"
+		"Haxe",
+		"Hexa",
+		"hexalang"
 	],
 }

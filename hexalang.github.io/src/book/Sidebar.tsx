@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Fragment, useEffect, useRef, useState, FC } from 'react'
+import { Fragment, FC } from 'react'
 import { pages } from './pages'
 
 const strong = (text: string, strong: boolean) => strong ? <strong>{text}</strong> : <>{text}</>

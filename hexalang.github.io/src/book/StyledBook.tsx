@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const headerHeight = `50px`
 const stickyTop = `42px`
@@ -346,6 +346,12 @@ img[src*="favicon"] {
 	cursor: pointer;
 }
 
+.emoji {
+	height: 20px;
+	width: 20px;
+	vertical-align: -2px;
+}
+
 /*!
  * GitHub Light v0.5.0
  * Copyright (c) 2012 - 2017 GitHub, Inc.
@@ -684,7 +690,7 @@ a:hover {
 	margin: 0;
 }
 
-/* This hack applies to code as modifer to the attached font (instead of replacing it) */
+/* This hack applies to code as modifier to the attached font (instead of replacing it) */
 code {
 	font-family: monospace !important;
 	overflow-x: auto;
@@ -810,6 +816,10 @@ nav.main-nav li a {
 	a {
 		text-decoration: underline;
 	}
+}
+
+.markdown td a {
+	text-decoration: underline;
 }
 
 .markdown p[align="center"] {

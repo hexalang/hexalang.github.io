@@ -1,4 +1,5 @@
 import { H3 } from 'book/H3'
+import { Img } from 'book/Img'
 import git from './images/git-to-PATH.png'
 
 export const Article = () => {
@@ -10,14 +11,14 @@ export const Article = () => {
 
 			<p>It comes built into <a href="https://github.com/hexalang/hexa#download">Hexa compiler</a>, so you don’t have to lurk elsewhere.</p>
 
-			<p>Manager works similiar to <code className="language-plaintext highlighter-rouge">npm</code> (node.js’ package manager) where possible.</p>
+			<p>Manager works similar to <code className="language-plaintext highlighter-rouge">npm</code> (node.js’ package manager) where possible.</p>
 
 			<H3 id="requirements">Requirements</H3>
 
 			<p>Package manager works atop of Git. <a href="https://git-scm.com/downloads">Download Git installer</a> if you don’t have
 				one pre-installed on your system, select add to PATH option:</p>
 
-			<p><img src={git} alt="git to PATH" /></p>
+			<Img src={git} alt="git to PATH" />
 
 			<p>Packages installed globally into <code className="language-plaintext highlighter-rouge">~/hexa_modules/packages</code> or <code className="language-plaintext highlighter-rouge">C:\Users\user\hexa_modules\packages</code>,
 				thus disk space requirements per-package are not high. Note, that every package version installed into separate

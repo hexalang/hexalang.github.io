@@ -12,7 +12,7 @@ const onClickCopy = () => {
 // TODO respect dark mode in CSS
 // TODO optimize
 // TODO react.memo
-// TODO for inlines Click to copy \to clipboard + pointer
+// TODO for inline Click to copy \to clipboard + pointer
 export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 	let html: JSX.Element[] = []
 	let stringFinalizer: '"' | "'" | '`' = '"'

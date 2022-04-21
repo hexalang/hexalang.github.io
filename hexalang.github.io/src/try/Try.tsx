@@ -1,4 +1,3 @@
-import { year } from 'data/links'
 import { Footer } from 'home/Footer'
 import { StyledTry } from './StyledTry'
 import { useEffect } from 'react'
