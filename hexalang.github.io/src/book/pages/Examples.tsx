@@ -5,24 +5,6 @@ export const Article = () => {
 		<>
 			<p>(draft)</p>
 
-			<p>Syntax examples</p>
-
-			<ul id="markdown-toc">
-				<li><a href="#hello-world" id="markdown-toc-hello-world">Hello, World!</a></li>
-				<li><a href="#comments" id="markdown-toc-comments">Comments</a></li>
-				<li><a href="#common-variable-types" id="markdown-toc-common-variable-types">Common variable types</a></li>
-				<li><a href="#deeper-overview" id="markdown-toc-deeper-overview">Deeper overview</a>    <ul>
-					<li><a href="#literals" id="markdown-toc-literals">Literals</a></li>
-					<li><a href="#lists" id="markdown-toc-lists">Lists</a></li>
-				</ul>
-				</li>
-				<li><a href="#maps" id="markdown-toc-maps">Maps</a></li>
-				<li><a href="#structures" id="markdown-toc-structures">Structures</a></li>
-				<li><a href="#strings" id="markdown-toc-strings">Strings</a></li>
-				<li><a href="#advanced-features" id="markdown-toc-advanced-features">Advanced features</a></li>
-				<li><a href="#not-yet-implemented-features" id="markdown-toc-not-yet-implemented-features">Not yet implemented features</a></li>
-			</ul>
-
 			<h3 id="hello-world">Hello, World!</h3>
 
 			<Code code={`console.log("Hello, World!")`} />

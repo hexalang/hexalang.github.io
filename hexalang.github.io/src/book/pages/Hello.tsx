@@ -17,16 +17,6 @@ export const Article = () => {
 			<p>If you’re already familiar with programming,
 				take a look at a <a href="https://hexalang.github.io/book/Comparison.html">programming language comparison list</a>.</p>
 
-			<ul id="markdown-toc">
-				<li>
-					<a href="#quickstart" id="markdown-toc-quickstart">Quickstart</a>    <ul>
-						<li><a href="#running-code-online" id="markdown-toc-running-code-online">Running code online</a></li>
-						<li><a href="#long-story" id="markdown-toc-long-story">Long story</a></li>
-						<li><a href="#mastering-error-messages" id="markdown-toc-mastering-error-messages">Mastering error messages</a></li>
-					</ul>
-				</li>
-			</ul>
-
 			<h2 id="quickstart">Quickstart</h2>
 
 			<p>Download <a href="https://github.com/hexalang/hexa#stable">Hexa compiler</a> and <a href="https://github.com/hexalang/hexa#tools--ide">syntax highlighting for your code editor</a>.
