@@ -1,7 +1,12 @@
+import { Link } from 'react-router-dom'
+import { github, year, patreon, telegram, discord, news, telegramChat } from '../../data/links'
+import logo from './images/logo.svg'
+import { Img } from '../Img'
+
 export const Article = () => {
 	return (
 		<>
-			<h2><img src="https://hexalang.github.io/favicon/android-icon-192x192.png" alt="Hexa" /></h2>
+			<Img src={logo} alt="Hexa logo" width={192} />
 
 			<p>Hexa is a high level, strictly typed programming language. It compiles to JavaScript, native executables and other languages. Easy to use and completely crossplatfrom.</p>
 
@@ -35,16 +40,18 @@ export const Article = () => {
 
 			<ul>
 				<li>
-					<a href="https://t.me/hexalang">Telegram @hexalang</a> our official group</li>
+					<a href={telegramChat}>Telegram @hexalang our official group</a></li>
 				<li>
-					<a href="https://t.me/hexalang_news">Telegram @hexalang_news</a> news channel</li>
+					<a href={discord}>Discord server with international chats</a></li>
 				<li>
-					<a href="https://t.me/hexalang_github">Telegram @hexalang_github</a> realtime GitHub feed</li>
+					<a href={telegram}>Telegram @hexalang_news news channel</a></li>
 				<li>
-					<a href="https://hexalang.github.io">https://hexalang.github.io</a> home page</li>
+					<a href="https://t.me/hexalang_github">Telegram @hexalang_github realtime GitHub feed</a></li>
 				<li>
-					<a href="https://github.com/hexalang">https://github.com/hexalang</a> GitHub itself and source code</li>
-				<li>Patreon <a href="https://patreon.com/PeyTy">https://patreon.com/PeyTy</a> if you consider donations</li>
+					<Link to="/" className="header-button">https://hexalang.github.io home page</Link></li>
+				<li>
+					<a href="https://github.com/hexalang">https://github.com/hexalang GitHub itself and source code</a></li>
+				<li><a href="https://patreon.com/PeyTy">Patreon https://patreon.com/PeyTy if you consider donations</a></li>
 				<li>
 					<a href="https://t.me/addstickers/hexalang">Stickers for Telegram</a> <img className="emoji" title=":heart:" alt=":heart:" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png" height="20" width="20" />
 				</li>
