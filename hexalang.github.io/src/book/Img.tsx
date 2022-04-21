@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { CSSProperties, FC } from "react"
 
 interface Props {
 	src: string
@@ -6,10 +6,13 @@ interface Props {
 	width?: number
 }
 
+const pStyle: CSSProperties = { textAlign: "center" }
+const imgStyle: CSSProperties = { borderRadius: '4px' }
+
 export const Img: FC<Props> = ({ src, alt, width }) => {
 	return (
-		<p style={{ textAlign: "center" }}>
-			<img src={src} alt={alt} title={alt} width={width} height={width} />
+		<p style={pStyle}>
+			<img style={imgStyle} src={src} alt={alt} title={alt} width={width} height={width} />
 		</p>
 	)
 }

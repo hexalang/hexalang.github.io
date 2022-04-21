@@ -87,6 +87,12 @@ export const Book = () => {
 			setNav(headers)
 		}
 		document.title = newTitle
+
+		document.querySelectorAll<HTMLAnchorElement>('a').forEach(a => {
+			if (a.href.endsWith(current.route)) {
+				a.scrollIntoView()
+			}
+		})
 	})
 
 	const headerOffset = 50
