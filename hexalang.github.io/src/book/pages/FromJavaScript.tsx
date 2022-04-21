@@ -1,3 +1,5 @@
+import { Page } from "book/Page"
+
 export const Article = () => {
 	return (
 		<>

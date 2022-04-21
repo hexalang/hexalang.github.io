@@ -1,4 +1,5 @@
 import { H2 } from 'book/H2'
+import { Page } from 'book/Page'
 import styled from 'styled-components'
 import { Code } from '../Code'
 

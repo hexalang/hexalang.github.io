@@ -1,5 +1,6 @@
 import { H2 } from 'book/H2'
 import { H3 } from 'book/H3'
+import { Page } from 'book/Page'
 import { Code } from '../Code'
 
 const code = `// My first program in Hexa!

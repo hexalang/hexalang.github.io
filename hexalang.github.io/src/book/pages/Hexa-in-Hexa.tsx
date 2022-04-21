@@ -1,6 +1,7 @@
 import bootstrap from './images/bootstrap.png'
 import such_a_many_commits from './images/such_a_many_commits.png'
 import { Img } from '../Img'
+import { Page } from 'book/Page'
 
 export const Article = () => {
 	return (

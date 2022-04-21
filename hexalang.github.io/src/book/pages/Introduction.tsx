@@ -3,6 +3,7 @@ import { telegram, discord, telegramChat } from '../../data/links'
 import logo from './images/logo.svg'
 import { Img } from '../Img'
 import { H2 } from 'book/H2'
+import { Page } from 'book/Page'
 
 export const Article = () => {
 	return (

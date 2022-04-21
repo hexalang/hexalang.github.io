@@ -1,6 +1,7 @@
 import { Code } from "book/Code"
 import { H2 } from "book/H2"
 import { H3 } from "book/H3"
+import { Page } from "book/Page"
 
 export const Article = () => {
 	return (
