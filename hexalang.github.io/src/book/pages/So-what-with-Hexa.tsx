@@ -7,7 +7,7 @@ export const Article = () => {
 			<blockquote>
 				<p>how hexa will be better than haxe? What to purpose of this Lang?</p>
 				<blockquote>
-					<p><a href="https://twitter.com/JMichaelShlomo/status/828918031686520833">https://twitter.com/JMichaelShlomo/status/828918031686520833</a></p>
+					<p><a href="https://twitter.com/JMichaelShlomo">JMichaelShlomo</a></p>
 				</blockquote>
 			</blockquote>
 
@@ -21,7 +21,7 @@ export const Article = () => {
 			<blockquote>
 				<p>curious - what problem(s) are you trying to solve?</p>
 				<blockquote>
-					<p><a href="https://twitter.com/jeff__ward/status/624432601210601472">https://twitter.com/jeff__ward/status/624432601210601472</a></p>
+					<p><a href="https://twitter.com/jeff__ward">jeff__ward</a></p>
 				</blockquote>
 			</blockquote>
 
