@@ -1,3 +1,14 @@
+import { Code } from '../Code'
+
+const code = `// My first program in Hexa!
+
+/// Show greetings
+function hello() {
+    console.log("Hello, Hexa!")
+}
+
+hello()`
+
 export const Article = () => {
 	return (
 		<>
@@ -23,15 +34,7 @@ export const Article = () => {
 
 			<p>Drag it into code editor then add some pretty lines into:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="c1">// My first program in Hexa!</span>
-
-				<span className="c1">/// Show greetings</span>
-				<span className="kd">function</span> <span className="nx">hello</span><span className="p">()</span> <span className="p">&#123;</span>
-				<span className="nx">console</span><span className="p">.</span><span className="nx">log</span><span className="p">(</span><span className="dl">"</span><span className="s2">Hello, Hexa!</span><span className="dl">"</span><span className="p">)</span>
-				<span className="p">&#125;</span>
-
-				<span className="nx">hello</span><span className="p">()</span>
-			</code></pre></div></div>
+			<Code code={code} />
 
 			<blockquote>
 				<p>Note: Hexa uses tabs for indentation</p>
@@ -43,14 +46,16 @@ export const Article = () => {
 			<p>Your file may be evaluated directly without compilation:</p>
 
 			<div className="language-sh highlighter-rouge"><div className="highlight"><pre className="highlight"><code>hexa hello.hexa
+				<br />
 				<span className="c"># This is called "console command"</span>
+				<br />
 				<span className="c"># if you're familiar with terminal</span>
 			</code></pre></div></div>
 
 			<p>Same within code editor:</p>
 
 			<ul>
-				<li>Sublime Text — …</li>
+				<li>Sublime Text — …TODO</li>
 			</ul>
 
 			<p>Expected output:</p>
@@ -70,54 +75,47 @@ export const Article = () => {
 
 			<p>Let’s investigate our program step-by-step:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="c1">// My first program in Hexa!</span>
-			</code></pre></div></div>
+			<Code code={`// My first program in Hexa!`} />
 
 			<p>Those gray notes are called <em>comments</em> and they don’t affect program flow.
 				Feel free to note anything you find useful for yourself and other programmers.
 				You may comment out any code to disable it, so it won’t be compiled:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="c1">// hello() this will do nothing</span>
-			</code></pre></div></div>
+			<Code code={`// hello() this will do nothing`} />
 
 			<p>Or multiple lines altogether:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="cm">/*
-				nothing
-				here
-				will be compiled
-				*/</span>
-			</code></pre></div></div>
+			<Code code={`/*
+    nothing
+    here
+    will be compiled
+*/`} />
 
 			<p>There is also are documentational comments. They start with triple slash <code className="language-plaintext highlighter-rouge">///</code> and attached semantically to the next code block after them:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="c1">/// Show greetings</span>
-				<span className="kd">function</span> <span className="nx">hello</span><span className="p">()</span> <span className="p">&#123;</span>
-			</code></pre></div></div>
+			<Code code={`/// Show greetings
+function hello() {`} />
 
 			<p>So we know what exactly that function does without reading whole code <img className="emoji" title=":thinking:" alt=":thinking:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png" height="20" width="20" />. This is a really good and common practice to document your code, make it your habit.</p>
 
 			<p>Next we see a function and it’s body:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="kd">function</span> <span className="nx">hello</span><span className="p">()</span> <span className="p">&#123;</span> <span className="c1">// "hello" is a function name</span>
-				<span className="c1">// function body</span>
-				<span className="p">&#125;</span>
-			</code></pre></div></div>
+			<Code code={`function hello() { // "hello" is a function name
+    // function body
+}`} />
 
 			<p>Function is a reusable code block, you may run it as many times you wish, and even send different parameters (arguments) into it:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="kd">function</span> <span className="nx">hello</span><span className="p">(</span><span className="nx">name</span><span className="p">)</span> <span className="p">&#123;</span> <span className="c1">// "name" is a function argument</span>
-				<span className="nx">console</span><span className="p">.</span><span className="nx">log</span><span className="p">(</span><span className="dl">"</span><span className="s2">Hello, </span><span className="dl">"</span> <span className="o">+</span> <span className="nx">name</span><span className="p">)</span> <span className="c1">// "+" here joins text strings together</span>
-				<span className="p">&#125;</span>
+			<Code code={`function hello(name) { // "name" is a function argument
+    console.log("Hello, " + name) // "+" here joins text strings together
+}
 
-				<span className="nx">hello</span><span className="p">(</span><span className="dl">"</span><span className="s2">World</span><span className="dl">"</span><span className="p">)</span> <span className="c1">// -&gt; prints "Hello, World"</span>
-				<span className="nx">hello</span><span className="p">(</span><span className="dl">"</span><span className="s2">people of the Earth</span><span className="dl">"</span><span className="p">)</span> <span className="c1">// -&gt; prints "Hello, people of the Earth"</span>
-			</code></pre></div></div>
+hello("World") // -> prints "Hello, World"
+hello("people of the Earth") // -> prints "Hello, people of the Earth"`} />
 
 			<p>Some functions may be attached to modules and objects, you call them with a <code className="language-plaintext highlighter-rouge">.dot()</code> syntax, like <code className="language-plaintext highlighter-rouge">console</code> in this example:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="nx">console</span><span className="p">.</span><span className="nx">log</span><span className="p">(</span><span className="dl">"</span><span className="s2">Hello, Hexa!</span><span className="dl">"</span><span className="p">)</span>
-			</code></pre></div></div>
+			<Code code={`console.log("Hello, Hexa!")`} />
 
 			<h3 id="mastering-error-messages">Mastering error messages</h3>
 
@@ -125,17 +123,15 @@ export const Article = () => {
 
 			<p>Changle this line:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="nx">hello</span><span className="p">()</span>
-			</code></pre></div></div>
+			<Code code={`hello()`} />
 
 			<p>To this one:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="nx">hello</span><span className="p">(</span><span className="nx">something</span><span className="p">)</span>
-			</code></pre></div></div>
+			<Code code={`hello(something)`} />
 
 			<p>When you will try to run it, you’ll see a message like this, and program will not start:</p>
 
-			<div className="language-sh highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="o">[</span>hello.hexa:8:7] <span className="c">#17 Can't find anything with name `something`</span>
+			<div className="language-sh highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="o">[</span>hello.hexa:8:7<span className="o">]</span> <span className="c">#17 Can't find anything with name `something`</span>
 			</code></pre></div></div>
 
 			<p>All error messages have common structure:</p>
@@ -148,17 +144,16 @@ export const Article = () => {
 
 			<p>Line numbers start from 1, so do columns:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="cm">/*1*/</span> <span className="c1">// My first program in Hexa!</span>
-				<span className="cm">/*2*/</span>
-				<span className="cm">/*3*/</span> <span className="c1">/// Show greetings</span>
-				<span className="cm">/*4*/</span> <span className="kd">function</span> <span className="nx">hello</span><span className="p">()</span> <span className="p">&#123;</span>
-				<span className="cm">/*5*/</span>     <span className="nx">console</span><span className="p">.</span><span className="nx">log</span><span className="p">(</span><span className="dl">"</span><span className="s2">Hello, Hexa!</span><span className="dl">"</span><span className="p">)</span>
-				<span className="cm">/*6*/</span> <span className="p">&#125;</span>
-				<span className="cm">/*7*/</span>
-				<span className="cm">/*8*/</span> <span className="nx">hello</span><span className="p">(</span><span className="nx">something</span><span className="p">)</span>
-				<span className="o">^</span> <span className="p">[</span><span className="nx">hello</span><span className="p">.</span><span className="nx">hexa</span><span className="p">:</span><span className="mi">8</span><span className="p">:</span><span className="mi">7</span><span className="p">]</span>
-				<span className="mi">123456789</span>
-			</code></pre></div></div>
+			<Code code={`/*1*/ // My first program in Hexa!
+/*2*/
+/*3*/ /// Show greetings
+/*4*/ function hello() {
+/*5*/     console.log("Hello, Hexa!")
+/*6*/ }
+/*7*/
+/*8*/ hello(something)
+      //    ^ [hello.hexa:8:7]
+      123456789 // column numbers`} />
 
 			<p>TODO## Level 2 - file system, useful stuff level 3, read repl from keyboard coz classic</p>
 		</>

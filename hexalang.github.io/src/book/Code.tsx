@@ -1,15 +1,45 @@
 enum State {
 	Plaintext,
 	CommentLine,
+	CommentMultiLine,
 	String
 }
 
-export const Code = ({ code }: { code: string }) => {
+// TODO react.memo
+export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 	let html: JSX.Element[] = []
+	let stringFinalizer: '"' | "'" | '`' = '"'
+	let commentNesting = 0
 
 	let chars = code.split('')
 	const keywords = [
-		'function'
+		'var',
+		'let',
+		'class',
+		'new',
+		'private',
+		'return',
+		'this',
+		'for',
+		'do',
+		'while',
+		'if',
+		'else',
+		'null',
+		'in',
+		'is',
+		'as',
+		'break',
+		'switch',
+		'continue',
+		'case',
+		'enum',
+		'throw',
+		'try',
+		'catch',
+		'true',
+		'false',
+		'function' // TODO
 	]
 
 	let state: State = State.Plaintext as State
@@ -29,31 +59,78 @@ export const Code = ({ code }: { code: string }) => {
 						state = State.CommentLine
 						continue
 					}
-					if (char === '"') {
+					if (char === '/' && char1 === '*') {
+						state = State.CommentMultiLine
+						continue
+					}
+					if (char === '"' || char === "'" || char === "`") {
+						stringFinalizer = char
 						html.push(<span className="mi">{char}</span>)
 						i++
 						state = State.String
 						continue
 					}
-					const word: string[] = []
-					let at = i
-					const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-					const alpha = alphabet + alphabet.toUpperCase()
-					while (at < chars.length && alpha.includes(chars[at])) {
-						word.push(chars[at])
-						at++
+
+					const alphabet = '_abcdefghijklmnopqrstuvwxyz'
+					if (alphabet.includes(char)) {
+						const word: string[] = []
+						let at = i
+						const alpha = alphabet + alphabet.toUpperCase()
+						while (at < chars.length && alpha.includes(chars[at])) {
+							word.push(chars[at])
+							at++
+						}
+
+						if (keywords.includes(word.join(''))) {
+							i = at
+							html.push(<span className="kd">{word.join('')}</span>)
+							continue
+						} else {
+							if (word.length > 0) {
+								i = at
+								html.push(<span className="nx">{word.join('')}</span>)
+								continue
+							}
+						}
 					}
 
-					if (keywords.includes(word.join(''))) {
-						i = at
-						html.push(<span className="kd">{word.join('')}</span>)
-						continue
-					} else {
+					const upper = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase()
+					if (upper.includes(char)) {
+						const word: string[] = []
+						let at = i
+						const alpha = alphabet + alphabet.toUpperCase()
+						while (at < chars.length && alpha.includes(chars[at])) {
+							word.push(chars[at])
+							at++
+						}
+
 						if (word.length > 0) {
 							i = at
-							html.push(<span className="nx">{word.join('')}</span>)
+							html.push(<span className="nb">{word.join('')}</span>)
 							continue
 						}
+					}
+
+					const numbers = '0123456789'
+					if (numbers.includes(char)) {
+						const word: string[] = []
+						let at = i
+						const alpha = numbers + '._uinABCDEFxeE-'
+						while (at < chars.length && alpha.includes(chars[at])) {
+							word.push(chars[at])
+							at++
+						}
+
+						i = at
+						html.push(<span className="mi">{word.join('')}</span>)
+						continue
+					}
+
+					const operators = '=+-/*!><&|'
+					if (operators.includes(char)) {
+						i++
+						html.push(<span className="o">{char}</span>)
+						continue
 					}
 
 					i++
@@ -72,9 +149,57 @@ export const Code = ({ code }: { code: string }) => {
 				html.push(<span className="c1">{char}</span>)
 				break
 			}
-			case State.String: {
-				if (char === '"') {
+			case State.CommentMultiLine: {
+				if (char === '\n') {
 					i++
+					html.push(<br />)
+					continue
+				}
+				if (char === '/' && char1 === '*') {
+					i++
+					i++
+					html.push(<span className="c1">{'/*'}</span>)
+					commentNesting++
+					continue
+				}
+				if (char === '*' && char1 === '/') {
+					i++
+					i++
+					html.push(<span className="c1">*/</span>)
+					commentNesting--
+					if (commentNesting === 0) {
+						state = State.Plaintext
+					}
+					continue
+				}
+				i++
+				html.push(<span className="c1">{char}</span>)
+				break
+			}
+			case State.String: {
+				if (char === '\\' && char1 === '(') {
+					i++
+					i++
+					html.push(<span className="nb"><b>{char}</b></span>)
+					html.push(<span className="nb">{char1}</span>)
+					while (i < chars.length && chars[i] !== ')') {
+						html.push(<span className="nb">{chars[i]}</span>)
+						i++
+					}
+					html.push(<span className="nb">{chars[i]}</span>)
+					i++
+					continue
+				}
+				if (char === '\\') {
+					i++
+					i++
+					html.push(<span className="gh"><b>{char}</b></span>)
+					html.push(<span className="gh">{char1}</span>)
+					continue
+				}
+				if (char === stringFinalizer) {
+					i++
+					// Push char here because char == ' or "
 					html.push(<span className="mi">{char}</span>)
 					state = State.Plaintext
 					continue
@@ -87,5 +212,8 @@ export const Code = ({ code }: { code: string }) => {
 	}
 
 	// <div dangerouslySetInnerHTML={{ __html: `<code>` + html.join('') + `</code>` }} />
+	if (inline) {
+		return <code>{html}</code>
+	}
 	return <div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code>{html}</code></pre></div></div>
 }

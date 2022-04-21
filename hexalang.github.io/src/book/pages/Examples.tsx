@@ -1,3 +1,5 @@
+import { Code } from "book/Code"
+
 export const Article = () => {
 	return (
 		<>
@@ -23,8 +25,7 @@ export const Article = () => {
 
 			<h3 id="hello-world">Hello, World!</h3>
 
-			<div className="language-js highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="nx">console</span><span className="p">.</span><span className="nx">log</span><span className="p">(</span><span className="dl">"</span><span className="s2">Hello, World!</span><span className="dl">"</span><span className="p">)</span>
-			</code></pre></div></div>
+			<Code code={`console.log("Hello, World!")`} />
 
 			<ul>
 				<li><a href="https://hexalang.github.io/book/Hello.html">Hello, Hexa!</a></li>
@@ -34,31 +35,29 @@ export const Article = () => {
 
 			<p>Comments are JavaScript-style. Multi-line comments are nestable.</p>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="c1">// Single-line comment.</span>
+			<Code code={`// Single-line comment.
 
-				<span className="cm">/*
-					Multi-line
-					comment.
-					*/</span>
+/*
+  Multi-line
+  comment.
+*/
 
-				<span className="cm">/*
-					Nested
+/*
+  Nested
 
-					/* multi-line */
+  /* multi-line */
 
-					comment.
-					*/</span>
-			</code></pre></div></div>
+  comment.
+*/`} />
 
 			<h2 id="common-variable-types">Common variable types</h2>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="n">null</span> <span className="c1">// No value</span>
-				<span className="mi">42</span> <span className="c1">// 32-bit signed integer</span>
-				<span className="mf">123.456</span> <span className="c1">// 64-bit floating-point number</span>
-				<span className="kc">true</span> <span className="kc">false</span> <span className="c1">// Boolean type</span>
-				<span className="s">"string"</span> <span className="c1">// String or text type</span>
-				<span className="p">[</span><span className="s">"red"</span><span className="p">,</span> <span className="s">"green"</span><span className="p">,</span> <span className="s">"blue"</span><span className="p">]</span> <span className="c1">// Array type or list</span>
-			</code></pre></div></div>
+			<Code code={`null // No value
+42 // 32-bit signed integer
+123.456 // 64-bit floating-point number
+true false // Boolean type
+"string" // String or text type
+["red", "green", "blue"] // Array type or list`} />
 
 			<ul>
 				<li><a href="https://hexalang.github.io/book/Strings.html">Strings</a></li>
@@ -66,65 +65,60 @@ export const Article = () => {
 
 			<p>Variables in Hexa are statically typed:</p>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="k">var</span> <span className="nv">a</span><span className="p">:</span> <span className="kt">Int</span> <span className="o">=</span> <span className="mi">123</span>
-				<span className="k">let</span> <span className="nv">b</span><span className="p">:</span> <span className="kt">Bool</span> <span className="o">=</span> <span className="kc">true</span>
-			</code></pre></div></div>
+			<Code code={`var a: Int = 123
+let b: Bool = true`} />
 
 			<p>Types a [inferrable]:</p>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="k">var</span> <span className="nv">a</span> <span className="o">=</span> <span className="mi">123</span>
-				<span className="k">let</span> <span className="nv">b</span> <span className="o">=</span> <span className="kc">true</span>
-			</code></pre></div></div>
+			<Code code={`var a = 123
+let b = true`} />
 
 			<h2 id="deeper-overview">Deeper overview</h2>
 
 			<h3 id="literals">Literals</h3>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="mh">0x10</span> <span className="c1">// Hexadecimal</span>
-				<span className="err">`</span><span className="kt">C</span><span className="p">:\</span><span className="kt">Windows</span><span className="p">\</span><span className="kt">System32</span><span className="p">\</span><span className="err">`</span> <span className="c1">// Raw strings do *not* do pre-escaping, but generate to JavaScript with escapes</span>
-			</code></pre></div></div>
+			<Code code={`0x10 // Hexadecimal
+\`C:\\Windows\\System32\`
+// Raw strings do *not* do pre-escaping,
+// but generated to JavaScript with escapes`} />
 
 			<h3 id="lists">Lists</h3>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="p">[]</span> <span className="c1">// Empty structure</span>
-				<span className="p">[</span><span className="mi">1</span><span className="p">,</span> <span className="mi">2</span><span className="p">,</span> <span className="mi">3</span><span className="p">]</span>
-				<span className="p">[</span><span className="kc">true</span><span className="p">,</span> <span className="kc">false</span><span className="p">,</span> <span className="kc">true</span><span className="p">,</span> <span className="kc">true</span><span className="p">]</span> <span className="c1">// Elements of same type</span>
-				<span className="p">[</span>
-				<span className="p">[</span><span className="mi">1</span><span className="p">,</span> <span className="mi">0</span><span className="p">,</span> <span className="mi">0</span><span className="p">],</span>
-				<span className="p">[</span><span className="mi">0</span><span className="p">,</span> <span className="mi">1</span><span className="p">,</span> <span className="mi">0</span><span className="p">],</span>
-				<span className="p">[</span><span className="mi">0</span><span className="p">,</span> <span className="mi">0</span><span className="p">,</span> <span className="mi">1</span><span className="p">]</span> <span className="c1">// No trailing comma</span>
-				<span className="p">]</span>
-			</code></pre></div></div>
+			<Code code={`[] // Empty structure
+[1, 2, 3]
+[true, false, true, true] // Elements of same type
+[
+  [1, 0, 0],
+  [0, 1, 0],
+  [0, 0, 1] // No trailing comma
+]`} />
 
 			<h2 id="maps">Maps</h2>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="p">[:]</span> <span className="c1">// Empty map</span>
-				<span className="p">[</span> <span className="s">"hello"</span><span className="p">:</span> <span className="s">"world!"</span> <span className="p">]</span>
-				<span className="p">[</span> <span className="mi">1</span><span className="p">:</span> <span className="s">"one"</span><span className="p">,</span> <span className="mi">2</span><span className="p">:</span> <span className="s">"two"</span> <span className="p">]</span> <span className="c1">// Elements of same type</span>
-			</code></pre></div></div>
+			<Code code={`[:] // Empty map
+[ "hello": "world!" ]
+[ 1: "one", 2: "two" ] // Elements of same type`} />
 
 			<h2 id="structures">Structures</h2>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="p">&#123;:&#125;</span> <span className="c1">// Empty structure</span>
-				<span className="p">&#123;</span> <span className="nv">hello</span><span className="p">:</span> <span className="s">"world!"</span> <span className="p">&#125;</span>
-				<span className="p">&#123;</span> <span className="nv">name</span><span className="p">:</span> <span className="s">"Jane"</span><span className="p">,</span> <span className="nv">age</span><span className="p">:</span> <span className="mi">21</span> <span className="p">&#125;</span>
-			</code></pre></div></div>
+			<Code code={`{:} // Empty structure
+{ hello: "world!" }
+{ name: "Jane", age: 21 }`} />
 
 			<h2 id="strings">Strings</h2>
 
-			<div className="language-swift highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="s">"Strings are
-				multi
-				line"</span>
-				<span className="s">"</span><span className="se">\'</span><span className="s">Second</span><span className="se">\n</span><span className="s">line</span><span className="se">\'</span><span className="s">"</span> <span className="c1">// Character escapes</span>
-			</code></pre></div></div>
+			<Code code={`"Strings are
+  multi
+    line"
+"\\'Second\\nline\\'" // Character escapes`} />
 
 			<h2 id="advanced-features">Advanced features</h2>
 
-			<p>.</p>
+			<p>TODO</p>
 
 			<h2 id="not-yet-implemented-features">Not yet implemented features</h2>
 
-			<p>.</p>
+			<p>TODO</p>
 		</>
 	)
 }

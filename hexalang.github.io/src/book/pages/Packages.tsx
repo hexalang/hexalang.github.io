@@ -38,6 +38,7 @@ export const Article = () => {
 					<code className="language-plaintext highlighter-rouge">hexa.json</code> - list all source files as “src\filename.hexa”</li>
 				<li>
 					<code className="language-plaintext highlighter-rouge">.gitattributes</code> - just add <code className="language-plaintext highlighter-rouge">* text=auto</code> there to avoid Linux&lt;-&gt;Windows&lt;-&gt;macOS
+					{' '}
 					<a href="https://en.wikipedia.org/wiki/Newline#Issues_with_different_newline_formats">end of lines problems</a>
 				</li>
 				<li>

@@ -54,7 +54,9 @@ export const Article = () => {
 				<li>Zig is all about (safe!) systems programming, with pointers, allocators and all, while it way better than C</li>
 				<li>I couldn’t write even a single win32 app in Rust (“lets overcomplicate everything”-oriented programming)</li>
 				<li>D requires you to have
-					<a href="https://en.wikipedia.org/wiki/Johnny_Mnemonic_(film)">a data storage device implanted in your brain</a>
+					{' '}
+					<a href="https://en.wikipedia.org/wiki/Johnny_Mnemonic_(film)"> a data storage device implanted in your brain</a>
+					{' '}
 					even to remember how that keyword behaves <strong>this</strong> time
 					(<code className="language-plaintext highlighter-rouge">@nogc</code>, <code className="language-plaintext highlighter-rouge">@safe</code> but <code className="language-plaintext highlighter-rouge">pure</code>, <code className="language-plaintext highlighter-rouge">nothrow</code>? <code className="language-plaintext highlighter-rouge">return ref</code> vs <code className="language-plaintext highlighter-rouge">return scope</code> what? <code className="language-plaintext highlighter-rouge">immutable</code> vs <code className="language-plaintext highlighter-rouge">const</code>, <code className="language-plaintext highlighter-rouge">static this</code>?? <code className="language-plaintext highlighter-rouge">alias this</code>???
 					oh wait there is also <code className="language-plaintext highlighter-rouge">return scope ref</code>…).</li>

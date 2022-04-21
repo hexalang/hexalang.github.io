@@ -27,6 +27,7 @@ p code.highlighter-rouge, li code.highlighter-rouge {
 
 .article>.highlighter-rouge {
 	padding: 0.4em;
+	margin: 0 1em 1em;
 }
 
 /* Markdown */
@@ -686,8 +687,12 @@ div pre.highlight {
 	overflow-x: auto;
 }
 
-div pre.highlight code {
+div pre.highlight > code {
 	display: block;
+	white-space: pre;
+}
+
+div pre.highlight code > span {
 }
 
 .date {
@@ -795,6 +800,9 @@ nav.main-nav li a {
 
 .markdown p {
 	text-align: justify;
+	a {
+		text-decoration: underline;
+	}
 }
 
 .markdown p[align="center"] {
@@ -805,6 +813,9 @@ nav.main-nav li a {
 .markdown li {
 	margin: 0 1em 1em;
 	word-wrap: break-word;
+	a {
+		text-decoration: underline;
+	}
 }
 
 .markdown ul {
@@ -876,6 +887,7 @@ nav.main-nav li a {
 	margin-bottom: 4px;
 	width: 20px;
 	height: 3px;
+	border-radius: 2px;
 }
 
 .sidebar-toggle:hover {

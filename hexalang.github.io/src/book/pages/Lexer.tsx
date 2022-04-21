@@ -1,3 +1,5 @@
+import { Code } from "book/Code"
+
 export const Article = () => {
 	return (
 		<>
@@ -5,9 +7,10 @@ export const Article = () => {
 
 			<p>Example of lexer work:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="dl">"</span><span className="s2">function hello() return 123</span><span className="dl">"</span> <span className="o">=&gt;</span> <span className="p">[</span><span className="dl">"</span><span className="s2">function</span><span className="dl">"</span><span className="p">,</span> <span className="dl">"</span><span className="s2">hello</span><span className="dl">"</span><span className="p">,</span> <span className="dl">"</span><span className="s2">(</span><span className="dl">"</span><span className="p">,</span> <span className="dl">"</span><span className="s2">)</span><span className="dl">"</span><span className="p">,</span> <span className="dl">"</span><span className="s2">return</span><span className="dl">"</span><span className="p">,</span> <span className="dl">"</span><span className="s2">123</span><span className="dl">"</span><span className="p">]</span>
-				<span className="c1">// In actual compiler code tokens are used, not arrays of plain strings</span>
-			</code></pre></div></div>
+			<Code code={`"function hello() return 123" => [
+    "function", "hello", "(", ")", "return", "123"
+]
+// In actual compiler code tokens are used, not arrays of plain strings`} />
 
 			<p>Each little piece of code is encoded as [Token] object, which contains position in file, extended value (for strings and identifiers), etc.
 				This is lots of information to show proper error messages and do debugging.</p>

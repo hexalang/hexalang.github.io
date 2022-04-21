@@ -161,6 +161,7 @@ export const Book = () => {
 						}}
 					>{current.name}</a></h2>
 					<div id="top"></div>
+					<StyledDraft>This is a draft, don't expect much</StyledDraft>
 					<Article />
 				</div>
 				<div css="margin-top: 64px" />

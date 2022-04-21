@@ -1,3 +1,5 @@
+import { Code } from "book/Code"
+
 export const Article = () => {
 	return (
 		<>
@@ -34,28 +36,27 @@ export const Article = () => {
 
 			<p>Something like that:</p>
 
-			<div className="language-js highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="c1">//(()=&gt;&#123; "use strict"</span>
-				<span className="kd">function</span> <span className="nx">throws</span><span className="p">(</span><span className="nx">i</span><span className="p">)</span> <span className="p">&#123;</span>
-				<span className="k">if</span> <span className="p">(</span><span className="nx">i</span> <span className="o">%</span> <span className="mi">2</span> <span className="o">==</span> <span className="mi">0</span><span className="p">)</span> <span className="k">throw</span> <span className="mi">123</span>
-				<span className="p">&#125;</span>
+			<Code code={`//(()=>{ "use strict"
+function throws(i) {
+ if (i % 2 == 0) throw 123
+}
 
-				<span className="kd">function</span> <span className="nx">calls</span><span className="p">(</span><span className="nx">i</span><span className="p">)</span> <span className="p">&#123;</span>
-				<span className="k">if</span> <span className="p">(</span><span className="nx">i</span> <span className="o">%</span> <span className="mi">2</span> <span className="o">==</span> <span className="mi">0</span><span className="p">)</span> <span className="nx">throws</span><span className="p">(</span><span className="nx">i</span> <span className="o">*</span> <span className="mi">3</span><span className="p">)</span>
-				<span className="p">&#125;</span>
+function calls(i) {
+ if (i % 2 == 0) throws(i * 3)
+}
 
-				<span className="kd">function</span> <span className="nx">catches</span><span className="p">(</span><span className="nx">i</span><span className="p">)</span> <span className="p">&#123;</span>
-				<span className="k">try</span> <span className="p">&#123;</span>
-				<span className="k">if</span> <span className="p">(</span><span className="nx">i</span> <span className="o">%</span> <span className="mi">2</span> <span className="o">==</span> <span className="mi">0</span><span className="p">)</span> <span className="nx">calls</span><span className="p">(</span><span className="nx">i</span> <span className="o">*</span> <span className="mi">3</span><span className="p">)</span>
-				<span className="p">&#125;</span> <span className="k">catch</span><span className="p">()</span> <span className="k">return</span> <span className="nx">i</span> <span className="o">-</span> <span className="mi">1</span>
-				<span className="k">return</span> <span className="nx">i</span> <span className="o">+</span> <span className="mi">1</span>
-				<span className="p">&#125;</span>
+function catches(i) {
+ try {
+   if (i % 2 == 0) calls(i * 3)
+ } catch() return i - 1
+ return i + 1
+}
 
-				<span className="kd">let</span> <span className="nx">i</span> <span className="o">=</span> <span className="mi">0</span>
-				<span className="kd">let</span> <span className="nx">result</span> <span className="o">=</span> <span className="mi">0</span>
-				<span className="k">while</span> <span className="p">(</span><span className="nx">i</span> <span className="o">&lt;</span> <span className="mi">0000</span><span className="p">)</span> <span className="nx">result</span> <span className="o">+=</span> <span className="nx">catches</span><span className="p">(</span><span className="nx">i</span><span className="p">)</span>
-				<span className="nx">console</span><span className="p">.</span><span className="nx">log</span><span className="p">(</span><span className="nx">result</span><span className="p">,</span> <span className="nx">i</span><span className="p">)</span>
-				<span className="c1">//&#125;)()</span>
-			</code></pre></div></div>
+let i = 0
+let result = 0
+while (i < 0000) result += catches(i)
+console.log(result, i)
+//})()`} />
 
 			<table>
 				<thead>

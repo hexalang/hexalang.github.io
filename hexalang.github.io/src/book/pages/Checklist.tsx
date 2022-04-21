@@ -2,7 +2,9 @@ export const Article = () => {
 	return (
 		<>
 			<p>This list follows common
+				{' '}
 				<a href="https://www.reddit.com/r/ProgrammingLanguages/comments/7mcsx3/programming_language_checklist/">“Programming Language Checklist”</a>
+				{' '}
 				structure, to give approximate view on Hexa! <img className="emoji" title=":roll_eyes:" alt=":roll_eyes:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f644.png" height="20" width="20" /></p>
 
 			<p>Consider with a bit of humor <img className="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" /></p>
