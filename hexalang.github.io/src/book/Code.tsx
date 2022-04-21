@@ -5,7 +5,14 @@ enum State {
 	String
 }
 
+const onClickCopy = () => {
+	// TODO copy innerText?
+}
+
+// TODO respect dark mode in CSS
+// TODO optimize
 // TODO react.memo
+// TODO for inlines Click to copy \to clipboard + pointer
 export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 	let html: JSX.Element[] = []
 	let stringFinalizer: '"' | "'" | '`' = '"'
@@ -75,7 +82,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 					if (alphabet.includes(char)) {
 						const word: string[] = []
 						let at = i
-						const alpha = alphabet + alphabet.toUpperCase()
+						const alpha = alphabet + alphabet.toUpperCase() + '0123456789'
 						while (at < chars.length && alpha.includes(chars[at])) {
 							word.push(chars[at])
 							at++
@@ -98,7 +105,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 					if (upper.includes(char)) {
 						const word: string[] = []
 						let at = i
-						const alpha = alphabet + alphabet.toUpperCase()
+						const alpha = alphabet + alphabet.toUpperCase() + '_0123456789'
 						while (at < chars.length && alpha.includes(chars[at])) {
 							word.push(chars[at])
 							at++
