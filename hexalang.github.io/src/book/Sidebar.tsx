@@ -8,9 +8,10 @@ interface Props {
 	currentRoute: string
 	toggleSidebar: () => void
 	toggleTheme: () => void
+	scrollTo: (hash: string) => void
 }
 
-export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar, toggleTheme }: Props) => {
+export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar, toggleTheme, scrollTo }: Props) => {
 	return (
 		<>
 			<div className="sidebar">
@@ -29,10 +30,7 @@ export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar, toggleTheme }:
 											to={`/book/${page.route}`}
 											onClick={
 												() => {
-													const target = document.querySelector('#top')
-													if (target) {
-														target.scrollIntoView()
-													}
+													scrollTo(`#top`)
 												}
 											}
 										>{strong(page.name, currentRoute === page.route)}</Link></li>
