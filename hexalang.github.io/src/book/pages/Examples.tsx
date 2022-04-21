@@ -1,11 +1,13 @@
 import { Code } from "book/Code"
+import { H2 } from "book/H2"
+import { H3 } from "book/H3"
 
 export const Article = () => {
 	return (
 		<>
 			<p>(draft)</p>
 
-			<h3 id="hello-world">Hello, World!</h3>
+			<H3 id="hello-world">Hello, World!</H3>
 
 			<Code code={`console.log("Hello, World!")`} />
 
@@ -13,7 +15,7 @@ export const Article = () => {
 				<li><a href="https://hexalang.github.io/book/Hello.html">Hello, Hexa!</a></li>
 			</ul>
 
-			<h3 id="comments">Comments</h3>
+			<H3 id="comments">Comments</H3>
 
 			<p>Comments are JavaScript-style. Multi-line comments are nestable.</p>
 
@@ -32,7 +34,7 @@ export const Article = () => {
   comment.
 */`} />
 
-			<h2 id="common-variable-types">Common variable types</h2>
+			<H2 id="common-variable-types">Common variable types</H2>
 
 			<Code code={`null // No value
 42 // 32-bit signed integer
@@ -55,16 +57,16 @@ let b: Bool = true`} />
 			<Code code={`var a = 123
 let b = true`} />
 
-			<h2 id="deeper-overview">Deeper overview</h2>
+			<H2 id="deeper-overview">Deeper overview</H2>
 
-			<h3 id="literals">Literals</h3>
+			<H3 id="literals">Literals</H3>
 
 			<Code code={`0x10 // Hexadecimal
 \`C:\\Windows\\System32\`
 // Raw strings do *not* do pre-escaping,
 // but generated to JavaScript with escapes`} />
 
-			<h3 id="lists">Lists</h3>
+			<H3 id="lists">Lists</H3>
 
 			<Code code={`[] // Empty structure
 [1, 2, 3]
@@ -75,30 +77,30 @@ let b = true`} />
   [0, 0, 1] // No trailing comma
 ]`} />
 
-			<h2 id="maps">Maps</h2>
+			<H2 id="maps">Maps</H2>
 
 			<Code code={`[:] // Empty map
 [ "hello": "world!" ]
 [ 1: "one", 2: "two" ] // Elements of same type`} />
 
-			<h2 id="structures">Structures</h2>
+			<H2 id="structures">Structures</H2>
 
 			<Code code={`{:} // Empty structure
 { hello: "world!" }
 { name: "Jane", age: 21 }`} />
 
-			<h2 id="strings">Strings</h2>
+			<H2 id="strings">Strings</H2>
 
 			<Code code={`"Strings are
   multi
     line"
 "\\'Second\\nline\\'" // Character escapes`} />
 
-			<h2 id="advanced-features">Advanced features</h2>
+			<H2 id="advanced-features">Advanced features</H2>
 
 			<p>TODO</p>
 
-			<h2 id="not-yet-implemented-features">Not yet implemented features</h2>
+			<H2 id="not-yet-implemented-features">Not yet implemented features</H2>
 
 			<p>TODO</p>
 		</>

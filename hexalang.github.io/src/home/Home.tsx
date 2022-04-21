@@ -13,7 +13,7 @@ export const Home = () => {
 
 				<div className="col-1 col-sm-2 pad">
 					<div className="shadow fullheight">
-						<div id="editor" className="pad code editor" contentEditable="true" spellCheck="false">// Live demo! Edit to compile on the fly<br />
+						<div id="editor" className="pad code editor" contentEditable="true" spellCheck="false">
 /* !! WARNING this is a VERY old compiler, will be updated soon !! */<br />
 							@native("console")<br />
 							declare class Console &#123;<br /> &nbsp; &nbsp; static fun log(...message: String): Void<br />

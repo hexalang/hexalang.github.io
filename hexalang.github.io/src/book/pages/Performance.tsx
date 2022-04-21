@@ -1,11 +1,12 @@
 import { Code } from "book/Code"
+import { H2 } from "book/H2"
 
 export const Article = () => {
 	return (
 		<>
 			<p>! This is a draft !</p>
 
-			<h2 id="environment">Environment</h2>
+			<H2 id="environment">Environment</H2>
 
 			<ul>
 				<li>Hexa</li>
@@ -32,7 +33,7 @@ export const Article = () => {
 				<li>OS: Windows 10</li>
 			</ul>
 
-			<h2 id="exception-handling">Exception handling</h2>
+			<H2 id="exception-handling">Exception handling</H2>
 
 			<p>Something like that:</p>
 

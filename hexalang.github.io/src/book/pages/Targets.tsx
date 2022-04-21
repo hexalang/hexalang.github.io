@@ -1,3 +1,5 @@
+import { H2 } from "book/H2"
+
 export const Article = () => {
 	return (
 		<>
@@ -21,7 +23,7 @@ export const Article = () => {
 
 			<p>/targets/third-party/ your-target/</p>
 
-			<h2 id="available-attributes">Available attributes</h2>
+			<H2 id="available-attributes">Available attributes</H2>
 
 			<ul>
 				<li><code className="language-plaintext highlighter-rouge">@rename</code></li>

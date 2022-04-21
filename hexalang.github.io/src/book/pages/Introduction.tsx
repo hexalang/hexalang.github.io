@@ -14,7 +14,7 @@ export const Article = () => {
 
 			<p>It assumes that you have some familiarity with the basics of programming, such as using a code editor and terminal, and concepts such as variables, looping, recursion, types and data structures. Background in imperative programming with some knowledge of functional programming ideas will be very helpful. Sometimes it makes a comparison to some other programming language (like JavaScript) to provide some additional information.</p>
 
-			<h2 id="where-to-start">Where to start</h2>
+			<H2 id="where-to-start">Where to start</H2>
 
 			<p>Are you novice?</p>
 
@@ -36,7 +36,7 @@ export const Article = () => {
 
 			<p>Hit a button on the left side to view/hide table of contents <img className="emoji" title=":arrow_left:" alt=":arrow_left:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b05.png" height="20" width="20" /></p>
 
-			<h2 id="helpful-links">Helpful links</h2>
+			<H2 id="helpful-links">Helpful links</H2>
 
 			<ul>
 				<li>

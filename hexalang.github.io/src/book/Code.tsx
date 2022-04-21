@@ -218,7 +218,8 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 		}
 	}
 
-	// <div dangerouslySetInnerHTML={{ __html: `<code>` + html.join('') + `</code>` }} />
+	html = html.map((value, index) => { return { ...value, key: index } })
+
 	if (inline) {
 		return <code>{html}</code>
 	}

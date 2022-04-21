@@ -1,4 +1,5 @@
 import { Code } from "book/Code"
+import { H3 } from "book/H3"
 
 export const Article = () => {
 	return (
@@ -7,7 +8,7 @@ export const Article = () => {
 				String is an independent piece of human-readable something in computer memory. Strings do not contain any special meaning (compared to objects),
 				and represented as type <code className="language-plaintext highlighter-rouge">String</code>.</p>
 
-			<h3 id="syntax-of-strings">Syntax of strings</h3>
+			<H3 id="syntax-of-strings">Syntax of strings</H3>
 
 			<Code code={`let s: String = "hello"
 let s = "hello"
@@ -42,7 +43,7 @@ s = "hello " + s // Adds in front, 's' now contains 'hello world '
 s += "!" // Same as s = s + "!"
 console.log(a) // -> prints 'hello world !'`} />
 
-			<h3 id="superpowers">Superpowers</h3>
+			<H3 id="superpowers">Superpowers</H3>
 
 			<p>Strings have special superpower: adding anything to string converts it to string (…sometimes into nonsensical stuff 😅)</p>
 
@@ -72,7 +73,7 @@ of those lines?"`} />
 			<Code code={`let multiline = "what is in between\\nof those lines?"
 //                                 ^^ note \\n in the middle`} />
 
-			<h3 id="string-interpolation">String interpolation</h3>
+			<H3 id="string-interpolation">String interpolation</H3>
 
 			<p>Sometimes you may want to embed value into string or do basic formatting. To do this just mention variable name within <code className="language-plaintext highlighter-rouge">\()</code>:</p>
 
@@ -88,7 +89,7 @@ console.log('hello ' + welcome + '!') // -> prints 'hello world!'`} />
 console.log('ten is \\(5 + 5) while [\\(a)] length is \\(a.length)')
 // -> prints 'ten is 10 while [1, 2, 3] length is 3'`} />
 
-			<h3 id="raw-strings">Raw strings</h3>
+			<H3 id="raw-strings">Raw strings</H3>
 
 			<p>Raw texts are surrounded by <strong>`backticks`</strong>. They don’t care about special characters.</p>
 
@@ -112,7 +113,7 @@ console.log(\`hello \\(welcome)!\`) // -> prints 'hello \\(welcome)!'`} />
 // Same as "this is \`backticked\` string"
 // Note single backticks in a resulting string`} />
 
-			<h3 id="optimization">Optimization</h3>
+			<H3 id="optimization">Optimization</H3>
 
 			<p>Strings are quite fast, they never change, so they never overhead. But they have a fault: string creation is a costly operation.
 				New strings are created on concatentaion of existing ones, and conversion of objects to text (like printing formatted number to screen).</p>

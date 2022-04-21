@@ -339,6 +339,13 @@ img[src*="favicon"] {
 	background-color: #EAF2F5;
 }
 
+.inlineCode:hover {
+	text-decoration: underline;
+	text-decoration-color: lightgray;
+	text-decoration-thickness: 1px;
+	cursor: pointer;
+}
+
 /*!
  * GitHub Light v0.5.0
  * Copyright (c) 2012 - 2017 GitHub, Inc.

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { H2 } from 'book/H2'
 import styled, { css } from 'styled-components'
 import { Code } from '../Code'
 
@@ -6,17 +6,6 @@ export const Sticky = styled.div`
 	position: sticky;
 	top: 0;
 `
-
-interface Props {
-	id: string
-}
-
-const H2: FC<Props> = ({ children, id }) => {
-	return <>
-		<div id={id} />
-		<h2 data-id={id}><a href={'#' + id}>{children}</a></h2>
-	</>
-}
 
 export const Article = () => {
 	return (
@@ -47,14 +36,16 @@ export const Article = () => {
 				<li>Types are placed like this: <Code inline code={`var a: Int = 1`} /> and <Code inline code={`fun (v: Int): Int`} /></li>
 				<li>Class fields have <Code inline code={`var`} /> and <Code inline code={`let`} /> before their names, also there is one and only visibility modifier <Code inline code={`private`} />.
 					Methods prepended with <Code inline code={`fun`} />. Constructors are <Code inline code={`new()`} />. Placing <Code inline code={`this.`} /> before field names isn’t required.
-					Braces <Code inline code={`{}`} /> aren’t required for function bodies.</li>
+					Braces <Code inline code={`{}`} /> are required for function bodies.</li>
 			</ul>
 
 			<p>Full example:</p>
 
 			<Code code={`class A {
     var a = 123
-    new (value) a = value
+    new (value) {
+        a = value
+    }
     private fun return_a() {
         return this.a + 1 + a
     }
@@ -82,7 +73,7 @@ let a = new A(456)`} />
 
 			<p><a href="https://hexalang.github.io/book/FromJavaScript.html">More on porting from JavaScript</a></p>
 
-			<h2 id="typescript">TypeScript</h2>
+			<H2 id="typescript">TypeScript</H2>
 
 			<ul>
 				<li>Hexa type system is stricter than TypeScript’s: <Code inline code={`Int`} /> + <Code inline code={`Float`} /> vs just <Code inline code={`number`} />. Types consider data-layout in memory. For example, <Code inline code={`Array<Float>`} /> is not compatible with <Code inline code={`Array<Int>`} /> and vise-versa, because they are stored (even in JavaScript engines)
@@ -100,7 +91,7 @@ let a = new A(456)`} />
 
 			<p>List of JavaScript differences apply to TypeScript as well</p>
 
-			<h2 id="c">C</h2>
+			<H2 id="c">C</H2>
 
 			<ul>
 				<li>Object oriented programming with single inheritance, always-virtual methods, ARC and real interfaces</li>

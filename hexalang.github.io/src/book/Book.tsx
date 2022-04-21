@@ -6,6 +6,8 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { github, youtube } from '../data/links'
 import { Sidebar } from './Sidebar'
 import styled, { css } from 'styled-components'
+import { scrollTo as scrollToh2 } from './H2'
+import { scrollTo as scrollToh3 } from './H3'
 
 export const StyledSub = styled.span`
 	width: 16px;
@@ -108,6 +110,9 @@ export const Book = () => {
 		page.scrollBy(0, -headerOffset)
 	}
 
+	scrollToh2.scrollTo = scrollTo
+	scrollToh3.scrollTo = scrollTo
+
 	useEffect(() => {
 		// eslint-disable-next-line no-restricted-globals
 		if (location.hash.length < 3) return
@@ -128,7 +133,7 @@ export const Book = () => {
 					<a href="https://github.com/hexalang/hexa/releases/latest" className="header-button">Install</a>
 					<a href={youtube} className="header-button">YouTube</a>
 					<a href={github} className="header-button">GitHub</a>
-					<Link to="/donate" className="header-button">Donate</Link>
+					<Link to="/donate" className="header-button">Sponsor</Link>
 				</div>
 				<div id="article-navigation">
 					<a
@@ -171,6 +176,7 @@ export const Book = () => {
 				toggleSidebar={() => setSidebar(!sidebar)}
 				toggleTheme={() => setTheme(theme === "normal" ? "invert" : "normal")}
 				currentRoute={current.route}
+				scrollTo={scrollTo}
 			/>
 		</StyledBook>
 	)

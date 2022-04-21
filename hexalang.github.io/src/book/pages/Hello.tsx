@@ -1,3 +1,5 @@
+import { H2 } from 'book/H2'
+import { H3 } from 'book/H3'
 import { Code } from '../Code'
 
 const code = `// My first program in Hexa!
@@ -17,7 +19,7 @@ export const Article = () => {
 			<p>If you’re already familiar with programming,
 				take a look at a <a href="https://hexalang.github.io/book/Comparison.html">programming language comparison list</a>.</p>
 
-			<h2 id="quickstart">Quickstart</h2>
+			<H2 id="quickstart">Quickstart</H2>
 
 			<p>Download <a href="https://github.com/hexalang/hexa#stable">Hexa compiler</a> and <a href="https://github.com/hexalang/hexa#tools--ide">syntax highlighting for your code editor</a>.
 				Create new file <code className="language-plaintext highlighter-rouge">hello.hexa</code> and place anywhere you wish.</p>
@@ -53,7 +55,7 @@ export const Article = () => {
 			<div className="language-plaintext highlighter-rouge"><div className="highlight"><pre className="highlight"><code>Hello, Hexa!
 			</code></pre></div></div>
 
-			<h3 id="running-code-online">Running code online</h3>
+			<H3 id="running-code-online">Running code online</H3>
 
 			<p>If you don’t want to setup Hexa right now, try compiler by not leaving a browser:</p>
 
@@ -61,7 +63,7 @@ export const Article = () => {
 
 			<p>Some features are not supported in the online compiler (like file system access).</p>
 
-			<h3 id="long-story">Long story</h3>
+			<H3 id="long-story">Long story</H3>
 
 			<p>Let’s investigate our program step-by-step:</p>
 
@@ -107,7 +109,7 @@ hello("people of the Earth") // -> prints "Hello, people of the Earth"`} />
 
 			<Code code={`console.log("Hello, Hexa!")`} />
 
-			<h3 id="mastering-error-messages">Mastering error messages</h3>
+			<H3 id="mastering-error-messages">Mastering error messages</H3>
 
 			<p>Hexa is strictly typed and compiled, meaning it keeps track of code structure also at development time, not only at running resulting app. Thus it helps you to quickly find errors, way faster than, say, JavaScript. So let’s go crazy and break some code!</p>
 
