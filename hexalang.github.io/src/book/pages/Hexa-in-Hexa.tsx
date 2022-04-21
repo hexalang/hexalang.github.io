@@ -1,5 +1,6 @@
 import bootstrap from './images/bootstrap.png'
 import such_a_many_commits from './images/such_a_many_commits.png'
+import { Img } from '../Img'
 
 export const Article = () => {
 	return (
@@ -10,14 +11,11 @@ export const Article = () => {
 
 			<p>And 100 commits behind… bootstrapping is done! <img className="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20" /></p>
 
-			<p><img src={such_a_many_commits} alt="Git GUI showing lots of commits to be pushed" /></p>
+			<Img src={such_a_many_commits} alt="Git GUI showing lots of commits to be pushed" />
 
 			<p>From now on, Hexa uses pre-built version of itself to make latest versions usable.</p>
 
-			<p style={{ textAlign: "center" }}>
-				<img src={bootstrap} alt="Compilation log" />
-			</p>
-			<p></p>
+			<Img src={bootstrap} alt="Compilation log" />
 
 			<p>There's some quirks, for example, old JavaScript generator dropped entirely from codebase in favor of new normalizer+generator tandem. New generator sometimes breaks compilation, but no worries, it's a quick fix, I just wanted to share my joy as earlier as possible!</p>
 			<p></p>
