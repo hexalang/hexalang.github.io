@@ -52,13 +52,13 @@ const pagesNoRoutes: PageNoRoutes = [
 		{ name: 'Why Hexa', render: Profit },
 	],
 	[
-		{ name: 'Inside compiler: Lexer', render: Lexer },
+		{ name: 'Lexer', render: Lexer },
 	],
 	[
-		{ name: 'Blog: Bootstrap the compiler', render: Bootstrap },
-		{ name: 'Blog: So what with Hexa', render: So },
-		{ name: 'Blog: Syntax and Inspiration', render: Syntax },
-		{ name: 'Blog: Hexa compiles itself', render: Hexa },
+		{ name: 'Bootstrap the compiler', render: Bootstrap },
+		{ name: 'So what with Hexa', render: So },
+		{ name: 'Syntax and Inspiration', render: Syntax },
+		{ name: 'Hexa compiles itself', render: Hexa },
 	]
 ]
 
