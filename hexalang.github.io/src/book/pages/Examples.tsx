@@ -55,7 +55,7 @@ true false // Boolean type
 			<Code code={`var a: Int = 123
 let b: Bool = true`} />
 
-			<p>Types a [inferrable]:</p>
+			<p>Types a inferrable (guessed automagically):</p>
 
 			<Code code={`var a = 123
 let b = true`} />
