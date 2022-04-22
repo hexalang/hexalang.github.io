@@ -4,6 +4,11 @@ import logo from './images/logo.svg'
 import { Img } from '../Img'
 import { H2 } from 'book/H2'
 import { Page } from 'book/Page'
+import { Article as Comparison } from './Comparison'
+import { Article as Profit } from './Profit'
+import { Article as Checklist } from './Checklist'
+import { Article as Lexer } from './Lexer'
+import { Article as Hello } from './Hello'
 
 export const Article = () => {
 	return (
@@ -22,18 +27,18 @@ export const Article = () => {
 
 			<ul>
 				<li>
-					<a href="https://hexalang.github.io/book/Hello.html">“Hello, Hexa!”</a> — beginner friendly intro to Hexa</li>
-				<li><a href="https://hexalang.github.io/try/">Online compiler (in browser!) to run examples</a></li>
+					<Page page={Hello}>“Hello, Hexa!”</Page> — beginner friendly intro to Hexa</li>
+				<li><Link to="/try">Try online compiler (in browser!) to run some examples</Link></li>
 			</ul>
 
 			<p>Are you experienced developer?</p>
 
 			<ul>
-				<li><a href="https://hexalang.github.io/book/Comparison.html">“Comparison with other languages”</a></li>
-				<li><a href="https://hexalang.github.io/book/Checklist.html">“Programming language checklist”</a></li>
-				<li><a href="https://hexalang.github.io/book/Profit.html">“Why Hexa?”</a></li>
+				<li><Page page={Comparison}>“Comparison with other languages”</Page></li>
+				<li><Page page={Checklist}>“Programming language checklist”</Page></li>
+				<li><Page page={Profit}>“Why Hexa?”</Page></li>
 				<li><a href="https://github.com/hexalang/hexa">Contribute to the compiler</a></li>
-				<li><a href="https://hexalang.github.io/book/Lexer.html">Compiler internals</a></li>
+				<li><Page page={Lexer}>Compiler internals</Page></li>
 			</ul>
 
 			<p>Hit a button on the left side to view/hide table of contents <img className="emoji" title=":arrow_left:" alt=":arrow_left:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b05.png" height="20" width="20" /></p>
@@ -50,7 +55,7 @@ export const Article = () => {
 				<li>
 					<a href="https://t.me/hexalang_github">Telegram @hexalang_github realtime GitHub feed</a></li>
 				<li>
-					<Link to="/" className="header-button">https://hexalang.github.io home page</Link></li>
+					<Link to="/">Hexa home page</Link></li>
 				<li>
 					<a href="https://github.com/hexalang">https://github.com/hexalang GitHub itself and source code</a></li>
 				<li><a href="https://patreon.com/PeyTy">Patreon https://patreon.com/PeyTy if you consider donations</a></li>

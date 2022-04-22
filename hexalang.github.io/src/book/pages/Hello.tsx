@@ -1,7 +1,10 @@
 import { H2 } from 'book/H2'
 import { H3 } from 'book/H3'
 import { Page } from 'book/Page'
+import { Link } from 'react-router-dom'
 import { Code } from '../Code'
+import { Article as Comparison } from './Comparison'
+import { Article as Install } from './Install'
 
 const code = `// My first program in Hexa!
 
@@ -18,11 +21,11 @@ export const Article = () => {
 			<p>Let’s write your very first program in Hexa!</p>
 
 			<p>If you’re already familiar with programming,
-				take a look at a <a href="https://hexalang.github.io/book/Comparison.html">programming language comparison list</a>.</p>
+				take a look at a <Page page={Comparison}>programming language comparison list</Page>.</p>
 
 			<H2 id="quickstart">Quickstart</H2>
 
-			<p>Download <a href="https://github.com/hexalang/hexa#stable">Hexa compiler</a> and <a href="https://github.com/hexalang/hexa#tools--ide">syntax highlighting for your code editor</a>.
+			<p>Download <Page page={Install} id="#compiler">Hexa compiler</Page> and <Page page={Install} id="#tools">syntax highlighting for your code editor</Page>.
 				Create new file <code className="language-plaintext highlighter-rouge">hello.hexa</code> and place anywhere you wish.</p>
 
 			<p>Drag it into code editor then add some pretty lines into:</p>
@@ -60,7 +63,7 @@ export const Article = () => {
 
 			<p>If you don’t want to setup Hexa right now, try compiler by not leaving a browser:</p>
 
-			<p><a href="https://hexalang.github.io/try/">https://hexalang.github.io/try/</a></p>
+			<p><Link to="/try">Try Hexa Online</Link></p>
 
 			<p>Some features are not supported in the online compiler (like file system access).</p>
 

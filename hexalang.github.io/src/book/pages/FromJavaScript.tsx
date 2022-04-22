@@ -1,4 +1,5 @@
 import { Page } from "book/Page"
+import { Article as Comparison } from './Comparison'
 
 export const Article = () => {
 	return (
@@ -15,7 +16,7 @@ export const Article = () => {
 
 			<p>And so forth.</p>
 
-			<p><a href="https://hexalang.github.io/book/Comparison.html#javascript">More details about language differences</a></p>
+			<p><Page page={Comparison} id="#javascript">More details about language differences</Page></p>
 		</>
 	)
 }

@@ -24,10 +24,12 @@ export const Page: FC<Props> = ({ children, page, id }) => {
 	if (to === pages[0][0]) console.error('Cannot find article', page)
 
 	return <Link
-		to={`/book/${to.route}`}
+		to={`/book/${to.route}${id ?? `#top`}`}
 		onClick={
 			() => {
-				scrollTo.scrollTo(id ?? `#top`)
+				setTimeout(_ => {
+					scrollTo.scrollTo(id ?? `#top`)
+				}, 123)
 			}
 		}
 	>{children}</Link>

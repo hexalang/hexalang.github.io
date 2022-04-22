@@ -1,5 +1,6 @@
 import { H2 } from "book/H2"
 import { Page } from "book/Page"
+import { Article as Performance } from './Performance'
 
 export const Article = () => {
 	return (
@@ -69,7 +70,7 @@ export const Article = () => {
 					</tr>
 					<tr>
 						<td css="text-align: left">Fast compilation</td>
-						<td css="text-align: right"><Page page="Performance">Nearly instantaneous</Page></td>
+						<td css="text-align: right"><Page page={Performance}>Nearly instantaneous</Page></td>
 					</tr>
 					<tr>
 						<td css="text-align: left">Stable syntax</td>
@@ -86,7 +87,7 @@ export const Article = () => {
 					<tr>
 						<td css="text-align: left">Very fast native targets</td>
 						<td css="text-align: right">
-							<a href="https://hexalang.github.io/book/Performance.html">Yes</a>, semantically guaranteed</td>
+							<Page page={Performance}>Yes</Page>, semantically guaranteed</td>
 					</tr>
 					<tr>
 						<td css="text-align: left">Low memory overhead</td>

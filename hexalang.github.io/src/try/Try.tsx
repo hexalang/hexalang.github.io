@@ -5,7 +5,7 @@ import { Header } from 'home/Header'
 
 export const Try = () => {
 	useEffect(() => {
-		document.title = 'Try Hexa'
+		document.title = 'Try Hexa Online'
 	}, [])
 
 	return <StyledTry>

@@ -2,6 +2,8 @@ import { Code } from "book/Code"
 import { H2 } from "book/H2"
 import { H3 } from "book/H3"
 import { Page } from "book/Page"
+import { Article as Hello } from './Hello'
+import { Article as Strings } from './Strings'
 
 export const Article = () => {
 	return (
@@ -13,7 +15,7 @@ export const Article = () => {
 			<Code code={`console.log("Hello, World!")`} />
 
 			<ul>
-				<li><a href="https://hexalang.github.io/book/Hello.html">Hello, Hexa!</a></li>
+				<li><Page page={Hello}>Hello, Hexa!</Page></li>
 			</ul>
 
 			<H3 id="comments">Comments</H3>
@@ -45,7 +47,7 @@ true false // Boolean type
 ["red", "green", "blue"] // Array type or list`} />
 
 			<ul>
-				<li><a href="https://hexalang.github.io/book/Strings.html">Strings</a></li>
+				<li><Page page={Strings}>Strings and text</Page></li>
 			</ul>
 
 			<p>Variables in Hexa are statically typed:</p>
@@ -69,7 +71,7 @@ let b = true`} />
 
 			<H3 id="lists">Lists</H3>
 
-			<Code code={`[] // Empty structure
+			<Code code={`[] // Empty array
 [1, 2, 3]
 [true, false, true, true] // Elements of same type
 [

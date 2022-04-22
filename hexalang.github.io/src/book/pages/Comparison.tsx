@@ -2,6 +2,7 @@ import { H2 } from 'book/H2'
 import { Page } from 'book/Page'
 import styled from 'styled-components'
 import { Code } from '../Code'
+import { Article as FromJavaScript } from './FromJavaScript'
 
 export const Sticky = styled.div`
 	position: sticky;
@@ -72,7 +73,7 @@ let a = new A(456)`} />
 				<li>Modularity is very different (based on package-level namespaces), but on-demand compatible with JS</li>
 			</ul>
 
-			<p><a href="https://hexalang.github.io/book/FromJavaScript.html">More on porting from JavaScript</a></p>
+			<p><Page page={FromJavaScript}>More on porting from JavaScript</Page></p>
 
 			<H2 id="typescript">TypeScript</H2>
 

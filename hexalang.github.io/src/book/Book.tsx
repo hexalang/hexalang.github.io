@@ -89,9 +89,14 @@ export const Book = () => {
 		}
 		document.title = newTitle
 
-		document.querySelectorAll<HTMLAnchorElement>('a').forEach(a => {
+		document.querySelectorAll<HTMLAnchorElement>('.sidebar li a').forEach(a => {
 			if (a.href.endsWith(current.route)) {
-				a.scrollIntoView()
+				a.scrollIntoView({
+					inline: 'start',
+					block: 'start'
+				})
+
+				document.querySelector<HTMLDivElement>('.sidebar')!.scrollBy(0, -20)
 			}
 		})
 	})
