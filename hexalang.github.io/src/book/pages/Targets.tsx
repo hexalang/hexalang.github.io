@@ -1,4 +1,6 @@
 import { H2 } from "book/H2"
+import { Page } from 'book/Page'
+import { Article as Normalizer } from './Normalizer'
 
 export const Article = () => {
 	return (
@@ -33,7 +35,7 @@ export const Article = () => {
 				<li><code className="language-plaintext highlighter-rouge">@operator</code></li>
 			</ul>
 
-			<p>[Normalizer] will lower <em>target users</em> code, so even if your generator supports only basics,
+			<p><Page page={Normalizer}>Normalizer</Page> will lower <em>target users</em> code, so even if your generator supports only basics,
 				most of the Hexa will work anyway. For example, most nested functions are converted to global ones,
 				so your may show error message “this function cannot be lowered to global one, nested functions are not supported”
 				if your target don’t support them (or you don’t implement them for performance or any reasons),
