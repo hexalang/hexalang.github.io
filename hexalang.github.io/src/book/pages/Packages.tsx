@@ -1,6 +1,8 @@
 import { H3 } from 'book/H3'
 import { Img } from 'book/Img'
+import { Page } from 'book/Page'
 import git from './images/git-to-PATH.png'
+import { Article as Install } from './Install'
 
 export const Article = () => {
 	return (
@@ -9,7 +11,7 @@ export const Article = () => {
 
 			<p>Package manager is a tool for code sharing between developers. Very easy to use, no worries! <img className="emoji" title=":wink:" alt=":wink:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png" height="20" width="20" /></p>
 
-			<p>It comes built into <a href="https://github.com/hexalang/hexa#download">Hexa compiler</a>, so you don’t have to lurk elsewhere.</p>
+			<p>It comes built into <Page page={Install} id="#compiler">Hexa compiler</Page>, so you don’t have to lurk elsewhere.</p>
 
 			<p>Manager works similar to <code className="language-plaintext highlighter-rouge">npm</code> (node.js’ package manager) where possible.</p>
 
@@ -66,7 +68,7 @@ export const Article = () => {
 				–no-cache
 				–reinstall # if broken incomplete download</p>
 
-			<p><a href="TODO%5Chexa%5Csource%5Ccli%5Chpm.hexa">Source code of package manager for contributors</a></p>
+			<p><a href="TODO%5Chexa%5Csource%5Ccli%5Chpm.hexa">Source code of package manager for contributors TODO</a></p>
 
 			<H3 id="uninstalling-packages">Uninstalling packages</H3>
 

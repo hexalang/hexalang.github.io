@@ -346,6 +346,14 @@ img[src*="favicon"] {
 	cursor: pointer;
 }
 
+.inlineCode {
+	background-color: #8b8b8b14;
+	border-radius: 3px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+    padding-right: 2px;
+}
+
 .emoji {
 	height: 20px;
 	width: 20px;

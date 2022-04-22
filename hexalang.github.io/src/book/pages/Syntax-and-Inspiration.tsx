@@ -1,9 +1,12 @@
+import { Article as So } from './So-what-with-Hexa'
+import { Page } from "book/Page"
+
 export const Article = () => {
 	return (
 		<>
 			<p>Hello <a href="http://mashable.com/2016/06/02/stop-saying-hey-guys/#2C7o.kps7kqq">youse</a>! 😄</p>
 
-			<p>This is the beginning of <a href="https://github.com/hexalang/hexa/issues/3">blog post series</a> about Hexa so let us start from basics!</p>
+			<p>This is the beginning of <Page page={So}>blog post series</Page> about Hexa so let us start from basics!</p>
 
 			<p>First of all, Hexa was greatly inspired by <a href="https://gist.github.com/royriojas/6454479">JavaScript</a>. It consists of things people enjoy, want, find useful and <a href="https://github.com/tc39/proposals">choose to be implemented</a>.
 				Also, JavaScript has a most flexible yet sane syntax.</p>

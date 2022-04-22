@@ -19,6 +19,7 @@ import { Article as Testing } from './pages/Testing'
 
 // Inside compiler
 import { Article as Lexer } from './pages/Lexer'
+import { Article as Normalizer } from './pages/Normalizer'
 
 // Blog
 import { Article as So } from './pages/So-what-with-Hexa'
@@ -53,12 +54,13 @@ const pagesNoRoutes: PageNoRoutes = [
 	],
 	[
 		{ name: 'Lexer', render: Lexer },
+		{ name: 'Normalizer', render: Normalizer },
 	],
 	[
-		{ name: 'Bootstrap the compiler', render: Bootstrap },
-		{ name: 'So what with Hexa', render: So },
-		{ name: 'Syntax and Inspiration', render: Syntax },
 		{ name: 'Hexa compiles itself', render: Hexa },
+		{ name: 'Syntax and Inspiration', render: Syntax },
+		{ name: 'So what with Hexa', render: So },
+		{ name: 'Bootstrap the compiler', render: Bootstrap },
 	]
 ]
 

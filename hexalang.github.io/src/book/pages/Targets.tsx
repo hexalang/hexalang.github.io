@@ -9,10 +9,12 @@ export const Article = () => {
 
 			<p>Note: it’s currently impossible to add targets dynamically to the compiler, you have to modify compiler code. Places of modification:</p>
 
+			<p>TODO</p>
+
 			<p>Feel free to create pull requests for new targets!</p>
 
 			<p>Note: Hexa follows pragmatic approach for language targets.
-				<strong>Don’t</strong> create ‘universal’ language targets, like “Lua”, “Lisp”, “JavaScript+TypeScript” or “Java+C#” etc.</p>
+				<strong> Don’t</strong> create ‘universal’ language targets, like “Lua”, “Lisp”, “JavaScript+TypeScript” or “Java+C#” etc.</p>
 
 			<p>Instead, create separate targets for each specific goal or platform.
 				Like “Lua 5 full-featured target” vs “Lua 5 performance-oriented target” vs “LuaJIT 2 target”,

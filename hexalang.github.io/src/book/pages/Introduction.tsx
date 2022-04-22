@@ -57,8 +57,8 @@ export const Article = () => {
 				<li>
 					<Link to="/">Hexa home page</Link></li>
 				<li>
-					<a href="https://github.com/hexalang">https://github.com/hexalang GitHub itself and source code</a></li>
-				<li><a href="https://patreon.com/PeyTy">Patreon https://patreon.com/PeyTy if you consider donations</a></li>
+					<a href="https://github.com/hexalang">GitHub itself and source code</a></li>
+				<li><a href="https://patreon.com/PeyTy">Patreon if you consider donations</a></li>
 				<li>
 					<a href="https://t.me/addstickers/hexalang">Stickers for Telegram</a> <img className="emoji" title=":heart:" alt=":heart:" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png" height="20" width="20" />
 				</li>
