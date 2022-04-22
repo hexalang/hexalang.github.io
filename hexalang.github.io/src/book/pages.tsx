@@ -31,6 +31,10 @@ import { Article as Syntax } from './pages/Syntax-and-Inspiration'
 type PageNoRoutes = {
 	name: string
 	render: () => JSX.Element
+	draft?: true
+	year?: number
+	month?: 'jan' | 'feb' | 'mar' | 'apr' | 'may' | 'june' | 'july' | 'aug' | 'sept' | 'oct' | 'nov' | 'dec'
+	day?: number
 }[][]
 
 const pagesNoRoutes: PageNoRoutes = [
