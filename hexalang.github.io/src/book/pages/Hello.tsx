@@ -127,16 +127,16 @@ hello("people of the Earth") // -> prints "Hello, people of the Earth"`} />
 
 			<p>When you will try to run it, you’ll see a message like this, and program will not start:</p>
 
-			<div className="language-sh highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="o">[</span>hello.hexa:8:7<span className="o">]</span> <span className="c">#17 Can't find anything with name `something`</span>
+			<div className="language-sh highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="o">[</span>hello.hexa:8:7<span className="o">]</span> <span className="c">hx(123) Can't find anything with name `something`</span>
 			</code></pre></div></div>
 
 			<p>All error messages have common structure:</p>
 
-			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="p">[</span><span className="nx">filename</span><span className="p">.</span><span className="nx">hexa</span><span className="p">:</span><span className="nx">line</span><span className="p">:</span><span className="nx">column</span><span className="p">]</span> <span className="err">#</span><span className="nx">errorCode</span> <span className="nx">description</span>
+			<div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code><span className="p">[</span><span className="nx">filename</span><span className="p">.</span><span className="nx">hexa</span><span className="p">:</span><span className="nx">line</span><span className="p">:</span><span className="nx">column</span><span className="p">]</span> <span className="err">hx(errorCode)</span> <span className="nx">description</span>
 			</code></pre></div></div>
 
 			<p>It is really hard to get lost.
-				Error <code className="language-plaintext highlighter-rouge">#</code> codes help you to discuss errors with team mates who have different error messages translation than yours.</p>
+				Error <code className="language-plaintext highlighter-rouge">hx(number)</code> codes help you to discuss errors with team mates who have different error messages translation than yours.</p>
 
 			<p>Line numbers start from 1, so do columns:</p>
 
