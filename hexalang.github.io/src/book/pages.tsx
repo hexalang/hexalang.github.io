@@ -20,6 +20,7 @@ import { Article as Testing } from './pages/Testing'
 // Inside compiler
 import { Article as Lexer } from './pages/Lexer'
 import { Article as Normalizer } from './pages/Normalizer'
+import { Article as Parser } from './pages/Parser'
 
 // Blog
 import { Article as So } from './pages/So-what-with-Hexa'
@@ -54,6 +55,7 @@ const pagesNoRoutes: PageNoRoutes = [
 	],
 	[
 		{ name: 'Lexer', render: Lexer },
+		{ name: 'Parser', render: Parser },
 		{ name: 'Normalizer', render: Normalizer },
 	],
 	[

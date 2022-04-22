@@ -1,9 +1,11 @@
 import { Code } from "book/Code"
+import { Page } from 'book/Page'
+import { Article as Parser } from './Parser'
 
 export const Article = () => {
 	return (
 		<>
-			<p>Lexer transfers data then to [Parser][TODO].</p>
+			<p>Lexer transfers data then to <Page page={Parser}>Parser</Page>.</p>
 
 			<p>Example of lexer work:</p>
 
@@ -12,7 +14,7 @@ export const Article = () => {
 ]
 // In actual compiler code tokens are used, not arrays of plain strings`} />
 
-			<p>Each little piece of code is encoded as [Token] object, which contains position in file, extended value (for strings and identifiers), etc.
+			<p>Each little piece of code is encoded as <Code inline code={`Token`} /> object, which contains position in file, extended value (for strings and identifiers), etc.
 				This is lots of information to show proper error messages and do debugging.</p>
 
 			<p>While Lexer code may not look very efficient, compared to “magic” of parser generators, the main problem is not in the design of lexer code itself. One should always think about bottlenecks. Hexa is language for modern computers, not 20-centuries. Nowadays compiler mostly limited by the CPU cache <strong>and whole compiler routine</strong> from starting compiler binary (gcc and clang are so huge, it takes eons to load them on low-ram and no-ssd situations on every compilation) to performing transformations, hints calculation, optimization and final output.</p>

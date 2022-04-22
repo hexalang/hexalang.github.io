@@ -9,6 +9,38 @@ const onClickCopy = () => {
 	// TODO copy innerText?
 }
 
+const letters = 'abcdefghijklmnopqrstuvwxyz'
+
+const keywords = [
+	'var',
+	'let',
+	'class',
+	'new',
+	'private',
+	'return',
+	'this',
+	'for',
+	'do',
+	'while',
+	'if',
+	'else',
+	'null',
+	'in',
+	'is',
+	'as',
+	'break',
+	'switch',
+	'continue',
+	'case',
+	'enum',
+	'throw',
+	'try',
+	'catch',
+	'true',
+	'false',
+	'fun'
+]
+
 // TODO respect dark mode in CSS
 // TODO optimize
 // TODO react.memo
@@ -19,36 +51,6 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 	let commentNesting = 0
 
 	let chars = code.split('')
-	const keywords = [
-		'var',
-		'let',
-		'class',
-		'new',
-		'private',
-		'return',
-		'this',
-		'for',
-		'do',
-		'while',
-		'if',
-		'else',
-		'null',
-		'in',
-		'is',
-		'as',
-		'break',
-		'switch',
-		'continue',
-		'case',
-		'enum',
-		'throw',
-		'try',
-		'catch',
-		'true',
-		'false',
-		'fun' // TODO
-	]
-
 	let state: State = State.Plaintext as State
 	let i = 0
 
@@ -62,6 +64,15 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 					i++
 					html.push(<br />)
 				} else {
+					if (char === '#') {
+						i++
+						html.push(<span className="mi">#</span>)
+						while (letters.includes(chars[i])) {
+							html.push(<span className="mi">{chars[i]}</span>)
+							i++
+						}
+						continue
+					}
 					if (char === '/' && char1 === '/') {
 						state = State.CommentLine
 						continue
