@@ -27,6 +27,9 @@ export const Page: FC<Props> = ({ children, page, id }) => {
 		to={`/book/${to.route}${id ?? `#top`}`}
 		onClick={
 			() => {
+				requestAnimationFrame(_ => {
+					scrollTo.scrollTo(id ?? `#top`)
+				})
 				setTimeout(_ => {
 					scrollTo.scrollTo(id ?? `#top`)
 				}, 123)
