@@ -28,12 +28,18 @@ import { Article as Bootstrap } from './pages/blog/Bootstrap-the-compiler'
 import { Article as Hexa } from './pages/blog/Hexa-in-Hexa'
 import { Article as Syntax } from './pages/blog/Syntax-and-Inspiration'
 
+// Lab
+import { Article as NativeIR } from './pages/lab/Native-IR'
+import { Article as RedesignComplexEnums } from './pages/lab/Redesign-Complex-Enums'
+
 type PageNoRoutes = {
 	name: string
 	render: () => JSX.Element
-	draft?: true
+	draft?: 'no'
 	year?: number
 	month?: 'jan' | 'feb' | 'mar' | 'apr' | 'may' | 'june' | 'july' | 'aug' | 'sept' | 'oct' | 'nov' | 'dec'
+	lab?: 'rfc' | 'merged' | 'rejected'
+	labRfcUrl?: string
 	day?: number
 }[][]
 
@@ -67,7 +73,11 @@ const pagesNoRoutes: PageNoRoutes = [
 		{ name: 'Syntax and Inspiration', render: Syntax },
 		{ name: 'So what with Hexa', render: So },
 		{ name: 'Bootstrap the compiler', render: Bootstrap },
-	]
+	],
+	[
+		{ name: 'Redesign complex enums', render: RedesignComplexEnums, lab: 'rfc' },
+		{ name: 'Native IR', render: NativeIR, lab: 'rfc' },
+	],
 ]
 
 const toRoutablePages = (pages: typeof pagesNoRoutes) => {

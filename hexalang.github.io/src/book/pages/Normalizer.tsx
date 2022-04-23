@@ -1,4 +1,3 @@
-import { Code } from "book/Code"
 import { Page } from 'book/Page'
 import { Article as Targets } from './Targets'
 

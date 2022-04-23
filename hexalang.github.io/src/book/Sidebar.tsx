@@ -26,7 +26,7 @@ const CategoryDivider = ({ name }: { name: string }) => {
 	</div>
 }
 
-const categories = ['Handbook', 'Inside compiler', 'Blog']
+const categories = ['Handbook', 'Inside compiler', 'Blog', 'HexaLab']
 
 export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar, toggleTheme, scrollTo }: Props) => {
 	const category = categories.slice()

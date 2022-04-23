@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { H2 } from 'book/H2'
 import { H3 } from 'book/H3'
 import { Page } from 'book/Page'

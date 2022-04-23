@@ -71,7 +71,7 @@ export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 			</div>
 
 			{!compact && <Link to="/">
-				<img width="191px" height="191px" src="/logo.svg" />
+				<img width="191px" height="191px" alt="logo" src="/logo.svg" />
 				<br />Hexa Programming Language
 				<br />Ensures safety, simplicity and performance
 				<br />
