@@ -899,11 +899,12 @@ nav.main-nav li a {
 	padding: 10px;
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 250px;
 	text-align: center;
 	z-index: 4;
 	transition: opacity .3s;
 	cursor: pointer;
+	transition: transform .25s ease-out;
 }
 
 .sidebar-toggle span {
@@ -924,12 +925,13 @@ nav.main-nav li a {
 	outline: none;
 	padding: 10px;
 	position: absolute;
-	left: 0;
+	left: 250px;
 	text-align: center;
 	transition: opacity .3s;
 	z-index: 4;
 	bottom: 40px;
 	cursor: pointer;
+	transition: transform .25s ease-out;
 }
 
 .dark-toggle span {
@@ -953,7 +955,6 @@ nav.main-nav li a {
 	left: 4px;
 }
 
-
 .dark-toggle:hover {
 	opacity: .4;
 }
@@ -962,7 +963,9 @@ nav.main-nav li a {
 	text-decoration: none;
 }
 
-&.sidebar-hidden .sidebar {
+&.sidebar-hidden .sidebar,
+&.sidebar-hidden .dark-toggle,
+&.sidebar-hidden .sidebar-toggle {
 	transform: translateX(-250px);
 }
 
@@ -1069,7 +1072,9 @@ nav.main-nav li a {
 }
 
 @media screen and (max-width: 768px) {
-	&.sidebar-hidden .sidebar {
+	&.sidebar-hidden .sidebar,
+	&.sidebar-hidden .dark-toggle,
+	&.sidebar-hidden .sidebar-toggle {
 		transform: translateX(250px);
 	}
 
@@ -1086,7 +1091,10 @@ nav.main-nav li a {
 
 	.sidebar {
 		left: -250px;
-		transition: transform .25s ease-out;
+	}
+
+	.sidebar-toggle, .dark-toggle {
+		left: 0px;
 	}
 
 	.github-corner,
