@@ -11,7 +11,26 @@ interface Props {
 	scrollTo: (hash: string) => void
 }
 
+const CategoryDivider = ({ name }: { name: string }) => {
+	return <div css={`display: flex;
+    align-items: center;`}>
+		<span css={`
+    font-size: 14px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #b6bebf;
+    font-weight: 500;
+    user-select: none;
+    cursor: default;
+`}>{name}</span><div css={`margin-top: 4px; flex-grow: 1; height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);`}></div>
+	</div>
+}
+
+const categories = ['Handbook', 'Inside compiler', 'Blog']
+
 export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar, toggleTheme, scrollTo }: Props) => {
+	const category = categories.slice()
+
 	return (
 		<>
 			<div className="sidebar">
@@ -24,7 +43,7 @@ export const Sidebar: FC<Props> = ({ currentRoute, toggleSidebar, toggleTheme, s
 						(() => {
 							return pages.map((chapter, index) => (
 								<Fragment key={index}>
-									{index !== 0 && <div css={`height: 1px; border-top: 1px solid rgba(139, 216, 255, 0.2);`}></div>}
+									{index !== 0 && <CategoryDivider name={category.shift() ?? 'Hexa'} />}
 									{chapter.map(page =>
 										<li key={page.route}><Link
 											to={`/book/${page.route}`}
