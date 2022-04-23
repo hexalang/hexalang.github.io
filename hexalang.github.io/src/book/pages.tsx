@@ -23,10 +23,10 @@ import { Article as Normalizer } from './pages/Normalizer'
 import { Article as Parser } from './pages/Parser'
 
 // Blog
-import { Article as So } from './pages/So-what-with-Hexa'
-import { Article as Bootstrap } from './pages/Bootstrap-the-compiler'
-import { Article as Hexa } from './pages/Hexa-in-Hexa'
-import { Article as Syntax } from './pages/Syntax-and-Inspiration'
+import { Article as So } from './pages/blog/So-what-with-Hexa'
+import { Article as Bootstrap } from './pages/blog/Bootstrap-the-compiler'
+import { Article as Hexa } from './pages/blog/Hexa-in-Hexa'
+import { Article as Syntax } from './pages/blog/Syntax-and-Inspiration'
 
 type PageNoRoutes = {
 	name: string
