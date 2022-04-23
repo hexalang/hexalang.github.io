@@ -1,3 +1,5 @@
+import { MouseEvent } from 'react'
+
 enum State {
 	Plaintext,
 	CommentLine,
@@ -5,8 +7,8 @@ enum State {
 	String
 }
 
-const onClickCopy = () => {
-	// TODO copy innerText?
+const onClickCopy = (event: MouseEvent<HTMLAnchorElement>) => {
+	navigator.clipboard.writeText((event.currentTarget.innerText ?? '').trim())
 }
 
 const letters = 'abcdefghijklmnopqrstuvwxyz'
@@ -232,7 +234,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 	html = html.map((value, index) => { return { ...value, key: index } })
 
 	if (inline) {
-		return <code>{html}</code>
+		return <code className="inlineCode" title={code + '\n\nClick to copy'} onClick={onClickCopy}>{html}</code>
 	}
 	return <div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code>{html}</code></pre></div></div>
 }

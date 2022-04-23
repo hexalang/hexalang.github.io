@@ -80,6 +80,7 @@ img[src*="favicon"] {
 .err {
 	color: #a61717;
 	background-color: #e3d2d2;
+	border-radius: 3px;
 }
 
 .k {
