@@ -90,7 +90,11 @@ export const Book = () => {
 					const name: string = header.innerText.trim()
 					const id = header.dataset['id'] ?? header.id
 					if (name !== current.name && name !== '' && id) {
-						headers.push({ id, name, h: header.tagName.toLowerCase() })
+						headers.push({
+							id,
+							name,
+							h: header.tagName.toLowerCase()
+						})
 					}
 				})
 			}
