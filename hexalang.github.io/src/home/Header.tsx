@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { github, youtube } from '../data/links'
 import styled from 'styled-components'
 import { FC } from 'react'
+import { Article as Install } from '../book/pages/Install'
+import { Page } from 'book/Page'
 
 const Styled = styled.div`
 	text-align: center;
@@ -61,7 +63,7 @@ export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 					</Link>}
 					<Link to="/try" className="navbar-btn">Try</Link>
 					<Link to="/book" className="navbar-btn">Learn</Link>
-					<a href="https://github.com/hexalang/hexa/releases/latest" className="navbar-btn">Install</a>
+					<Page className="navbar-btn" page={Install}>Install</Page>
 					<a href={youtube} className="navbar-btn">YouTube</a>
 					<a href={github} className="navbar-btn">GitHub</a>
 					<Link to="/donate" className="navbar-btn">Donate</Link>

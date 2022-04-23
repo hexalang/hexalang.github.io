@@ -8,7 +8,8 @@ import { Sidebar } from './Sidebar'
 import styled from 'styled-components'
 import { scrollTo as scrollToH2 } from './H2'
 import { scrollTo as scrollToH3 } from './H3'
-import { scrollTo as scrollToPage } from './Page'
+import { Page, scrollTo as scrollToPage } from './Page'
+import { Article as Install } from './pages/Install'
 
 export const StyledSub = styled.span`
 	width: 16px;
@@ -151,7 +152,7 @@ export const Book = () => {
 				<div className="header">
 					<div className="header-spacer"></div>
 					<Link to="/try" className="header-button">Try</Link>
-					<a href="https://github.com/hexalang/hexa/releases/latest" className="header-button">Install</a>
+					<Page className="header-button" page={Install}>Install</Page>
 					<a href={youtube} className="header-button">YouTube</a>
 					<a href={github} className="header-button">GitHub</a>
 					<Link to="/donate" className="header-button">Sponsor</Link>

@@ -5,11 +5,17 @@ import { pages } from './pages'
 interface Props {
 	page: () => JSX.Element
 	id?: string
+	className?: string
 }
 
 export let scrollTo: { scrollTo: (hash: string) => void } = {} as any
 
-export const Page: FC<Props> = ({ children, page, id }) => {
+export const Page: FC<Props> = ({
+	children,
+	page,
+	id,
+	className
+}) => {
 	let to = pages[0][0]
 	if (id && !id.startsWith('#')) {
 		id = '#' + id
@@ -24,6 +30,7 @@ export const Page: FC<Props> = ({ children, page, id }) => {
 	if (to === pages[0][0]) console.error('Cannot find article', page)
 
 	return <Link
+		className={className}
 		to={`/book/${to.route}${id ?? `#top`}`}
 		onClick={
 			() => {
