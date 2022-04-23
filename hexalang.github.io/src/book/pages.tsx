@@ -75,8 +75,14 @@ const pagesNoRoutes: PageNoRoutes = [
 		{ name: 'Bootstrap the compiler', render: Bootstrap },
 	],
 	[
-		{ name: 'Redesign complex enums', render: RedesignComplexEnums, lab: 'rfc' },
-		{ name: 'Native IR', render: NativeIR, lab: 'rfc' },
+		{
+			name: 'Redesign complex enums', render: RedesignComplexEnums, lab: 'rfc',
+			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/25'
+		},
+		{
+			name: 'Native IR', render: NativeIR, lab: 'rfc',
+			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/24'
+		},
 	],
 ]
 

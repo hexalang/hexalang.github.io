@@ -46,6 +46,31 @@ export const StyledDraft = styled.div`
 	margin-bottom: 4px;
 `
 
+export const StyledRfc = styled.div`
+	width: 100%;
+	color: var(--color-text);
+	color: grey;
+	text-align: center;
+	margin-bottom: 8px;
+	margin-top: 16px;
+	a {
+		border-style: solid;
+		border-width: 1px;
+		border-color: lightblue;
+		color: lightblue;
+		border-radius: 8px;
+		padding: 3px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+`
+
+const Rfc = ({ href }: { href: string }) => {
+	return <StyledRfc>
+		<a href={href}>This proposal is open for discussion. Click to visit comments page.</a>
+	</StyledRfc>
+}
+
 const articleByRoute = (route: string) => {
 	route = route.replace('/', '').trim().toLowerCase()
 
@@ -193,6 +218,7 @@ export const Book = () => {
 					>{current.name}</a></h2>
 					<div id="top"></div>
 					{current.draft !== 'no' && <StyledDraft>This is a draft, don't expect much</StyledDraft>}
+					{current.labRfcUrl && <Rfc href={current.labRfcUrl} />}
 					<Article />
 				</div>
 				<div css="margin-top: 64px" />
