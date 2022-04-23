@@ -37,6 +37,14 @@ export const StyledSub = styled.span`
 	}
 `
 
+export const StyledDraft = styled.div`
+	width: 100%;
+	color: var(--color-text);
+	color: grey;
+	text-align: center;
+	margin-bottom: 4px;
+`
+
 const articleByRoute = (route: string) => {
 	route = route.replace('/', '').trim().toLowerCase()
 
