@@ -53,7 +53,7 @@ export const StyledRfc = styled.div`
 	text-align: center;
 	margin-bottom: 8px;
 	margin-top: 16px;
-	a {
+	a, span {
 		border-style: solid;
 		border-width: 1px;
 		border-color: lightblue;
@@ -62,12 +62,34 @@ export const StyledRfc = styled.div`
 		padding: 3px;
 		padding-left: 5px;
 		padding-right: 5px;
+
+		&.rejected {
+			border-color: lightcoral;
+			color: lightcoral;
+		}
+
+		&.merged {
+			border-color: lightgreen;
+			color: lightgreen;
+		}
 	}
 `
 
 const Rfc = ({ href }: { href: string }) => {
 	return <StyledRfc>
-		<a href={href}>This proposal is open for discussion. Click to visit comments page.</a>
+		<a href={href}>This proposal is open for discussion, click to visit comments page</a>
+	</StyledRfc>
+}
+
+const Merged = () => {
+	return <StyledRfc>
+		<span className='merged'>This proposal was implemented and merged into Hexa</span>
+	</StyledRfc>
+}
+
+const Rejected = () => {
+	return <StyledRfc>
+		<span className='rejected'>This proposal was rejected and will not be implemented</span>
 	</StyledRfc>
 }
 
@@ -219,6 +241,8 @@ export const Book = () => {
 					<div id="top"></div>
 					{current.draft !== 'no' && <StyledDraft>This is a draft, don't expect much</StyledDraft>}
 					{current.labRfcUrl && <Rfc href={current.labRfcUrl} />}
+					{current.lab === 'merged' && <Merged />}
+					{current.lab === 'rejected' && <Rejected />}
 					<Article />
 				</div>
 				<div css="margin-top: 64px" />

@@ -24,6 +24,8 @@ export const Article = () => {
 			<blockquote>
 				<p>Note: idiomatic Hexa prefers long self-descriptional identifier names. Longer names =&gt; longer comparison loops with classic approaches.</p>
 			</blockquote>
+
+			{false && 'TODO realtime demo with LSP text to tokens'}
 		</>
 	)
 }
