@@ -2,6 +2,8 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 import { StyledHome } from './StyledHome'
 import { Link } from 'react-router-dom'
+import { Code } from 'book/Code'
+import { StyledLanding } from './StyledLanding'
 
 export const Home = () => {
 	return (
