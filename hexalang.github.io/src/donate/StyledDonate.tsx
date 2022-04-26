@@ -54,6 +54,11 @@ div.small-container {
 
 .donate-card {
 	margin: 15px;
+	border-radius: 8px;
+}
+
+.no-border {
+	border-bottom: unset !important;
 }
 
 .card {
@@ -165,6 +170,7 @@ a.btn-blue {
 	color: #fff !important;
 	text-decoration: none;
 	background-color: rgb(41, 156, 228) !important;
+	margin-bottom: 6px;
 }
 
 .space-between {

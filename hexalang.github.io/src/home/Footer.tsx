@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 const Styled = styled.div`
 	.footer {
 		flex: 0 1 45px;
-		background: #6cf;
 		justify-content: center;
 	}
 
@@ -74,8 +73,8 @@ export const Footer = () => {
 	return (
 		<Styled className="footer flex-row">
 			<div className="flex-auto center non-mobile text">
-				<div>
-					<a href={github}>Hexa</a> &copy; {year}
+				<div title="Read Fair Use Disclaimer section in README.md of the website repo for more details">
+					<a href={github} style={{ color: 'black' }}>Hexa</a> &copy; {year}
 				</div>
 			</div>
 			<div className="flex-row footer-buttons">

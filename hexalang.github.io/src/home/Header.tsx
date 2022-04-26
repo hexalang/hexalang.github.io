@@ -12,11 +12,14 @@ const Styled = styled.div`
 
 	.navbar {
 		right: 10px;
+		right: 0px;
 		position: absolute;
 		min-height: 50px;
 		display: flex;
 		padding: 3px;
 		flex-direction: row;
+		width: 100vw;
+		padding-right: 12px;
 	}
 
 	.navbar-btn {
@@ -47,6 +50,16 @@ const Styled = styled.div`
 		color: black;
 		text-decoration: none;
 	}
+
+	.grow {
+		flex-grow: 1;
+	}
+
+	.logoButton {
+		flex-grow: 1;
+		display: flex;
+    	padding-left: 18px;
+	}
 	//.small-logo:hover {
 	//	scale: 2.5 2.5;
 	//	position: relative;
@@ -55,12 +68,13 @@ const Styled = styled.div`
 
 export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 	return (
-		<Styled>
+		<Styled className="navbarHeader">
+			<div className="navbarHeaderBlur"></div>
 			<div className="navbar flex-end">
-				<div className="flex-row">
-					{compact && <Link to="/">
+				<div className="flex-row grow">
+					{compact ? <span className="logoButton"><Link to="/" className="">
 						<img className="small-logo" alt="Home" width="24px" height="24px" src="/logo-no-text.svg" />
-					</Link>}
+					</Link></span> : <span className="logoButton"></span>}
 					<Link to="/try" className="navbar-btn">Try</Link>
 					<Link to="/book" className="navbar-btn">Learn</Link>
 					<Page className="navbar-btn" page={Install}>Install</Page>

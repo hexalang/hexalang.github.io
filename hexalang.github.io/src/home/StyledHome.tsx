@@ -15,6 +15,12 @@ code {
 	display: none !important;
 }
 
+overflow-x: hidden;
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
 * {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	padding: 0px;
@@ -102,6 +108,27 @@ a {
 	flex: 0 1 45px;
 	background: #6cf;
 	justify-content: center;
+	background-color: rgba(100, 100, 100, 0.2);
+	backdrop-filter: blur(10px);
+	background-image: url(/acryl.png);
+	background-repeat: repeat;
+}
+
+.navbarHeaderBlur {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	background-color: rgba(100, 100, 100, 0.2);
+	backdrop-filter: blur(10px);
+	height: 50px;
+	pointer-events: none;
+	background-image: url(/acryl.png);
+	background-repeat: repeat;
+
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: rgba(100, 100, 100, 0.2);
 }
 
 .header {

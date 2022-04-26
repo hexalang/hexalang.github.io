@@ -9,7 +9,6 @@ export const StyledLanding = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	position: relative;
 
 	//row-gap: 8px;
 	//column-gap: 8px;
@@ -22,7 +21,6 @@ export const StyledLanding = styled.div`
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		position: relative;
 
 		.blocks {
 			display: flex;
@@ -141,12 +139,10 @@ export const StyledLanding = styled.div`
 
 				.gi {
 					background-image: url(/gh.svg);
-
 				}
 
 				.di {
 					background-image: url(/di.png);
-
 				}
 			}
 		}
