@@ -8,8 +8,8 @@ import { StyledLanding } from './StyledLanding'
 export const Home = () => {
 	return (
 		<StyledHome className="page shadow">
-			<div className="wip-label">Site is under construction!! =)</div>
-			<Header compact={false} />
+			<div className="wip-label hidden">Site is under construction!! =)</div>
+			<Header compact={true} />
 
 			<div className="container">
 
