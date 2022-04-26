@@ -28,10 +28,11 @@ const Styled = styled.div`
 		padding: 5px 10px;
 		user-select: none;
 		margin: 6px;
+		transition: color .2s ease-in-out;
 	}
 
 	.navbar-btn:hover {
-		box-shadow: 0px 10px 20px -10px lightgrey;
+		color: rgb(0, 174, 239);
 	}
 
 	.flex-row {
