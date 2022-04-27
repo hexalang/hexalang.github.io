@@ -10,6 +10,17 @@ const Styled = styled.div`
 	font-size: 18px !important;
 	flex: 0 1 auto;
 
+	@media screen and (max-width: 800px) {
+		a {
+			font-size: 14px !important;
+		}
+
+		.navbar-btn.navbar-btn {
+			padding: 0px;
+			margin-left: 3px;
+		}
+	}
+
 	.navbar {
 		right: 10px;
 		right: 0px;

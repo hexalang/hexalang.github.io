@@ -289,6 +289,12 @@ export const StyledLanding = styled.div`
 			left: -10px;
 			z-index: 1;
 			pointer-events: none;
+
+			@media screen and (max-width: 800px) {
+				& {
+					left: -90px;
+				}
+			}
 		}
 	}
 `
