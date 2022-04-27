@@ -221,6 +221,7 @@ export const StyledLanding = styled.div`
 					display: flex;
 					flex-grow: 1;
 					padding-left: 8px;
+					padding-bottom: 5px;
 				}
 
 				.title {
@@ -244,6 +245,7 @@ export const StyledLanding = styled.div`
 					font-size: 14px;
 					align-items: center;
 					justify-content: center;
+					padding-bottom: 1px;
 
 					&:hover {
 						background-color: #1c1c1c;

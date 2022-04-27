@@ -7,8 +7,13 @@ import { StyledLanding } from './StyledLanding'
 import { github, youtube, patreon, telegram, discord } from '../data/links'
 import { Article as Install } from '../book/pages/Install'
 import { Page } from 'book/Page'
+import { useEffect } from 'react'
 
 export const Home = () => {
+	useEffect(() => {
+		document.title = 'Hexa'
+	}, [])
+
 	return (
 		<StyledHome className="page shadow">
 			<div className="wip-label hidden">Site is under construction!! =)</div>
