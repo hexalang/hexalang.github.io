@@ -183,6 +183,12 @@ export const StyledLanding = styled.div`
 			padding: 14px;
 			padding-top: 4px;
 
+			@media screen and (max-width: 800px) {
+				& {
+					margin-bottom: 30px;
+				}
+			}
+
 			.button {
 				width: 100%;
 				height: 80px;
