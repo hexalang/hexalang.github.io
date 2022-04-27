@@ -19,6 +19,10 @@ const Styled = styled.div`
 			padding: 0px;
 			margin-left: 3px;
 		}
+
+		a img.bigLogo {
+			margin-top: 34px;
+		}
 	}
 
 	.navbar {
@@ -97,7 +101,7 @@ export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 			</div>
 
 			{!compact && <Link to="/">
-				<img width="191px" height="191px" alt="logo" src="/logo.svg" />
+				<img className="bigLogo" width="191px" height="191px" alt="logo" src="/logo.svg" />
 				<br />Hexa Programming Language
 				<br />Ensures safety, simplicity and performance
 				<br />

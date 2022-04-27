@@ -78,6 +78,13 @@ div.small-container {
 .card-body {
 	display: flex;
 	flex-direction: row;
+
+	@media screen and (max-width: 800px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 	padding: 15px 30px;
 
 	&.center {
