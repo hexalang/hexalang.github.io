@@ -118,7 +118,7 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	background-color: rgba(100, 100, 100, 0.2);
 	backdrop-filter: blur(10px);
 	height: 50px;

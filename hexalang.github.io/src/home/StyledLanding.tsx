@@ -9,7 +9,6 @@ export const StyledLanding = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-
 	//row-gap: 8px;
 	//column-gap: 8px;
 	//gap: 8px;
@@ -21,9 +20,22 @@ export const StyledLanding = styled.div`
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
+		user-select: none;
+
+		@media screen and (max-width: 800px) {
+			& {
+				margin-top: 0px;
+			}
+		}
 
 		.blocks {
 			display: flex;
+			justify-content: center;
+			@media screen and (max-width: 800px) {
+				& {
+					flex-direction: column-reverse;
+				}
+			}
 		}
 
 		.block {
@@ -40,6 +52,11 @@ export const StyledLanding = styled.div`
 
 		.blockWhite {
 			flex-direction: column;
+			@media screen and (max-width: 800px) {
+				& {
+					margin-bottom: 16px;
+				}
+			}
 
 			.texts {
 				border-radius: 20px;
@@ -58,6 +75,10 @@ export const StyledLanding = styled.div`
 					font-weight: 500;
 					align-self: flex-end;
 					margin-right: 16px;
+					user-select: none;
+				}
+
+				code {
 					user-select: none;
 				}
 
