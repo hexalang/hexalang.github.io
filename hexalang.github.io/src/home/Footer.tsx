@@ -66,6 +66,10 @@ const Styled = styled.div`
 	@media screen and (max-width: 800px) {
 		.non-mobile {
 			display: none;
+			width: 0;
+			height: 0;
+			font-size: 0;
+			// TODO flex even for footer buttons
 		}
 	}
 `
