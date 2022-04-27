@@ -132,7 +132,7 @@ export const StyledLanding = styled.div`
 				justify-content: space-evenly;
 				align-items: center;
 
-				div {
+				> a {
 					background-image: url(/yt.svg);
 					width: 52px;
 					width: 44px;

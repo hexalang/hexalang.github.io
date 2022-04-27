@@ -4,6 +4,9 @@ import { StyledHome } from './StyledHome'
 import { Link } from 'react-router-dom'
 import { Code } from 'book/Code'
 import { StyledLanding } from './StyledLanding'
+import { github, youtube, patreon, telegram, discord } from '../data/links'
+import { Article as Install } from '../book/pages/Install'
+import { Page } from 'book/Page'
 
 export const Home = () => {
 	return (
@@ -15,28 +18,28 @@ export const Home = () => {
 					<img width="191px" height="191px" alt="logo" src="/logo.svg" />
 					<div className="blocks">
 						<div className="block blockAcryl">
-							<div className="button">
+							<a href={youtube} className="button">
 								<div className="yt ico"></div>
 								<div className="text">
 									<div className="title">Follow</div>
 									<div className="desc">Watch YouTube videos</div>
 								</div>
-							</div>
-							<div className="button">
+							</a>
+							<Link to="/try" className="button">
 								<div className="try ico"></div>
 								<div className="text">
 									<div className="title">Try</div>
 									<div className="desc">Directly in your browser</div>
 								</div>
-							</div>
-							<div className="button">
+							</Link>
+							<a href={patreon} className="button">
 								<div className="hearts ico"></div>
 								<div className="text">
 									<div className="title">Support</div>
 									<div className="desc">Sponsor on Patreon</div>
 								</div>
-							</div>
-							<div className="button dark">Install on your device &gt;</div>
+							</a>
+							<Page page={Install} className="button dark">Install on your device&nbsp;&gt;</Page>
 						</div>
 						<div className="block blockWhite">
 							<div className="texts">
@@ -50,9 +53,9 @@ export const Home = () => {
 hello("Hexa")`} />
 							</div>
 							<div className="icons">
-								<div className="tg"></div>
-								<div className="gi"></div>
-								<div className="di"></div>
+								<a href={telegram} className="tg">{telegram}</a>
+								<a href={github} className="gi">{github}</a>
+								<a href={discord} className="di">{discord}</a>
 							</div>
 						</div>
 					</div>
