@@ -135,8 +135,10 @@ export const StyledLanding = styled.div`
 				div {
 					background-image: url(/yt.svg);
 					width: 52px;
+					width: 44px;
 					height: 44px;
 					background-size: 42px 44px;
+					background-size: 44px 44px;
 					background-repeat: no-repeat;
 					background-position: center;
 					cursor: pointer;
@@ -153,7 +155,7 @@ export const StyledLanding = styled.div`
 				}
 
 				.tg {
-					background-image: url(/tg.svg);
+					background-image: url(/tgw.svg);
 
 
 				}
@@ -163,7 +165,8 @@ export const StyledLanding = styled.div`
 				}
 
 				.di {
-					background-image: url(/di.png);
+					background-image: url(/didi.svg);
+					background-size: 44px 44px;
 				}
 			}
 		}
