@@ -813,11 +813,25 @@ nav.main-nav li a {
 .markdown h2 {
 	margin-top: 0px;
     margin-bottom: 0.45em;
+
+	@media screen and (max-width: 800px) {
+		display: flex;
+		font-size: 20px;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .markdown h3 {
 	margin-top: 0px;
     margin-bottom: 0.5em;
+
+	@media screen and (max-width: 800px) {
+		font-size: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .markdown p {
