@@ -1,11 +1,14 @@
 import { H2 } from "book/H2"
 import { Page } from "book/Page"
 import { Article as Performance } from './Performance'
+import noice from './images/noice.jpg'
+import { Img } from "book/Img"
 
 export const Article = () => {
 	return (
 		<>
-			<p>Consider adopting new programming language? <img className="emoji" title=":yum:" alt=":yum:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f60b.png" height="20" width="20" /></p>
+			<Img src={noice} style={{ borderRadius: '100%' }} alt="Nice lang very recommend" width={256} />
+			<p>Hello there! Consider adopting new programming language? <img className="emoji" title=":yum:" alt=":yum:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f60b.png" height="20" width="20" /></p>
 
 			<H2 id="goals-and-philosophy">Goals and philosophy</H2>
 
