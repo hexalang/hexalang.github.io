@@ -863,7 +863,17 @@ nav.main-nav li a {
 }
 
 .markdown blockquote {
-	border-left: 0.25em solid gainsboro;
+	::before {
+		border-radius: 4px;
+		display: block;
+		width: 0.2em;
+		background-color: gainsboro;
+		height: 100%;
+		content: '.';
+		position: absolute;
+		color: transparent;
+	}
+	position: relative;
 	margin-left: 1em;
 	color: grey;
 }
@@ -1048,12 +1058,20 @@ nav.main-nav li a {
 	font-size: 18px;
 	background-color: var(--color-bg);
 	padding-bottom: 4px;
-	border-left-color: rgba(0,0,0,0.5);
-	border-left-style: solid;
-	border-left-width: 6px;
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
+
+	::before {
+		border-radius: 4px;
+		display: block;
+		width: 0.2em;
+		background-color: rgba(0,0,0,0.5);
+		height: 100%;
+		content: '.';
+		position: absolute;
+		color: transparent;
+	}
 
 	a {
 		position: relative;

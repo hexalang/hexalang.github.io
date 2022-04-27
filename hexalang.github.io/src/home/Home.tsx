@@ -39,7 +39,7 @@ export const Home = () => {
 									<div className="desc">Sponsor on Patreon</div>
 								</div>
 							</a>
-							<Page page={Install} className="button dark">Install on your device&nbsp;&gt;</Page>
+							<Page page={Install} className="button dark"><span className="down" />Install on your device</Page>
 						</div>
 						<div className="block blockWhite">
 							<div className="texts">

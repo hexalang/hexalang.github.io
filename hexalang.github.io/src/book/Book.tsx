@@ -170,7 +170,7 @@ export const Book = () => {
 					block: 'start'
 				})
 
-				document.querySelector<HTMLDivElement>('.sidebar')!.scrollBy(0, -20)
+				//document.querySelector<HTMLDivElement>('.sidebar')!.scrollBy(0, -20)
 			}
 		})
 	})

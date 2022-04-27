@@ -252,6 +252,17 @@ export const StyledLanding = styled.div`
 					&:hover:active {
 						background-color: #121212;
 					}
+
+					position: relative;
+					padding-left: 25px;
+					.down {
+						background-image: url(/down.svg);
+						background-size: 36px 36px;
+						position: absolute;
+						width: 36px;
+						height: 36px;
+						left: 0;
+					}
 				}
 
 				.ico {
