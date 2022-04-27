@@ -1005,6 +1005,13 @@ nav.main-nav li a {
 	font-size: 18px;
 	padding: 10px 15px;
 	text-decoration: none;
+
+	@media screen and (max-width: 800px) {
+		& {
+			padding: 10px 10px;
+			// TODO yeah I could just flex evenly here...
+		}
+	}
 }
 
 .article {
@@ -1081,7 +1088,6 @@ nav.main-nav li a {
 	.page {
 		left: 0;
 		max-width: 100vw;
-		padding-top: 20px;
 		transition: transform .25s ease;
 	}
 

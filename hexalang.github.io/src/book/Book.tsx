@@ -43,7 +43,7 @@ export const StyledDraft = styled.div`
 	color: var(--color-text);
 	color: grey;
 	text-align: center;
-	margin-bottom: 4px;
+	margin-bottom: 10px;
 `
 
 export const StyledRfc = styled.div`
