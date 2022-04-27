@@ -48,6 +48,11 @@
 				s.text = code;
 				document.body.appendChild(s);
 			}
+
+			window.requestAnimationFrame(_ => {
+				const theme = `dark`
+				document.querySelectorAll(`style.${theme}rea${'der'}`).forEach((_) => _.media = 'max-width: 1px')
+			})
 		}
 	</script>
 </body>
