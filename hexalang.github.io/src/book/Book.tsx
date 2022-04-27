@@ -53,7 +53,14 @@ export const StyledRfc = styled.div`
 	text-align: center;
 	margin-bottom: 8px;
 	margin-top: 16px;
-	a, span {
+	display: flex;
+	justify-content: center;
+
+	a {
+		color: lightblue;
+	}
+
+	> a, span, div {
 		border-style: solid;
 		border-width: 1px;
 		border-color: lightblue;
@@ -62,6 +69,11 @@ export const StyledRfc = styled.div`
 		padding: 3px;
 		padding-left: 5px;
 		padding-right: 5px;
+		max-width: 60%;
+
+		@media screen and (max-width: 800px) {
+			max-width: 90%;
+		}
 
 		&.rejected {
 			border-color: lightcoral;
@@ -77,7 +89,9 @@ export const StyledRfc = styled.div`
 
 const Rfc = ({ href }: { href: string }) => {
 	return <StyledRfc>
-		<a href={href}>This proposal is open for discussion, click to visit comments page</a>
+		<div>
+			<a href={href}>This proposal is open for discussion, click to visit comments page</a>
+		</div>
 	</StyledRfc>
 }
 
