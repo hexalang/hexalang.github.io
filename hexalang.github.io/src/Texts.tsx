@@ -52,7 +52,16 @@ export const texts: Texts = {
 	},
 	// Chinese
 	'zh': {
-		'Follow': 'Follow',
+		'Follow': '关注',
+		'Try': 'Try',
+		'Learn': '学会',
+		'Install': '安装',
+		'Donate': '捐赠',
+		'Watch YouTube videos': '观看 YouTube 视频',
+		'Directly in your browser': '直接在浏览器中',
+		'Support': '支持',
+		'Sponsor on Patreon': 'Patreon 的赞助商',
+		'Install on your device': '在您的设备上安装',
 	},
 	// Korean
 	'ko': {
