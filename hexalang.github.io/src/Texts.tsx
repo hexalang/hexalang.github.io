@@ -53,7 +53,7 @@ export const texts: Texts = {
 	// Chinese
 	'zh': {
 		'Follow': '关注',
-		'Try': 'Try',
+		'Try': '实验',
 		'Learn': '学会',
 		'Install': '安装',
 		'Donate': '捐赠',
