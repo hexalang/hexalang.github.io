@@ -68,7 +68,16 @@ export const texts: Texts = {
 	},
 	// Polish
 	'pl': {
-		'Follow': 'Follow',
+		'Follow': 'Follować',
+		'Try': 'Spróbować',
+		'Learn': 'Uczyć się',
+		'Install': 'Zainstalować',
+		'Donate': 'Darowizna',
+		'Watch YouTube videos': 'Oglądać video z YouTube',
+		'Directly in your browser': 'Bezpośrednio w przeglądarce',
+		'Support': 'Pomoc',
+		'Sponsor on Patreon': 'Sponsor na Patreonie',
+		'Install on your device': 'Zainstaluj na swoim urządzeniu',
 	},
 	// Slovak
 	'sk': {
