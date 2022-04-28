@@ -6,6 +6,8 @@
 
 ![Hello](hello.png?raw=true)
 
+Add your native language to **`hexalang.github.io\src\Texts.tsx`**
+
 ## Fair Use Disclaimer
 
 This website may contain copyrighted material, the use of which may not have been specifically authorized by the copyright owner.
