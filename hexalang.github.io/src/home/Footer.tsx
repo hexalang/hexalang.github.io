@@ -77,8 +77,12 @@ export const Footer = () => {
 	return (
 		<Styled className="footer flex-row">
 			<div className="flex-auto center non-mobile text">
-				<div title="Read Fair Use Disclaimer section in README.md of the website repo for more details">
-					<a href={github} style={{ color: 'black' }}>Hexa</a> &copy; {year}
+				<div title="Read Fair Use Disclaimer section in README.md of the website repo for more details" style={{ color: 'lightgrey' }}>
+					<a href={github} style={{ color: 'lightgrey' }}>Hexa</a> &copy; {year}
+					&nbsp;
+					<a href="https://www.pixiv.net/en/artworks/77171026" style={{ color: 'lightgreen' }}>Background</a>
+					&nbsp;by&nbsp;
+					<a href="https://www.pixiv.net/en/users/795196" style={{ color: 'palevioletred' }}>DSマイル</a>
 				</div>
 			</div>
 			<div className="flex-row footer-buttons">
