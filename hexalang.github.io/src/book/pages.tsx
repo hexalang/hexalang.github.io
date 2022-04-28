@@ -57,7 +57,6 @@ const pagesNoRoutes: PageNoRoutes = [
 	[
 		{ name: 'Syntax examples', render: Examples },
 		{ name: 'Comparison with other languages', render: Comparison },
-		{ name: 'C++n\'ting your code', render: Cppnt },
 		{ name: 'FAQ', render: FAQ },
 		{ name: 'Package manager', render: Packages },
 		{ name: 'Performance', render: Performance },
@@ -66,6 +65,7 @@ const pagesNoRoutes: PageNoRoutes = [
 		{ name: 'Strings and text', render: Strings },
 		{ name: 'Third-party compilation targets', render: Targets },
 		{ name: 'Unit testing', render: Testing },
+		{ name: 'C++n\'ting your code', render: Cppnt },
 		{ name: 'Why Hexa', render: Profit },
 	],
 	[
