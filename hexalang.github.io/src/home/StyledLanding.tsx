@@ -1,7 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const StyledLanding = styled.div`
-	//background-color: grey;
 	width: 100vw;
 	min-height: calc(100vh - 45px);
 	display: flex;
@@ -9,9 +8,6 @@ export const StyledLanding = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	//row-gap: 8px;
-	//column-gap: 8px;
-	//gap: 8px;
 
 	.margin {
 		margin-top: -15vh;
@@ -42,10 +38,7 @@ export const StyledLanding = styled.div`
 			display: flex;
 			width: 328px;
 			height: 328px;
-			//background-color: white;
 			border-radius: 20px;
-			//row-gap: 8px;
-			//column-gap: 8px;
 			margin-left: 8px;
 			margin-right: 8px;
 		}
@@ -85,17 +78,12 @@ export const StyledLanding = styled.div`
 				.highlighter-rouge {
 					margin-top: 10px;
 					font-size: 14px;
-					//font-family: Menlo, Roboto Mono, Consolas, Courier New, monospace !important;
 					color: black;
 					text-align: left;
 					align-self: center;
 
 					code span {
-						//white-space: pre;
-						//text-align: left;
-						//font-family: Menlo, Roboto Mono, Consolas, Courier New, monospace !important;
 						font-size: 14px !important;
-						//font-weight: 500;
 						&.mi, &.kd {
 							color: #57b0dc;
 						}
@@ -156,8 +144,6 @@ export const StyledLanding = styled.div`
 
 				.tg {
 					background-image: url(/tgw.svg);
-
-
 				}
 
 				.gi {
@@ -305,17 +291,36 @@ export const StyledLanding = styled.div`
 			}
 		}
 
-		img {
+		img, .safariLogoFix {
 			position: relative;
 			top: 76px;
 			left: -10px;
 			z-index: 1;
 			pointer-events: none;
+			display: inline-block;
 
 			@media screen and (max-width: 800px) {
 				& {
 					left: -90px;
 				}
+			}
+		}
+
+		.safariLogoFix {
+			width: 191px;
+			height: 191px;
+			.safariLogo {
+				background-image: url(/logo.svg);
+				background-size: 382px 382px;
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 382px;
+				height: 382px;
+				transform: scale(0.5);
+				display: block;
+				position: relative;
+				left: -95px;
+				top: -95px;
 			}
 		}
 	}

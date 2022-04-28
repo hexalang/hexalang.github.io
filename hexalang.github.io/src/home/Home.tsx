@@ -20,7 +20,7 @@ export const Home = () => {
 			<Header compact={true} />
 			<StyledLanding>
 				<div className="margin">
-					<img width="191px" height="191px" alt="logo" src="/logo.svg" />
+					<span className="safariLogoFix"><span className="safariLogo" /></span>
 					<div className="blocks">
 						<div className="block blockAcryl">
 							<a href={youtube} className="button">
