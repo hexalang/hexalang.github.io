@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { tgw, yt, gh, tri, didi, down } from './images/svg'
+import { tgw, yt, gh, tri, didi, down, logo } from './images/svg'
 
 export const StyledLanding = styled.div`
 	width: 100vw;
@@ -281,7 +281,7 @@ export const StyledLanding = styled.div`
 				}
 
 				.hearts {
-					background-image: url(/hearts.png);
+					background-image: url(/heartso.png);
 					width: 52px;
 					height: 44px;
 					background-size: 42px 44px;
@@ -310,7 +310,7 @@ export const StyledLanding = styled.div`
 			width: 191px;
 			height: 191px;
 			.safariLogo {
-				background-image: url(/logo.svg);
+				background-image: url(${logo});
 				background-size: 382px 382px;
 				background-repeat: no-repeat;
 				background-position: center;
