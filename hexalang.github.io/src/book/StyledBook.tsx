@@ -370,19 +370,14 @@ img[src*="favicon"] {
  */
 
 .c
-
-/* comment, punctuation.definition.comment, string.comment */
 	{
 	color: #6a737d;
 }
 
 .nx,
 .c1
-/* constant, entity.name.constant, variable.other.constant, variable.language, support, meta.property-name, support.constant, support.variable, meta.module-reference, markup.raw, meta.diff.header, meta.output */
 ,
 .s .v
-
-/* string variable */
 	{
 	color: #005cc5;
 }
@@ -392,29 +387,21 @@ img[src*="favicon"] {
 }
 
 .e
-/* entity */
 ,
 .en
-
-/* entity.name */
 	{
 	color: #6f42c1;
 	color: #d2a8ff;
 }
 
 .smi
-/* variable.parameter.function, storage.modifier.package, storage.modifier.import, storage.type.java, variable.other */
 ,
 .s .s1
-
-/* string source */
 	{
 	color: #24292e;
 }
 
 .ent
-
-/* entity.name.tag, markup.quote */
 	{
 	color: #22863a;
 }
@@ -422,179 +409,130 @@ img[src*="favicon"] {
 .o,
 .kd,
 .k
-
-/* keyword, storage, storage.type */
 	{
 	color: #d73a49;
 }
 
 .s
-/* string */
 ,
 .pds
-/* punctuation.definition.string, source.regexp, string.regexp.character-class */
 ,
 .s .pse .s1
-/* string punctuation.section.embedded source */
 ,
 .sr
-/* string.regexp */
 ,
 .sr .cce
-/* string.regexp constant.character.escape */
 ,
 .sr .sre
-/* string.regexp source.ruby.embedded */
 ,
 .sr .sra
-
-/* string.regexp string.regexp.arbitrary-repitition */
 	{
 	color: #032f62;
 }
 
 .v
-/* variable */
 ,
 .smw
-
-/* sublimelinter.mark.warning */
 	{
 	color: #e36209;
 }
 
 .bu
-
-/* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
 	{
 	color: #b31d28;
 }
 
 .ii
-
-/* invalid.illegal */
 	{
 	color: #fafbfc;
 	background-color: #b31d28;
 }
 
 .c2
-
-/* carriage-return */
 	{
 	color: #fafbfc;
 	background-color: #d73a49;
 }
 
 .c2::before
-
-/* carriage-return */
 	{
 	content: "^M";
 }
 
 .sr .cce
-
-/* string.regexp constant.character.escape */
 	{
 	font-weight: normal;
 	color: #22863a;
 }
 
 .ml
-
-/* markup.list */
 	{
 	color: #735c0f;
 }
 
 .mh
-/* markup.heading */
 ,
 .mh .en
-/* markup.heading entity.name */
 ,
 .ms
-
-/* meta.separator */
 	{
 	font-weight: normal;
 	color: #005cc5;
 }
 
 .mi
-
-/* markup.italic */
 	{
 	font-style: normal;
 	/* color: #24292e; */
 }
 
 .mb
-
-/* markup.500 */
 	{
 	font-weight: normal;
 	color: #24292e;
 }
 
 .md
-
-/* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */
 	{
 	color: #b31d28;
 	background-color: #ffeef0;
 }
 
 .mi1
-
-/* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */
 	{
 	color: #22863a;
 	background-color: #f0fff4;
 }
 
 .mc
-
-/* markup.changed, punctuation.definition.changed */
 	{
 	color: #e36209;
 	background-color: #ffebda;
 }
 
 .mi2
-
-/* markup.ignored, markup.untracked */
 	{
 	color: #f6f8fa;
 	background-color: #005cc5;
 }
 
 .mdr
-
-/* meta.diff.range */
 	{
 	font-weight: normal;
 	color: #6f42c1;
 }
 
 .ba
-
-/* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
 	{
 	color: #586069;
 }
 
 .sg
-
-/* sublimelinter.gutter-mark */
 	{
 	color: #959da5;
 }
 
 .corl
-
-/* constant.other.reference.link, string.other.link */
 	{
 	text-decoration: underline;
 	color: #032f62;
@@ -874,7 +812,6 @@ nav.main-nav li a {
 }
 
 .markdown {
-	/* padding: 20px 0px; */
 	font-size: 18px;
 }
 
