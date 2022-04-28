@@ -90,6 +90,16 @@ const pagesNoRoutes: PageNoRoutes = [
 			lab: 'rfc',
 			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/24'
 		},
+		{
+			name: 'Decorator namespaces', render: Decorators,
+			lab: 'rfc',
+			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/26'
+		},
+		{
+			name: 'Multithreaded compiler', render: Multithreaded,
+			lab: 'rfc',
+			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/27'
+		},
 	],
 ]
 
