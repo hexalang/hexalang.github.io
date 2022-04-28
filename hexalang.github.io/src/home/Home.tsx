@@ -8,6 +8,7 @@ import { github, youtube, patreon, telegram, discord } from '../data/links'
 import { Article as Install } from '../book/pages/Install'
 import { Page } from 'book/Page'
 import { useEffect } from 'react'
+import { Text } from 'Translate'
 
 export const Home = () => {
 	useEffect(() => {
@@ -26,25 +27,25 @@ export const Home = () => {
 							<a href={youtube} className="button">
 								<div className="yt ico"></div>
 								<div className="text">
-									<div className="title">Follow</div>
-									<div className="desc">Watch YouTube videos</div>
+									<div className="title"><Text>Follow</Text></div>
+									<div className="desc"><Text>Watch YouTube videos</Text></div>
 								</div>
 							</a>
 							<Link to="/try" className="button">
 								<div className="try ico"></div>
 								<div className="text">
-									<div className="title">Try</div>
-									<div className="desc">Directly in your browser</div>
+									<div className="title"><Text>Try</Text></div>
+									<div className="desc"><Text>Directly in your browser</Text></div>
 								</div>
 							</Link>
 							<a href={patreon} className="button">
 								<div className="hearts ico"></div>
 								<div className="text">
-									<div className="title">Support</div>
-									<div className="desc">Sponsor on Patreon</div>
+									<div className="title"><Text>Support</Text></div>
+									<div className="desc"><Text>Sponsor on Patreon</Text></div>
 								</div>
 							</a>
-							<Page page={Install} className="button dark"><span className="down" />Install on your device</Page>
+							<Page page={Install} className="button dark"><span className="down" /><Text>Install on your device</Text></Page>
 						</div>
 						<div className="block blockWhite">
 							<div className="texts">

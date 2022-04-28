@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { FC } from 'react'
 import { Article as Install } from '../book/pages/Install'
 import { Page } from 'book/Page'
+import { Text } from 'Translate'
 
 const Styled = styled.div`
 	text-align: center;
@@ -91,12 +92,12 @@ export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 					{compact ? <span className="logoButton"><Link to="/" className="">
 						<img className="small-logo" alt="Home" width="24px" height="24px" src="/logo-no-text.svg" />
 					</Link></span> : <span className="logoButton"></span>}
-					<Link to="/try" className="navbar-btn">Try</Link>
-					<Link to="/book" className="navbar-btn">Learn</Link>
-					<Page className="navbar-btn" page={Install}>Install</Page>
+					<Link to="/try" className="navbar-btn"><Text>Try</Text></Link>
+					<Link to="/book" className="navbar-btn"><Text>Learn</Text></Link>
+					<Page className="navbar-btn" page={Install}><Text>Install</Text></Page>
 					<a href={youtube} className="navbar-btn">YouTube</a>
 					<a href={github} className="navbar-btn">GitHub</a>
-					<Link to="/donate" className="navbar-btn">Donate</Link>
+					<Link to="/donate" className="navbar-btn"><Text>Donate</Text></Link>
 				</div>
 			</div>
 
