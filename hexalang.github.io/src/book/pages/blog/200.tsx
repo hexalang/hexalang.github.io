@@ -2,10 +2,13 @@ import { H2 } from "book/H2"
 import { H3 } from "book/H3"
 import { JustUrl } from "book/JustUrl"
 import { Page } from "book/Page"
+import github from "../images/gh.svg"
 
 export const Article = () => {
 	return (
 		<>
+			TODO PIC
+			TODO YT
 			<p>This is the very first official release of Hexa! Previous release (aka 1.0.0) was just formal and wasn't really ready for public usage or capable of anything actually useful.</p>
 
 			<H2 id="breaking">New features</H2>
@@ -25,18 +28,30 @@ export const Article = () => {
 				<li>_</li>
 			</ul>
 
-			<H2 id="credits">Credits</H2>
-			<p>Thanks to our sponsors and contributors!</p>
+			<H2 id="wip">Work in progress</H2>
+			<p>Future directions for the development of new features and improvements to the existing ones.</p>
 			<ul>
-				<li>acidicMercury8</li>
-				<li>ethanolchik</li>
-				<li>expwez</li>
-				<li>gavr123456789</li>
-				<li>Samsuper12</li>
+				<li>Package manager</li>
+				<li>Project templates</li>
+				<li>Bootstrap to .exe</li>
+				<li><img className="emoji" title=":arrow_left:" alt=":arrow_left:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b05.png" height="20" width="20" /> Also check HexaLab initiatives</li>
+			</ul>
+
+			<H2 id="credits">Credits</H2>
+			<p>Thanks to our fantastic sponsors and contributors!</p>
+			<ul>
+				<li><img alt="GitHub" src={github} className="emoji" /> acidicMercury8</li>
+				<li><img alt="GitHub" src={github} className="emoji" /> ethanolchik</li>
+				<li><img alt="GitHub" src={github} className="emoji" /> expwez</li>
+				<li><img alt="GitHub" src={github} className="emoji" /> gavr123456789</li>
+				<li><img alt="GitHub" src={github} className="emoji" /> Samsuper12</li>
+				also active patreons or past
 			</ul>
 			<blockquote>
 				<p>Displayed in alphabetical order</p>
 			</blockquote>
+
+			<p style={{ textAlign: 'center' }}><img className="emoji" title="❤️" alt=":heart:" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png" height="20" width="20" /></p>
 		</>
 	)
 }
