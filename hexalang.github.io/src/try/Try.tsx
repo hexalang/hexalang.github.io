@@ -51,6 +51,7 @@ export const Try = () => {
 					<div className="tab-content fullheight">
 						<div className="tab-pane active pad fullheight flex-column" id="run">
 							<div className="output fullheight" id="runner-wrapper">
+								{false && 'about=_black noopener etc, disallow cookie access'}
 								<iframe title="runner" className="runner" src="/run.html?r=0.6468282873069537#soon" name="runner" scrolling="no" css="height: 100%;" frameBorder="no"></iframe>
 							</div>
 						</div>

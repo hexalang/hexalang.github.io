@@ -74,6 +74,7 @@ const pagesNoRoutes: PageNoRoutes = [
 		{ name: 'Normalizer', render: Normalizer },
 	],
 	[
+		//{ name: 'Hexa 2.0.0', render: Release200 },
 		{ name: 'Hexa compiles itself', render: Hexa },
 		{ name: 'Syntax and Inspiration', render: Syntax },
 		{ name: 'So what with Hexa', render: So },
