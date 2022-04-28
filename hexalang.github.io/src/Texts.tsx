@@ -81,7 +81,16 @@ export const texts: Texts = {
 	},
 	// Slovak
 	'sk': {
-		'Follow': 'Follow',
+		'Follow': 'Sledovať',
+		'Try': 'Vyskúšať',
+		'Learn': 'Učte sa',
+		'Install': 'Nainštalovať',
+		'Donate': 'Darcovstvo',
+		'Watch YouTube videos': 'Pozrite si video na YouTube',
+		'Directly in your browser': 'Priamo v prehliadači',
+		'Support': 'Pomoc',
+		'Sponsor on Patreon': 'Sponzor na Patreone',
+		'Install on your device': 'Nainštalujte do svojho zariadenia',
 	},
 	// Czech
 	'cs': {
