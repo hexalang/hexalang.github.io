@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { tgw, yt, gh, tri, didi, down } from './images/svg'
 
 export const StyledLanding = styled.div`
 	width: 100vw;
@@ -121,7 +122,6 @@ export const StyledLanding = styled.div`
 				align-items: center;
 
 				> a {
-					background-image: url(/yt.svg);
 					width: 52px;
 					width: 44px;
 					height: 44px;
@@ -143,15 +143,15 @@ export const StyledLanding = styled.div`
 				}
 
 				.tg {
-					background-image: url(/tgw.svg);
+					background-image: url(${tgw});
 				}
 
 				.gi {
-					background-image: url(/gh.svg);
+					background-image: url(${gh});
 				}
 
 				.di {
-					background-image: url(/didi.svg);
+					background-image: url(${didi});
 					background-size: 44px 44px;
 				}
 			}
@@ -244,7 +244,7 @@ export const StyledLanding = styled.div`
 					position: relative;
 					padding-left: 25px;
 					.down {
-						background-image: url(/down.svg);
+						background-image: url(${down});
 						background-size: 36px 36px;
 						position: absolute;
 						width: 36px;
@@ -262,7 +262,7 @@ export const StyledLanding = styled.div`
 				}
 
 				.yt {
-					background-image: url(/yt.svg);
+					background-image: url(${yt});
 					width: 52px;
 					height: 44px;
 					background-size: 42px 44px;
@@ -271,7 +271,7 @@ export const StyledLanding = styled.div`
 				}
 
 				.try {
-					background-image: url(/try.svg);
+					background-image: url(${tri});
 					width: 52px;
 					height: 44px;
 					background-size: 52px 44px;
