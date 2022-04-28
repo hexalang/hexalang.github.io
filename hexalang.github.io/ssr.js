@@ -24,3 +24,7 @@ for (const part of parts) {
 }
 
 fs.writeFileSync('build/404.html', index)
+fs.mkdirSync(`build/try`, { recursive: true })
+fs.writeFileSync('build/try/index.html', index)
+fs.mkdirSync(`build/donate`, { recursive: true })
+fs.writeFileSync('build/donate/index.html', index)
