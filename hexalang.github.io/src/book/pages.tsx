@@ -28,9 +28,14 @@ import { Article as Bootstrap } from './pages/blog/Bootstrap-the-compiler'
 import { Article as Hexa } from './pages/blog/Hexa-in-Hexa'
 import { Article as Syntax } from './pages/blog/Syntax-and-Inspiration'
 
+// Releases
+import { Article as Release200 } from './pages/blog/200'
+
 // Lab
 import { Article as NativeIR } from './pages/lab/Native-IR'
 import { Article as RedesignComplexEnums } from './pages/lab/Redesign-Complex-Enums'
+import { Article as Decorators } from './pages/lab/Decorators'
+import { Article as Multithreaded } from './pages/lab/Multithreaded'
 
 type PageNoRoutes = {
 	name: string
@@ -76,11 +81,13 @@ const pagesNoRoutes: PageNoRoutes = [
 	],
 	[
 		{
-			name: 'Redesign complex enums', render: RedesignComplexEnums, lab: 'rfc',
+			name: 'Redesign complex enums', render: RedesignComplexEnums,
+			lab: 'rfc',
 			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/25'
 		},
 		{
-			name: 'Native IR', render: NativeIR, lab: 'rfc',
+			name: 'Native IR', render: NativeIR,
+			lab: 'rfc',
 			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/24'
 		},
 	],
@@ -92,7 +99,7 @@ const toRoutablePages = (pages: typeof pagesNoRoutes) => {
 			return {
 				...page,
 				name: page.name.trim(),
-				route: page.name.trim().toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz'.indexOf(char) !== -1 ? char : '-').join('').split('--').join('-')
+				route: page.name.trim().toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz0123456789'.indexOf(char) !== -1 ? char : '-').join('').split('--').join('-')
 			}
 		}
 	))

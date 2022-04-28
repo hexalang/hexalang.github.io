@@ -97,7 +97,7 @@ const Rfc = ({ href }: { href: string }) => {
 
 const Merged = () => {
 	return <StyledRfc>
-		<span className='merged'>This proposal was implemented and merged into Hexa</span>
+		<span className='merged'>This proposal has been implemented and merged into Hexa</span>
 	</StyledRfc>
 }
 
@@ -245,13 +245,13 @@ export const Book = () => {
 					>{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
 				</div>
 				<div className="article markdown">
-					<h2><a
+					<h1><a
 						href={'#top'}
 						onClick={(event) => {
 							event.preventDefault()
 							scrollTo(`#top`)
 						}}
-					>{current.name}</a></h2>
+					>{current.name}</a></h1>
 					<div id="top"></div>
 					{current.draft !== 'no' && <StyledDraft>This is a draft, don't expect much</StyledDraft>}
 					{current.labRfcUrl && <Rfc href={current.labRfcUrl} />}

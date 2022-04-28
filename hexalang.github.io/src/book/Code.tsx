@@ -75,6 +75,15 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 						}
 						continue
 					}
+					if (char === '@') {
+						i++
+						html.push(<span className="en">@</span>)
+						while (letters.includes(chars[i]) || chars[i] === '.') {
+							html.push(<span className="en">{chars[i]}</span>)
+							i++
+						}
+						continue
+					}
 					if (char === '/' && char1 === '/') {
 						state = State.CommentLine
 						continue

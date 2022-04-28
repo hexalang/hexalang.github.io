@@ -14,6 +14,7 @@ height: 100vh;
 code, code * {
 	font-size: 17px !important;
 	font-family: "SF Mono", "Consolas", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace !important;
+	color: lightgray;
 }
 
 .highlighter-rouge {
@@ -398,6 +399,7 @@ img[src*="favicon"] {
 /* entity.name */
 	{
 	color: #6f42c1;
+	color: #d2a8ff;
 }
 
 .smi
@@ -728,13 +730,6 @@ h2 {
 	position: sticky;
 	top: ${stickyTop};
 	background-color: var(--color-bg);
-}
-
-h1 {
-	font-weight: normal;
-}
-
-h2 {
 	font-size: 40px;
 	text-align: center;
 	height: 54px; // Sticky
@@ -810,7 +805,7 @@ nav.main-nav li a {
 	text-align: center;
 }
 
-.markdown h2 {
+.markdown h2, .markdown h1 {
 	margin-top: 0px;
     margin-bottom: 0.45em;
 

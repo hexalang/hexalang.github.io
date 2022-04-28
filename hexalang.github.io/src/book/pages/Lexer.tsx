@@ -1,4 +1,5 @@
 import { Code } from "book/Code"
+import { H2 } from "book/H2"
 import { Page } from 'book/Page'
 import { Article as Parser } from './Parser'
 
@@ -26,6 +27,14 @@ export const Article = () => {
 			</blockquote>
 
 			{false && 'TODO realtime demo with LSP text to tokens'}
+
+			<H2 id="where">Where to look</H2>
+
+			<ul>
+				<li>source\compiler\lexer.hexa</li>
+				<li>source\data\token.hexa</li>
+			</ul>
+
 		</>
 	)
 }
