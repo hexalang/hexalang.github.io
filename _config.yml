@@ -14,11 +14,6 @@ theme-color: "#66ccff"
 
 # Structure
 
-collections:
-  book:
-    output: true
-  blog:
-    output: true
 social:
   name: Hexa Programming Language
   links:
