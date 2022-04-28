@@ -94,6 +94,15 @@ export const texts: Texts = {
 	},
 	// Czech
 	'cs': {
-		'Follow': 'Follow',
+		'Follow': 'Sledovat',
+		'Try': 'Vyzkoušet',
+		'Learn': 'Učte se',
+		'Install': 'Nainstalovat',
+		'Donate': 'Dárcovství',
+		'Watch YouTube videos': 'Podívejte se na video na YouTube',
+		'Directly in your browser': 'Přímo v prohlížeči',
+		'Support': 'Pomoc',
+		'Sponsor on Patreon': 'Sponzor na Patreonu',
+		'Install on your device': 'Nainstalujte do svého zařízení',
 	},
 } as const
