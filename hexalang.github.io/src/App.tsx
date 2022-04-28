@@ -34,6 +34,7 @@ const App = () => {
 			<Route path="/book" element={<Book />} />
 			<Route path="/" element={<Home />} />
 			<Route path="/:fallback404" element={<Home />} />
+			<Route path="/:fallback404/:fallback" element={<Home />} />
 		</Routes>
 	</BrowserRouter>
 }
