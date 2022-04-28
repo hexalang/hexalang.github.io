@@ -14,7 +14,7 @@ height: 100vh;
 code, code * {
 	font-size: 17px !important;
 	font-family: "SF Mono", "Consolas", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace !important;
-	color: lightgray;
+	color: var(--code-color);
 }
 
 .highlighter-rouge {
@@ -374,7 +374,10 @@ img[src*="favicon"] {
 	color: #6a737d;
 }
 
-.nx,
+.nx {
+	color: var(--code-nx);
+}
+
 .c1
 ,
 .s .v
@@ -551,26 +554,41 @@ img[src*="favicon"] {
 }
 
 transition: background-color .95s ease;
+// Light
 --color-bg: #ffffff;
 --color-text: #000000;
+--code-color: darkgray;
+--code-nx: #005cc5;
 
 @media screen and (prefers-color-scheme: dark) {
+	// Dark
 	--color-bg: #333333;
 	--color-text: #ffffff;
+	--code-color: lightgray;
+	--code-nx: #4b83c3;
 
 	&[data-theme="invert"] {
+		// Light
 		--color-bg: #ffffff;
 		--color-text: #000000;
+		--code-color: darkgray;
+		--code-nx: #005cc5;
 	}
 }
 
 @media screen and (prefers-color-scheme: light) {
+	// Light
 	--color-bg: #ffffff;
 	--color-text: #000000;
+	--code-color: darkgray;
+	--code-nx: #005cc5;
 
+	// Dark
 	&[data-theme="invert"] {
 		--color-bg: #333333;
 		--color-text: #ffffff;
+		--code-color: lightgray;
+		--code-nx: #4b83c3;
 	}
 }
 
