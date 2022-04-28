@@ -17,6 +17,7 @@ code {
 
 overflow-x: hidden;
 width: 100%;
+background-image: url(/g.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;

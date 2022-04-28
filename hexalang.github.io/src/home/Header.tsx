@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import { github, youtube } from '../data/links'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { FC } from 'react'
 import { Article as Install } from '../book/pages/Install'
 import { Page } from 'book/Page'
 import { Text } from 'Translate'
 
-const Styled = styled.div`
+const Styled = styled.div<{ compact: boolean }>`
 	text-align: center;
 	font-size: 18px !important;
 	flex: 0 1 auto;
@@ -30,16 +30,25 @@ const Styled = styled.div`
 		right: 10px;
 		right: 0px;
 		position: absolute;
-		min-height: 50px;
+		height: 50px;
 		display: flex;
 		padding: 3px;
 		flex-direction: row;
 		width: 100vw;
 		padding-right: 12px;
+
+		${props => props.compact && css`
+			background: linear-gradient(
+				rgba(0, 0, 0, 0.1),
+				rgba(0, 0, 0, 0.0)
+			);
+		`};
 	}
 
 	.navbar-btn {
-		color: rgb(32, 32, 32);
+		${props => props.compact ? css`
+			color: lightgray;
+		` : css`color: rgb(32, 32, 32)`};
 		cursor: pointer;
 		padding: 5px 10px;
 		user-select: none;
@@ -85,7 +94,7 @@ const Styled = styled.div`
 
 export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 	return (
-		<Styled className="navbarHeader">
+		<Styled className="navbarHeader" compact={compact}>
 			<div className="navbarHeaderBlur"></div>
 			<div className="navbar flex-end">
 				<div className="flex-row grow">
