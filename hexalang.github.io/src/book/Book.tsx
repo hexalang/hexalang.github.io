@@ -115,6 +115,10 @@ const articleByRoute = (route: string) => {
 			if (page.route === route) {
 				return page
 			}
+
+			if (route.endsWith('.html') && page.route.startsWith(route.toLowerCase().split('.html')[0])) {
+				return page
+			}
 		}
 	}
 
