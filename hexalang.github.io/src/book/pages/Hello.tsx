@@ -24,7 +24,7 @@ export const Article = () => {
 			<p>If you’re already familiar with programming,
 				take a look at a <Page page={Comparison}>programming language comparison list</Page>.</p>
 
-			<H2 id="quickstart">Quickstart</H2>
+			<H2>Quickstart</H2>
 
 			<p>Download <Page page={Install} id="#compiler">Hexa compiler</Page> and <Page page={Install} id="#tools">syntax highlighting for your code editor</Page>.
 				Create new file <code className="language-plaintext highlighter-rouge">hello.hexa</code> and place anywhere you wish.</p>
@@ -60,7 +60,7 @@ export const Article = () => {
 			<div className="language-plaintext highlighter-rouge"><div className="highlight"><pre className="highlight"><code>Hello, Hexa!
 			</code></pre></div></div>
 
-			<H3 id="running-code-online">Running code online</H3>
+			<H3>Running code online</H3>
 
 			<p>If you don’t want to setup Hexa right now, try compiler by not leaving a browser:</p>
 
@@ -68,7 +68,7 @@ export const Article = () => {
 
 			<p>Some features are not supported in the online compiler (like file system access).</p>
 
-			<H3 id="long-story">Long story</H3>
+			<H3>Long story</H3>
 
 			<p>Let’s investigate our program step-by-step:</p>
 
@@ -114,7 +114,7 @@ hello("people of the Earth") // -> prints "Hello, people of the Earth"`} />
 
 			<Code code={`console.log("Hello, Hexa!")`} />
 
-			<H3 id="mastering-error-messages">Mastering error messages</H3>
+			<H3>Mastering error messages</H3>
 
 			<p>Hexa is strictly typed and compiled, meaning it keeps track of code structure also at development time, not only at running resulting app. Thus it helps you to quickly find errors, way faster than, say, JavaScript. So let’s go crazy and break some code!</p>
 

@@ -52,7 +52,30 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 	let stringFinalizer: '"' | "'" | '`' = '"'
 	let commentNesting = 0
 
+	// Fixup
+	if (code[0] === '\n') code = code.substr(1)
+
+	let lines = code.split('\n')
+	if (lines[lines.length - 1].trim() === '') lines.pop()
+
+	// Fixup
+	let at = 0
+	while (
+		at < lines[0].length && (
+			lines[0][at] === ' '
+			||
+			lines[0][at] === '\t'
+		)) at++
+	const indent = lines[0].substr(0, at)
+	if (indent.length > 0) {
+		if (lines.every(_ => _.startsWith(indent))) {
+			lines = lines.map(_ => _.substr(at))
+		}
+	}
+
+	code = lines.join('\n')
 	let chars = code.split('')
+
 	let state: State = State.Plaintext as State
 	let i = 0
 

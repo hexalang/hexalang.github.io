@@ -10,7 +10,7 @@ export const Article = () => {
 		<>
 			<p>(draft)</p>
 
-			<H3 id="hello-world">Hello, World!</H3>
+			<H3>Hello, World!</H3>
 
 			<Code code={`console.log("Hello, World!")`} />
 
@@ -18,7 +18,7 @@ export const Article = () => {
 				<li><Page page={Hello}>Hello, Hexa!</Page></li>
 			</ul>
 
-			<H3 id="comments">Comments</H3>
+			<H3>Comments</H3>
 
 			<p>Comments are JavaScript-style. Multi-line comments are nestable.</p>
 
@@ -37,7 +37,7 @@ export const Article = () => {
   comment.
 */`} />
 
-			<H2 id="common-variable-types">Common variable types</H2>
+			<H2>Common variable types</H2>
 
 			<Code code={`null // No value
 42 // 32-bit signed integer
@@ -60,16 +60,16 @@ let b: Bool = true`} />
 			<Code code={`var a = 123
 let b = true`} />
 
-			<H2 id="deeper-overview">Deeper overview</H2>
+			<H2>Deeper overview</H2>
 
-			<H3 id="literals">Literals</H3>
+			<H3>Literals</H3>
 
 			<Code code={`0x10 // Hexadecimal
 \`C:\\Windows\\System32\`
 // Raw strings do *not* do pre-escaping,
 // but generated to JavaScript with escapes`} />
 
-			<H3 id="lists">Lists</H3>
+			<H3>Lists</H3>
 
 			<Code code={`[] // Empty array
 [1, 2, 3]
@@ -80,30 +80,30 @@ let b = true`} />
   [0, 0, 1] // No trailing comma
 ]`} />
 
-			<H2 id="maps">Maps</H2>
+			<H2>Maps</H2>
 
 			<Code code={`[:] // Empty map
 [ "hello": "world!" ]
 [ 1: "one", 2: "two" ] // Elements of same type`} />
 
-			<H2 id="structures">Structures</H2>
+			<H2>Structures</H2>
 
 			<Code code={`{:} // Empty structure
 { hello: "world!" }
 { name: "Jane", age: 21 }`} />
 
-			<H2 id="strings">Strings</H2>
+			<H2>Strings</H2>
 
 			<Code code={`"Strings are
   multi
     line"
 "\\'Second\\nline\\'" // Character escapes`} />
 
-			<H2 id="advanced-features">Advanced features</H2>
+			<H2>Advanced features</H2>
 
 			<p>TODO</p>
 
-			<H2 id="not-yet-implemented-features">Not yet implemented features</H2>
+			<H2>Not yet implemented features</H2>
 
 			<p>TODO</p>
 		</>

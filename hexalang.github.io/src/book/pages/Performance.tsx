@@ -6,7 +6,7 @@ export const Article = () => {
 		<>
 			<p>! This is a draft !</p>
 
-			<H2 id="environment">Environment</H2>
+			<H2>Environment</H2>
 
 			<ul>
 				<li>Hexa</li>
@@ -33,7 +33,7 @@ export const Article = () => {
 				<li>OS: Windows 10</li>
 			</ul>
 
-			<H2 id="exception-handling">Exception handling</H2>
+			<H2>Exception handling</H2>
 
 			<p>Something like that:</p>
 

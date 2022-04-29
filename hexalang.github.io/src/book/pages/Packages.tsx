@@ -15,7 +15,7 @@ export const Article = () => {
 
 			<p>Manager works similar to <code className="language-plaintext highlighter-rouge">npm</code> (node.js’ package manager) where possible.</p>
 
-			<H3 id="requirements">Requirements</H3>
+			<H3>Requirements</H3>
 
 			<p>Package manager works atop of Git. <a href="https://git-scm.com/downloads">Download Git installer</a> if you don’t have
 				one pre-installed on your system, select add to PATH option:</p>
@@ -27,7 +27,7 @@ export const Article = () => {
 				folder like <code className="language-plaintext highlighter-rouge">hexa_modules/packages/.../v1.2.3</code>, but you may cleanup unused versions.
 				If packages installed locally on per-project manner, then <code className="language-plaintext highlighter-rouge">./hexa_modules</code> created in the project root.</p>
 
-			<H3 id="package-bundle">Package bundle</H3>
+			<H3>Package bundle</H3>
 
 			<p>Code with additional data may be bundled into “package” like this:</p>
 
@@ -55,7 +55,7 @@ export const Article = () => {
 
 			<p>Use any of <code className="language-plaintext highlighter-rouge">/</code> or <code className="language-plaintext highlighter-rouge">\\</code> slashes. Hexa changes them to platform-specific automagically.</p>
 
-			<H3 id="registering-package-versions">Registering package versions</H3>
+			<H3>Registering package versions</H3>
 
 			<p>git tag</p>
 
@@ -70,7 +70,7 @@ export const Article = () => {
 
 			<p><a href="TODO%5Chexa%5Csource%5Ccli%5Chpm.hexa">Source code of package manager for contributors TODO</a></p>
 
-			<H3 id="uninstalling-packages">Uninstalling packages</H3>
+			<H3>Uninstalling packages</H3>
 
 			<p>Do this only if your really need some free disk space. It’s okay to have fallbacks if new package version fails.</p>
 

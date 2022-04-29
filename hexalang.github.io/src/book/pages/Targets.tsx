@@ -27,7 +27,7 @@ export const Article = () => {
 
 			<p>/targets/third-party/ your-target/</p>
 
-			<H2 id="available-attributes">Available attributes</H2>
+			<H2>Available attributes</H2>
 
 			<ul>
 				<li><code className="language-plaintext highlighter-rouge">@rename</code></li>

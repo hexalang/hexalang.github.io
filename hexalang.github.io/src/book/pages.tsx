@@ -36,6 +36,7 @@ import { Article as NativeIR } from './pages/lab/Native-IR'
 import { Article as RedesignComplexEnums } from './pages/lab/Redesign-Complex-Enums'
 import { Article as Decorators } from './pages/lab/Decorators'
 import { Article as Multithreaded } from './pages/lab/Multithreaded'
+import { nameToId } from './utils'
 
 type PageNoRoutes = {
 	name: string
@@ -110,7 +111,7 @@ const toRoutablePages = (pages: typeof pagesNoRoutes) => {
 			return {
 				...page,
 				name: page.name.trim(),
-				route: page.name.trim().toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz0123456789'.indexOf(char) !== -1 ? char : '-').join('').split('--').join('-')
+				route: nameToId(page.name)
 			}
 		}
 	))

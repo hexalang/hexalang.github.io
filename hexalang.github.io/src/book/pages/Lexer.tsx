@@ -28,7 +28,7 @@ export const Article = () => {
 
 			{false && 'TODO realtime demo with LSP text to tokens'}
 
-			<H2 id="where">Where to look</H2>
+			<H2>Where to look</H2>
 
 			<ul>
 				<li>source\compiler\lexer.hexa</li>

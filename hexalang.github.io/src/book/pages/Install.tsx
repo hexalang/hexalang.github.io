@@ -16,11 +16,11 @@ export const Article = () => {
 				<li>Nightly builds (i.e. CI Artifacts)</li>
 			</ul>
 
-			<H2 id="compiler">Compiler</H2>
+			<H2>Compiler</H2>
 
 			<p>TODO</p>
 
-			<H2 id="tools">Tools</H2>
+			<H2>Tools</H2>
 
 			<p>TODO</p>
 		</>

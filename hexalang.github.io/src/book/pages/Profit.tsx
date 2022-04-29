@@ -10,7 +10,7 @@ export const Article = () => {
 			<Img src={noice} style={{ borderRadius: '100%' }} alt="Nice lang very recommend" width={256} />
 			<p>Hello there! Consider adopting new programming language? <img className="emoji" title=":yum:" alt=":yum:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f60b.png" height="20" width="20" /></p>
 
-			<H2 id="goals-and-philosophy">Goals and philosophy</H2>
+			<H2>Goals and philosophy</H2>
 
 			<p>Main goal of Hexa is… software. This is not a language on its own, it is a tool.</p>
 
@@ -31,7 +31,7 @@ export const Article = () => {
 
 			<p>Software deserves to be great, and problems to be solvable.</p>
 
-			<H2 id="use-cases">Use cases</H2>
+			<H2>Use cases</H2>
 
 			<ul>
 				<li>High performance, portable, cross platform <strong>native</strong> software</li>
@@ -41,7 +41,7 @@ export const Article = () => {
 				<li>Scaling and maintenance</li>
 			</ul>
 
-			<H2 id="pros">Pros</H2>
+			<H2>Pros</H2>
 
 			<table>
 				<thead>
@@ -131,7 +131,7 @@ export const Article = () => {
 				</tbody>
 			</table>
 
-			<H2 id="cons">Cons</H2>
+			<H2>Cons</H2>
 
 			<table>
 				<thead>

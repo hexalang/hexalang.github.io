@@ -28,7 +28,7 @@ export const Article = () => {
 
 			<p>Compare with known language by choosing it on the right sidebar <img className="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png?v8" height="20" width="20" /></p>
 
-			<H2 id="javascript">JavaScript</H2>
+			<H2>JavaScript</H2>
 
 			<ul>
 				<li><Code inline code={`var`} /> in Hexa is a <Code inline code={`let`} /> in JavaScript. Everyone uses <Code inline code={`let`} /> in js today anyway, but <Code inline code={`var`} /> as a keyword is more common and not breaks your old habits</li>
@@ -75,7 +75,7 @@ let a = new A(456)`} />
 
 			<p><Page page={FromJavaScript}>More on porting from JavaScript</Page></p>
 
-			<H2 id="typescript">TypeScript</H2>
+			<H2>TypeScript</H2>
 
 			<ul>
 				<li>Hexa type system is stricter than TypeScript’s: <Code inline code={`Int`} /> + <Code inline code={`Float`} /> vs just <Code inline code={`number`} />. Types consider data-layout in memory. For example, <Code inline code={`Array<Float>`} /> is not compatible with <Code inline code={`Array<Int>`} /> and vise-versa, because they are stored (even in JavaScript engines)
@@ -93,7 +93,7 @@ let a = new A(456)`} />
 
 			<p>List of JavaScript differences apply to TypeScript as well</p>
 
-			<H2 id="c">C</H2>
+			<H2>C</H2>
 
 			<ul>
 				<li>Object oriented programming with single inheritance, always-virtual methods, ARC and real interfaces</li>
