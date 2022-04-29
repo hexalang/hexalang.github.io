@@ -5,8 +5,8 @@ const pages = fs.readFileSync('src/book/pages.tsx').toString()
 
 const parts =
 	pages.split(`const pagesNoRoutes: PageNoRoutes = [`)[1]
-	.split(']\n')[0].replaceAll(`\\'`, '"')
-	.split(`name: '`)
+		.split(']\n')[0].replaceAll(`\\'`, '"')
+		.split(`name: '`)
 
 parts.shift()
 const urling = _ => _.trim().toLowerCase().split('').map(char => 'abcdefghijklmnopqrstuvwxyz0123456789'.indexOf(char) !== -1 ? char : '-').join('').split('--').join('-')
@@ -18,7 +18,7 @@ for (const part of parts) {
 	fs.mkdirSync(`build/book/${url}`, { recursive: true })
 	const html = index.replaceAll(
 		`Hexa Programming Language`,
-		`${name} — Hexa Book`
+		`${name.replaceAll('\\', '').replaceAll("'", '’').replaceAll('"', '’')} — Hexa Book`
 	)
 	fs.writeFileSync(`build/book/${url}/index.html`, html)
 }
