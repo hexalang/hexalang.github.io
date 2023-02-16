@@ -6,6 +6,8 @@
 
 ![Hello](hello.png?raw=true)
 
+## Translation
+
 Add your native language to **`hexalang.github.io\src\Texts.tsx`**
 
 ## Repo Structure
