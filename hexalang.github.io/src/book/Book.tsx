@@ -234,7 +234,7 @@ export const Book = () => {
 							scrollTo(`#top`)
 						}}
 						className={(hash === '#' || hash === '#top') ? "selected" : ''}
-					>{current.name}</a>
+					>&nbsp;{current.name}</a>
 					{nav.map(nav => <Fragment key={nav.id}><a
 						href={`#${nav.id}`}
 						onClick={(event) => {
@@ -258,6 +258,7 @@ export const Book = () => {
 					>{current.name}</a></h1>
 					<div id="top"></div>
 					{current.draft !== 'no' && <StyledDraft>This is a draft, don't expect much</StyledDraft>}
+					{current.year && <StyledDraft>{current.day} {current.month} {current.year}</StyledDraft>}
 					{current.labRfcUrl && <Rfc href={current.labRfcUrl} />}
 					{current.lab === 'merged' && <Merged />}
 					{current.lab === 'rejected' && <Rejected />}
