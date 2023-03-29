@@ -225,7 +225,9 @@ export const StyledLanding = styled.div`
 
 				&.dark {
 					background-color: black;
-					width: 183px;
+					min-width: 183px;
+    				width: unset;
+					align-self: flex-start;
 					height: 29px;
 					color: white;
 					font-size: 14px;
@@ -242,7 +244,8 @@ export const StyledLanding = styled.div`
 					}
 
 					position: relative;
-					padding-left: 25px;
+					padding-left: 36px;
+    				padding-right: 10px;
 					.down {
 						background-image: url(${down});
 						background-size: 36px 36px;

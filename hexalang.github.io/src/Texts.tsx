@@ -40,7 +40,16 @@ export const texts: Texts = {
 	},
 	// Russian
 	'ru': {
-		'Follow': 'Follow',
+		'Follow': 'Подписаться',
+		'Try': 'Попробовать',
+		'Learn': 'Научиться',
+		'Install': 'Установить',
+		'Donate': 'Пожертвовать',
+		'Watch YouTube videos': 'Смотреть на YouTube',
+		'Directly in your browser': 'Прямо в твоём браузере',
+		'Support': 'Поддержать',
+		'Sponsor on Patreon': 'Стать спонсором на Patreon',
+		'Install on your device': 'Установить на своё устройство',
 	},
 	// Arabic
 	'ar': {
@@ -48,7 +57,16 @@ export const texts: Texts = {
 	},
 	// Ukrainian
 	'uk': {
-		'Follow': 'Follow',
+		'Follow': 'Слідкувати',
+		'Try': 'Спробувати',
+		'Learn': 'Вивчати',
+		'Install': 'Встановити',
+		'Donate': 'Пожертвувати',
+		'Watch YouTube videos': 'Дивитися відео на YouTube',
+		'Directly in your browser': 'Безпосередньо у вашому браузері',
+		'Support': 'Підтримати',
+		'Sponsor on Patreon': 'Стати спонсором на Patreon',
+		'Install on your device': 'Встановити на ваш пристрій',
 	},
 	// Chinese
 	'zh': {
