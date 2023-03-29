@@ -23,7 +23,7 @@ export const Article = () => {
 			<p>Normally many people have an impression of “cheap” or “obvious” optimizations. Say, allocating a String for a textual token takes about 50% of lexer performance. Hmm…why do this at all? Let’s store file offset and size! Nope. First, you’ll have to store file contents in memory, store 32 bits offset + 16 bits size (already same memory as 6 ascii characters, Hexa uses only ASCII for identifiers). Okay, who cares about RAM (which is always AL-WA-YS swapped out thanks to your IDE opened (looking at my VSCode) thus you don’t actually have free RAM ever), but how would you compare identifies to each other later? Oh, looping over characters every time? Hexa stores string only once in memory. Longer to allocate, but costs nothing to compare later, thus making <code className="language-plaintext highlighter-rouge">switch()</code> and <code className="language-plaintext highlighter-rouge">==</code> operators insanely cheap.</p>
 
 			<blockquote>
-				<p>Note: idiomatic Hexa prefers long self-descriptional identifier names. Longer names =&gt; longer comparison loops with classic approaches.</p>
+				<p>Note: idiomatic Hexa prefers long self-descriptional identifier names. Longer names =&gt; longer comparison loops (with classic approach of per-char comparison).</p>
 			</blockquote>
 
 			{false && 'TODO realtime demo with LSP text to tokens'}

@@ -57,9 +57,9 @@ console.log(a) // -> prints 'hello world !'`} />
 				<li><code className="language-plaintext highlighter-rouge">\\</code> — adds <code className="language-plaintext highlighter-rouge">\</code> character itself</li>
 				<li><code className="language-plaintext highlighter-rouge">\t</code> — adds a tab</li>
 				<li><code className="language-plaintext highlighter-rouge">\n</code> — new line</li>
-				<li><code className="language-plaintext highlighter-rouge">\r</code> — most useless superpower</li>
-				<li><code className="language-plaintext highlighter-rouge">\'</code> — adds <code className="language-plaintext highlighter-rouge">'</code> character, even if string surrounded by <code className="language-plaintext highlighter-rouge">'single \'quotes\''</code></li>
-				<li><code className="language-plaintext highlighter-rouge">\"</code> — adds <code className="language-plaintext highlighter-rouge">"</code> character, even if string surrounded by <code className="language-plaintext highlighter-rouge">"double \"quotes\""</code></li>
+				<li><code className="language-plaintext highlighter-rouge">\r</code> — adds carriage return, useful on some platforms</li>
+				<li><code className="language-plaintext highlighter-rouge">\'</code> — adds <code className="language-plaintext highlighter-rouge">'</code> character, even if string is surrounded by <code className="language-plaintext highlighter-rouge">'single \'quotes\''</code></li>
+				<li><code className="language-plaintext highlighter-rouge">\"</code> — adds <code className="language-plaintext highlighter-rouge">"</code> character, even if string is surrounded by <code className="language-plaintext highlighter-rouge">"double \"quotes\""</code></li>
 			</ul>
 
 			<p>When multi line strings are used directly in code, without resorting to special characters to encode new lines,

@@ -78,10 +78,10 @@ const pagesNoRoutes: PageNoRoutes = [
 	],
 	[
 		//{ name: 'Hexa 2.0.0', render: Release200 },
-		{ name: 'Hexa compiles itself', render: Hexa },
-		{ name: 'Syntax and Inspiration', render: Syntax },
-		{ name: 'So what with Hexa', render: So },
-		{ name: 'Bootstrap the compiler', render: Bootstrap },
+		{ name: 'Hexa compiles itself', render: Hexa, draft: 'no', year: 2018, day: 25, month: 'july' },
+		{ name: 'Syntax and Inspiration', render: Syntax, draft: 'no', year: 2017, day: 12, month: 'feb' },
+		{ name: 'So what with Hexa', render: So, draft: 'no', year: 2017, day: 8, month: 'feb' },
+		{ name: 'Bootstrap the compiler', render: Bootstrap, draft: 'no', year: 2017, day: 7, month: 'feb' },
 	],
 	[
 		{

@@ -5,8 +5,6 @@ import { Article as Normalizer } from './Normalizer'
 export const Article = () => {
 	return (
 		<>
-			<p>DRAFT</p>
-
 			<p>Code generation is based on concept of Nice Nodes. This technology would be improved over time.</p>
 
 			<p>Note: it’s currently impossible to add targets dynamically to the compiler, you have to modify compiler code. Places of modification:</p>
