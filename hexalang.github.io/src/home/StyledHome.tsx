@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const StyledHome = styled.div`
 background-color: rgb(255, 255, 255);
@@ -153,7 +153,7 @@ a {
 	margin: 10px;
 }
 
-.fullheight {
+.full-height {
 	height: 100%;
 }
 

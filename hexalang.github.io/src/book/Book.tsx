@@ -135,6 +135,7 @@ export const Book = () => {
 	const [sidebar, setSidebar] = useState<boolean>(true)
 	const [nav, setNav] = useState<{ id: string, name: string, h: string }[]>([])
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		// TODO SSR router title?
 		const newTitle = current.name + ' — Hexa Book'

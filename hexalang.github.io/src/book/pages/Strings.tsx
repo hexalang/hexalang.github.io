@@ -12,7 +12,7 @@ export const Article = () => {
 
 			<Code code={`let s: String = "hello"
 let s = "hello"
-// Compiler knows what qoutes mean
+// Compiler knows what quotes mean
 // and sets 's' type to 'String' for you`} />
 
 			<p>Double- and single quoted strings have absolutely same meaning and features</p>
@@ -63,12 +63,12 @@ console.log(a) // -> prints 'hello world !'`} />
 			</ul>
 
 			<p>When multi line strings are used directly in code, without resorting to special characters to encode new lines,
-				on different platforms you will have incomplatible newlines encoding, <code className="language-plaintext highlighter-rouge">\r\n</code> on Windows, <code className="language-plaintext highlighter-rouge">\n</code> on Linux and most others.</p>
+				on different platforms you will have incompatible newlines encoding, <code className="language-plaintext highlighter-rouge">\r\n</code> on Windows, <code className="language-plaintext highlighter-rouge">\n</code> on Linux and most others.</p>
 
 			<Code code={`let multiline = "what is in between
 of those lines?"`} />
 
-			<p>Hexa takes care for you, by always replacing <code className="language-plaintext highlighter-rouge">\r\n</code> to <code className="language-plaintext highlighter-rouge">\n</code>, saving your team mates from unneccessary headache and holywars:</p>
+			<p>Hexa takes care for you, by always replacing <code className="language-plaintext highlighter-rouge">\r\n</code> to <code className="language-plaintext highlighter-rouge">\n</code>, saving your team mates from unnecessary headache and holywars:</p>
 
 			<Code code={`let multiline = "what is in between\\nof those lines?"
 //                                 ^^ note \\n in the middle`} />
@@ -83,7 +83,7 @@ console.log('hello \\(welcome)!') // -> prints 'hello world!'
 // Basically the same as:
 console.log('hello ' + welcome + '!') // -> prints 'hello world!'`} />
 
-			<p>You may use any expressions within interpolation parethesis:</p>
+			<p>You may use any expressions within interpolation parenthesis:</p>
 
 			<Code code={`let a = [1,2,3]
 console.log('ten is \\(5 + 5) while [\\(a)] length is \\(a.length)')
@@ -107,7 +107,7 @@ console.log(\`hello \\(welcome)!\`) // -> prints 'hello \\(welcome)!'`} />
 			<Code code={`let s = \`
 \` // Contains \\n or \\r\\n depending on your code editor settings`} />
 
-			<p>Only special case is embedding a backtick characted into raw string, possible by repeating backtick twise:</p>
+			<p>Only special case is embedding a backtick character into raw string, possible by repeating backtick twice:</p>
 
 			<Code code={`let s = \`this is \`\`backticked\`\` string\`
 // Same as "this is \`backticked\` string"
@@ -116,7 +116,7 @@ console.log(\`hello \\(welcome)!\`) // -> prints 'hello \\(welcome)!'`} />
 			<H3>Optimization</H3>
 
 			<p>Strings are quite fast, they never change, so they never overhead. But they have a fault: string creation is a costly operation.
-				New strings are created on concatentaion of existing ones, and conversion of objects to text (like printing formatted number to screen).</p>
+				New strings are created on concatenation of existing ones, and conversion of objects to text (like printing formatted number to screen).</p>
 
 			<p>Compiler tries it’s best to optimize such cases.
 				In every obvious situation it builds a complete string: <code className="language-plaintext highlighter-rouge">"a" + "b"</code> is guaranteed to become <code className="language-plaintext highlighter-rouge">"ab"</code>. This optimization is always enabled.</p>

@@ -21,9 +21,9 @@ export const Try = () => {
 						<a className="nav-link active" href="#source">Source</a>
 						<a className="nav-link" href="#options">Options</a>
 					</div>
-					<div className="tab-content fullheight">
-						<div className="tab-pane active pad fullheight" id="source">
-							<div id="editor" className="pad code editor input-control fullheight" contentEditable="true">var names = ['Joffrey', 'Tyrion', 'Sansa']<br />console.log('Hello ' + names.join(", ") + '!')</div>
+					<div className="tab-content full-height">
+						<div className="tab-pane active pad full-height" id="source">
+							<div id="editor" className="pad code editor input-control full-height" contentEditable="true">var names = ['Joffrey', 'Tyrion', 'Sansa']<br />console.log('Hello ' + names.join(", ") + '!')</div>
 						</div>
 						<div className="tab-pane pad-2" id="options">
 							<div className="flex-row">
@@ -48,20 +48,20 @@ export const Try = () => {
 						<a className="nav-link" href="#code">Code</a>
 						<a className="nav-link" href="#log">Log</a>
 					</div>
-					<div className="tab-content fullheight">
-						<div className="tab-pane active pad fullheight flex-column" id="run">
-							<div className="output fullheight" id="runner-wrapper">
+					<div className="tab-content full-height">
+						<div className="tab-pane active pad full-height flex-column" id="run">
+							<div className="output full-height" id="runner-wrapper">
 								{false && 'about=_black noopener etc, disallow cookie access'}
 								<iframe title="runner" className="runner" src="/run.html?r=0.6468282873069537#soon" name="runner" scrolling="no" css="height: 100%;" frameBorder="no"></iframe>
 							</div>
 						</div>
-						<div className="tab-pane pad fullheight flex-column" id="code">
-							<div className="output fullheight">
+						<div className="tab-pane pad full-height flex-column" id="code">
+							<div className="output full-height">
 								<div className="code">Generated compiler code will be here</div>
 							</div>
 						</div>
-						<div className="tab-pane pad fullheight flex-column" id="log">
-							<div className="output fullheight">
+						<div className="tab-pane pad full-height flex-column" id="log">
+							<div className="output full-height">
 								<div className="code">Compiler output will be here</div>
 							</div>
 						</div>

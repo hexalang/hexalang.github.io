@@ -120,11 +120,11 @@ export const StyledTry = styled.div`
 		margin: 10px;
 	}
 
-	.fullheight {
+	.full-height {
 		height: 100%;
 	}
 
-	.flex-fullheight {
+	.flex-full-height {
 		flex-grow: 1;
 	}
 	.shadow {
