@@ -2,6 +2,7 @@ import { Code } from "book/Code"
 import { H2 } from "book/H2"
 import { Page } from 'book/Page'
 import { Article as Parser } from './Parser'
+import { CompilerUrl } from "book/JustUrl"
 
 export const Article = () => {
 	return (
@@ -31,8 +32,8 @@ export const Article = () => {
 			<H2>Where to look</H2>
 
 			<ul>
-				<li>source\compiler\lexer.hexa</li>
-				<li>source\data\token.hexa</li>
+				<li><CompilerUrl>source\compiler\lexer.hexa</CompilerUrl></li>
+				<li><CompilerUrl>source\data\token.hexa</CompilerUrl></li>
 			</ul>
 
 		</>

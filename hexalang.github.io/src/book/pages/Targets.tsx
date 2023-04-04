@@ -1,6 +1,7 @@
 import { H2 } from "book/H2"
 import { Page } from 'book/Page'
 import { Article as Normalizer } from './Normalizer'
+import { CompilerUrl } from "book/JustUrl"
 
 export const Article = () => {
 	return (
@@ -9,7 +10,12 @@ export const Article = () => {
 
 			<p>Note: it’s currently impossible to add targets dynamically to the compiler, you have to modify compiler code. Places of modification:</p>
 
-			<p>TODO</p>
+			<ul>
+				<li><CompilerUrl>source\targets</CompilerUrl> remember to update hexa.json</li>
+				<li><CompilerUrl>source\targets.hexa</CompilerUrl></li>
+				<li><CompilerUrl>library</CompilerUrl> referred by setLibrary</li>
+				<li><CompilerUrl>source\main.hexa</CompilerUrl> call registerTarget</li>
+			</ul>
 
 			<p>Feel free to create pull requests for new targets!</p>
 
@@ -22,8 +28,6 @@ export const Article = () => {
 				“Arduino C” vs “Clang with full-LLVM intrinsics”, “Unity Script C#” vs “C# 8.0”, etc.</p>
 
 			<p>‘Universal’ targets always lack features and performance, and much harder to develop, test and maintain.</p>
-
-			<p>/targets/third-party/ your-target/</p>
 
 			<H2>Available attributes</H2>
 
