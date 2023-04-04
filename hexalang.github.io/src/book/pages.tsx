@@ -74,7 +74,7 @@ const pagesNoRoutes: PageNoRoutes = [
 	[
 		{ name: 'Lexer', render: Lexer },
 		{ name: 'Parser', render: Parser },
-		{ name: 'Normalizer', render: Normalizer },
+		{ name: 'Normalizer', render: Normalizer, draft: 'no' },
 	],
 	[
 		//{ name: 'Hexa 2.0.0', render: Release200 },
