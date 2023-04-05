@@ -50,6 +50,18 @@ enum Node {
 	// you should NOT deduplicate this value!
 }
 `} />
+			<H3>Generalization of null</H3>
+			<p>
+				Hexa assumes <Code inline code={`null`} /> to be <i>the</i> value for <i>every</i> optional type.
+				Checks like <Code inline code={`value != null`} /> should be done with <Code inline code={`==`} /> operator
+				instead of <Code inline code={`===`} /> in targets with extra sentinel values like <b>undefined</b> in JavaScript.
+				In targets with items like <Code inline code={`std::optional`} />, generator must infer the implementation and use
+				optional type accordingly. Try to not make this implementation detail explicit to the user until strictly necessary.
+				Normalizer may provide some meta data around <Code inline code={`null`} /> keyword and it's conversion into
+				actual usable value with proper type information.
+				Same goes for <Code inline code={`if let`} /> bindings,
+				where you should generate proper <Code inline code={`optional.unwrap()`} /> logic according to the target and type.
+			</p>
 
 			<H2>Available attributes</H2>
 
