@@ -2,6 +2,8 @@ import { H2 } from "book/H2"
 import { Page } from 'book/Page'
 import { Article as Normalizer } from './Normalizer'
 import { CompilerUrl } from "book/JustUrl"
+import { Code } from "book/Code"
+import { H3 } from "book/H3"
 
 export const Article = () => {
 	return (
@@ -28,6 +30,26 @@ export const Article = () => {
 				“Arduino C” vs “Clang with full-LLVM intrinsics”, “Unity Script C#” vs “C# 8.0”, etc.</p>
 
 			<p>‘Universal’ targets always lack features and performance, and much harder to develop, test and maintain.</p>
+
+			<H2>Expected behavior</H2>
+			<H3>Unwanted enum optimization</H3>
+			<p>
+				Each enum value of non-constant enumeration must be a separate instance.
+				It should be possible to use enum values as keys in <Code inline code={`Map`} />.
+				For example, in parsers, user may attach some meta data onto AST node, say position of the node,
+				and if the value of the <Code inline code={`break`} /> node would be reused, operation
+				<Code inline code={`positions.get(node)`} /> will return data for the wrong node.
+				This was an actual bug in the Hexa compiler.
+			</p>
+
+			<Code code={`// Example of such enum:
+enum Node {
+	While(condition, expression)
+	Break
+	// Note absence of the () in Break,
+	// you should NOT deduplicate this value!
+}
+`} />
 
 			<H2>Available attributes</H2>
 
