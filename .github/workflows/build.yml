@@ -28,11 +28,10 @@ jobs:
                     git clone --depth=1 --branch=isekai https://github.com/hexalang/hexalang.github.io.git hexalang.github.io-isekai
                     echo Clone complete
                     cp -rf build hexalang.github.io-isekai
-                    ls
                     cd hexalang.github.io-isekai
-                    ls
                     git config user.name "GitHub Actions Bot"
                     git config user.email "<>"
                     git add .
-                    git commit -m "GitHub Actions Bot"
+                    git commit -m "Deploy `date`"
+                    git push
                     echo Poggers!
