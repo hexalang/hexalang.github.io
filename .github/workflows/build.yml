@@ -24,14 +24,16 @@ jobs:
 
             - name: Upload
               run: |
-                    cd hexalang.github.io
-                    git clone --depth=1 --branch=isekai https://github.com/hexalang/hexalang.github.io.git hexalang.github.io-isekai
-                    echo Clone complete
-                    cp -rf build hexalang.github.io-isekai
-                    cd hexalang.github.io-isekai
+                    mkdir -p /tmp/build
+                    cp -rf hexalang.github.io/build /tmp/build
+                    git stash
+                    git branch --track isekai origin/isekai && git pull --all && git fetch --all
+                    git checkout isekai
+                    cp -rf /tmp/build .
+                    ls
                     git config user.name "GitHub Actions Bot"
                     git config user.email "<>"
                     git add .
                     git commit -m "Deploy `date`"
-                    git push
+                    git push --set-upstream origin isekai
                     echo Poggers!
