@@ -24,6 +24,7 @@ jobs:
 
             - name: Upload
               run: |
+                    cd hexalang.github.io
                     git clone --depth=1 --branch=isekai https://github.com/hexalang/hexalang.github.io.git hexalang.github.io-isekai
                     echo Clone complete
                     cp -rf build hexalang.github.io-isekai
