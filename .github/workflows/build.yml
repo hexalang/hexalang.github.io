@@ -25,11 +25,12 @@ jobs:
             - name: Upload
               run: |
                     mkdir -p /tmp/build
-                    cp -rf hexalang.github.io/build /tmp/build
+                    cp -rf hexalang.github.io/build/* /tmp/build
+                    rm -rf hexalang.github.io/build
                     git stash
                     git branch --track isekai origin/isekai && git pull --all && git fetch --all
                     git checkout isekai
-                    cp -rf /tmp/build .
+                    cp -rf /tmp/build/* .
                     ls
                     git config user.name "GitHub Actions Bot"
                     git config user.email "<>"
