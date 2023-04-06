@@ -18,7 +18,6 @@ jobs:
             - name: Webpack
               id: build
               run: |
-                export -n CI
                 cd hexalang.github.io
                 mkdir -p build
                 date > build/build.txt
@@ -26,6 +25,7 @@ jobs:
             - name: Upload
               run: |
                     git clone --depth=1 --branch=isekai https://github.com/hexalang/hexalang.github.io.git hexalang.github.io-isekai
+                    echo Clone complete
                     cp -rf build hexalang.github.io-isekai
                     ls
                     cd hexalang.github.io-isekai
