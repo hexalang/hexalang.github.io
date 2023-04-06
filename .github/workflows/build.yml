@@ -15,12 +15,25 @@ jobs:
               with:
                 fetch-depth: '0'
 
+            - name: Setup
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 19
+                  cache: yarn
+                  cache-dependency-path: hexalang.github.io/yarn.lock
+
             - name: Webpack
               id: build
               run: |
+                export -n CI
+                npm install --global yarn typescript
                 cd hexalang.github.io
                 mkdir -p build
                 date > build/build.txt
+                yarn install --frozen-lockfile
+                npx browserslist@latest --update-db
+                yarn build
+                node ssr.js
 
             - name: Upload
               run: |
