@@ -29,7 +29,6 @@ jobs:
                 npm install --global yarn typescript
                 cd hexalang.github.io
                 mkdir -p build
-                date > build/build.txt
                 yarn install --frozen-lockfile
                 npx browserslist@latest --update-db
                 yarn build
@@ -44,9 +43,9 @@ jobs:
                     git branch --track isekai origin/isekai && git pull --all && git fetch --all
                     git checkout isekai
                     cp -rf /tmp/build/* .
-                    ls
                     git config user.name "GitHub Actions Bot"
                     git config user.email "<>"
+                    date > build.txt
                     git add .
                     git commit -m "Deploy `date`"
                     git push --set-upstream origin isekai
