@@ -1,0 +1,37 @@
+# Uploads webpack onto isekai
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - 'kawaii'
+
+jobs:
+    build:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              with:
+                fetch-depth: '0'
+
+            - name: Webpack
+              id: build
+              run: |
+                export -n CI
+                cd hexalang.github.io
+                mkdir -p build
+                date > build/build.txt
+
+            - name: Upload
+              run: |
+                    git clone --depth=1 --branch=isekai https://github.com/hexalang/hexalang.github.io.git hexalang.github.io-isekai
+                    cp -rf build hexalang.github.io-isekai
+                    ls
+                    cd hexalang.github.io-isekai
+                    ls
+                    git config user.name "GitHub Actions Bot"
+                    git config user.email "<>"
+                    git add .
+                    git commit -m "GitHub Actions Bot"
+                    echo Poggers!
