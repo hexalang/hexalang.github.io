@@ -107,6 +107,40 @@ const Rejected = () => {
 	</StyledRfc>
 }
 
+export const StyledMatrix = styled.div`
+	width: 100%;
+
+	span {
+		transition: padding .3s ease-in-out;
+		padding: 0 2px;
+		cursor: default;
+	}
+
+	span:hover {
+		padding: 0 5px;
+	}
+`
+
+const Matrix = () => {
+	const matrix = 'thanks for reading'.split('')
+	let count = matrix.length
+	const items: JSX.Element[] = []
+	let index = 0
+	const red = { color: 'rgb(250,96,74)' }
+	const blue = { color: 'rgb(0,174,239)' }
+	while (count > 0) {
+		count--
+		if (matrix[index] === ' ') {
+			items.push(<br />)
+		} else {
+			items.push(<span style={Math.random() > 0.5 ? red : blue}>{matrix[index]}</span>)
+		}
+		index++
+		if (index === matrix.length) index = 0
+	}
+	return <StyledMatrix style={{ width: '100%', textAlign: 'center', fontFamily: 'monospace' }}>{items}</StyledMatrix>
+}
+
 const articleByRoute = (route: string) => {
 	route = route.replace('/', '').trim().toLowerCase()
 
@@ -264,6 +298,7 @@ export const Book = () => {
 					{current.lab === 'merged' && <Merged />}
 					{current.lab === 'rejected' && <Rejected />}
 					<Article />
+					{current.year && <Matrix />}
 				</div>
 				<div css="margin-top: 64px" />
 			</div>
