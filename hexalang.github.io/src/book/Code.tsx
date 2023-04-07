@@ -19,37 +19,47 @@ const keywords = [
 	'let',
 
 	'class',
-	'new',
+	'interface',
+	'enum',
 	'private',
+	'declare',
 
+	'static',
+	'super',
+	'new',
 	'return',
 	'this',
-	'for',
-	'do',
-	'while',
-	'if',
-	'else',
 	'null',
-	'in',
 	'is',
 	'as',
 
+	'and',
+	'or',
+	'not',
 
+	'do',
+	'in',
+	'for',
+	'while',
 	'break',
-	'switch',
 	'continue',
 
+	'switch',
 	'case',
-	'enum',
 
 	'throw',
 	'try',
 	'catch',
 
+	'if',
+	'else',
 	'true',
 	'false',
 
+	'import',
 
+	'async',
+	'await',
 	'fun'
 ]
 
