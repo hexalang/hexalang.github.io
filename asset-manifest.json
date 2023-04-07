@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7c740446.css",
-    "main.js": "/static/js/main.9fa808cd.js",
+    "main.js": "/static/js/main.d8738e77.js",
     "static/js/787.cc35b326.chunk.js": "/static/js/787.cc35b326.chunk.js",
     "static/media/noice.jpg": "/static/media/noice.178e8af92a90886a5b48.jpg",
     "static/media/git-to-PATH.png": "/static/media/git-to-PATH.92988edca3eeb44b399b.png",
@@ -9,11 +9,11 @@
     "static/media/logo.svg": "/static/media/logo.03f97b3fd96e95fae6067fa6d077ca47.svg",
     "static/media/liberapay.svg": "/static/media/liberapay.3f1087d325b8332844844a420fa405d6.svg",
     "main.7c740446.css.map": "/static/css/main.7c740446.css.map",
-    "main.9fa808cd.js.map": "/static/js/main.9fa808cd.js.map",
+    "main.d8738e77.js.map": "/static/js/main.d8738e77.js.map",
     "787.cc35b326.chunk.js.map": "/static/js/787.cc35b326.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c740446.css",
-    "static/js/main.9fa808cd.js"
+    "static/js/main.d8738e77.js"
   ]
 }
