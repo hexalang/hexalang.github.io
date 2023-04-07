@@ -11,7 +11,16 @@ export const Article = () => {
 					<source src="/pawah.webm" type="video/webm" />
 				</video>
 			</div>
-			<p>This article assumes that Hexa is undoubtedly better than C++. Unfortunately, we still have to reuse C++ codebases, so let's learn how to do it.</p>
+			<p>
+				Hexa aims to offer superior interop with C++.
+				Unfortunately, we still have to reuse C++ codebases, so let's learn how to do it.
+				This article is also applicable to C and other native libraries.
+			</p>
+			<p>
+				C++ code generation is built into C target's generator.
+				You don't need to switch targets to use C++ features.
+				In case of any issues, feel free to provide a reproducible example in our bug tracker.
+			</p>
 			<H2>Use C++ from Hexa</H2>
 			<H3>COM Interfaces</H3>
 			<H3>Generic Templates</H3>
