@@ -13,12 +13,15 @@ const onClickCopy = (event: MouseEvent<HTMLAnchorElement>) => {
 
 const letters = 'abcdefghijklmnopqrstuvwxyz'
 
+// TODO '_' in separate color
 const keywords = [
 	'var',
 	'let',
+
 	'class',
 	'new',
 	'private',
+
 	'return',
 	'this',
 	'for',
@@ -30,16 +33,23 @@ const keywords = [
 	'in',
 	'is',
 	'as',
+
+
 	'break',
 	'switch',
 	'continue',
+
 	'case',
 	'enum',
+
 	'throw',
 	'try',
 	'catch',
+
 	'true',
 	'false',
+
+
 	'fun'
 ]
 
