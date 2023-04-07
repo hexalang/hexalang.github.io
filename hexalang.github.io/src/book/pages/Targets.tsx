@@ -8,7 +8,7 @@ import { H3 } from "book/H3"
 export const Article = () => {
 	return (
 		<>
-			<p>Code generation is based on concept of <Page page={Normalizer}>Nice Nodes</Page>. This technology would be improved over time.</p>
+			<p>Code generation is based on the concept of <Page page={Normalizer}>Nice Nodes</Page>. This technology would be improved over time.</p>
 
 			<p>Note: it’s currently impossible to add targets dynamically to the compiler, you have to modify compiler code. Places of modification:</p>
 
@@ -19,7 +19,7 @@ export const Article = () => {
 				<li><CompilerUrl>source\main.hexa</CompilerUrl> call registerTarget</li>
 			</ul>
 
-			<p>Feel free to create pull requests for new targets! Later they will be extracted to a separate libraries.</p>
+			<p>Feel free to create pull requests for new targets! Later they will be extracted into a separate libraries.</p>
 
 			<p>Note: Hexa follows pragmatic approach for language targets.
 				<strong> Don’t</strong> create ‘universal’ language targets, like “Lua”, “Lisp”, “JavaScript+TypeScript” or “Java+C#” etc.</p>
