@@ -25,7 +25,7 @@ jobs:
             - name: Webpack
               id: build
               run: |
-                export -n CI
+                export -n CI # Ignore warnings
                 npm install --global yarn typescript
                 cd hexalang.github.io
                 mkdir -p build
@@ -43,10 +43,10 @@ jobs:
                     git branch --track isekai origin/isekai && git pull --all && git fetch --all
                     git checkout isekai
                     cp -rf /tmp/build/* .
-                    git config user.name "GitHub Actions Bot"
+                    git config user.name "GitHub Action"
                     git config user.email "<>"
                     date > build.txt
-                    git add .
+                    git add . # TODO -A
                     git commit -m "Deploy `date`"
                     git push --set-upstream origin isekai
                     echo Poggers!
