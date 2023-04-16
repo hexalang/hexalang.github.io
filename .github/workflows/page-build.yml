@@ -1,0 +1,30 @@
+name: Deployment
+on:
+  push:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'npm'
+        
+    - name: Install Packages
+      run: |
+        npm install --global yarn typescript
+        yarn install --frozen-lockfile
+      
+    - name: Build page
+      run: |
+        yarn build
+        node ssr.js
+
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./build
+
