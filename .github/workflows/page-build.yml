@@ -14,12 +14,12 @@ jobs:
         
     - name: Install Packages
       run: |
-        export -n CI
         npm install --global yarn typescript
         yarn install --frozen-lockfile
       
     - name: Build page
       run: |
+        export -n CI
         yarn build
         node ssr.js
 
