@@ -14,6 +14,7 @@ jobs:
         
     - name: Install Packages
       run: |
+        export -n CI
         npm install --global yarn typescript
         yarn install --frozen-lockfile
       
