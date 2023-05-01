@@ -5,7 +5,7 @@ import { Img } from "book/Img"
 export const Article = () => {
 	return (
 		<>
-			<div style={{ display: 'flex', justifyContent: 'center', marginBottom: '14px' }}>
+			<div title="Have confidence!" style={{ display: 'flex', justifyContent: 'center', marginBottom: '14px' }}>
 				<video id="background-video" autoPlay loop muted poster="/pawah.jpg" style={{ pointerEvents: 'none', borderRadius: '100%', width: '192px', height: '192px' }}>
 					<source src="/pawah.mp4" type="video/mp4" />
 					<source src="/pawah.webm" type="video/webm" />
@@ -22,9 +22,11 @@ export const Article = () => {
 				In case of any issues, feel free to provide a reproducible example in our bug tracker.
 			</p>
 			<H2>Use C++ from Hexa</H2>
+			<H3>Basic data structures</H3>
 			<H3>COM Interfaces</H3>
 			<H3>Generic Templates</H3>
 			<H3>DLL Import</H3>
+			<H3>Stable ABI</H3>
 			<H3>Include as Code</H3>
 			<H2>Use Hexa from C++</H2>
 			<H3>COM Classes</H3>
