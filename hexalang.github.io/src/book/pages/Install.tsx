@@ -1,9 +1,11 @@
 import { H2 } from "book/H2"
+import { Img } from "book/Img"
+import picture from './images/happy.png'
 
 export const Article = () => {
 	return (
 		<>
-			<p>! This is a draft !</p>
+			<Img src={picture} style={{ borderRadius: '100%' }} alt="So happy! Gonna play with Hexa, yay!" width={256} />
 
 			<p>Getting up and running!</p>
 
