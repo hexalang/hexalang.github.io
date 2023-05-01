@@ -160,6 +160,7 @@ const articleByRoute = (route: string) => {
 	return pages[0][0]
 }
 
+let mustRebuildNav = true
 export const Book = () => {
 	const params = useParams<{ article: string }>()
 	const current = articleByRoute(params.article || '')
@@ -171,10 +172,12 @@ export const Book = () => {
 	const [nav, setNav] = useState<{ id: string, name: string, h: string }[]>([])
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	useEffect(() => {
+	const buildNav = () => {
 		// TODO SSR router title?
 		const newTitle = current.name + ' — Hexa Book'
-		if (newTitle !== document.title) {
+
+		if (mustRebuildNav || newTitle !== document.title) {
+			mustRebuildNav = false
 			const headers: typeof nav = []
 			// eslint-disable-next-line no-lone-blocks
 			{
@@ -201,6 +204,7 @@ export const Book = () => {
 			}
 			setNav(headers)
 		}
+
 		document.title = newTitle
 
 		document.querySelectorAll<HTMLAnchorElement>('.sidebar li a').forEach(a => {
@@ -213,7 +217,14 @@ export const Book = () => {
 				//document.querySelector<HTMLDivElement>('.sidebar')!.scrollBy(0, -20)
 			}
 		})
-	})
+
+		if (nav.length === 0) {
+			mustRebuildNav = true
+			setTimeout(buildNav, 555)
+		}
+	}
+
+	useEffect(buildNav)
 
 	const headerOffset = 50
 
