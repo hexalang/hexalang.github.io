@@ -6,7 +6,7 @@ import { Img } from "book/Img"
 import picture from '../images/byena.jpg'
 
 export const PSU1 = () => <>
-	<Img src={picture} style={{ borderRadius: '100%' }} alt="So happy! New features, yay!" width={256} />
+	<Img src={picture} style={{ borderRadius: '100%' }} alt="In the programmer's flow" width={256} />
 	<p>
 		Welcome to the very first issue of the Planned Syntax Updates.
 		From time-to-time we update the syntax to ensure that Hexa meets real-world requirements.
@@ -102,4 +102,17 @@ export const PSU1 = () => <>
 	PSU require { } over case in N+
 
 	{'({ doc, tested, done }) => '} unwrap args like this also for fun
+
+	<H2>CLI</H2>
+	<p>
+		UX of the command line definitely can be improved.
+		Let's think about it.
+	</p>
+	<H3>Command line arguments</H3>
+	<p>
+		Dedicated argument parser should allow any order of flags like <Code inline code={`--define`} /> and <Code inline code={`--target`} />.
+	</p>
+	<p>
+		Would be cool to have unit tests for argument parsing engine too.
+	</p>
 </>
