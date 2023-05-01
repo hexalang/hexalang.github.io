@@ -40,6 +40,9 @@ import { Article as Multithreaded } from './pages/lab/Multithreaded'
 // Utils
 import { nameToId } from './utils'
 
+// Automatic import
+import { PSU1 } from './pages/lab/PSU-1'
+
 type PageNoRoutes = {
 	name: string
 	render: () => JSX.Element
@@ -103,6 +106,11 @@ const pagesNoRoutes: PageNoRoutes = [
 			name: 'Multithreaded compiler', render: Multithreaded,
 			lab: 'rfc',
 			labRfcUrl: 'https://github.com/hexalang/Hexa/discussions/27'
+		},
+		{
+			name: 'Planned Syntax Update', render: PSU1,
+			lab: 'rfc',
+			labRfcUrl: 'https://github.com/orgs/hexalang/discussions/38'
 		},
 	],
 ]
