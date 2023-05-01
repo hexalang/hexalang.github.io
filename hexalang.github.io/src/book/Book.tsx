@@ -107,6 +107,7 @@ const Rejected = () => {
 	</StyledRfc>
 }
 
+// TODO move all to Markup
 export const StyledMatrix = styled.div`
 	width: 100%;
 
@@ -281,7 +282,7 @@ export const Book = () => {
 							+
 							(nav.h === 'h3' ? ' flex' : '')
 						}
-					>{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
+					>&nbsp;{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
 				</div>
 				<div className="article markdown">
 					<h1><a
@@ -298,7 +299,10 @@ export const Book = () => {
 					{current.lab === 'merged' && <Merged />}
 					{current.lab === 'rejected' && <Rejected />}
 					<Article />
-					{current.year && <Matrix />}
+					{
+						// current.year && <Matrix />
+					}
+					<Matrix />
 				</div>
 				<div css="margin-top: 64px" />
 			</div>
