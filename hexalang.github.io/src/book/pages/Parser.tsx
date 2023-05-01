@@ -9,6 +9,8 @@ export const Article = () => {
 
 			<p>Result of parsing depends on conditional compilation defines set in <Code inline code={`hexa.json`} />, this affects only <Code inline code={`#if condition`} /> tokens.</p>
 
+			<p>State is contained withing the Parser class <i>instance</i>, so it can be run in parallel (on multiple CPU cores).</p>
+
 			<H2>Where to look</H2>
 
 			<ul>
