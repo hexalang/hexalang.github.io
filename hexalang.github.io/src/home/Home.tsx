@@ -52,7 +52,7 @@ export const Home = () => {
 								<div className="motto">Performance</div>
 								<div className="motto">Simplicity</div>
 								<div className="motto">Safety</div>
-								<Code code={`fun hello(friend: String) {
+								<Code code={`fun hello(friend String) {
     console.log("hello, \\(friend)!")
 }
 
