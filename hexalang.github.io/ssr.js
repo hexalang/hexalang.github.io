@@ -28,3 +28,7 @@ fs.mkdirSync(`build/try`, { recursive: true })
 fs.writeFileSync('build/try/index.html', index)
 fs.mkdirSync(`build/donate`, { recursive: true })
 fs.writeFileSync('build/donate/index.html', index)
+
+// Fix Google indexing
+fs.mkdirSync(`build/blog`, { recursive: true })
+fs.writeFileSync('build/blog/Hexa-in-Hexa.html', index)
