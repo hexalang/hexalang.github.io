@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 import { Code } from '../Code'
 import { Article as Comparison } from './Comparison'
 import { Article as Install } from './Install'
+import { Img } from "book/Img"
+import picture from './images/nyan.jpg'
 
 const code = `// My first program in Hexa!
 
@@ -19,6 +21,7 @@ hello()`
 export const Article = () => {
 	return (
 		<>
+			<Img src={picture} style={{ borderRadius: '100%' }} alt="Hexa says meow :3" width={256} />
 			<p>Let’s write your very first program in Hexa!</p>
 
 			<p>If you’re already familiar with programming,
