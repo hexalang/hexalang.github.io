@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7c740446.css",
-    "main.js": "/static/js/main.ea5b94af.js",
+    "main.js": "/static/js/main.0af0be3b.js",
     "static/js/787.cc35b326.chunk.js": "/static/js/787.cc35b326.chunk.js",
     "static/media/byena.jpg": "/static/media/byena.65bcc2f2964a650b7ce3.jpg",
     "static/media/noice.jpg": "/static/media/noice.178e8af92a90886a5b48.jpg",
@@ -13,11 +13,11 @@
     "static/media/logo.svg": "/static/media/logo.03f97b3fd96e95fae6067fa6d077ca47.svg",
     "static/media/liberapay.svg": "/static/media/liberapay.3f1087d325b8332844844a420fa405d6.svg",
     "main.7c740446.css.map": "/static/css/main.7c740446.css.map",
-    "main.ea5b94af.js.map": "/static/js/main.ea5b94af.js.map",
+    "main.0af0be3b.js.map": "/static/js/main.0af0be3b.js.map",
     "787.cc35b326.chunk.js.map": "/static/js/787.cc35b326.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c740446.css",
-    "static/js/main.ea5b94af.js"
+    "static/js/main.0af0be3b.js"
   ]
 }
