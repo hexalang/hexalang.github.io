@@ -2,12 +2,13 @@ import { H3 } from 'book/H3'
 import { Img } from 'book/Img'
 import { Page } from 'book/Page'
 import git from './images/git-to-PATH.png'
+import speedtyper from './images/speedtyper.jpg'
 import { Article as Install } from './Install'
 
 export const Article = () => {
 	return (
 		<>
-			<p>DRAFT</p>
+			<Img src={speedtyper} style={{ borderRadius: '100%' }} alt="Package installer goes brrrr dori dori dori dori dori" width={256} />
 
 			<p>Package manager is a tool for code sharing between developers. Very easy to use, no worries! <img className="emoji" title=":wink:" alt=":wink:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png" height="20" width="20" /></p>
 
