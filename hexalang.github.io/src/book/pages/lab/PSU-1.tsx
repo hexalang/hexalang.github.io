@@ -166,7 +166,7 @@ case a: { a b c }
 	drop new keyword, add T { }
 	declare T = T2 to type T = T2
 	Enum(name: T) keep as is? cause looks the same as constructor?
-	case : {3/* + expr*/}
+	case : {3/* + expr* /}
 	(a)=gt_ must be a=gt_
 	no nested ternary
 	[,] trailing commas
