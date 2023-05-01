@@ -202,8 +202,28 @@ export const Book = () => {
 					}
 				})
 			}
-			setNav(headers)
+
+			if (headers.length !== nav.length) {
+				setNav(headers)
+			} else {
+				if (headers.some(
+					(v, i) => nav[i].h !== v.h || nav[i].id !== v.id || nav[i].name !== v.name
+				)) {
+					setNav(headers)
+				}
+			}
 		}
+
+		if (mustRebuildNav === false && nav.length === 0 && headers.length === 0) {
+			mustRebuildNav = true
+			setTimeout(buildNav, 555)
+		}
+
+		return newTitle
+	}
+
+	const buildNavAndScroll = () => {
+		const newTitle = buildNav()
 
 		document.title = newTitle
 
@@ -217,14 +237,9 @@ export const Book = () => {
 				//document.querySelector<HTMLDivElement>('.sidebar')!.scrollBy(0, -20)
 			}
 		})
-
-		if (mustRebuildNav === false && nav.length === 0 && headers.length === 0) {
-			mustRebuildNav = true
-			setTimeout(buildNav, 555)
-		}
 	}
 
-	useEffect(buildNav)
+	useEffect(buildNavAndScroll)
 
 	const headerOffset = 50
 
