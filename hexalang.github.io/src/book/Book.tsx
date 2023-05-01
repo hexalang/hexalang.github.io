@@ -176,9 +176,9 @@ export const Book = () => {
 		// TODO SSR router title?
 		const newTitle = current.name + ' — Hexa Book'
 
+		const headers: typeof nav = []
 		if (mustRebuildNav || newTitle !== document.title) {
 			mustRebuildNav = false
-			const headers: typeof nav = []
 			// eslint-disable-next-line no-lone-blocks
 			{
 				[
@@ -218,7 +218,7 @@ export const Book = () => {
 			}
 		})
 
-		if (nav.length === 0) {
+		if (mustRebuildNav === false && nav.length === 0 && headers.length === 0) {
 			mustRebuildNav = true
 			setTimeout(buildNav, 555)
 		}
@@ -293,7 +293,7 @@ export const Book = () => {
 							+
 							(nav.h === 'h3' ? ' flex' : '')
 						}
-					>&nbsp;{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
+					>&nbsp;&nbsp;{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
 				</div>
 				<div className="article markdown">
 					<h1><a
