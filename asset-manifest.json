@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.7c740446.css",
-    "main.js": "/static/js/main.bf11d93a.js",
+    "main.js": "/static/js/main.4f424040.js",
     "static/js/787.cc35b326.chunk.js": "/static/js/787.cc35b326.chunk.js",
     "static/media/byena.jpg": "/static/media/byena.65bcc2f2964a650b7ce3.jpg",
     "static/media/noice.jpg": "/static/media/noice.178e8af92a90886a5b48.jpg",
+    "static/media/speedrun.jpg": "/static/media/speedrun.b5eda07faf34b3ec60b3.jpg",
     "static/media/speedtyper.jpg": "/static/media/speedtyper.a8bf2db5dea10983e4e3.jpg",
     "static/media/happy.png": "/static/media/happy.dd1bb26738abf633ff2c.png",
     "static/media/nyan.jpg": "/static/media/nyan.ffb43f53e21536d99104.jpg",
@@ -13,11 +14,11 @@
     "static/media/logo.svg": "/static/media/logo.03f97b3fd96e95fae6067fa6d077ca47.svg",
     "static/media/liberapay.svg": "/static/media/liberapay.3f1087d325b8332844844a420fa405d6.svg",
     "main.7c740446.css.map": "/static/css/main.7c740446.css.map",
-    "main.bf11d93a.js.map": "/static/js/main.bf11d93a.js.map",
+    "main.4f424040.js.map": "/static/js/main.4f424040.js.map",
     "787.cc35b326.chunk.js.map": "/static/js/787.cc35b326.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c740446.css",
-    "static/js/main.bf11d93a.js"
+    "static/js/main.4f424040.js"
   ]
 }
