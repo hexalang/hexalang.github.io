@@ -12,6 +12,7 @@ const onClickCopy = (event: MouseEvent<HTMLAnchorElement>) => {
 }
 
 const letters = 'abcdefghijklmnopqrstuvwxyz'
+const upper = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase()
 
 // TODO '_' in separate color
 const keywords = [
@@ -121,7 +122,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 					if (char === '@') {
 						i++
 						html.push(<span className="en">@</span>)
-						while (letters.includes(chars[i]) || chars[i] === '.') {
+						while (letters.includes(chars[i]) || upper.includes(chars[i]) || chars[i] === '.') {
 							html.push(<span className="en">{chars[i]}</span>)
 							i++
 						}
@@ -166,7 +167,6 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 						}
 					}
 
-					const upper = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase()
 					if (upper.includes(char)) {
 						const word: string[] = []
 						let at = i
