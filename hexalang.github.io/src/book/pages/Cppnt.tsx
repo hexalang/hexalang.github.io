@@ -1,6 +1,5 @@
 import { H2 } from "book/H2"
 import { H3 } from "book/H3"
-import { Img } from "book/Img"
 
 export const Article = () => {
 	return (
@@ -21,18 +20,29 @@ export const Article = () => {
 				You don't need to switch targets to use C++ features.
 				In case of any issues, feel free to provide a reproducible example in our bug tracker.
 			</p>
-			<H2>Use C++ from Hexa</H2>
+			<H2>Modularity recommendations</H2>
+
+			Avoid @include-ing every class or variable, instead apply them over whole bundle.
+			Place per-DLL or per-header declarations into separate file like
+			@namespace('boost::asio')
+			@include('&lt;boost&gt;')
+			this // Module-level self reference
+
+			class A { } // Would use module-level decorators
+			class B { } // Would use module-level decorators
+
+			<H2>Use C and C++ from Hexa</H2>
 			<H3>Basic data structures</H3>
 			<H3>COM Interfaces</H3>
 			<H3>Generic Templates</H3>
 			<H3>DLL Import</H3>
-			<H3>Stable ABI</H3>
 			<H3>Include as Code</H3>
-			<H2>Use Hexa from C++</H2>
+			<H2>Use Hexa from C and C++</H2>
 			<H3>COM Classes</H3>
 			<H3>DLL Export</H3>
 			<H3>Export as Code</H3>
 			<H3>Instantiate Generics</H3>
+			<H3>Stable ABI</H3>
 		</>
 	)
 }
