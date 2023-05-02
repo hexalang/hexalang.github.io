@@ -10,18 +10,25 @@ import { scrollTo as scrollToH2 } from './H2'
 import { scrollTo as scrollToH3 } from './H3'
 import { Page, scrollTo as scrollToPage } from './Page'
 import { Article as Install } from './pages/Install'
+import sub from './pages/images/sub.png'
 
 export const StyledSub = styled.span`
 	width: 16px;
+	min-width: 16px;
 	height: 16px;
+	min-height: 16px;
 	display: inline-block;
 	position: relative;
+	background-image: url(${sub});
+	background-size: cover;
 
 	div {
+		display: none;
 		background-color: gray;
 	}
 
 	div.ver {
+		display: none;
 		position: absolute;
 		height: 8px;
 		width: 2px;
@@ -30,6 +37,7 @@ export const StyledSub = styled.span`
 	}
 
 	div.hor {
+		display: none;
 		position: absolute;
 		height: 2px;
 		width: 8px;
