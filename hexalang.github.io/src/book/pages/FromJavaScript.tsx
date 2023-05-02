@@ -1,10 +1,12 @@
 import { Page } from "book/Page"
 import { Article as Comparison } from './Comparison'
+import { Img } from "book/Img"
+import speedrun from './images/speedrun.jpg'
 
 export const Article = () => {
 	return (
 		<>
-			<p>!Draft!</p>
+			<Img src={speedrun} style={{ borderRadius: '100%' }} alt="Very fast typing, she probably uses Dvorak" width={256} />
 
 			<p>Hexa provides hints how to convert your existing JavaScript code.</p>
 
