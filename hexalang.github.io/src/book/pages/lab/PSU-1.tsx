@@ -30,6 +30,10 @@ export const PSU1 = () => <>
 	</p>
 
 	<H3>Drop colon in variables</H3>
+	<p>
+		Were you ever curious why "colons" and "semicolons" are similar named?
+		Probably because they are both useless legacy idiosyncrasies.
+	</p>
 	<Code code={`// Before
 var varName: Type
 // Now
@@ -48,21 +52,28 @@ var varName Type`} />
 	<Code code={`// Before
 value = new Type(arguments)
 // After
-value = Type(arguments)`} />
+value = Type(arguments)
+// Zero-arguments always require something, like ()
+value = Type()
+`} />
 	<p>
 		Hexa also supports fields initializer, but it's confusing.
 	</p>
 	<Code code={`// Before
 value = new Type { fields } (arguments)
 // This clearly means "fields are set after construction"
-value = Type(arguments) { fields }`} />
+value = Type(arguments) { fields }
+// Should be possible too
+value = Type { fields }
+value = Type { }
+`} />
 	<FeatureState />
 
 	<H3>Drop colon in enums</H3>
 	<Code code={`// Look at all those annoying colons\nenum E : T { A(v: T)\n// Becomes\nenum E T { A(v T)`} />
 	<p>
 		Update language server hints too!
-		Allow <Code inline code={`Bool`} /> as possible enum type also.
+		Allow <Code inline code={`Bool`} /> as possible enum type also U?Int*.
 	</p>
 	<FeatureState />
 
@@ -86,7 +97,7 @@ value = Type(arguments) { fields }`} />
 	<H2>Lexer fixes</H2>
 	<p>
 		Some fixes apparently to be done. No optimizations yet.
-		Note: Lexer is not Parser. Lexer splits text to tokens. Check the corresponding article.
+		Note: Lexer is not Parser. Lexer splits text into tokens. Check the corresponding article.
 	</p>
 	<ul>
 		<li><strong>NOT DONE</strong> Parse <Code inline code={`@as`} /> and other keyword-like decorators</li>
@@ -186,6 +197,12 @@ case a: { a b c }
 	{'({ doc, tested, done }) => '} unwrap args like this also for fun
 	*/
 	}
+
+	<H2>Null safety</H2>
+	<p>
+		Some features are disabled due to lack of syntax sugar.
+		Without sugar, dealing with null safety is super annoying.
+	</p>
 
 	<H2>CLI</H2>
 	<p>
