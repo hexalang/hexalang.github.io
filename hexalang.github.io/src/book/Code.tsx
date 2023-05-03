@@ -58,6 +58,7 @@ const keywords = [
 	'false',
 
 	'import',
+	'from',
 
 	'async',
 	'await',
