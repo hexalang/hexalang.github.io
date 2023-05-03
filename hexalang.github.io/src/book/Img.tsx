@@ -27,6 +27,8 @@ const StyledImg = styled.p`
 	}
 `
 
+// TODO on click dim screen, show pic on screen center, movable zoom-able,
+// also arrow keys to swipe pics if there are many (use effects to track them)
 export const Img: FC<Props> = ({ src, alt, width, style }) => {
 	return (
 		<StyledImg style={pStyle} title={alt}>
