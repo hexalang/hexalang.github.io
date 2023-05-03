@@ -21,6 +21,7 @@ import { Article as Testing } from './pages/Testing'
 import { Article as Lexer } from './pages/Lexer'
 import { Article as Normalizer } from './pages/Normalizer'
 import { Article as Parser } from './pages/Parser'
+import { Article as Typer } from './pages/insights/Typer'
 import { Article as Human } from './pages/insights/Human'
 
 // Blog
@@ -78,6 +79,7 @@ const pagesNoRoutes: PageNoRoutes = [
 	[
 		{ name: 'Lexer', render: Lexer },
 		{ name: 'Parser', render: Parser },
+		{ name: 'Typer', render: Typer },
 		{ name: 'Normalizer', render: Normalizer, draft: 'no' },
 		{ name: 'Human Syntax Guidelines', render: Human },
 	],
