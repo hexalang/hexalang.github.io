@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const headerHeight = `50px`
 const stickyTop = `42px`
 
+// TODO `<article>`? for SEO
 export const StyledBook = styled.div`
 // Avoid weird trail on sidebar animation
 background-color: var(--color-bg);
