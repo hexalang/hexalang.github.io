@@ -1,3 +1,6 @@
+import { CompilerUrl } from "book/JustUrl"
+import { H2 } from "book/H2"
+
 export const Article = () => {
 	return (
 		<>
@@ -23,6 +26,14 @@ export const Article = () => {
 				Fixing requires more than a full day of coding and testing, thus it's postponed until
 				workarounds will stop being... sane?
 			</p>
+
+			<H2>Where to look</H2>
+
+			<ul>
+				<li><CompilerUrl>source\compiler\typer.hexa</CompilerUrl></li>
+				<li><CompilerUrl>source\data\types.hexa</CompilerUrl></li>
+				<li><CompilerUrl>source\data\nodeType.hexa</CompilerUrl></li>
+			</ul>
 		</>
 	)
 }
