@@ -22,6 +22,7 @@ const keywords = [
 	'class',
 	'interface',
 	'enum',
+	'type',
 	'private',
 	'declare',
 
@@ -73,6 +74,9 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 	let html: JSX.Element[] = []
 	let stringFinalizer: '"' | "'" | '`' = '"'
 	let commentNesting = 0
+
+	// There's JSX bug for empty code
+	if (code.trim() === '') return <div className="language-ts highlighter-rouge"></div>
 
 	// Fixup
 	if (code[0] === '\n') code = code.substr(1)
