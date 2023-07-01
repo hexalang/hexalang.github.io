@@ -98,7 +98,7 @@ export const StyledRfc = styled.div`
 const Rfc = ({ href }: { href: string }) => {
 	return <StyledRfc>
 		<div>
-			<a href={href}>This proposal is open for discussion, click to visit comments page</a>
+			<a href={href}>This proposal is open for discussion, click to visit the comments page</a>
 		</div>
 	</StyledRfc>
 }
