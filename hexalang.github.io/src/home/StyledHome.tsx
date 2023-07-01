@@ -18,7 +18,7 @@ code {
 overflow-x: hidden;
 width: 100%;
 background-color: #283a3c;
-background-image: url(/g.jpg);
+background-image: url(/bg.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
