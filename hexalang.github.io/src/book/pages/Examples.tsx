@@ -136,7 +136,9 @@ var a [Int] = [1, 2, 3]`} />
 [ "hello": "world!" ]
 [ 1: "one", 2: "two" ] // Elements of same type
 
-			<H2>Structures</H2>
+var a [Int : String] = [1: "hello", 2: "world"]`} />
+
+			<H3>Structures</H3>
 
 			<Code code={`{:} // Empty structure
 { hello: "world!" }
