@@ -133,6 +133,11 @@ value = Type { }
 		Bonus point: "type" keyword may be used for meta-methods and due to their common usage
 		this saves a lot of keystrokes.
 	</p>
+	<p>
+		Another option is to use "meta" keyword and keep "declare" as-is.
+		"declare" is not really a "type" nor "alias" right now, and should be properly specified in the
+		first place.
+	</p>
 	<Code code={`// Nah or fine?\ndeclare A = B\n// Becomes\ntype A = B`} />
 	<FeatureState />
 
