@@ -1,4 +1,5 @@
 import { Code } from "book/Code"
+import { H2 } from "book/H2"
 
 export const Article = () => {
 	return (
@@ -11,6 +12,10 @@ export const Article = () => {
 			<p>It should describe C semantics with some extra metadata for debugging and ABI handling.</p>
 
 			<p>Currently we're investigating how feasible it is to add native IR information into existing Nice Nodes.</p>
+
+			<H2>Register allocation</H2>
+
+			<p>Register allocation requires to edit final resulting nodes, ones that will produce the machine code. It may be problematic to do this trick with a Nice Nodes due to focus on immutability and their higher-lever nature.</p>
 		</>
 	)
 }
