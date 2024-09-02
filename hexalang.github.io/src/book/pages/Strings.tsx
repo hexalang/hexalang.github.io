@@ -15,7 +15,7 @@ let s = "hello"
 // Compiler knows what quotes mean
 // and sets 's' type to 'String' for you`} />
 
-			<p>Double- and single quoted strings have absolutely same meaning and features</p>
+			<p>Double and single quote strings have absolutely same meaning and features:</p>
 
 			<Code code={`"hello"
 'hello' // No difference, nothing to worry about`} />
@@ -24,7 +24,7 @@ let s = "hello"
 				And they have only one property — length, or size.</p>
 
 			<Code code={`let s = "hello" + "!" // Same as "hello!"
-let s = "hello" + '!' // Mixing double- and single quoted strings is fine
+let s = "hello" + '!' // Mixing double and single quote strings is fine
 
 let h = "hello"[0] // Starts from zero
 let s = "hello"
