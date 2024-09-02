@@ -10,8 +10,8 @@
 	"cSpell.words": [
 		"acryl",
 		"automagically",
+		"codebases",
 		"Cppnt",
-		"Haxe",
 		"heartso",
 		"Hexa",
 		"hexalang",
@@ -23,4 +23,11 @@
 		"isekai",
 		"webm"
 	],
+	"files.exclude": {
+		"**/.git": true,
+		"build": true,
+		"node_modules": true,
+		"**/Thumbs.db": true,
+		"**/.DS_Store": true
+	},
 }
