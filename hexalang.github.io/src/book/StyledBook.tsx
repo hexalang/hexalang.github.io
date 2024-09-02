@@ -613,7 +613,7 @@ body, #root, .page, .sidebar {
 	}
 }
 
-code {
+code, pre.highlight {
 	::-webkit-scrollbar {
 		width: 10px;
 		height: 10px;
@@ -657,6 +657,10 @@ pre {
 
 code {
   counter-increment: line;
+}
+
+code.countedCode {
+	width: fit-content;
 }
 
 code.countedCode::before {
