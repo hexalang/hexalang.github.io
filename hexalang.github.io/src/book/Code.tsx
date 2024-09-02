@@ -66,14 +66,24 @@ const keywords = [
 	'fun'
 ]
 
+declare type Syntaxes = 'hexa'
+
+// TODO syntaxes <CodeJS> <CodeCxx>
 // TODO respect dark mode in CSS
 // TODO optimize
 // TODO react.memo
 // TODO for inline Click to copy \to clipboard + pointer
-export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
+export const Code = ({ code, inline, syntax }: { code: string, inline?: boolean, syntax?: Syntaxes }) => {
+	syntax = syntax ?? 'hexa'
+	let htmlLines: JSX.Element[] = []
 	let html: JSX.Element[] = []
 	let stringFinalizer: '"' | "'" | '`' = '"'
 	let commentNesting = 0
+
+	const newLine = () => {
+		htmlLines.push(<code className="countedCode" key={htmlLines.length}>{html}</code>)
+		html = []
+	}
 
 	// There's JSX bug for empty code
 	if (code.trim() === '') return <div className="language-ts highlighter-rouge"></div>
@@ -113,7 +123,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 			case State.Plaintext: {
 				if (char === '\n') {
 					i++
-					html.push(<br />)
+					newLine()
 				} else {
 					if (char === '#') {
 						i++
@@ -218,7 +228,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 			case State.CommentLine: {
 				if (char === '\n') {
 					i++
-					html.push(<br />)
+					newLine()
 					state = State.Plaintext
 					continue
 				}
@@ -229,7 +239,7 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 			case State.CommentMultiLine: {
 				if (char === '\n') {
 					i++
-					html.push(<br />)
+					newLine()
 					continue
 				}
 				if (char === '/' && char1 === '*') {
@@ -288,10 +298,18 @@ export const Code = ({ code, inline }: { code: string, inline?: boolean }) => {
 		}
 	}
 
-	html = html.map((value, index) => { return { ...value, key: index } })
 
 	if (inline) {
 		return <code className="inlineCode" title={code + '\n\nClick to copy'} onClick={onClickCopy}>{html}</code>
 	}
+
+	// Register latest tokens
+	newLine()
+
+	return <div className="language-ts highlighter-rouge">
+		<div className="highlight">
+			<pre className="highlight">{htmlLines}</pre>
+		</div>
+	</div>
 	return <div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code>{html}</code></pre></div></div>
 }

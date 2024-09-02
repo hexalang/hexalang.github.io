@@ -57,7 +57,7 @@ li ul li {
 	transition: color .2s ease-in-out;
 }
 
-/* Emoji haXe logo */
+/* Emojis from favicons */
 
 img[src*="favicon"] {
 	margin-right: 4px;
@@ -649,6 +649,26 @@ a {
 
 a:hover {
 	color: rgb(0, 174, 239);
+}
+
+pre {
+  counter-reset: line;
+}
+
+code {
+  counter-increment: line;
+}
+
+code.countedCode::before {
+	content: counter(line);
+	display: inline-block;
+	width: 1.5em; /* Two digits */
+	border-right: 1px solid #7979798b;
+	padding: 0 .5em 0 .1em;
+	margin-right: .5em;
+	color: #888;
+	-webkit-user-select: none;
+	text-align: right;
 }
 
 .highlighter-rouge {
