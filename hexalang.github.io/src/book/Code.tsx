@@ -82,6 +82,8 @@ export const Code = ({ code, inline, syntax }: { code: string, inline?: boolean,
 	const [copied, setCopied] = useState(() => 0)
 
 	const newLine = () => {
+		// Add `.key`
+		html = html.map((value, index) => { return { ...value, key: index } })
 		htmlLines.push(<code className="countedCode" key={htmlLines.length}>{html}</code>)
 		html = []
 	}
@@ -326,5 +328,4 @@ export const Code = ({ code, inline, syntax }: { code: string, inline?: boolean,
 			</div>
 		</div>
 	</div>
-	return <div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code>{html}</code></pre></div></div>
 }
