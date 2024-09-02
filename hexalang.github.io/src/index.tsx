@@ -5,6 +5,10 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 const root = document.getElementById('root')
+const preview = document.getElementById('preview')
+if (preview && root) {
+	root.removeChild(preview)
+}
 
 ReactDOM.render(
 	<React.StrictMode>
