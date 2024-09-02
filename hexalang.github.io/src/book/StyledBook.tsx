@@ -911,8 +911,9 @@ nav.main-nav li a {
 	bottom: 0;
 	left: 0;
 	width: 250px;
-	transition: transform .25s ease-out;
+	transition: transform .25s ease-out, background-color .95s ease;
 	font-size: 20px;
+	background-color: var(--color-bg);
 }
 
 .sidebar ul li {
@@ -939,7 +940,7 @@ nav.main-nav li a {
 	transition: transform .25s ease-out;
 
 	:hover::after {
-		opacity: 1;
+		opacity: .9;
 	}
 
 	::after {
@@ -989,7 +990,7 @@ nav.main-nav li a {
 	transition: transform .25s ease-out;
 
 	:hover::after {
-		opacity: 1;
+		opacity: .9;
 	}
 
 	::after {
