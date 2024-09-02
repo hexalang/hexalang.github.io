@@ -741,6 +741,7 @@ h2 {
 	font-size: 40px;
 	text-align: center;
 	height: 54px; // Sticky
+	z-index: 1;
 }
 
 h3 {
@@ -750,6 +751,7 @@ h3 {
 	top: ${stickyTop};
 	background-color: var(--color-bg);
 	height: 54px; // Sticky
+	z-index: 1;
 }
 
 img {
