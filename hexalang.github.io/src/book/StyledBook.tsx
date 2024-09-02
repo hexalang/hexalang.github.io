@@ -688,6 +688,37 @@ div pre.highlight {
 	overflow-x: auto;
 }
 
+div.highlight {
+	position: relative;
+}
+
+div.highlight:hover .highlighter-copy {
+	opacity: 1;
+}
+
+div.highlighter-copy:hover {
+	opacity: 1;
+}
+
+// TODO hide on modile
+div.highlighter-copy {
+	opacity: .0;
+	transition: opacity .3s;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background-color: #79797927;
+	border-radius: 3px;
+	padding: 3px 4px;
+	font-size: 65%;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover:active {
+		background-color: #385a793f;
+	}
+}
+
 div pre.highlight > code {
 	display: block;
 	white-space: pre;

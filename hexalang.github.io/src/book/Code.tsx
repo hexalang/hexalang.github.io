@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react'
+import { MouseEvent, useState } from 'react'
 
 enum State {
 	Plaintext,
@@ -79,6 +79,7 @@ export const Code = ({ code, inline, syntax }: { code: string, inline?: boolean,
 	let html: JSX.Element[] = []
 	let stringFinalizer: '"' | "'" | '`' = '"'
 	let commentNesting = 0
+	const [copied, setCopied] = useState(() => 0)
 
 	const newLine = () => {
 		htmlLines.push(<code className="countedCode" key={htmlLines.length}>{html}</code>)
@@ -309,6 +310,20 @@ export const Code = ({ code, inline, syntax }: { code: string, inline?: boolean,
 	return <div className="language-ts highlighter-rouge">
 		<div className="highlight">
 			<pre className="highlight">{htmlLines}</pre>
+			<div
+				className="highlighter-copy"
+				onClick={() => {
+					setCopied(copied + 1)
+					navigator.clipboard.writeText(code.trim() + '\n')
+				}}
+			>
+				{
+					copied > 0.5 ?
+						"Copied!" + (copied > 1.1 ? " x" + copied : "")
+						:
+						"Copy code"
+				}
+			</div>
 		</div>
 	</div>
 	return <div className="language-ts highlighter-rouge"><div className="highlight"><pre className="highlight"><code>{html}</code></pre></div></div>
