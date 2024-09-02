@@ -258,8 +258,15 @@ export const Book = () => {
 		if (!page) return
 		window.location.hash = id
 
+		// Scroll right navigation panel
+		const selectorId = id.substr(1)
+		const selector = `a.article-navigation-href[href$=${selectorId}]`
+		const href = document.querySelector<HTMLElement>(selector)
+		const navigation = document.querySelector<HTMLElement>('#article-navigation-scroll')
+
 		if (id === `#top`) {
 			page.scrollTo(0, 0)
+			if (navigation) navigation.scrollTo(0, 0)
 			return
 		}
 
@@ -267,6 +274,11 @@ export const Book = () => {
 			block: 'start'
 		})
 
+		if (href) href.scrollIntoView({
+			block: 'start'
+		})
+
+		// Fix scrolling position visually
 		page.scrollBy(0, -headerOffset)
 	}
 
@@ -304,7 +316,11 @@ export const Book = () => {
 								event.preventDefault()
 								scrollTo(`#top`)
 							}}
-							className={(hash === '#' || hash === '#top') ? "selected" : ''}
+							className={
+								((hash === '#' || hash === '#top') ? "selected" : '')
+								+
+								' article-navigation-href'
+							}
 						>&nbsp;{current.name}</a>
 						{nav.map(nav => <Fragment key={nav.id}><a
 							href={`#${nav.id}`}
@@ -316,6 +332,8 @@ export const Book = () => {
 								((hash === `#${nav.id}`) ? "selected" : '')
 								+
 								(nav.h === 'h3' ? ' flex' : '')
+								+
+								' article-navigation-href'
 							}
 						>&nbsp;&nbsp;{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
 					</div>
