@@ -1116,11 +1116,12 @@ nav.main-nav li a {
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
+	max-height: calc(100% - 50px - 4px);
 
 	::before {
 		border-radius: 4px;
 		display: block;
-		width: 0.2em;
+		width: 4px;
 		background-color: rgba(0,0,0,0.5);
 		height: 100%;
 		content: '.';
@@ -1145,6 +1146,27 @@ nav.main-nav li a {
 
 #article-navigation a {
 	font-size: 0.9em;
+}
+
+#article-navigation-scroll {
+	overflow-y: scroll;
+	height: 100%;
+	scrollbar-width: none;  /* Firefox */
+
+	width: calc(226px - 8px);
+	text-align: right;
+	margin-left: 4px;
+	font-size: 18px;
+	background-color: var(--color-bg);
+	padding-bottom: 4px;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+
+	::-webkit-scrollbar {
+		width: 0px;
+		display: none;  /* Safari and Chrome */
+	}
 }
 
 @media screen and (max-width: 1270px) {

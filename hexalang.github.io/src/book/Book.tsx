@@ -297,26 +297,28 @@ export const Book = () => {
 					<Link to="/donate" className="header-button">Sponsor</Link>
 				</div>
 				<div id="article-navigation">
-					<a
-						href="#top"
-						onClick={(event) => {
-							event.preventDefault()
-							scrollTo(`#top`)
-						}}
-						className={(hash === '#' || hash === '#top') ? "selected" : ''}
-					>&nbsp;{current.name}</a>
-					{nav.map(nav => <Fragment key={nav.id}><a
-						href={`#${nav.id}`}
-						onClick={(event) => {
-							event.preventDefault()
-							scrollTo(`#${nav.id}`)
-						}}
-						className={
-							((hash === `#${nav.id}`) ? "selected" : '')
-							+
-							(nav.h === 'h3' ? ' flex' : '')
-						}
-					>&nbsp;&nbsp;{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
+					<div id="article-navigation-scroll">
+						<a
+							href="#top"
+							onClick={(event) => {
+								event.preventDefault()
+								scrollTo(`#top`)
+							}}
+							className={(hash === '#' || hash === '#top') ? "selected" : ''}
+						>&nbsp;{current.name}</a>
+						{nav.map(nav => <Fragment key={nav.id}><a
+							href={`#${nav.id}`}
+							onClick={(event) => {
+								event.preventDefault()
+								scrollTo(`#${nav.id}`)
+							}}
+							className={
+								((hash === `#${nav.id}`) ? "selected" : '')
+								+
+								(nav.h === 'h3' ? ' flex' : '')
+							}
+						>&nbsp;&nbsp;{nav.name}{nav.h === 'h3' && <StyledSub><div className="ver" /><div className="hor" /></StyledSub>}</a></Fragment>)}
+					</div>
 				</div>
 				<div className="article markdown">
 					<h1><a
