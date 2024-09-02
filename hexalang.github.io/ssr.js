@@ -16,10 +16,11 @@ for (const part of parts) {
 	const url = urling(name)
 	console.log(name, url)
 	fs.mkdirSync(`build/book/${url}`, { recursive: true })
+	const title = name.replaceAll('\\', '').replaceAll("'", '’').replaceAll('"', '’')
 	const html = index.replaceAll(
 		`Hexa Programming Language`,
-		`${name.replaceAll('\\', '').replaceAll("'", '’').replaceAll('"', '’')} — Hexa Book`
-	)
+		`${title} — Hexa Book`
+	).replaceAll('@PREVIEW@', `<p align="center">${title}</p>`)
 	fs.writeFileSync(`build/book/${url}/index.html`, html)
 }
 
