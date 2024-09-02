@@ -34,7 +34,6 @@ export const Try = () => {
 									<select className="input-control">
 										<option value="js">JavaScript</option>
 										<option value="c">C/C++</option>
-										<option value="haxe">Haxe</option>
 									</select>
 								</div>
 							</div>
