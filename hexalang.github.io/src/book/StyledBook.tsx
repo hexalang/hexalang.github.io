@@ -937,6 +937,29 @@ nav.main-nav li a {
 	transition: opacity .3s;
 	cursor: pointer;
 	transition: transform .25s ease-out;
+
+	:hover::after {
+		opacity: 1;
+	}
+
+	::after {
+		content: 'Sidebar Toggle';
+		transition: opacity .3s;
+		opacity: 0;
+		font-size: 14px;
+		color: black;
+		background-color: darkgray;
+		display: block;
+		position: absolute;
+		left: 40px;
+		top: 8px;
+		width: 104px;
+		height: 22px;
+		text-align: center;
+		border-radius: 6px;
+		pointer-events: none;
+		user-select: none;
+	}
 }
 
 .sidebar-toggle span {
@@ -949,8 +972,8 @@ nav.main-nav li a {
 	border-radius: 2px;
 }
 
-.sidebar-toggle:hover {
-	opacity: .4;
+.sidebar-toggle:hover span {
+	opacity: .5;
 }
 
 .dark-toggle {
@@ -964,6 +987,29 @@ nav.main-nav li a {
 	bottom: 40px;
 	cursor: pointer;
 	transition: transform .25s ease-out;
+
+	:hover::after {
+		opacity: 1;
+	}
+
+	::after {
+		content: 'Dark Mode';
+		transition: opacity .3s;
+		opacity: 0;
+		font-size: 14px;
+		color: black;
+		background-color: darkgray;
+		display: block;
+		position: absolute;
+		left: 40px;
+		top: 8px;
+		width: 104px;
+		height: 22px;
+		text-align: center;
+		border-radius: 6px;
+		pointer-events: none;
+		user-select: none;
+	}
 }
 
 .dark-toggle span {
@@ -987,8 +1033,8 @@ nav.main-nav li a {
 	left: 4px;
 }
 
-.dark-toggle:hover {
-	opacity: .4;
+.dark-toggle:hover span {
+	opacity: .5;
 }
 
 .sidebar * {
