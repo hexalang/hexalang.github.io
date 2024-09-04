@@ -952,14 +952,21 @@ nav.main-nav li a {
 		background-color: darkgray;
 		display: block;
 		position: absolute;
-		left: 40px;
+		left: 38px;
 		top: 8px;
-		width: 104px;
+		width: 102px;
 		height: 22px;
 		text-align: center;
 		border-radius: 6px;
 		pointer-events: none;
 		user-select: none;
+
+		// Mobile
+		@media screen and (max-width: 389px) {
+			& {
+				display: none !important;
+			}
+		}
 	}
 }
 
@@ -1002,14 +1009,21 @@ nav.main-nav li a {
 		background-color: darkgray;
 		display: block;
 		position: absolute;
-		left: 40px;
+		left: 38px;
 		top: 8px;
-		width: 104px;
+		width: 102px;
 		height: 22px;
 		text-align: center;
 		border-radius: 6px;
 		pointer-events: none;
 		user-select: none;
+
+		// Mobile
+		@media screen and (max-width: 389px) {
+			& {
+				display: none !important;
+			}
+		}
 	}
 }
 
