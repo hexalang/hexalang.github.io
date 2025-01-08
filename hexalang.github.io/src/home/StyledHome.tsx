@@ -54,6 +54,20 @@ code.countedCode {
 	display: none !important;
 }
 
+img.wink.wink {
+	user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: 162px;
+    top: 172px;
+	border-radius: 100%;
+}
+
+.language-ts.language-ts {
+	margin-top: 0;
+    margin-bottom: 10px;
+}
+
 overflow-x: hidden;
 width: 100%;
 background-color: #283a3c;
