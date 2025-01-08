@@ -11,6 +11,10 @@ code {
 		monospace;
 }
 
+code.countedCode {
+    display: block;
+}
+
 .hidden {
 	display: none !important;
 }
