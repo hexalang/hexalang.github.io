@@ -84,9 +84,9 @@ export const Footer = () => {
 					&nbsp;by&nbsp;
 					<a href="https://www.pixiv.net/en/users/795196" style={{ color: 'palevioletred' }}>DSマイル</a>
 					&nbsp;/&nbsp;
-					<a href="https://www.shadertoy.com/view/MfjyWK" style={{ color: 'palevioletred' }}>mrange</a>
+					<a href="https://www.shadertoy.com/user/mrange" style={{ color: 'palevioletred' }}>mrange</a>
 					&nbsp;/&nbsp;
-					<a href="https://www.shadertoy.com/view/XXfyzB" style={{ color: 'palevioletred' }}>FabriceNeyret2</a>
+					<a href="https://www.shadertoy.com/user/FabriceNeyret2" style={{ color: 'palevioletred' }}>FabriceNeyret2</a>
 				</div>
 			</div>
 			<div className="flex-row footer-buttons">
