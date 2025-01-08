@@ -85,6 +85,8 @@ const Styled = styled.div<{ compact: boolean }>`
 		flex-grow: 1;
 		display: flex;
     	padding-left: 18px;
+		height: 100%;
+		align-items: center;
 	}
 	//.small-logo:hover {
 	//	scale: 2.5 2.5;
@@ -97,7 +99,7 @@ export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 		<Styled className="navbarHeader" compact={compact}>
 			<div className="navbarHeaderBlur"></div>
 			<div className="navbar flex-end">
-				<div className="flex-row grow">
+				<div className="navButtons flex-row grow">
 					{compact ? <span className="logoButton"><Link to="/" className="">
 						<img className="small-logo" alt="Home" width="24px" height="24px" src="/file.png" />
 					</Link></span> : <span className="logoButton"></span>}
