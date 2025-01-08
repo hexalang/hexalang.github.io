@@ -80,9 +80,13 @@ export const Footer = () => {
 				<div title="Read Fair Use Disclaimer section in README.md of the website repo for more details" style={{ color: 'lightgrey' }}>
 					<a href={github} style={{ color: 'lightgrey' }}>Hexa</a> &copy; {year}
 					&nbsp;
-					<a href="https://www.pixiv.net/en/artworks/77171026" style={{ color: 'lightgreen' }}>Background</a>
+					<a href="https://www.pixiv.net/en/artworks/77171026" style={{ color: 'lightgreen' }}>Backgrounds</a>
 					&nbsp;by&nbsp;
 					<a href="https://www.pixiv.net/en/users/795196" style={{ color: 'palevioletred' }}>DSマイル</a>
+					&nbsp;/&nbsp;
+					<a href="https://www.shadertoy.com/view/MfjyWK" style={{ color: 'palevioletred' }}>mrange</a>
+					&nbsp;/&nbsp;
+					<a href="https://www.shadertoy.com/view/XXfyzB" style={{ color: 'palevioletred' }}>FabriceNeyret2</a>
 				</div>
 			</div>
 			<div className="flex-row footer-buttons">
