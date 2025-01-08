@@ -17,6 +17,8 @@ export const Article = () => {
 
 			<p><strong>Swift</strong>’s team achieved high level of familiarity while rolled some pretty interesting, somewhat new, sometimes innovative, concepts and features. And yes, there is Apple’s tyranny in language space on their platforms, which makes Swift <a href="https://www.infoq.com/news/2016/01/swift-overtakes-objective-c">widely used</a> “by default”. This is my second lowest common denominator for language look and feel.</p>
 
+			<p><strong>Go</strong> seemed like a weird take on C-like family of the languages. But now some design benefits became way more apparent. No more colons!</p>
+
 			<p>Haxe is <em>more than 10 years old</em> language. Ahead of its time, years before it already looked like the todays mainstream. It’s main powers are astonishing type system, multi platform support, meta-programming and <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS principle</a>. It also follows JavaScript similarity.</p>
 
 			<p>You may expect a mix of features from those languages. Like <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html">argument labels</a> at a caller side, <a href="https://blog.mariusschulz.com/2016/09/27/typescript-2-0-non-nullable-types">nullability</a> control, <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html">tagged</a> unions, object <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">extractors</a>, <a href="https://nodejs.org/api/fs.html">standard</a> library, selective data <a href="https://en.wikipedia.org/wiki/Immutable_object">immutability</a>, etcetera.</p>
