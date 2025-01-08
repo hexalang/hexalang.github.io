@@ -3,17 +3,17 @@
 	"name": "Hexa Programming Language",
 	"icons": [
 		{
-			"src": "favicon.ico",
-			"sizes": "64x64 32x32 24x24 16x16",
-			"type": "image/x-icon"
+			"src": "file.png",
+			"type": "image/png",
+			"sizes": "96x96 64x64 32x32 24x24 16x16"
 		},
 		{
-			"src": "logo192.png",
+			"src": "round192.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "logo512.png",
+			"src": "round512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}
