@@ -4,7 +4,7 @@ import { StyledHome } from './StyledHome'
 import { Link } from 'react-router-dom'
 import { Code } from 'book/Code'
 import { StyledLanding } from './StyledLanding'
-import { github, youtube, patreon, telegram, discord } from '../data/links'
+import { github, youtube, patreon, telegram, discord, background, animation } from '../data/links'
 import { Article as Install } from '../book/pages/Install'
 import { Page } from 'book/Page'
 import { useEffect } from 'react'
@@ -20,8 +20,16 @@ export const Home = () => {
 			<div className="wip-label hidden">Site is under construction!! =)</div>
 			<div className="background-webgl">
 				<iframe
-					allowTransparency={true} frameBorder="0" src="https://www.shadertoy.com/embed/XXfyzB?gui=false&t=10&gui=false&paused=false&muted=true"
-					style={{ overflow: 'hidden', height: '100%', width: '100%' }}
+					id="webglFrame"
+					onLoad={() => document.getElementById('webglFrame')!.style.opacity = "1"}
+					allowTransparency={true} frameBorder="0"
+					src={background.replace('$', animation)}
+					style={{
+						overflow: 'hidden',
+						height: '100%',
+						width: '100%',
+						opacity: 0,
+					}}
 					height="100%" width="100%"></iframe>
 			</div>
 			<Header compact={true} />
@@ -69,6 +77,7 @@ hello("Hexa")`} />
 								<a href={github} className="gi">{github}</a>
 								<a href={discord} className="di">{discord}</a>
 							</div>
+							<img className="wink" alt="Wink" width="96px" height="96px" src="/wink.webp" />
 						</div>
 					</div>
 				</div>
