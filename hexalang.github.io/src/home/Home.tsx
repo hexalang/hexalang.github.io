@@ -18,6 +18,12 @@ export const Home = () => {
 	return (
 		<StyledHome className="page shadow">
 			<div className="wip-label hidden">Site is under construction!! =)</div>
+			<div className="background-webgl">
+				<iframe
+					allowTransparency={true} frameBorder="0" src="https://www.shadertoy.com/embed/NdKyDw?gui=false&t=10&gui=false&paused=false&muted=true"
+					style={{ overflow: 'hidden', height: '100%', width: '100%' }}
+					height="100%" width="100%"></iframe>
+			</div>
 			<Header compact={true} />
 			<StyledLanding>
 				<div className="margin">

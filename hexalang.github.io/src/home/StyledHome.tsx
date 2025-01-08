@@ -20,6 +20,36 @@ code.countedCode {
 	display: none;
 }
 
+.background-webgl {
+	pointer-events: none;
+	user-select: none;
+	position: fixed;
+	//position: absolute;
+	//position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	//
+	z-index: -1;
+	z-index: 0;
+
+	//display: none;
+	iframe {
+	//position: absolute;
+	//z-index: 1;
+	}
+
+}
+
+.blockWhite .texts {
+	z-index: 1;
+}
+
+.safariLogoFix {
+	z-index: 2 !important;
+}
+
 .hidden {
 	display: none !important;
 }
