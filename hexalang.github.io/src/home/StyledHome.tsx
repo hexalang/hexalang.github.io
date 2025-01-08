@@ -186,8 +186,9 @@ a {
 	border-bottom-color: rgba(100, 100, 100, 0.2);
 }
 
-.navButtons {
+.navButtons.navButtons {
 	overflow-y: clip;
+	height: 100%;
 }
 
 .header {
