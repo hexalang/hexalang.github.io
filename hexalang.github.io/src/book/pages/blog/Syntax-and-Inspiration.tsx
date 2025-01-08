@@ -11,7 +11,7 @@ export const Article = () => {
 			<p>First of all, Hexa was greatly inspired by <a href="https://gist.github.com/royriojas/6454479">JavaScript</a>. It consists of things people enjoy, want, find useful and <a href="https://github.com/tc39/proposals">choose to be implemented</a>.
 				Also, JavaScript has a most flexible yet sane syntax.</p>
 
-			<p>Other guys involved are: TypeScript, Swift and, of course, Haxe.</p>
+			<p>Other guys involved are: TypeScript, Swift, Go and, of course, Haxe.</p>
 
 			<p><strong>TypeScript</strong>’s popularity shows that dynamic typed scripting fades away. I love types. It solves a JavaScript+Types problem for me.</p>
 
