@@ -186,6 +186,10 @@ a {
 	border-bottom-color: rgba(100, 100, 100, 0.2);
 }
 
+.navButtons {
+	overflow-y: clip;
+}
+
 .header {
 	text-align: center;
 	font-size: 110%;
