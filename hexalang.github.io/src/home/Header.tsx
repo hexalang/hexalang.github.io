@@ -16,7 +16,7 @@ const Styled = styled.div<{ compact: boolean }>`
 			font-size: 14px !important;
 		}
 
-		.navbar-btn.navbar-btn {
+		.navbarButton.navbarButton {
 			padding: 0px;
 			margin-left: 3px;
 		}
@@ -37,6 +37,9 @@ const Styled = styled.div<{ compact: boolean }>`
 		width: 100vw;
 		padding-right: 12px;
 
+		// iOS Safari
+		overflow-y: clip;
+
 		${props => props.compact && css`
 			background: linear-gradient(
 				rgba(0, 0, 0, 0.1),
@@ -45,7 +48,7 @@ const Styled = styled.div<{ compact: boolean }>`
 		`};
 	}
 
-	.navbar-btn {
+	.navbarButton {
 		${props => props.compact ? css`
 			color: lightgray;
 		` : css`color: rgb(32, 32, 32)`};
@@ -56,7 +59,7 @@ const Styled = styled.div<{ compact: boolean }>`
 		transition: color .2s ease-in-out;
 	}
 
-	.navbar-btn:hover {
+	.navbarButton:hover {
 		color: rgb(0, 174, 239);
 	}
 
@@ -103,12 +106,12 @@ export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 					{compact ? <span className="logoButton"><Link to="/" className="">
 						<img className="small-logo" alt="Home" width="24px" height="24px" src="/file.png" />
 					</Link></span> : <span className="logoButton"></span>}
-					<Link to="/try" className="navbar-btn"><Text>Try</Text></Link>
-					<Link to="/book" className="navbar-btn"><Text>Learn</Text></Link>
-					<Page className="navbar-btn" page={Install}><Text>Install</Text></Page>
-					<a href={youtube} className="navbar-btn">YouTube</a>
-					<a href={github} className="navbar-btn">GitHub</a>
-					<Link to="/donate" className="navbar-btn"><Text>Donate</Text></Link>
+					<Link to="/try" className="navbarButton"><Text>Try</Text></Link>
+					<Link to="/book" className="navbarButton"><Text>Learn</Text></Link>
+					<Page className="navbarButton" page={Install}><Text>Install</Text></Page>
+					<a href={youtube} className="navbarButton">YouTube</a>
+					<a href={github} className="navbarButton">GitHub</a>
+					<Link to="/donate" className="navbarButton"><Text>Donate</Text></Link>
 				</div>
 			</div>
 
