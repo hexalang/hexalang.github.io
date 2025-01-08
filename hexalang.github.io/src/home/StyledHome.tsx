@@ -13,6 +13,11 @@ code {
 
 code.countedCode {
     display: block;
+	margin-bottom: 6px;
+}
+
+.highlighter-copy {
+	display: none;
 }
 
 .hidden {
