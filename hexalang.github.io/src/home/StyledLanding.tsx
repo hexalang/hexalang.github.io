@@ -326,8 +326,11 @@ export const StyledLanding = styled.div`
 				position: relative;
 				left: -95px;
 				top: -95px;
-				filter: drop-shadow(0px 0px 48px rgb(0 0 0 / 0.25));
+				// Buggy on iOS Safari
+				// filter: drop-shadow(0px 0px 48px rgb(0 0 0 / 0.25));
 			}
+
+			filter: drop-shadow(0px 0px 48px rgb(0 0 0 / 0.25));
 		}
 	}
 `
