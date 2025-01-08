@@ -12,7 +12,7 @@ code {
 }
 
 code.countedCode {
-    display: block;
+	display: block;
 	margin-bottom: 6px;
 }
 
