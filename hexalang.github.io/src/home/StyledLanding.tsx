@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { tgw, yt, gh, tri, didi, down, logo } from './images/svg'
+import { tgw, yt, gh, tri, didi, down, logo, hexaRound } from './images/svg'
 
 export const StyledLanding = styled.div`
 	width: 100vw;
@@ -46,6 +46,8 @@ export const StyledLanding = styled.div`
 
 		.blockWhite {
 			flex-direction: column;
+			position: relative;
+
 			@media screen and (max-width: 800px) {
 				& {
 					margin-bottom: 16px;
@@ -313,7 +315,7 @@ export const StyledLanding = styled.div`
 			width: 191px;
 			height: 191px;
 			.safariLogo {
-				background-image: url(${logo});
+				background-image: url(${hexaRound});
 				background-size: 382px 382px;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -324,6 +326,7 @@ export const StyledLanding = styled.div`
 				position: relative;
 				left: -95px;
 				top: -95px;
+				filter: drop-shadow(0px 0px 48px rgb(0 0 0 / 0.25));
 			}
 		}
 	}
