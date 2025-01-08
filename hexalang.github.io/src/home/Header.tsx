@@ -99,7 +99,7 @@ export const Header: FC<{ compact: boolean }> = ({ compact }) => {
 			<div className="navbar flex-end">
 				<div className="flex-row grow">
 					{compact ? <span className="logoButton"><Link to="/" className="">
-						<img className="small-logo" alt="Home" width="24px" height="24px" src="/logo-no-text.svg" />
+						<img className="small-logo" alt="Home" width="24px" height="24px" src="/file.png" />
 					</Link></span> : <span className="logoButton"></span>}
 					<Link to="/try" className="navbar-btn"><Text>Try</Text></Link>
 					<Link to="/book" className="navbar-btn"><Text>Learn</Text></Link>
