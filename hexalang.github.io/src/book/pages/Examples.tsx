@@ -9,7 +9,7 @@ export const Article = () => {
 	return (
 		<>
 			<p>
-				Hexa's syntax is greatly inspired by TypeScript and Swift.
+				Hexa's syntax is greatly inspired by TypeScript, Go and Swift.
 			</p>
 			<p>
 				Standard library is close to JavaScript one, as Hexa supports Web as a first-class target.
