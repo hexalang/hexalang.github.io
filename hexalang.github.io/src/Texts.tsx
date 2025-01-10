@@ -17,6 +17,7 @@ export const texts: Texts = {
 		'Support': 'Supporta',
 		'Sponsor on Patreon': 'Diventa sponsor su Patreon',
 		'Install on your device': 'Installa sul tuo dispositivo',
+		'Hi': 'Ciao',
 	},
 	// Spain
 	'es': {
@@ -30,6 +31,7 @@ export const texts: Texts = {
 		'Support': 'Apoyar',
 		'Sponsor on Patreon': 'Patrocinar en Patreon',
 		'Install on your device': 'Instalar en tu dispositivo',
+		'Hi': 'Hola',
 	},
 	// German
 	'de': {
@@ -43,6 +45,7 @@ export const texts: Texts = {
 		'Support': 'Unterstützen',
 		'Sponsor on Patreon': 'Auf Patreon sponsern',
 		'Install on your device': 'Auf Ihrem Gerät installieren',
+		'Hi': 'Hallo',
 	},
 	// French
 	'fr': {
@@ -56,6 +59,7 @@ export const texts: Texts = {
 		'Support': 'Soutenir',
 		'Sponsor on Patreon': 'Sponsoriser sur Patreon',
 		'Install on your device': 'Installer sur votre appareil',
+		'Hi': 'Salut',
 	},
 	// Japanese
 	'ja': {
@@ -69,6 +73,7 @@ export const texts: Texts = {
 		'Support': 'サポート',
 		'Sponsor on Patreon': 'Patreonのスポンサーになる',
 		'Install on your device': 'あなたのデバイスにインストールする',
+		'Hi': 'こんにちは',
 	},
 	// Kazakh
 	'kk': {
@@ -82,6 +87,7 @@ export const texts: Texts = {
 		'Support': 'Қолдау көрсету',
 		'Sponsor on Patreon': 'Patreonда спонсор болу',
 		'Install on your device': 'Өзіңіздің құрылғыңызға орнатыңыз',
+		'Hi': 'Сәлем',
 	},
 	// Russian
 	'ru': {
@@ -95,6 +101,7 @@ export const texts: Texts = {
 		'Support': 'Поддержать',
 		'Sponsor on Patreon': 'Стать спонсором на Patreon',
 		'Install on your device': 'Установить на своё устройство',
+		'Hi': 'Привет',
 	},
 	// Arabic
 	'ar': {
@@ -108,6 +115,7 @@ export const texts: Texts = {
 		'Support': 'دعم',
 		'Sponsor on Patreon': 'رعاية على Patreon',
 		'Install on your device': 'تثبيت على جهازك',
+		'Hi': 'مرحبا',
 	},
 	// Ukrainian
 	'uk': {
@@ -121,6 +129,7 @@ export const texts: Texts = {
 		'Support': 'Підтримати',
 		'Sponsor on Patreon': 'Стати спонсором на Patreon',
 		'Install on your device': 'Встановити на ваш пристрій',
+		'Hi': 'Привіт',
 	},
 	// Chinese
 	'zh': {
@@ -134,6 +143,7 @@ export const texts: Texts = {
 		'Support': '支持',
 		'Sponsor on Patreon': 'Patreon 的赞助商',
 		'Install on your device': '在您的设备上安装',
+		'Hi': '你好',
 	},
 	// Korean
 	'ko': {
@@ -147,6 +157,7 @@ export const texts: Texts = {
 		'Support': '지원',
 		'Sponsor on Patreon': 'Patreon에서 후원하기',
 		'Install on your device': '장치에 설치',
+		'Hi': '안녕하세요',
 	},
 	// Hindi
 	'hi': {
@@ -160,6 +171,7 @@ export const texts: Texts = {
 		'Support': 'समर्थन',
 		'Sponsor on Patreon': 'पेट्रियॉन पर प्रायोजक',
 		'Install on your device': 'अपनी डिवाइस पर इंस्टॉल करें',
+		'Hi': 'नमस्ते',
 	},
 	// Portuguese
 	'pt': {
@@ -173,6 +185,7 @@ export const texts: Texts = {
 		'Support': 'Apoiar',
 		'Sponsor on Patreon': 'Patrocinar no Patreon',
 		'Install on your device': 'Instalar no seu dispositivo',
+		'Hi': 'Oi',
 	},
 	// Polish
 	'pl': {
@@ -186,6 +199,7 @@ export const texts: Texts = {
 		'Support': 'Pomoc',
 		'Sponsor on Patreon': 'Sponsor na Patreonie',
 		'Install on your device': 'Zainstaluj na swoim urządzeniu',
+		'Hi': 'Cześć',
 	},
 	// Slovak
 	'sk': {
@@ -199,6 +213,7 @@ export const texts: Texts = {
 		'Support': 'Pomoc',
 		'Sponsor on Patreon': 'Sponzor na Patreone',
 		'Install on your device': 'Nainštalujte do svojho zariadenia',
+		'Hi': 'Ahoj',
 	},
 	// Czech
 	'cs': {
@@ -212,6 +227,7 @@ export const texts: Texts = {
 		'Support': 'Pomoc',
 		'Sponsor on Patreon': 'Sponzor na Patreonu',
 		'Install on your device': 'Nainstalujte do svého zařízení',
+		'Hi': 'Ahoj',
 	},
 	// Latvian
 	'lv': {
@@ -225,6 +241,7 @@ export const texts: Texts = {
 		'Support': 'Atbalstīt',
 		'Sponsor on Patreon': 'Kļūt par sponsoru Patreonā',
 		'Install on your device': 'Instalēt uz jūsu ierīces',
+		'Hi': 'Sveiki',
 	},
 	// Lithuanian
 	'lt': {
@@ -238,6 +255,7 @@ export const texts: Texts = {
 		'Support': 'Palaikyti',
 		'Sponsor on Patreon': 'Rėmėti per Patreon',
 		'Install on your device': 'Įdiegti į savo įrenginį',
+		'Hi': 'Labas',
 	},
 	// Estonian
 	'et': {
@@ -251,6 +269,7 @@ export const texts: Texts = {
 		'Support': 'Toeta',
 		'Sponsor on Patreon': 'Toeta Patreonis',
 		'Install on your device': 'Paigalda oma seadmesse',
+		'Hi': 'Tere',
 	},
 	// Greek
 	'el': {
@@ -264,6 +283,7 @@ export const texts: Texts = {
 		'Support': 'Υποστηρίξτε',
 		'Sponsor on Patreon': 'Χρηματοδοτήστε στο Patreon',
 		'Install on your device': 'Εγκαταστήστε στη συσκευή σας',
+		'Hi': 'Γεια',
 	},
 	// Finnish
 	'fi': {
@@ -277,6 +297,7 @@ export const texts: Texts = {
 		'Support': 'Tue',
 		'Sponsor on Patreon': 'Sponsoroi Patreonissa',
 		'Install on your device': 'Asenna laitteellesi',
+		'Hi': 'Hei',
 	},
 	// Swedish
 	'sv': {
@@ -290,6 +311,7 @@ export const texts: Texts = {
 		'Support': 'Stöd',
 		'Sponsor on Patreon': 'Sponsra på Patreon',
 		'Install on your device': 'Installera på din enhet',
+		'Hi': 'Hej',
 	},
 	// Danish
 	'da': {
@@ -303,5 +325,6 @@ export const texts: Texts = {
 		'Support': 'Støt',
 		'Sponsor on Patreon': 'Sponsor på Patreon',
 		'Install on your device': 'Installer på din enhed',
+		'Hi': 'Hej',
 	},
 } as const
