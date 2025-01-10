@@ -54,6 +54,19 @@ const langs: readonly string[] = (_ => {
 	return languagesIDs
 })()
 
+export const translate = (text: string): string => {
+	for (let index = 0; index < langs.length; index++) {
+		const lang: string = langs[index]
+		const strings = texts[lang]
+
+		if (strings && strings[text]) {
+			return strings[text]
+		}
+	}
+
+	return text
+}
+
 export const Text = ({ children }: { children: string }) => {
 	children = children.trim()
 
