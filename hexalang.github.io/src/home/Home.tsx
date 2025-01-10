@@ -12,7 +12,7 @@ import { Text, translate } from 'Translate'
 
 export const Home = () => {
 	useEffect(() => {
-		document.title = 'Hexa'
+		document.title = 'Hexa Programming Language'
 	}, [])
 
 	return (
