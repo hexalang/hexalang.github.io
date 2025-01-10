@@ -8,7 +8,7 @@ import { github, youtube, patreon, telegram, discord, background, animation } fr
 import { Article as Install } from '../book/pages/Install'
 import { Page } from 'book/Page'
 import { useEffect } from 'react'
-import { Text } from 'Translate'
+import { Text, translate } from 'Translate'
 
 export const Home = () => {
 	useEffect(() => {
@@ -70,7 +70,7 @@ export const Home = () => {
     console.log("hello, \\(friend)!")
 }
 
-hello("Hexa")`} />
+hello("Hexa")`.replace('hello,', translate('Hi') + ',')} />
 							</div>
 							<div className="icons">
 								<a href={telegram} className="tg">{telegram}</a>
