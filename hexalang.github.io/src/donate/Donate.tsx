@@ -77,7 +77,7 @@ export const Donate = () => {
 					<div className="donate-card-container col-1 col-sm-2">
 						<div className="card donate-card" css='text-align: center'>
 							<div className="card-header">
-								Liberapay
+								GitHub
 							</div>
 							<a href="https://github.com/sponsors/PeyTy">
 								<div className="card-body center">
