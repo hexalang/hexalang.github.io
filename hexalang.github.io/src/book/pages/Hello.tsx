@@ -55,7 +55,7 @@ export const Article = () => {
 			<p>Same within code editor:</p>
 
 			<ul>
-				<li>Sublime Text — …TODO</li>
+				<li>Sublime Text — …{false && 'TODO'}</li>
 			</ul>
 
 			<p>Expected output:</p>
@@ -155,7 +155,7 @@ hello("people of the Earth") // -> prints "Hello, people of the Earth"`} />
       //    ^ [hello.hexa:8:7]
       123456789 // column numbers`} />
 
-			<p>TODO## Level 2 - file system, useful stuff level 3, read repl from keyboard coz classic</p>
+			<p>{false && 'TODO ## Level 2 - file system, useful stuff level 3, read repl from keyboard coz classic'}</p>
 		</>
 	)
 }
