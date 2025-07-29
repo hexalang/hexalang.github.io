@@ -10,6 +10,8 @@ export const Article = () => {
 		<>
 			<Img src={speedtyper} style={{ borderRadius: '100%' }} alt="Package installer goes brrrr dori dori dori dori dori" width={256} />
 
+			<p>Warning: this feature is not yet included in the release builds!</p>
+
 			<p>Package manager is a tool for code sharing between developers. Very easy to use, no worries! <img className="emoji" title=":wink:" alt=":wink:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png" height="20" width="20" /></p>
 
 			<p>It comes built into <Page page={Install} id="#compiler">Hexa compiler</Page>, so you don’t have to lurk elsewhere.</p>
