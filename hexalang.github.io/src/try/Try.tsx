@@ -23,7 +23,7 @@ export const Try = () => {
 					</div>
 					<div className="tab-content full-height">
 						<div className="tab-pane active pad full-height" id="source">
-							<div id="editor" className="pad code editor input-control full-height" contentEditable="true">var names = ['Joffrey', 'Tyrion', 'Sansa']<br />console.log('Hello ' + names.join(", ") + '!')</div>
+							<div id="editor" className="pad code editor input-control full-height" contentEditable="true">WARNING<br />THIS ONLINE COMPILER VERSION IS DEPRECATED<br />AND WILL BE REPLACED<br />var names = ['Joffrey', 'Tyrion', 'Sansa']<br />console.log('Hello ' + names.join(", ") + '!')</div>
 						</div>
 						<div className="tab-pane pad-2" id="options">
 							<div className="flex-row">
