@@ -102,7 +102,7 @@ console.log(\`hello\\tworld\`) // -> prints 'hello\\tworld'`} />
 			<Code code={`let welcome = 'world'
 console.log(\`hello \\(welcome)!\`) // -> prints 'hello \\(welcome)!'`} />
 
-			<p>They also keep line endings information as is:</p>
+			<p>They also keep line endings information as is{false && 'TODO'}:</p>
 
 			<Code code={`let s = \`
 \` // Contains \\n or \\r\\n depending on your code editor settings`} />
