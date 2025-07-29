@@ -13,7 +13,7 @@ export const Donate = () => {
 		<div className="page shadow">
 			<Header compact={false} />
 
-			<div className="container flex-column pad">
+			<div className="container flex-column pad" style={{ color: 'black' }}>
 				<div className="card donate-card">
 					<div className="card-header no-border">
 						<p>To accelerate closing of issues and implementation of new/requested features <strong>you</strong> can become a <i>collaborator</i> or make some donation here:</p>
@@ -79,14 +79,15 @@ export const Donate = () => {
 							<div className="card-header">
 								Liberapay
 							</div>
-							<a href="https://liberapay.com/PeyTy">
+							<a href="https://github.com/sponsors/PeyTy">
 								<div className="card-body center">
 									<img
 										src={liberapay}
 										width="140"
-										alt="Become a Patron"
+										alt="Become a Sponsor"
 										className=""
 									/>
+									{false && 'TODO update the pic'}
 								</div>
 							</a>
 						</div>
@@ -95,8 +96,9 @@ export const Donate = () => {
 				<div className="donate-section-header">
 					Cryptocurrencies
 				</div>
-				<div className="flex-row">
-					<div className="donate-card-container col-1 col-sm-2">
+				<div className="flex-row" style={{ justifyContent: 'center' }}>
+					{false && 'TODO cleanup'}
+					{false && <div className="donate-card-container col-1 col-sm-2">
 						<div className="card donate-card">
 							<div className="mobile card-header">Bitcoin</div>
 							<div className="card-body">
@@ -107,9 +109,9 @@ export const Donate = () => {
 									<div className="donate-wallet-name non-mobile">Bitcoin</div>
 									<div className="donate-wallet-description">
 										<div className="donate-wallet">
-											3Gp6D7c7XwNEvrFB2CeMtbDTHoQawMjo4n
+											deprecated
 										</div>
-										<a className="btn btn-blue btn-large space-between" href="bitcoin:3Gp6D7c7XwNEvrFB2CeMtbDTHoQawMjo4n?message=Donation">
+										<a className="btn btn-blue btn-large space-between" href="bitcoin:deprecated?message=Donation">
 											Open in wallet
 											<svg className="svg-inline" aria-hidden="true" data-prefix="far" data-icon="external-link"
 												role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -120,7 +122,7 @@ export const Donate = () => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>}
 					<div className="donate-card-container col-1 col-sm-2">
 						<div className="card donate-card">
 							<div className="mobile card-header">Monero</div>
@@ -146,7 +148,7 @@ export const Donate = () => {
 							</div>
 						</div>
 					</div>
-					<div className="donate-card-container col-1 col-sm-2">
+					{false && <div className="donate-card-container col-1 col-sm-2">
 						<div className="card donate-card">
 							<div className="mobile card-header">Ethereum</div>
 							<div className="card-body">
@@ -157,9 +159,9 @@ export const Donate = () => {
 									<div className="donate-wallet-name non-mobile">Ethereum</div>
 									<div className="donate-wallet-description">
 										<div className="donate-wallet">
-											0x27e9254b61b1cd8da37a7617ac7714a8c33fddd4
+											deprecated
 										</div>
-										<a className="btn btn-blue btn-large space-between" href="ethereum:0x27e9254b61b1cd8da37a7617ac7714a8c33fddd4">
+										<a className="btn btn-blue btn-large space-between" href="ethereum:deprecated">
 											Open in wallet
 											<svg className="svg-inline" aria-hidden="true" data-prefix="far" data-icon="external-link"
 												role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -170,8 +172,8 @@ export const Donate = () => {
 								</div>
 							</div>
 						</div>
-					</div>
-					<div className="donate-card-container col-1 col-sm-2">
+					</div>}
+					{false && <div className="donate-card-container col-1 col-sm-2">
 						<div className="card donate-card">
 							<div className="mobile card-header">Litecoin</div>
 							<div className="card-body">
@@ -182,9 +184,9 @@ export const Donate = () => {
 									<div className="donate-wallet-name non-mobile">Litecoin</div>
 									<div className="donate-wallet-description">
 										<div className="donate-wallet">
-											MJpWH3vENaBzx64sCjGfdStuomTZkiwQfc
+											deprecated
 										</div>
-										<a className="btn btn-blue btn-large space-between" href="litecoin:MJpWH3vENaBzx64sCjGfdStuomTZkiwQfc?amount=0.10&label=Donation&message=Thank%20you%21">
+										<a className="btn btn-blue btn-large space-between" href="litecoin:deprecated?amount=0.10&label=Donation&message=Thank%20you%21">
 											Open in wallet
 											<svg className="svg-inline" aria-hidden="true" data-prefix="far" data-icon="external-link"
 												role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -195,7 +197,7 @@ export const Donate = () => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>}
 				</div>
 			</div>
 
