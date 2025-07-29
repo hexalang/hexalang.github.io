@@ -8,7 +8,7 @@ import github from "../images/gh.svg"
 export const Article = () => {
 	return (
 		<>
-			TODO PIC
+			{false && 'TODO Pics'}
 			<p>This is the very first official release of Hexa! Previous release (aka 1.0.0) was just formal and wasn't really ready for public usage or capable of anything actually useful.</p>
 
 			<H2>New features</H2>
