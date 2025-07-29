@@ -69,7 +69,7 @@ export const Article = () => {
 				–no-cache
 				–reinstall # if broken incomplete download</p>
 
-			<p><a href="TODO%5Chexa%5Csource%5Ccli%5Chpm.hexa">Source code of package manager for contributors TODO</a></p>
+			<p><a href="TODO%5Chexa%5Csource%5Ccli%5Chpm.hexa">Source code of package manager for contributors</a></p>
 
 			<H3>Uninstalling packages</H3>
 
